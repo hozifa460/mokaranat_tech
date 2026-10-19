@@ -305,13 +305,15 @@ D:\tech_comparisons\
   - Verified repository contents via GitHub API.
 
 ### Phase 16: Comprehensive Hardware Review & Architectural Calibration (2026-10-20)
-- **Laptop Classification Bug & Display Enhancements (`ai_editorial.py`, `spec_engine.py`, `seed_specs.json`):**
-  - Corrected laptop weight threshold in `EditorialRuleEngine._build_who_should_buy` from `weight <= 1.8` to `weight <= 1.9` kg, correctly recognizing the ASUS ROG Zephyrus G16 (1.85 kg) as a portable/thin-and-light machine with OLED display.
-  - Customized laptop `tdp_w` diffing in `SpecEngine` to render as `أقصى استهلاك رسومي متاح (GPU TGP / Thermal Budget)` marked as an informational tie with engineering nuance: high TGP (175W) yields sustained clock speeds whereas constrained TGP (105W) allows ultra-slim chassis and lower heat.
-  - Added OLED (0.2ms response, infinite contrast) vs IPS (500 nits, no burn-in risk) pros and cons to both laptops in editorial generation.
+- **Laptop Classification Bug & Display Enhancements (`ai_editorial.py`, `spec_engine.py`, `seed_specs.json`, `SpecsTable.astro`):**
+  - Updated laptop portability threshold in `EditorialRuleEngine._build_who_should_buy` to `weight < 2.0` kg (covering Zephyrus G16 at 1.85 kg as well as thin gaming laptops up to 1.99 kg) with OLED display recognition.
+  - De-duplicated heavy laptop weight cons in `_build_one_laptop`: heavy laptops (>= 2.5 kg) receive exactly 1 consolidated, descriptive con comparing against lighter competitors rather than duplicate consecutive weight bullet points.
+  - Added dedicated `display` comparison row to `SpecEngine._compare_laptop_raw_specs` and `SpecsTable.astro`, presenting side-by-side OLED (infinite contrast, 0.2ms response, true blacks) vs IPS (500 nits sustained brightness, no burn-in risk) analysis.
+  - Formatted laptop `tdp_w` diffing dynamically with actual wattages (`GPU TGP / Thermal Budget`) as an informational tie explaining sustained clock speeds (175W) vs thin-chassis thermals (105W).
 - **CPU Cleanliness & Platform Longevity (`models.py`, `database.py`, `seed_specs.json`, `spec_engine.py`, `ai_editorial.py`):**
   - Nullified `ray_tracing_score` for CPUs in `seed_specs.json`, `models.py`, and `database.py`, preventing irrelevant GPU RT metrics from leaking into CPU spec diffs and charts.
   - Updated Intel Core i7-14700K process node to `Intel 7 (10nm Enhanced SuperFin)` and socket to `LGA 1700 (End of Life)`.
+  - Refined CPU editorial pros generation to eliminate misleading raw "بدقة تصنيع 7nm" suffix when describing Intel 7 architectures.
   - Customized CPU process node comparison in `SpecEngine` to mark as tie with explicit architectural explanation comparing Intel 7 transistor density against TSMC 5nm.
   - Added AM5 platform lifecycle support through 2027+ pro for Ryzen 7000 series, and dead-end socket EOL con for Intel LGA 1700.
 - **Inter-Tier GPU Scaling Calibration (`seed_specs.json`, `ai_editorial.py`):**
@@ -321,14 +323,15 @@ D:\tech_comparisons\
   - Renamed in seed specs and database to `NVIDIA GeForce RTX 4060 Ti (8GB)`.
 - **Ray Tracing Disclosures (`models.py`, `fps_calculator.py`, `GamingFpsWidget.astro`):**
   - Added `rt_badge_ar` field to `GamingFpsItem`.
-  - Assigned badges for RT-intensive games: `⚡ تتبع الأشعة مفعّل (RT ON)` for Cyberpunk 2077, and `💡 إضاءة Lumen العتادية` for Black Myth: Wukong.
+  - Assigned badges for RT-intensive games: `⚡ تتبع الأشعة مفعّل (RT ON)` for Cyberpunk 2077 and generic `rt_heavy` profiles, and `💡 إضاءة Lumen العتادية` for Black Myth: Wukong.
   - Rendered RT disclosure badge next to game titles in `GamingFpsWidget.astro`.
 - **Pricing Framing Consistency (`SpecsTable.astro`, `ai_editorial.py`):**
-  - Clarified in `SpecsTable.astro` that the savings percentage is calculated off the higher MSRP: `أوفر بنسبة {formatVal(diff.diff_percentage)}% (خصم من السعر الأعلى) مقارنة بسعر المنافس لصالح {winner}`.
-  - Clarified in `ai_editorial.py` that competitor markup is calculated over the cheaper MSRP: `يرتفع سعر منافسه بنسبة ... عن السعر الأقل`.
+  - Clarified in `SpecsTable.astro` that savings percentage is calculated off the higher MSRP: `أوفر بنسبة {formatVal(diff.diff_percentage)}% (خصم من السعر الأعلى) مقارنة بسعر المنافس لصالح {winner}`.
+  - Clarified in `ai_editorial.py` across all value budget narratives (including cost-per-frame parity in 4060 Ti vs 7700 XT) that competitor markup is calculated over the cheaper MSRP: `يرتفع سعر منافسه بنسبة ... عن السعر الأقل`.
 - **Automated Test Expansion & SSG Build:**
-  - Added 5 new automated unit tests in `core/tests/test_affiliate_and_editorial.py`, expanding the test suite to 55 tests with 100% pass rate in 1.16s.
-  - Re-seeded SQLite database, regenerated all 7 comparison JSONs, and built all 11 static pages via Astro SSG with zero errors in 5.40s.
+  - Expanded test suite in `core/tests/test_affiliate_and_editorial.py` to 60 automated unit tests (up from 50) with 100% pass rate in 1.25s.
+  - Re-seeded SQLite database, regenerated all 7 comparison JSON collections, and verified 11 static pages built via Astro SSG with zero errors in 1.97s.
+  - Audited compiled HTML to confirm zero Amazon links or mentions.
 
 ---
 

@@ -160,6 +160,8 @@ class FpsCalculator:
                     rt_badge_ar = "⚡ تتبع الأشعة مفعّل (RT ON)"
                 elif game.get("id") == "wukong":
                     rt_badge_ar = "💡 إضاءة Lumen العتادية"
+                elif game.get("rt_heavy"):
+                    rt_badge_ar = "⚡ تتبع الأشعة مفعّل (RT ON)"
 
                 results.append(GamingFpsItem(
                     game_title=game["title"],

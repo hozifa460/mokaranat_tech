@@ -51,7 +51,9 @@ class SpecEngine:
         # 3. Power Consumption (TDP Watts) - lower is better for desktops, customized for gaming laptops
         is_laptop = item_a.category == "laptop" or item_b.category == "laptop"
         if is_laptop:
-            tdp_diff_pct = round(abs(item_a.tdp_w - item_b.tdp_w) / max(item_a.tdp_w, item_b.tdp_w) * 100, 1) if max(item_a.tdp_w, item_b.tdp_w) > 0 else 0.0
+            max_tgp = max(item_a.tdp_w, item_b.tdp_w)
+            min_tgp = min(item_a.tdp_w, item_b.tdp_w)
+            tdp_diff_pct = round(abs(item_a.tdp_w - item_b.tdp_w) / max_tgp * 100, 1) if max_tgp > 0 else 0.0
             diffs.append(SpecDiffItem(
                 key="tdp_w",
                 label_ar="أقصى استهلاك رسومي متاح (GPU TGP / Thermal Budget)",
@@ -60,7 +62,7 @@ class SpecEngine:
                 unit="W",
                 winner="tie",
                 diff_percentage=tdp_diff_pct,
-                advantage_summary_ar="مقياس هندسي: يمنح السحب الأعلى (مثل 175W) أداء رسومياً مستداماً وترددات بطاقة أعلى، بينما يتيح السحب المنضبط (مثل 105W) هيكلاً فائق النحافة وحرارة أقل"
+                advantage_summary_ar=f"مقياس هندسي: يمنح السحب الأعلى ({max_tgp}W) أداء رسومياً مستداماً وترددات بطاقة أعلى، بينما يتيح السحب المنضبط ({min_tgp}W) هيكلاً فائق النحافة وحرارة أقل"
             ))
         else:
             diffs.append(cls._compare_numeric(
@@ -77,7 +79,18 @@ class SpecEngine:
         # Cross-architecture comparison (e.g. monolithic TSMC 4N vs chiplets 5nm/6nm) is misleading
         # due to differing transistor densities and packaging architectures. Treat as informational tie.
         is_cross_architecture = item_a.architecture.strip().lower() != item_b.architecture.strip().lower()
-        if is_cross_architecture:
+        if item_a.process_node_nm == item_b.process_node_nm:
+            diffs.append(SpecDiffItem(
+                key="process_node_nm",
+                label_ar="دقة التصنيع (Process Node)",
+                value_a=item_a.process_node_nm,
+                value_b=item_b.process_node_nm,
+                unit="nm",
+                winner="tie",
+                diff_percentage=0.0,
+                advantage_summary_ar="دقة تصنيع متطابقة عتادياً"
+            ))
+        elif is_cross_architecture:
             is_cpu_comparison = item_a.category == "cpu" or item_b.category == "cpu"
             has_intel_cpu = is_cpu_comparison and ("intel" in item_a.brand.lower() or "intel" in item_b.brand.lower())
             if has_intel_cpu:
@@ -424,6 +437,29 @@ class SpecEngine:
                 unit="Wh",
                 higher_is_better=True,
                 summary_pattern="سعة بطارية أكبر للعمل لفترات أطول خارج المقبس"
+            ))
+
+        display_a = raw_a.get("display")
+        display_b = raw_b.get("display")
+        if display_a and display_b:
+            is_oled_a = "oled" in str(display_a).lower()
+            is_oled_b = "oled" in str(display_b).lower()
+            if is_oled_a and not is_oled_b:
+                advantage = "مقارنة شاشات: شاشة OLED تمتاز بتباين لانهائي وسواد حقيقي وزمن استجابة 0.2ms، بينما تمتاز شاشة IPS بـ 500 nits سطوع عالٍ وثابت دون مخاطر تطبيع (Burn-in)"
+            elif is_oled_b and not is_oled_a:
+                advantage = "مقارنة شاشات: شاشة OLED تمتاز بتباين لانهائي وسواد حقيقي وزمن استجابة 0.2ms، بينما تمتاز شاشة IPS بـ 500 nits سطوع عالٍ وثابت دون مخاطر تطبيع (Burn-in)"
+            else:
+                advantage = "مقارنة شاشات: تقنيات عرض متقدمة بمعدلات تحديث سريعة ملائمة للألعاب التنافسية وصناعة المحتوى"
+
+            items.append(SpecDiffItem(
+                key="display",
+                label_ar="تقنية ومواصفات الشاشة",
+                value_a=str(display_a),
+                value_b=str(display_b),
+                unit="",
+                winner="tie",
+                diff_percentage=0.0,
+                advantage_summary_ar=advantage
             ))
 
         return items

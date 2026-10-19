@@ -119,7 +119,7 @@
       "unit": "nm",
       "winner": "tie",
       "diff_percentage": 0.0,
-      "advantage_summary_ar": "متطابق في هذه القيمة"
+      "advantage_summary_ar": "دقة تصنيع متطابقة عتادياً"
     },
     {
       "key": "ray_tracing_score",
@@ -537,7 +537,7 @@
         "url": "https://tech-comparisons.pages.dev/compare/rx-7800-xt-vs-rx-7900-xtx",
         "name": "مقارنة AMD Radeon RX 7800 XT ضد AMD Radeon RX 7900 XTX | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين AMD Radeon RX 7800 XT و AMD Radeon RX 7900 XTX. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T20:59:05.471943+00:00",
+        "datePublished": "2026-10-19T21:18:26.009189+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -563,5 +563,5 @@
       }
     ]
   },
-  "created_at": "2026-10-19T20:59:05.471943+00:00"
+  "created_at": "2026-10-19T21:18:26.009189+00:00"
 }

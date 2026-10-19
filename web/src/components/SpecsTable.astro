@@ -62,10 +62,10 @@ const formatVal = (v: any) => {
               <td class="py-4 px-6">
                 <div class="flex items-center gap-2">
                   <span class={`font-extrabold ${isA ? 'text-blue-600 dark:text-blue-400' : ''}`}>
-                    <bdi dir="ltr" class="whitespace-nowrap">{formatVal(diff.value_a)} {diff.unit}</bdi>
+                    <bdi dir="ltr" class={diff.unit ? 'whitespace-nowrap' : 'font-bold text-xs leading-relaxed'}>{formatVal(diff.value_a)} {diff.unit}</bdi>
                   </span>
                   {isA && (
-                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
+                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 whitespace-nowrap">
                       🏆 أفضل
                     </span>
                   )}
@@ -74,10 +74,10 @@ const formatVal = (v: any) => {
               <td class="py-4 px-6">
                 <div class="flex items-center gap-2">
                   <span class={`font-extrabold ${isB ? 'text-indigo-600 dark:text-indigo-400' : ''}`}>
-                    <bdi dir="ltr" class="whitespace-nowrap">{formatVal(diff.value_b)} {diff.unit}</bdi>
+                    <bdi dir="ltr" class={diff.unit ? 'whitespace-nowrap' : 'font-bold text-xs leading-relaxed'}>{formatVal(diff.value_b)} {diff.unit}</bdi>
                   </span>
                   {isB && (
-                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300">
+                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 whitespace-nowrap">
                       🏆 أفضل
                     </span>
                   )}

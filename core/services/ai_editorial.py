@@ -395,7 +395,7 @@ class EditorialRuleEngine:
                 return (
                     f"عند دراسة معادلة القيمة مقابل السعر، يقدم {cheaper.name} تكلفة شراء أولية أقل بسعر ${cheaper_price_str} "
                     f"(توفير ${price_diff_str} لصالح الميزانيات المحدودة مع سحب طاقة منخفض يبلغ {cheaper.tdp_w}W). "
-                    f"في المقابل، يطرح {pricier.name} سعراً أعلى بنسبة {price_inc_str}% (${pricier_price_str})، "
+                    f"في المقابل، يطرح {pricier.name} سعراً أعلى بنسبة {price_inc_str}% عن السعر الأقل (${pricier_price_str})، "
                     f"ومع تفوقه في معدل الإطارات بدقة 1440p بمتوسط {fps_lead_str}{vram_context}، "
                     f"فإن تكلفة الإطار الواحد (القيمة مقابل السعر) تصبح متطابقة عملياً بين البطاقتين (تعادل في القيمة الصافية). "
                     f"وبذلك لا يوجد فوز مطلق؛ {invest_reason}{market_revision_note}"
@@ -687,9 +687,11 @@ class EditorialRuleEngine:
             l3_opp = opp.raw_specs.get("l3_cache_mb", 32)
             is_x3d = "x3d" in cpu.name.lower() or l3_self >= 64
 
-            pros = [
-                f"معمارية {cpu.architecture} المتقدمة بدقة تصنيع {_format_num(cpu.process_node_nm)}nm"
-            ]
+            if "intel 7" in cpu.architecture.lower() or ("intel" in cpu.brand.lower() and cpu.process_node_nm >= 7.0):
+                node_pro = f"معمارية {cpu.architecture}" if "intel 7" in cpu.architecture.lower() else f"معمارية {cpu.architecture} بمعيار تصنيع Intel 7 (10nm Enhanced SuperFin)"
+            else:
+                node_pro = f"معمارية {cpu.architecture} المتقدمة بدقة تصنيع {_format_num(cpu.process_node_nm)}nm"
+            pros = [node_pro]
 
             # Efficiency / multi-core pro
             if cpu.efficiency_score >= 80 or cpu.tdp_w < opp.tdp_w:
@@ -785,15 +787,19 @@ class EditorialRuleEngine:
             if laptop.launch_msrp_usd > opp.launch_msrp_usd:
                 cons.append(f"سعر إطلاق رسمي أعلى (${_format_num(laptop.launch_msrp_usd)})")
             if weight_self > weight_opp:
-                cons.append(f"وزن الجهاز ({_format_num(weight_self)} كجم) أثقل نسبياً عند الحمل في الحقيبة مقارنة بـ {opp.name} ({_format_num(weight_opp)} كجم)")
+                if weight_self >= 2.5:
+                    cons.append(f"وزن الجهاز ({_format_num(weight_self)} كجم) ثقيل مع شاحن ضخم مقارنة بالمنافس ({_format_num(weight_opp)} كجم) مما يحد من سهولة التنقل اليومي ويجعله بديلاً مكتبياً")
+                else:
+                    cons.append(f"وزن الجهاز ({_format_num(weight_self)} كجم) أثقل نسبياً عند الحمل في الحقيبة مقارنة بـ {opp.name} ({_format_num(weight_opp)} كجم)")
             elif battery_self < battery_opp:
                 cons.append(f"سعة بطارية أقل ({_format_num(battery_self)}Wh مقابل {_format_num(battery_opp)}Wh لدى {opp.name})")
 
             if is_oled:
                 cons.append("شاشات OLED تتطلب عناية لتفادي تطبيع الصورة (Burn-in) مع العناصر الثابتة وسطوعها المستمر أقل في البيئات شديدة الإضاءة مقارنة بـ IPS")
-            if weight_self >= 2.5:
+            elif weight_self >= 2.5 and weight_self <= weight_opp:
                 cons.append(f"وزن الجهاز ({_format_num(weight_self)} كجم) ثقيل مع شاحن ضخم مما يحد من سهولة التنقل اليومي ويجعله بديلاً مكتبياً")
-            elif weight_self < 2.0 and laptop.tdp_w <= 120:
+
+            if weight_self < 2.0 and laptop.tdp_w <= 120:
                 cons.append(f"سحب طاقة رسومي محكوم ({laptop.tdp_w}W TGP) ليتناسب مع الهيكل النحيف والخفيف مقارنة بأجهزة الألعاب الضخمة")
 
             cons.append("خيارات ترقية العتاد الداخلي محدودة بطبيعة الأجهزة المحمولة")
@@ -864,7 +870,7 @@ class EditorialRuleEngine:
             display = target.raw_specs.get("display", "")
             is_oled = "oled" in display.lower() or any("oled" in f.lower() for f in target.features)
             display_mention = " مع الاستفادة من شاشة OLED فائقة التباين والألوان" if is_oled else ""
-            if weight <= 1.9:
+            if weight < 2.0:
                 return (
                     f"المستخدم كثير التنقل وصانع المحتوى الذي يضع خفة الوزن ({_format_num(weight)} كجم) "
                     f"وسهولة الحمل في صدارة أولوياته{display_mention}، مع الاستفادة من بطارية {battery}Wh وشاشة عالية الدقة."

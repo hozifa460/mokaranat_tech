@@ -121,7 +121,7 @@
       "unit": "nm",
       "winner": "tie",
       "diff_percentage": 0.0,
-      "advantage_summary_ar": "متطابق في هذه القيمة"
+      "advantage_summary_ar": "دقة تصنيع متطابقة عتادياً"
     },
     {
       "key": "ray_tracing_score",
@@ -539,7 +539,7 @@
         "url": "https://tech-comparisons.pages.dev/compare/rtx-4070-super-vs-rtx-4080-super",
         "name": "مقارنة NVIDIA GeForce RTX 4070 Super ضد NVIDIA GeForce RTX 4080 Super | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4070 Super و NVIDIA GeForce RTX 4080 Super. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T20:59:05.286829+00:00",
+        "datePublished": "2026-10-19T21:18:25.862494+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -565,5 +565,5 @@
       }
     ]
   },
-  "created_at": "2026-10-19T20:59:05.286829+00:00"
+  "created_at": "2026-10-19T21:18:25.862494+00:00"
 }

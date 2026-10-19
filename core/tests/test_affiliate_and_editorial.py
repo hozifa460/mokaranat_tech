@@ -1227,6 +1227,111 @@ def test_pricing_framing_markup_over_cheaper_msrp():
     assert "عن السعر الأقل" in verdict.value_and_budget_ar
 
 
+def test_laptop_portability_sub_2kg_edge_case():
+    """Verifies that laptops weighing between 1.90 and 1.99 kg are classified as portable thin-and-light."""
+    slim_195 = HardwareSpec(
+        id="laptop-195", slug="laptop-195", name="Thin Gaming 16 (1.95kg)",
+        category="laptop", brand="ASUS", release_year=2024, launch_msrp_usd=1800.0,
+        architecture="Meteor Lake", process_node_nm=4.0, tdp_w=100,
+        raw_specs={"weight_kg": 1.95, "display": "16-inch OLED 240Hz", "battery_wh": 85.0},
+        benchmark_index=83.0, features=["OLED Display"]
+    )
+    heavy_desk = HardwareSpec(
+        id="laptop-heavy", slug="laptop-heavy", name="Heavy Beast 17 (2.8kg)",
+        category="laptop", brand="Lenovo", release_year=2024, launch_msrp_usd=2500.0,
+        architecture="Intel 14th Gen", process_node_nm=4.0, tdp_w=175,
+        raw_specs={"weight_kg": 2.8, "display": "17-inch IPS 500nits", "battery_wh": 99.0},
+        benchmark_index=92.0
+    )
+    verdict = EditorialRuleEngine.generate_verdict(slim_195, heavy_desk)
+    # 1.95kg laptop must receive portable buyer recommendation
+    assert "كثير التنقل" in verdict.who_should_buy_a or "خفة الوزن" in verdict.who_should_buy_a
+    assert "اللاعب أو المحترف" in verdict.who_should_buy_b
+
+
+def test_laptop_heavy_weight_con_deduplication():
+    """Verifies that heavy laptops (>= 2.5 kg) do not receive redundant duplicate weight cons."""
+    g16 = HardwareSpec(
+        id="rog-zephyrus-g16", slug="rog-zephyrus-g16", name="ASUS ROG Zephyrus G16 (2024)",
+        category="laptop", brand="ASUS", release_year=2024, launch_msrp_usd=1999.0,
+        architecture="Meteor Lake + Ada", process_node_nm=4.0, tdp_w=105,
+        raw_specs={"weight_kg": 1.85, "display": "16-inch OLED 2.5K 240Hz 0.2ms", "battery_wh": 90.0},
+        benchmark_index=84.0, features=["OLED"]
+    )
+    legion = HardwareSpec(
+        id="legion-pro-7i", slug="legion-pro-7i", name="Lenovo Legion Pro 7i (Gen 9)",
+        category="laptop", brand="Lenovo", release_year=2024, launch_msrp_usd=2199.0,
+        architecture="Intel 14th Gen + RTX 4080", process_node_nm=4.0, tdp_w=175,
+        raw_specs={"weight_kg": 2.6, "display": "16-inch IPS 2.5K 240Hz 500nits", "battery_wh": 99.9},
+        benchmark_index=91.0
+    )
+    verdict = EditorialRuleEngine.generate_verdict(g16, legion)
+    # Count how many cons mention weight for Legion
+    weight_cons = [c for c in verdict.cons_b if "وزن" in c or "كجم" in c]
+    assert len(weight_cons) == 1, f"Expected exactly 1 weight con for heavy laptop, found: {weight_cons}"
+
+
+def test_laptop_display_spec_diff_and_oled_vs_ips():
+    """Verifies that SpecEngine compares laptop display specs and provides OLED vs IPS technical context."""
+    from core.services.spec_engine import SpecEngine
+    g16 = HardwareSpec(
+        id="rog-zephyrus-g16", slug="rog-zephyrus-g16", name="ASUS ROG Zephyrus G16 (2024)",
+        category="laptop", brand="ASUS", release_year=2024, launch_msrp_usd=1999.0,
+        architecture="Meteor Lake + Ada", process_node_nm=4.0, tdp_w=105,
+        raw_specs={"weight_kg": 1.85, "display": "16-inch OLED 2.5K 240Hz 0.2ms", "battery_wh": 90.0},
+        benchmark_index=84.0
+    )
+    legion = HardwareSpec(
+        id="legion-pro-7i", slug="legion-pro-7i", name="Lenovo Legion Pro 7i (Gen 9)",
+        category="laptop", brand="Lenovo", release_year=2024, launch_msrp_usd=2199.0,
+        architecture="Intel 14th Gen + RTX 4080", process_node_nm=4.0, tdp_w=175,
+        raw_specs={"weight_kg": 2.6, "display": "16-inch IPS 2.5K 240Hz 500nits Anti-Glare", "battery_wh": 99.9},
+        benchmark_index=91.0
+    )
+    diffs = SpecEngine.compare_specs(g16, legion)
+    display_diff = next((d for d in diffs if d.key == "display"), None)
+    assert display_diff is not None, "Expected 'display' row in laptop spec differences"
+    assert display_diff.winner == "tie"
+    assert "OLED" in display_diff.advantage_summary_ar and "IPS" in display_diff.advantage_summary_ar
+    assert "0.2ms" in display_diff.advantage_summary_ar and "500 nits" in display_diff.advantage_summary_ar
+
+
+def test_cpu_intel7_no_raw_7nm_in_pros():
+    """Verifies that Intel Core i7-14700K pros do not include misleading raw 'بدقة تصنيع 7nm'."""
+    cpu_intel = HardwareSpec(
+        id="i7-14700k", slug="i7-14700k", name="Intel Core i7-14700K",
+        category="cpu", brand="Intel", release_year=2023, launch_msrp_usd=409.0,
+        architecture="Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin)", process_node_nm=7.0, tdp_w=253,
+        raw_specs={"total_cores": 20, "threads": 28, "socket": "LGA 1700 (End of Life)"},
+        benchmark_index=92.5
+    )
+    cpu_amd = HardwareSpec(
+        id="ryzen-7-7800x3d", slug="ryzen-7-7800x3d", name="AMD Ryzen 7 7800X3D",
+        category="cpu", brand="AMD", release_year=2023, launch_msrp_usd=449.0,
+        architecture="Zen 4 (3D V-Cache)", process_node_nm=5.0, tdp_w=120,
+        raw_specs={"total_cores": 8, "threads": 16, "socket": "AM5"},
+        benchmark_index=91.0
+    )
+    verdict = EditorialRuleEngine.generate_verdict(cpu_amd, cpu_intel)
+    pros_intel_text = " ".join(verdict.pros_b)
+    assert "بدقة تصنيع 7nm" not in pros_intel_text
+    assert "Intel 7" in pros_intel_text
+
+
+def test_pricing_framing_markup_over_cheaper_msrp_on_cost_per_frame_parity():
+    """Verifies that cost-per-frame parity narratives (e.g. 4060 Ti vs 7700 XT) also clarify markup over cheaper MSRP."""
+    import json
+    from core.config import SEED_DATA_PATH
+    with open(SEED_DATA_PATH, "r", encoding="utf-8") as f:
+        data = {item["id"]: HardwareSpec.model_validate(item) for item in json.load(f)}
+
+    s_4060 = data["rtx-4060-ti"]
+    s_7700 = data["rx-7700-xt"]
+    verdict = EditorialRuleEngine.generate_verdict(s_4060, s_7700)
+    assert "عن السعر الأقل" in verdict.value_and_budget_ar
+
+
+
 
 
 
