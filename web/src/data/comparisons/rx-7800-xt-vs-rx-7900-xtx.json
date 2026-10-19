@@ -66,9 +66,9 @@
     },
     "benchmark_index": 96.0,
     "gaming_scores": {
-      "raster_1080p": 105.0,
-      "raster_1440p": 117.0,
-      "raster_4k": 100.0
+      "raster_1080p": 95.0,
+      "raster_1440p": 98.0,
+      "raster_4k": 94.0
     },
     "ray_tracing_score": 76.0,
     "efficiency_score": 75.0,
@@ -190,9 +190,9 @@
       "game_title_ar": "سايبربانك 2077",
       "resolution": "1080p",
       "preset": "Ultra High",
-      "fps_a": 101,
-      "fps_b": 125,
-      "diff_pct": 23.8,
+      "fps_a": 102,
+      "fps_b": 127,
+      "diff_pct": 24.5,
       "winner": "b",
       "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
@@ -213,8 +213,8 @@
       "resolution": "4K",
       "preset": "Ultra High",
       "fps_a": 35,
-      "fps_b": 50,
-      "diff_pct": 42.9,
+      "fps_b": 52,
+      "diff_pct": 48.6,
       "winner": "b",
       "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
@@ -224,8 +224,8 @@
       "resolution": "1080p",
       "preset": "Cinematic High",
       "fps_a": 72,
-      "fps_b": 89,
-      "diff_pct": 23.6,
+      "fps_b": 90,
+      "diff_pct": 25.0,
       "winner": "b",
       "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
@@ -246,8 +246,8 @@
       "resolution": "4K",
       "preset": "Cinematic High",
       "fps_a": 22,
-      "fps_b": 31,
-      "diff_pct": 40.9,
+      "fps_b": 32,
+      "diff_pct": 45.5,
       "winner": "b",
       "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
@@ -256,9 +256,9 @@
       "game_title_ar": "كاونتر سترايك 2",
       "resolution": "1080p",
       "preset": "Competitive High",
-      "fps_a": 295,
-      "fps_b": 321,
-      "diff_pct": 8.8,
+      "fps_a": 296,
+      "fps_b": 323,
+      "diff_pct": 9.1,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -268,8 +268,8 @@
       "resolution": "1440p",
       "preset": "Competitive High",
       "fps_a": 203,
-      "fps_b": 236,
-      "diff_pct": 16.3,
+      "fps_b": 237,
+      "diff_pct": 16.7,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -279,8 +279,8 @@
       "resolution": "4K",
       "preset": "Competitive High",
       "fps_a": 111,
-      "fps_b": 127,
-      "diff_pct": 14.4,
+      "fps_b": 129,
+      "diff_pct": 16.2,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -290,8 +290,8 @@
       "resolution": "1080p",
       "preset": "Ultra",
       "fps_a": 129,
-      "fps_b": 155,
-      "diff_pct": 20.2,
+      "fps_b": 158,
+      "diff_pct": 22.5,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -301,8 +301,8 @@
       "resolution": "1440p",
       "preset": "Ultra",
       "fps_a": 94,
-      "fps_b": 131,
-      "diff_pct": 39.4,
+      "fps_b": 132,
+      "diff_pct": 40.4,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -312,8 +312,8 @@
       "resolution": "4K",
       "preset": "Ultra",
       "fps_a": 52,
-      "fps_b": 73,
-      "diff_pct": 40.4,
+      "fps_b": 76,
+      "diff_pct": 46.2,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -322,9 +322,9 @@
       "game_title_ar": "كول أوف ديوتي: وورزون",
       "resolution": "1080p",
       "preset": "Ultra / High",
-      "fps_a": 206,
-      "fps_b": 250,
-      "diff_pct": 21.4,
+      "fps_a": 207,
+      "fps_b": 254,
+      "diff_pct": 22.7,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -334,8 +334,8 @@
       "resolution": "1440p",
       "preset": "Ultra / High",
       "fps_a": 141,
-      "fps_b": 200,
-      "diff_pct": 41.8,
+      "fps_b": 201,
+      "diff_pct": 42.6,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -345,8 +345,8 @@
       "resolution": "4K",
       "preset": "Ultra / High",
       "fps_a": 71,
-      "fps_b": 102,
-      "diff_pct": 43.7,
+      "fps_b": 105,
+      "diff_pct": 47.9,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -355,9 +355,9 @@
       "game_title_ar": "أساسنز كريد ميراج",
       "resolution": "1080p",
       "preset": "Ultra High",
-      "fps_a": 140,
-      "fps_b": 169,
-      "diff_pct": 20.7,
+      "fps_a": 141,
+      "fps_b": 172,
+      "diff_pct": 22.0,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -367,8 +367,8 @@
       "resolution": "1440p",
       "preset": "Ultra High",
       "fps_a": 101,
-      "fps_b": 141,
-      "diff_pct": 39.6,
+      "fps_b": 142,
+      "diff_pct": 40.6,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -378,8 +378,8 @@
       "resolution": "4K",
       "preset": "Ultra High",
       "fps_a": 51,
-      "fps_b": 72,
-      "diff_pct": 41.2,
+      "fps_b": 74,
+      "diff_pct": 45.1,
       "winner": "b",
       "rt_badge_ar": null
     }
@@ -389,7 +389,7 @@
     "winner_name": "AMD Radeon RX 7900 XTX",
     "score_a": 81.0,
     "score_b": 96.0,
-    "quick_verdict_ar": "يتفوق AMD Radeon RX 7900 XTX في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 18.5% مقارنة بـ AMD Radeon RX 7800 XT. هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~37.4%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "quick_verdict_ar": "يتفوق AMD Radeon RX 7900 XTX في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 18.5% مقارنة بـ AMD Radeon RX 7800 XT. هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~38%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
     "gaming_analysis_ar": "في ساحة الألعاب، يتميز كرت AMD Radeon RX 7900 XTX بقوة معالجة خام فائقة وسعة ذاكرة رسومية هائلة تبلغ 24GB VRAM، في حين يقدم AMD Radeon RX 7800 XT بسعة 16GB توازناً ممتازاً على دقة 1440p، مع دعم كامل لكلا البطاقتين لتقنيات FSR 3.1 ومنافذ DisplayPort 2.1 الحديثة.",
     "productivity_analysis_ar": "على صعيد الإنتاجية والرندرة، تمنح سعة الذاكرة الكبيرة (24GB لـ AMD Radeon RX 7900 XTX) ميزة في معالجة المشاهد ثلاثية الأبعاد والمشاريع الضخمة، بينما يستهلك AMD Radeon RX 7800 XT طاقة أقل (263W مقابل 355W) مما يسهل تبريده في مختلف بيئات العمل.",
     "value_and_budget_ar": "عند دراسة معادلة القيمة مقابل السعر، يطرح AMD Radeon RX 7800 XT تكلفة شراء أقل بسعر $499 (توفير $500، بينما يرتفع سعر منافسه بنسبة 100.2% عن السعر الأقل)، في حين يقدم AMD Radeon RX 7900 XTX زيادة في الإطارات بمتوسط ~38% وسعة 24GB، مما يجعل AMD Radeon RX 7800 XT الخيار الأفضل لقيمة كل دولار، بينما يستهدف AMD Radeon RX 7900 XTX من يطلب أداءً أعلى واستثماراً أكثر استدامة للمستقبل.",
@@ -537,7 +537,7 @@
         "url": "https://tech-comparisons.pages.dev/compare/rx-7800-xt-vs-rx-7900-xtx",
         "name": "مقارنة AMD Radeon RX 7800 XT ضد AMD Radeon RX 7900 XTX | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين AMD Radeon RX 7800 XT و AMD Radeon RX 7900 XTX. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T21:18:26.009189+00:00",
+        "datePublished": "2026-10-19T21:45:49.983365+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -559,9 +559,9 @@
           "bestRating": "5",
           "worstRating": "1"
         },
-        "reviewBody": "يتفوق AMD Radeon RX 7900 XTX في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 18.5% مقارنة بـ AMD Radeon RX 7800 XT. هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~37.4%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+        "reviewBody": "يتفوق AMD Radeon RX 7900 XTX في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 18.5% مقارنة بـ AMD Radeon RX 7800 XT. هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~38%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
       }
     ]
   },
-  "created_at": "2026-10-19T21:18:26.009189+00:00"
+  "created_at": "2026-10-19T21:45:49.983365+00:00"
 }

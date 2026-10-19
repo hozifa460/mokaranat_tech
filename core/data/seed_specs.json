@@ -92,9 +92,9 @@
     },
     "benchmark_index": 95.0,
     "gaming_scores": {
-      "raster_1080p": 102.0,
-      "raster_1440p": 109.0,
-      "raster_4k": 93.0
+      "raster_1080p": 94.0,
+      "raster_1440p": 96.0,
+      "raster_4k": 92.0
     },
     "ray_tracing_score": 94.0,
     "efficiency_score": 88.0,
@@ -125,9 +125,9 @@
     },
     "benchmark_index": 96.0,
     "gaming_scores": {
-      "raster_1080p": 105.0,
-      "raster_1440p": 117.0,
-      "raster_4k": 100.0
+      "raster_1080p": 95.0,
+      "raster_1440p": 98.0,
+      "raster_4k": 94.0
     },
     "ray_tracing_score": 76.0,
     "efficiency_score": 75.0,
@@ -280,13 +280,13 @@
       "ram_gb": 32,
       "storage_tb": 1
     },
-    "benchmark_index": 84.0,
+    "benchmark_index": 72.0,
     "gaming_scores": {
-      "raster_1080p": 86.0,
-      "raster_1440p": 79.0,
-      "raster_4k": 54.0
+      "raster_1080p": 76.0,
+      "raster_1440p": 64.0,
+      "raster_4k": 42.0
     },
-    "ray_tracing_score": 80.0,
+    "ray_tracing_score": 68.0,
     "efficiency_score": 86.0,
     "features": ["ROG Nebula OLED Panel (0.2ms Response)", "CNC Aluminum Body", "Lightweight 1.85kg"]
   },
@@ -310,13 +310,13 @@
       "ram_gb": 32,
       "storage_tb": 1
     },
-    "benchmark_index": 91.0,
+    "benchmark_index": 86.0,
     "gaming_scores": {
-      "raster_1080p": 94.0,
-      "raster_1440p": 90.0,
-      "raster_4k": 76.0
+      "raster_1080p": 90.0,
+      "raster_1440p": 88.0,
+      "raster_4k": 68.0
     },
-    "ray_tracing_score": 89.0,
+    "ray_tracing_score": 84.0,
     "efficiency_score": 72.0,
     "features": ["Full 175W TGP GPU", "Coldfront 5.0 Vapor Chamber", "500 nits High-Brightness IPS", "TrueStrike Keyboard"]
   }

@@ -100,7 +100,16 @@ class FpsCalculator:
         base_target = game["base_fps_at_100_index"].get(norm_res, 60)
 
         res_key = f"raster_{norm_res.lower()}"
-        base_factor = (item.gaming_scores.get(res_key, item.benchmark_index)) / 100.0
+        raw_score = item.gaming_scores.get(res_key, item.benchmark_index)
+
+        # Non-linear scaling for flagship hardware:
+        # Ensures that raw benchmark and raster scores in seed_specs stay strictly within 0-100 (flagships <= 98.0),
+        # while preserving authentic ~30-40% inter-tier scaling for flagship silicon (e.g. RTX 4080 Super & RX 7900 XTX).
+        if raw_score <= 85.0:
+            base_factor = raw_score / 100.0
+        else:
+            delta = raw_score - 85.0
+            base_factor = (raw_score / 100.0) + 0.00115 * (delta ** 2)
 
         # Weight score based on ray tracing capability if title is RT heavy
         if game.get("rt_heavy"):

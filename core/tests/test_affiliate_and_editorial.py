@@ -1331,6 +1331,88 @@ def test_pricing_framing_markup_over_cheaper_msrp_on_cost_per_frame_parity():
     assert "عن السعر الأقل" in verdict.value_and_budget_ar
 
 
+def test_seed_specs_scores_100_ceiling_and_flagship_capping():
+    """Verifies that all hardware items in seed_specs.json have benchmark and raster scores <= 98.0 (<= 100)."""
+    import json
+    from core.config import SEED_DATA_PATH
+    with open(SEED_DATA_PATH, "r", encoding="utf-8") as f:
+        items = json.load(f)
+
+    for item in items:
+        # Benchmark index must be <= 100 (and flagships <= 98.0)
+        assert item["benchmark_index"] <= 100.0, f"{item['id']} benchmark_index {item['benchmark_index']} exceeds 100"
+        for res, score in item.get("gaming_scores", {}).items():
+            assert score <= 100.0, f"{item['id']} gaming_scores[{res}] {score} exceeds 100"
+            if item["id"] in ("rtx-4080-super", "rx-7900-xtx"):
+                assert score <= 98.0, f"Flagship {item['id']} {res} score {score} exceeds 98.0 ceiling"
+
+    # Verify specific calibrated scores
+    specs_by_id = {i["id"]: i for i in items}
+    assert specs_by_id["rtx-4080-super"]["gaming_scores"]["raster_1440p"] == 96.0
+    assert specs_by_id["rx-7900-xtx"]["gaming_scores"]["raster_1440p"] == 98.0
+    assert specs_by_id["rog-zephyrus-g16"]["benchmark_index"] == 72.0
+    assert specs_by_id["rog-zephyrus-g16"]["gaming_scores"]["raster_1440p"] == 64.0
+    assert specs_by_id["rog-zephyrus-g16"]["ray_tracing_score"] == 68.0
+    assert specs_by_id["legion-pro-7i"]["benchmark_index"] == 86.0
+    assert specs_by_id["legion-pro-7i"]["gaming_scores"]["raster_1440p"] == 88.0
+    assert specs_by_id["legion-pro-7i"]["ray_tracing_score"] == 84.0
+
+
+def test_laptop_gaming_fps_realism_against_desktops_and_gap():
+    """Verifies that RTX 4070 Mobile 105W does not beat desktop RTX 4060 Ti or RX 7800 XT,
+    and establishes authentic 35-45% gap behind RTX 4080 Mobile 175W.
+    """
+    import json
+    from core.config import SEED_DATA_PATH
+    with open(SEED_DATA_PATH, "r", encoding="utf-8") as f:
+        data = {item["id"]: HardwareSpec.model_validate(item) for item in json.load(f)}
+
+    g16 = data["rog-zephyrus-g16"]
+    desktop_4060ti = data["rtx-4060-ti"]
+    desktop_7800xt = data["rx-7800-xt"]
+    legion = data["legion-pro-7i"]
+
+    # 1. G16 mobile 105W must not beat desktop 4060 Ti across raster benchmarks
+    assert g16.gaming_scores["raster_1080p"] < desktop_4060ti.gaming_scores["raster_1080p"]
+    assert g16.gaming_scores["raster_1440p"] < desktop_4060ti.gaming_scores["raster_1440p"]
+    assert g16.gaming_scores["raster_4k"] < desktop_4060ti.gaming_scores["raster_4k"]
+    assert g16.ray_tracing_score < desktop_4060ti.ray_tracing_score
+
+    # 2. Desktop RX 7800 XT (263W) significantly beats G16 (105W)
+    assert desktop_7800xt.gaming_scores["raster_1440p"] > g16.gaming_scores["raster_1440p"] + 15.0
+
+    # 3. G16 vs Legion Pro 7i authentic ~35-45% mobile gaming performance gap
+    matrix = FpsCalculator.calculate_fps_matrix(g16, legion)
+    leads_1440p = [((i.fps_b - i.fps_a) / i.fps_a) * 100 for i in matrix if i.resolution == "1440p"]
+    avg_gap = sum(leads_1440p) / len(leads_1440p)
+    assert 34.0 <= avg_gap <= 45.0, f"Expected 34-45% gap between 105W and 175W laptops, got {avg_gap:.1f}%"
+
+
+def test_laptop_who_should_buy_no_linguistic_repetition():
+    """Verifies that laptop buyer recommendation in _build_who_should_buy has zero linguistic repetition."""
+    import json
+    from core.config import SEED_DATA_PATH
+    with open(SEED_DATA_PATH, "r", encoding="utf-8") as f:
+        data = {item["id"]: HardwareSpec.model_validate(item) for item in json.load(f)}
+
+    g16 = data["rog-zephyrus-g16"]
+    legion = data["legion-pro-7i"]
+    verdict = EditorialRuleEngine.generate_verdict(g16, legion)
+
+    who_g16 = verdict.who_should_buy_a
+    # Count occurrences of 'مع الاستفادة من' and 'شاشة'
+    assert who_g16.count("مع الاستفادة من") == 1, f"Expected exactly 1 'مع الاستفادة من', found: {who_g16.count('مع الاستفادة من')}"
+    assert who_g16.count("شاشة") == 1, f"Expected exactly 1 'شاشة', found: {who_g16.count('شاشة')}"
+
+    # Verify battery formatting without awkward '.0'
+    assert "90Wh" in who_g16
+    assert "90.0Wh" not in who_g16
+
+    # Verify clean wording
+    assert "المستخدم كثير التنقل وصانع المحتوى الذي يضع خفة الوزن (1.9 كجم) وسهولة الحمل في صدارة أولوياته" in who_g16
+    assert "مع الاستفادة من شاشة OLED فائقة التباين والألوان وبطارية بسعة 90Wh" in who_g16
+
+
 
 
 

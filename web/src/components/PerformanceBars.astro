@@ -79,6 +79,10 @@ const formatVal = (v: any) => {
       const diffPct = minVal > 0 ? (Math.abs(m.valA - m.valB) / minVal) * 100 : 0;
       const isTie = m.valA === m.valB || diffPct < 3.0;
       const winner = isTie ? 'tie' : (m.valA > m.valB ? 'a' : 'b');
+      const maxVal = Math.max(100, m.valA, m.valB);
+      const widthPctA = Math.min(100, Math.max(10, Math.round((m.valA / maxVal) * 100)));
+      const widthPctB = Math.min(100, Math.max(10, Math.round((m.valB / maxVal) * 100)));
+      const displayUnit = maxVal > 100 ? `/ ${formatVal(maxVal)}` : m.unit;
       return (
         <div>
           <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-3 gap-2">
@@ -87,11 +91,11 @@ const formatVal = (v: any) => {
             </span>
             <div class="flex items-center gap-4 text-xs font-bold">
               <span class={winner === 'a' ? 'text-blue-600 dark:text-blue-400 font-extrabold' : (winner === 'tie' ? 'text-blue-600/90 dark:text-blue-400/90' : 'text-slate-400')}>
-                {itemA.name}: <bdi dir="ltr" class="whitespace-nowrap">{formatVal(m.valA)} {m.unit}</bdi>
+                {itemA.name}: <bdi dir="ltr" class="whitespace-nowrap">{formatVal(m.valA)} {displayUnit}</bdi>
               </span>
               <span class="text-slate-300 dark:text-slate-700">|</span>
               <span class={winner === 'b' ? 'text-indigo-600 dark:text-indigo-400 font-extrabold' : (winner === 'tie' ? 'text-indigo-600/90 dark:text-indigo-400/90' : 'text-slate-400')}>
-                {itemB.name}: <bdi dir="ltr" class="whitespace-nowrap">{formatVal(m.valB)} {m.unit}</bdi>
+                {itemB.name}: <bdi dir="ltr" class="whitespace-nowrap">{formatVal(m.valB)} {displayUnit}</bdi>
               </span>
               {winner === 'tie' && (
                 <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-500">
@@ -111,7 +115,7 @@ const formatVal = (v: any) => {
               <div class="flex-1 bg-slate-100 dark:bg-slate-800 h-5 rounded-full overflow-hidden p-0.5">
                 <div
                   class={`h-full rounded-full transition-all flex items-center justify-end px-2 text-[10px] font-black text-white ${winner === 'a' ? 'bg-gradient-to-r from-blue-500 to-blue-600' : (winner === 'tie' ? 'bg-blue-600' : 'bg-slate-400 dark:bg-slate-600')}`}
-                  style={`width: ${Math.max(10, m.valA)}%`}
+                  style={`width: ${widthPctA}%`}
                 >
                   <bdi dir="ltr" class="whitespace-nowrap">{formatVal(m.valA)}</bdi>
                 </div>
@@ -126,7 +130,7 @@ const formatVal = (v: any) => {
               <div class="flex-1 bg-slate-100 dark:bg-slate-800 h-5 rounded-full overflow-hidden p-0.5">
                 <div
                   class={`h-full rounded-full transition-all flex items-center justify-end px-2 text-[10px] font-black text-white ${winner === 'b' ? 'bg-gradient-to-r from-indigo-500 to-indigo-600' : (winner === 'tie' ? 'bg-indigo-600' : 'bg-slate-400 dark:bg-slate-600')}`}
-                  style={`width: ${Math.max(10, m.valB)}%`}
+                  style={`width: ${widthPctB}%`}
                 >
                   <bdi dir="ltr" class="whitespace-nowrap">{formatVal(m.valB)}</bdi>
                 </div>

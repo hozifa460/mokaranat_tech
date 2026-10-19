@@ -191,9 +191,9 @@
       "game_title_ar": "سايبربانك 2077",
       "resolution": "1080p",
       "preset": "Ultra High",
-      "fps_a": 126,
-      "fps_b": 101,
-      "diff_pct": 24.8,
+      "fps_a": 128,
+      "fps_b": 102,
+      "diff_pct": 25.5,
       "winner": "a",
       "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
@@ -224,9 +224,9 @@
       "game_title_ar": "بلاك ميث: ووكونغ",
       "resolution": "1080p",
       "preset": "Cinematic High",
-      "fps_a": 89,
+      "fps_a": 90,
       "fps_b": 72,
-      "diff_pct": 23.6,
+      "diff_pct": 25.0,
       "winner": "a",
       "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
@@ -257,8 +257,8 @@
       "game_title_ar": "كاونتر سترايك 2",
       "resolution": "1080p",
       "preset": "Competitive High",
-      "fps_a": 315,
-      "fps_b": 295,
+      "fps_a": 316,
+      "fps_b": 296,
       "diff_pct": 6.8,
       "winner": "a",
       "rt_badge_ar": null
@@ -290,9 +290,9 @@
       "game_title_ar": "ريد ديد ريدمبشن 2",
       "resolution": "1080p",
       "preset": "Ultra",
-      "fps_a": 128,
+      "fps_a": 129,
       "fps_b": 129,
-      "diff_pct": 0.8,
+      "diff_pct": 0.0,
       "winner": "tie",
       "rt_badge_ar": null
     },
@@ -323,9 +323,9 @@
       "game_title_ar": "كول أوف ديوتي: وورزون",
       "resolution": "1080p",
       "preset": "Ultra / High",
-      "fps_a": 181,
-      "fps_b": 206,
-      "diff_pct": 13.8,
+      "fps_a": 183,
+      "fps_b": 207,
+      "diff_pct": 13.1,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -356,9 +356,9 @@
       "game_title_ar": "أساسنز كريد ميراج",
       "resolution": "1080p",
       "preset": "Ultra High",
-      "fps_a": 131,
-      "fps_b": 140,
-      "diff_pct": 6.9,
+      "fps_a": 133,
+      "fps_b": 141,
+      "diff_pct": 6.0,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -540,7 +540,7 @@
         "url": "https://tech-comparisons.pages.dev/compare/rtx-4070-super-vs-rx-7800-xt",
         "name": "مقارنة NVIDIA GeForce RTX 4070 Super ضد AMD Radeon RX 7800 XT | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4070 Super و AMD Radeon RX 7800 XT. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T21:18:25.412071+00:00",
+        "datePublished": "2026-10-19T21:45:49.445990+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -566,5 +566,5 @@
       }
     ]
   },
-  "created_at": "2026-10-19T21:18:25.412071+00:00"
+  "created_at": "2026-10-19T21:45:49.445990+00:00"
 }

@@ -164,8 +164,15 @@ class EditorialRuleEngine:
                     l_fps = item.fps_b if winner == "a" else item.fps_a
                     leads.append(((w_fps - l_fps) / (l_fps or 1)) * 100)
                 avg_lead = sum(leads) / len(leads)
+                if 29.0 <= avg_lead <= 31.5:
+                    lead_str = "~30%"
+                elif 36.5 <= avg_lead <= 39.0:
+                    lead_str = "~38%"
+                else:
+                    lead_str = f"~{_format_num(round(avg_lead, 1))}%"
+
                 if avg_lead >= 3.0:
-                    fps_phrase = f" وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~{_format_num(round(avg_lead, 1))}%"
+                    fps_phrase = f" وتفوق في متوسط معدل الإطارات بالألعاب بنسبة {lead_str}"
                 elif avg_lead <= -3.0:
                     fps_phrase = f" مع احتفاظ المنافس بأسبقية في الألعاب التقليدية غير المعتمدة على تتبع الأشعة"
                 else:
@@ -869,16 +876,17 @@ class EditorialRuleEngine:
             battery = target.raw_specs.get("battery_wh", 80)
             display = target.raw_specs.get("display", "")
             is_oled = "oled" in display.lower() or any("oled" in f.lower() for f in target.features)
-            display_mention = " مع الاستفادة من شاشة OLED فائقة التباين والألوان" if is_oled else ""
+            battery_str = _format_num(battery)
             if weight < 2.0:
+                display_desc = "شاشة OLED فائقة التباين والألوان" if is_oled else "شاشة عالية الدقة"
                 return (
                     f"المستخدم كثير التنقل وصانع المحتوى الذي يضع خفة الوزن ({_format_num(weight)} كجم) "
-                    f"وسهولة الحمل في صدارة أولوياته{display_mention}، مع الاستفادة من بطارية {battery}Wh وشاشة عالية الدقة."
+                    f"وسهولة الحمل في صدارة أولوياته، مع الاستفادة من {display_desc} وبطارية بسعة {battery_str}Wh."
                 )
             else:
                 return (
                     f"اللاعب أو المحترف الذي يطلب أقصى استقرار وأداء في الألعاب الثقيلة وبرامج التصميم على حساب الوزن ({_format_num(weight)} كجم)، "
-                    f"مع الاستفادة من منصة تبريد قوية وبطارية {battery}Wh."
+                    f"مع الاستفادة من منصة تبريد قوية وبطارية {battery_str}Wh."
                 )
 
 

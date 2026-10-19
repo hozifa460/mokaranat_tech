@@ -68,9 +68,9 @@
     },
     "benchmark_index": 95.0,
     "gaming_scores": {
-      "raster_1080p": 102.0,
-      "raster_1440p": 109.0,
-      "raster_4k": 93.0
+      "raster_1080p": 94.0,
+      "raster_1440p": 96.0,
+      "raster_4k": 92.0
     },
     "ray_tracing_score": 94.0,
     "efficiency_score": 88.0,
@@ -192,9 +192,9 @@
       "game_title_ar": "سايبربانك 2077",
       "resolution": "1080p",
       "preset": "Ultra High",
-      "fps_a": 126,
-      "fps_b": 150,
-      "diff_pct": 19.0,
+      "fps_a": 128,
+      "fps_b": 152,
+      "diff_pct": 18.8,
       "winner": "b",
       "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
@@ -204,8 +204,8 @@
       "resolution": "1440p",
       "preset": "Ultra High",
       "fps_a": 82,
-      "fps_b": 111,
-      "diff_pct": 35.4,
+      "fps_b": 112,
+      "diff_pct": 36.6,
       "winner": "b",
       "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
@@ -215,8 +215,8 @@
       "resolution": "4K",
       "preset": "Ultra High",
       "fps_a": 41,
-      "fps_b": 57,
-      "diff_pct": 39.0,
+      "fps_b": 60,
+      "diff_pct": 46.3,
       "winner": "b",
       "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
@@ -225,9 +225,9 @@
       "game_title_ar": "بلاك ميث: ووكونغ",
       "resolution": "1080p",
       "preset": "Cinematic High",
-      "fps_a": 89,
-      "fps_b": 105,
-      "diff_pct": 18.0,
+      "fps_a": 90,
+      "fps_b": 106,
+      "diff_pct": 17.8,
       "winner": "b",
       "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
@@ -237,8 +237,8 @@
       "resolution": "1440p",
       "preset": "Cinematic High",
       "fps_a": 54,
-      "fps_b": 73,
-      "diff_pct": 35.2,
+      "fps_b": 74,
+      "diff_pct": 37.0,
       "winner": "b",
       "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
@@ -248,8 +248,8 @@
       "resolution": "4K",
       "preset": "Cinematic High",
       "fps_a": 25,
-      "fps_b": 35,
-      "diff_pct": 40.0,
+      "fps_b": 37,
+      "diff_pct": 48.0,
       "winner": "b",
       "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
@@ -258,9 +258,9 @@
       "game_title_ar": "كاونتر سترايك 2",
       "resolution": "1080p",
       "preset": "Competitive High",
-      "fps_a": 315,
-      "fps_b": 336,
-      "diff_pct": 6.7,
+      "fps_a": 316,
+      "fps_b": 338,
+      "diff_pct": 7.0,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -270,8 +270,8 @@
       "resolution": "1440p",
       "preset": "Competitive High",
       "fps_a": 214,
-      "fps_b": 242,
-      "diff_pct": 13.1,
+      "fps_b": 243,
+      "diff_pct": 13.6,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -281,8 +281,8 @@
       "resolution": "4K",
       "preset": "Competitive High",
       "fps_a": 116,
-      "fps_b": 131,
-      "diff_pct": 12.9,
+      "fps_b": 134,
+      "diff_pct": 15.5,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -291,9 +291,9 @@
       "game_title_ar": "ريد ديد ريدمبشن 2",
       "resolution": "1080p",
       "preset": "Ultra",
-      "fps_a": 128,
-      "fps_b": 148,
-      "diff_pct": 15.6,
+      "fps_a": 129,
+      "fps_b": 150,
+      "diff_pct": 16.3,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -303,8 +303,8 @@
       "resolution": "1440p",
       "preset": "Ultra",
       "fps_a": 90,
-      "fps_b": 120,
-      "diff_pct": 33.3,
+      "fps_b": 121,
+      "diff_pct": 34.4,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -314,8 +314,8 @@
       "resolution": "4K",
       "preset": "Ultra",
       "fps_a": 49,
-      "fps_b": 67,
-      "diff_pct": 36.7,
+      "fps_b": 70,
+      "diff_pct": 42.9,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -324,9 +324,9 @@
       "game_title_ar": "كول أوف ديوتي: وورزون",
       "resolution": "1080p",
       "preset": "Ultra / High",
-      "fps_a": 181,
-      "fps_b": 209,
-      "diff_pct": 15.5,
+      "fps_a": 183,
+      "fps_b": 211,
+      "diff_pct": 15.3,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -336,8 +336,8 @@
       "resolution": "1440p",
       "preset": "Ultra / High",
       "fps_a": 121,
-      "fps_b": 159,
-      "diff_pct": 31.4,
+      "fps_b": 160,
+      "diff_pct": 32.2,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -347,8 +347,8 @@
       "resolution": "4K",
       "preset": "Ultra / High",
       "fps_a": 61,
-      "fps_b": 82,
-      "diff_pct": 34.4,
+      "fps_b": 86,
+      "diff_pct": 41.0,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -357,9 +357,9 @@
       "game_title_ar": "أساسنز كريد ميراج",
       "resolution": "1080p",
       "preset": "Ultra High",
-      "fps_a": 131,
-      "fps_b": 152,
-      "diff_pct": 16.0,
+      "fps_a": 133,
+      "fps_b": 154,
+      "diff_pct": 15.8,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -369,8 +369,8 @@
       "resolution": "1440p",
       "preset": "Ultra High",
       "fps_a": 92,
-      "fps_b": 122,
-      "diff_pct": 32.6,
+      "fps_b": 123,
+      "diff_pct": 33.7,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -380,8 +380,8 @@
       "resolution": "4K",
       "preset": "Ultra High",
       "fps_a": 45,
-      "fps_b": 62,
-      "diff_pct": 37.8,
+      "fps_b": 65,
+      "diff_pct": 44.4,
       "winner": "b",
       "rt_badge_ar": null
     }
@@ -391,7 +391,7 @@
     "winner_name": "NVIDIA GeForce RTX 4080 Super",
     "score_a": 82.5,
     "score_b": 95.0,
-    "quick_verdict_ar": "يتفوق NVIDIA GeForce RTX 4080 Super في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 15.2% مقارنة بـ NVIDIA GeForce RTX 4070 Super. هذا التفوق يستند إلى معمارية Ada Lovelace وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~30.2%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "quick_verdict_ar": "يتفوق NVIDIA GeForce RTX 4080 Super في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 15.2% مقارنة بـ NVIDIA GeForce RTX 4070 Super. هذا التفوق يستند إلى معمارية Ada Lovelace وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~30%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
     "gaming_analysis_ar": "في ساحة الألعاب، يقدم كل من NVIDIA GeForce RTX 4070 Super و NVIDIA GeForce RTX 4080 Super دعماً متكاملاً لأحدث تقنيات DLSS 3 لتوليد الإطارات (Frame Generation) و DLSS 3.5 لإعادة بناء الأشعة (Ray Reconstruction) وكفاءة تتبع أشعة رائدة. يتفوق NVIDIA GeForce RTX 4080 Super بمؤشر أداء 95/100 وسعة ذاكرة 16GB مما يمنحه سلاسة إضافية على دقة 4K مقارنة بـ NVIDIA GeForce RTX 4070 Super (12GB).",
     "productivity_analysis_ar": "على صعيد صُنّاع المحتوى ومحترفي التصميم، يستفيد كلا الكرتين من تسريع مكتبات CUDA و OptiX ومشفرات NVENC الحديثة في تطبيقات الرندرة والذكاء الاصطناعي، مع أسبقية لـ NVIDIA GeForce RTX 4080 Super في سرعة معالجة النماذج ثلاثية الأبعاد بفضل عدد أنوية CUDA الأكبر.",
     "value_and_budget_ar": "عند دراسة معادلة القيمة مقابل السعر، يطرح NVIDIA GeForce RTX 4070 Super تكلفة شراء أقل بسعر $599 (توفير $400، بينما يرتفع سعر منافسه بنسبة 66.8% عن السعر الأقل)، في حين يقدم NVIDIA GeForce RTX 4080 Super زيادة في الإطارات بمتوسط ~30% وسعة 16GB، مما يجعل NVIDIA GeForce RTX 4070 Super الخيار الأفضل لقيمة كل دولار، بينما يستهدف NVIDIA GeForce RTX 4080 Super من يطلب أداءً أعلى واستثماراً أكثر استدامة للمستقبل.",
@@ -539,7 +539,7 @@
         "url": "https://tech-comparisons.pages.dev/compare/rtx-4070-super-vs-rtx-4080-super",
         "name": "مقارنة NVIDIA GeForce RTX 4070 Super ضد NVIDIA GeForce RTX 4080 Super | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4070 Super و NVIDIA GeForce RTX 4080 Super. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T21:18:25.862494+00:00",
+        "datePublished": "2026-10-19T21:45:49.843660+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -561,9 +561,9 @@
           "bestRating": "5",
           "worstRating": "1"
         },
-        "reviewBody": "يتفوق NVIDIA GeForce RTX 4080 Super في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 15.2% مقارنة بـ NVIDIA GeForce RTX 4070 Super. هذا التفوق يستند إلى معمارية Ada Lovelace وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~30.2%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+        "reviewBody": "يتفوق NVIDIA GeForce RTX 4080 Super في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 15.2% مقارنة بـ NVIDIA GeForce RTX 4070 Super. هذا التفوق يستند إلى معمارية Ada Lovelace وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~30%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
       }
     ]
   },
-  "created_at": "2026-10-19T21:18:25.862494+00:00"
+  "created_at": "2026-10-19T21:45:49.843660+00:00"
 }

@@ -24,13 +24,13 @@
       "ram_gb": 32,
       "storage_tb": 1
     },
-    "benchmark_index": 84.0,
+    "benchmark_index": 72.0,
     "gaming_scores": {
-      "raster_1080p": 86.0,
-      "raster_1440p": 79.0,
-      "raster_4k": 54.0
+      "raster_1080p": 76.0,
+      "raster_1440p": 64.0,
+      "raster_4k": 42.0
     },
-    "ray_tracing_score": 80.0,
+    "ray_tracing_score": 68.0,
     "efficiency_score": 86.0,
     "features": [
       "ROG Nebula OLED Panel (0.2ms Response)",
@@ -59,13 +59,13 @@
       "ram_gb": 32,
       "storage_tb": 1
     },
-    "benchmark_index": 91.0,
+    "benchmark_index": 86.0,
     "gaming_scores": {
-      "raster_1080p": 94.0,
-      "raster_1440p": 90.0,
-      "raster_4k": 76.0
+      "raster_1080p": 90.0,
+      "raster_1440p": 88.0,
+      "raster_4k": 68.0
     },
-    "ray_tracing_score": 89.0,
+    "ray_tracing_score": 84.0,
     "efficiency_score": 72.0,
     "features": [
       "Full 175W TGP GPU",
@@ -79,12 +79,12 @@
     {
       "key": "benchmark_index",
       "label_ar": "مؤشر الأداء العام (Benchmark Index)",
-      "value_a": 84.0,
-      "value_b": 91.0,
+      "value_a": 72.0,
+      "value_b": 86.0,
       "unit": "/ 100",
       "winner": "b",
-      "diff_percentage": 8.3,
-      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 8.3%"
+      "diff_percentage": 19.4,
+      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 19.4%"
     },
     {
       "key": "launch_msrp_usd",
@@ -119,12 +119,12 @@
     {
       "key": "ray_tracing_score",
       "label_ar": "كفاءة تتبع الأشعة (Ray Tracing)",
-      "value_a": 80.0,
-      "value_b": 89.0,
+      "value_a": 68.0,
+      "value_b": 84.0,
       "unit": "/ 100",
       "winner": "b",
-      "diff_percentage": 11.2,
-      "advantage_summary_ar": "معالجة متقدمة لتقنيات الإضاءة الواقعية بفارق 11.2%"
+      "diff_percentage": 23.5,
+      "advantage_summary_ar": "معالجة متقدمة لتقنيات الإضاءة الواقعية بفارق 23.5%"
     },
     {
       "key": "efficiency_score",
@@ -167,17 +167,17 @@
       "advantage_summary_ar": "مقارنة شاشات: شاشة OLED تمتاز بتباين لانهائي وسواد حقيقي وزمن استجابة 0.2ms، بينما تمتاز شاشة IPS بـ 500 nits سطوع عالٍ وثابت دون مخاطر تطبيع (Burn-in)"
     }
   ],
-  "performance_score_a": 84.0,
-  "performance_score_b": 91.0,
+  "performance_score_a": 72.0,
+  "performance_score_b": 86.0,
   "fps_benchmarks": [
     {
       "game_title": "Cyberpunk 2077",
       "game_title_ar": "سايبربانك 2077",
       "resolution": "1080p",
       "preset": "Ultra High",
-      "fps_a": 113,
-      "fps_b": 126,
-      "diff_pct": 11.5,
+      "fps_a": 96,
+      "fps_b": 123,
+      "diff_pct": 28.1,
       "winner": "b",
       "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
@@ -186,9 +186,9 @@
       "game_title_ar": "سايبربانك 2077",
       "resolution": "1440p",
       "preset": "Ultra High",
-      "fps_a": 72,
-      "fps_b": 84,
-      "diff_pct": 16.7,
+      "fps_a": 57,
+      "fps_b": 82,
+      "diff_pct": 43.9,
       "winner": "b",
       "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
@@ -197,9 +197,9 @@
       "game_title_ar": "سايبربانك 2077",
       "resolution": "4K",
       "preset": "Ultra High",
-      "fps_a": 30,
-      "fps_b": 43,
-      "diff_pct": 43.3,
+      "fps_a": 22,
+      "fps_b": 38,
+      "diff_pct": 72.7,
       "winner": "b",
       "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
@@ -208,9 +208,9 @@
       "game_title_ar": "بلاك ميث: ووكونغ",
       "resolution": "1080p",
       "preset": "Cinematic High",
-      "fps_a": 78,
-      "fps_b": 87,
-      "diff_pct": 11.5,
+      "fps_a": 66,
+      "fps_b": 85,
+      "diff_pct": 28.8,
       "winner": "b",
       "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
@@ -219,152 +219,152 @@
       "game_title_ar": "بلاك ميث: ووكونغ",
       "resolution": "1440p",
       "preset": "Cinematic High",
-      "fps_a": 47,
-      "fps_b": 54,
-      "diff_pct": 14.9,
-      "winner": "b",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
-    },
-    {
-      "game_title": "Black Myth: Wukong",
-      "game_title_ar": "بلاك ميث: ووكونغ",
-      "resolution": "4K",
-      "preset": "Cinematic High",
-      "fps_a": 18,
-      "fps_b": 26,
-      "diff_pct": 44.4,
-      "winner": "b",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
-    },
-    {
-      "game_title": "Counter-Strike 2",
-      "game_title_ar": "كاونتر سترايك 2",
-      "resolution": "1080p",
-      "preset": "Competitive High",
-      "fps_a": 300,
-      "fps_b": 311,
-      "diff_pct": 3.7,
-      "winner": "b",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Counter-Strike 2",
-      "game_title_ar": "كاونتر سترايك 2",
-      "resolution": "1440p",
-      "preset": "Competitive High",
-      "fps_a": 203,
-      "fps_b": 214,
-      "diff_pct": 5.4,
-      "winner": "b",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Counter-Strike 2",
-      "game_title_ar": "كاونتر سترايك 2",
-      "resolution": "4K",
-      "preset": "Competitive High",
-      "fps_a": 103,
-      "fps_b": 116,
-      "diff_pct": 12.6,
-      "winner": "b",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Red Dead Redemption 2",
-      "game_title_ar": "ريد ديد ريدمبشن 2",
-      "resolution": "1080p",
-      "preset": "Ultra",
-      "fps_a": 125,
-      "fps_b": 136,
-      "diff_pct": 8.8,
-      "winner": "b",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Red Dead Redemption 2",
-      "game_title_ar": "ريد ديد ريدمبشن 2",
-      "resolution": "1440p",
-      "preset": "Ultra",
-      "fps_a": 87,
-      "fps_b": 99,
-      "diff_pct": 13.8,
-      "winner": "b",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Red Dead Redemption 2",
-      "game_title_ar": "ريد ديد ريدمبشن 2",
-      "resolution": "4K",
-      "preset": "Ultra",
-      "fps_a": 39,
-      "fps_b": 55,
-      "diff_pct": 41.0,
-      "winner": "b",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Call of Duty: Warzone",
-      "game_title_ar": "كول أوف ديوتي: وورزون",
-      "resolution": "1080p",
-      "preset": "Ultra / High",
-      "fps_a": 181,
-      "fps_b": 197,
-      "diff_pct": 8.8,
-      "winner": "b",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Call of Duty: Warzone",
-      "game_title_ar": "كول أوف ديوتي: وورزون",
-      "resolution": "1440p",
-      "preset": "Ultra / High",
-      "fps_a": 118,
-      "fps_b": 135,
-      "diff_pct": 14.4,
-      "winner": "b",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Call of Duty: Warzone",
-      "game_title_ar": "كول أوف ديوتي: وورزون",
-      "resolution": "4K",
-      "preset": "Ultra / High",
-      "fps_a": 49,
-      "fps_b": 68,
-      "diff_pct": 38.8,
-      "winner": "b",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Assassin's Creed Mirage",
-      "game_title_ar": "أساسنز كريد ميراج",
-      "resolution": "1080p",
-      "preset": "Ultra High",
-      "fps_a": 131,
-      "fps_b": 143,
-      "diff_pct": 9.2,
-      "winner": "b",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Assassin's Creed Mirage",
-      "game_title_ar": "أساسنز كريد ميراج",
-      "resolution": "1440p",
-      "preset": "Ultra High",
-      "fps_a": 90,
-      "fps_b": 103,
-      "diff_pct": 14.4,
-      "winner": "b",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Assassin's Creed Mirage",
-      "game_title_ar": "أساسنز كريد ميراج",
-      "resolution": "4K",
-      "preset": "Ultra High",
       "fps_a": 37,
-      "fps_b": 52,
-      "diff_pct": 40.5,
+      "fps_b": 53,
+      "diff_pct": 43.2,
+      "winner": "b",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "4K",
+      "preset": "Cinematic High",
+      "fps_a": 15,
+      "fps_b": 23,
+      "diff_pct": 53.3,
+      "winner": "b",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1080p",
+      "preset": "Competitive High",
+      "fps_a": 285,
+      "fps_b": 310,
+      "diff_pct": 8.8,
+      "winner": "b",
+      "rt_badge_ar": null
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1440p",
+      "preset": "Competitive High",
+      "fps_a": 188,
+      "fps_b": 213,
+      "diff_pct": 13.3,
+      "winner": "b",
+      "rt_badge_ar": null
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "4K",
+      "preset": "Competitive High",
+      "fps_a": 96,
+      "fps_b": 111,
+      "diff_pct": 15.6,
+      "winner": "b",
+      "rt_badge_ar": null
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1080p",
+      "preset": "Ultra",
+      "fps_a": 110,
+      "fps_b": 135,
+      "diff_pct": 22.7,
+      "winner": "b",
+      "rt_badge_ar": null
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1440p",
+      "preset": "Ultra",
+      "fps_a": 70,
+      "fps_b": 98,
+      "diff_pct": 40.0,
+      "winner": "b",
+      "rt_badge_ar": null
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "4K",
+      "preset": "Ultra",
+      "fps_a": 30,
+      "fps_b": 49,
+      "diff_pct": 63.3,
+      "winner": "b",
+      "rt_badge_ar": null
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1080p",
+      "preset": "Ultra / High",
+      "fps_a": 160,
+      "fps_b": 195,
+      "diff_pct": 21.9,
+      "winner": "b",
+      "rt_badge_ar": null
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1440p",
+      "preset": "Ultra / High",
+      "fps_a": 96,
+      "fps_b": 134,
+      "diff_pct": 39.6,
+      "winner": "b",
+      "rt_badge_ar": null
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "4K",
+      "preset": "Ultra / High",
+      "fps_a": 38,
+      "fps_b": 61,
+      "diff_pct": 60.5,
+      "winner": "b",
+      "rt_badge_ar": null
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 116,
+      "fps_b": 141,
+      "diff_pct": 21.6,
+      "winner": "b",
+      "rt_badge_ar": null
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 73,
+      "fps_b": 101,
+      "diff_pct": 38.4,
+      "winner": "b",
+      "rt_badge_ar": null
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 29,
+      "fps_b": 46,
+      "diff_pct": 58.6,
       "winner": "b",
       "rt_badge_ar": null
     }
@@ -372,12 +372,12 @@
   "verdict": {
     "overall_winner": "b",
     "winner_name": "Lenovo Legion Pro 7i (Gen 9)",
-    "score_a": 84.0,
-    "score_b": 91.0,
-    "quick_verdict_ar": "يتفوق Lenovo Legion Pro 7i (Gen 9) في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 8.3% مقارنة بـ ASUS ROG Zephyrus G16 (2024). هذا التفوق يستند إلى معمارية Intel 14th Gen + RTX 4080 وتوازن العتاد المعماري ومنصة التشغيل المحمولة، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
-    "gaming_analysis_ar": "في فئة الحواسيب المحمولة، يوفر كلا الجهازين توازناً متقدماً بين الأداء المحمول والحرارة المحكومة، مع أفضلية في ثبات الترددات والأداء الرسومي لصالح Lenovo Legion Pro 7i (Gen 9) (بمؤشر 91/100) تحت الأحمال المطولة مقارنة بـ ASUS ROG Zephyrus G16 (2024) (84/100).",
+    "score_a": 72.0,
+    "score_b": 86.0,
+    "quick_verdict_ar": "يتفوق Lenovo Legion Pro 7i (Gen 9) في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 19.4% مقارنة بـ ASUS ROG Zephyrus G16 (2024). هذا التفوق يستند إلى معمارية Intel 14th Gen + RTX 4080 وتوازن العتاد المعماري ومنصة التشغيل المحمولة، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "gaming_analysis_ar": "في فئة الحواسيب المحمولة، يوفر كلا الجهازين توازناً متقدماً بين الأداء المحمول والحرارة المحكومة، مع أفضلية في ثبات الترددات والأداء الرسومي لصالح Lenovo Legion Pro 7i (Gen 9) (بمؤشر 86/100) تحت الأحمال المطولة مقارنة بـ ASUS ROG Zephyrus G16 (2024) (72/100).",
     "productivity_analysis_ar": "تعتبر سعة البطارية وإدارة الطاقة والوزن هي العوامل الفاصلة في الإنتاجية اليومية للمصممين والمبرمجين؛ حيث يتميز ASUS ROG Zephyrus G16 (2024) بسهولة التنقل بوزن 1.9 كجم، بينما يوفر Lenovo Legion Pro 7i (Gen 9) منصة عمل قوية وثابتة.",
-    "value_and_budget_ar": "يطرح ASUS ROG Zephyrus G16 (2024) تكلفة شراء أولية أقل بسعر $1999 مقارنة بـ $2199 (توفير $200، بينما يرتفع سعر منافسه بنسبة 10% عن السعر الأقل)، في حين يوفر Lenovo Legion Pro 7i (Gen 9) أداءً إضافياً بنسبة 8.3% يبرر الاستثمار لمن تتطلب أعمالهم أعلى مواصفات للتنقل واللعب.",
+    "value_and_budget_ar": "يطرح ASUS ROG Zephyrus G16 (2024) تكلفة شراء أولية أقل بسعر $1999 مقارنة بـ $2199 (توفير $200، بينما يرتفع سعر منافسه بنسبة 10% عن السعر الأقل)، في حين يوفر Lenovo Legion Pro 7i (Gen 9) أداءً إضافياً بنسبة 19.4% يبرر الاستثمار لمن تتطلب أعمالهم أعلى مواصفات للتنقل واللعب.",
     "pros_a": [
       "شاشة OLED مذهلة (تباين لا نهائي، استجابة فائقة 0.2ms، وسواد حقيقي مثالي لصناع المحتوى والسينمائيين)",
       "تصميم أنيق ووزن خفيف (1.9 كجم) يسهل التنقل اليومي مقارنة بالمنافس (2.6 كجم)",
@@ -392,7 +392,7 @@
     ],
     "pros_b": [
       "شاشة IPS فائقة السطوع (500 nits لثبات الإضاءة والوضوح التام في الغرف المضيئة دون أي مخاطر لتطبيع الشاشة OLED Burn-in)",
-      "أداء معالجة إجمالي قوي بمؤشر 91/100",
+      "أداء معالجة إجمالي قوي بمؤشر 86/100",
       "بطارية بسعة ضخمة (99.9 واط/ساعة) للاستخدام المطول خارج المنزل"
     ],
     "cons_b": [
@@ -401,7 +401,7 @@
       "خيارات ترقية العتاد الداخلي محدودة بطبيعة الأجهزة المحمولة",
       "يتطلب وضعية تهوية جيدة على سطح مستوٍ لتفادي خنق تدفق الهواء السفلي"
     ],
-    "who_should_buy_a": "المستخدم كثير التنقل وصانع المحتوى الذي يضع خفة الوزن (1.9 كجم) وسهولة الحمل في صدارة أولوياته مع الاستفادة من شاشة OLED فائقة التباين والألوان، مع الاستفادة من بطارية 90Wh وشاشة عالية الدقة.",
+    "who_should_buy_a": "المستخدم كثير التنقل وصانع المحتوى الذي يضع خفة الوزن (1.9 كجم) وسهولة الحمل في صدارة أولوياته، مع الاستفادة من شاشة OLED فائقة التباين والألوان وبطارية بسعة 90Wh.",
     "who_should_buy_b": "اللاعب أو المحترف الذي يطلب أقصى استقرار وأداء في الألعاب الثقيلة وبرامج التصميم على حساب الوزن (2.6 كجم)، مع الاستفادة من منصة تبريد قوية وبطارية 99.9Wh."
   },
   "affiliate_links_a": [
@@ -529,7 +529,7 @@
         "url": "https://tech-comparisons.pages.dev/compare/rog-zephyrus-g16-vs-legion-pro-7i",
         "name": "مقارنة ASUS ROG Zephyrus G16 (2024) ضد Lenovo Legion Pro 7i (Gen 9) | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين ASUS ROG Zephyrus G16 (2024) و Lenovo Legion Pro 7i (Gen 9). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T21:18:26.262838+00:00",
+        "datePublished": "2026-10-19T21:45:50.235694+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -547,13 +547,13 @@
         },
         "reviewRating": {
           "@type": "Rating",
-          "ratingValue": 4.5,
+          "ratingValue": 4.3,
           "bestRating": "5",
           "worstRating": "1"
         },
-        "reviewBody": "يتفوق Lenovo Legion Pro 7i (Gen 9) في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 8.3% مقارنة بـ ASUS ROG Zephyrus G16 (2024). هذا التفوق يستند إلى معمارية Intel 14th Gen + RTX 4080 وتوازن العتاد المعماري ومنصة التشغيل المحمولة، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+        "reviewBody": "يتفوق Lenovo Legion Pro 7i (Gen 9) في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 19.4% مقارنة بـ ASUS ROG Zephyrus G16 (2024). هذا التفوق يستند إلى معمارية Intel 14th Gen + RTX 4080 وتوازن العتاد المعماري ومنصة التشغيل المحمولة، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
       }
     ]
   },
-  "created_at": "2026-10-19T21:18:26.262838+00:00"
+  "created_at": "2026-10-19T21:45:50.235694+00:00"
 }

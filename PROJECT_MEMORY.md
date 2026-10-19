@@ -333,6 +333,39 @@ D:\tech_comparisons\
   - Re-seeded SQLite database, regenerated all 7 comparison JSON collections, and verified 11 static pages built via Astro SSG with zero errors in 1.97s.
   - Audited compiled HTML to confirm zero Amazon links or mentions.
 
+### Phase 17: PerformanceBars 100-Ceiling Normalization, Laptop FPS Realism & Linguistic Polish (2026-10-20)
+- **PerformanceBars CSS Clipping & Dynamic Normalization (`web/src/components/PerformanceBars.astro`):**
+  - **Issue Identified:** Visual meter bars previously rendered raw score widths via `style="width: ${Math.max(10, m.valA)}%"`. When scores exceeded 100 (e.g. 109.0 or 117.0), the bar overflowed its parent container (`overflow-hidden`), pushing the right-aligned `<bdi>` value badge off-screen.
+  - **Resolution:** Implemented mathematical ceiling normalization:
+    `const maxVal = Math.max(100, m.valA, m.valB);`
+    `const widthPctA = Math.min(100, Math.max(10, Math.round((m.valA / maxVal) * 100)));`
+    `const widthPctB = Math.min(100, Math.max(10, Math.round((m.valB / maxVal) * 100)));`
+    `const displayUnit = maxVal > 100 ? `/ ${formatVal(maxVal)}` : m.unit;`
+    Ensures that visual bar width never exceeds 100% and text inside `overflow-hidden` is never clipped off-screen while keeping display units and ratios mathematically sound.
+- **Hardware Spec 100 Ceiling & Flagship Capping (`core/data/seed_specs.json`, `core/services/fps_calculator.py`):**
+  - **Issue Identified:** Previous calibrations for RTX 4080 Super and RX 7900 XTX had set `raster_1440p` to 109.0 and 117.0, violating the 0-100 normalized index design.
+  - **Resolution:** Calibrated all hardware items in `seed_specs.json` so that NO score exceeds 100:
+    - `rtx-4080-super`: benchmark_index: 95.0, gaming_scores: `{"raster_1080p": 94.0, "raster_1440p": 96.0, "raster_4k": 92.0}` (all <= 96.0 <= 98.0).
+    - `rx-7900-xtx`: benchmark_index: 96.0, gaming_scores: `{"raster_1080p": 95.0, "raster_1440p": 98.0, "raster_4k": 94.0}` (all <= 98.0).
+  - **Non-Linear Flagship Scaling in `fps_calculator.py`:** Added non-linear scaling for scores above 85.0 (`base_factor = (raw_score / 100.0) + 0.00115 * ((raw_score - 85.0) ** 2)`). Allows raw benchmark and raster scores in `seed_specs.json` to stay strictly within 0-100, while preserving authentic ~30-40% inter-tier scaling for flagship silicon (e.g. RTX 4080 Super +31.3% average lead over RTX 4070 Super at 1440p; RX 7900 XTX +37.9% lead over RX 7800 XT at 1440p).
+- **Laptop Gaming FPS Realism & Benchmarks (`core/data/seed_specs.json`, `core/services/fps_calculator.py`):**
+  - **Issue Identified:** ASUS ROG Zephyrus G16 (RTX 4070 Mobile 105W) previously had inflated scores (84.0 index, 79.0 raster_1440p) that erroneously beat desktop GPUs like the RTX 4060 Ti (8GB, 160W) and RX 7800 XT (16GB, 263W), and compressed the mobile gaming gap against the 175W desktop replacement Legion Pro 7i to only ~13%.
+  - **Resolution:** Grounded laptop specs in empirical reviews (Jarrod's Tech):
+    - `rog-zephyrus-g16`: benchmark_index: 72.0, gaming_scores: `{"raster_1080p": 76.0, "raster_1440p": 64.0, "raster_4k": 42.0}`, ray_tracing_score: 68.0.
+    - `legion-pro-7i`: benchmark_index: 86.0, gaming_scores: `{"raster_1080p": 90.0, "raster_1440p": 88.0, "raster_4k": 68.0}`, ray_tracing_score: 84.0.
+    - Result: Zephyrus G16 (105W) accurately trails desktop RTX 4060 Ti (8GB) across 1080p, 1440p, and 4K, trails desktop RX 7800 XT by a wide margin, and establishes the authentic 35-45% mobile gaming performance gap behind Legion Pro 7i (175W).
+- **Linguistic Polish & Elimination of Repetition in Laptop Recommendation (`core/services/ai_editorial.py`):**
+  - Eliminated duplicate phrasing in `_build_who_should_buy` for laptops where "مع الاستفادة من" and "شاشة" were repeated twice.
+  - Cleanly combined into: `"المستخدم كثير التنقل وصانع المحتوى الذي يضع خفة الوزن (1.9 كجم) وسهولة الحمل في صدارة أولوياته، مع الاستفادة من شاشة OLED فائقة التباين والألوان وبطارية بسعة 90Wh."`
+  - Replaced awkward floating point battery representation (`90.0Wh`) with clean integer representation (`90Wh`) via `_format_num()`.
+- **Automated Test Expansion & Full Pipeline Verification:**
+  - Added 3 dedicated unit tests in `core/tests/test_affiliate_and_editorial.py`:
+    - `test_seed_specs_scores_100_ceiling_and_flagship_capping`: confirms all scores across all items in `seed_specs.json` are <= 98.0 (<= 100).
+    - `test_laptop_gaming_fps_realism_against_desktops_and_gap`: validates G16 mobile trailing desktop 4060 Ti and 7800 XT, and 35-45% gap behind Legion Pro 7i.
+    - `test_laptop_who_should_buy_no_linguistic_repetition`: enforces exactly 1 occurrence of "مع الاستفادة من" and "شاشة", and validates clean battery formatting.
+  - Test suite expanded to 63 automated unit tests with 100% pass rate in 1.25s.
+  - Re-seeded SQLite database, regenerated all 7 programmatic comparison JSON collections, and verified 11 static pages compiled via Astro SSG with 0 errors in 2.22s.
+
 ---
 
 ## 5. Rules for Future AI Agents & Maintainers
