@@ -175,9 +175,9 @@
       "game_title_ar": "سايبربانك 2077",
       "resolution": "1080p",
       "preset": "Ultra High",
-      "fps_a": 96,
-      "fps_b": 123,
-      "diff_pct": 28.1,
+      "fps_a": 104,
+      "fps_b": 133,
+      "diff_pct": 27.9,
       "winner": "b",
       "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
@@ -186,9 +186,9 @@
       "game_title_ar": "سايبربانك 2077",
       "resolution": "1440p",
       "preset": "Ultra High",
-      "fps_a": 57,
-      "fps_b": 82,
-      "diff_pct": 43.9,
+      "fps_a": 61,
+      "fps_b": 89,
+      "diff_pct": 45.9,
       "winner": "b",
       "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
@@ -197,9 +197,9 @@
       "game_title_ar": "سايبربانك 2077",
       "resolution": "4K",
       "preset": "Ultra High",
-      "fps_a": 22,
-      "fps_b": 38,
-      "diff_pct": 72.7,
+      "fps_a": 24,
+      "fps_b": 41,
+      "diff_pct": 70.8,
       "winner": "b",
       "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
@@ -208,9 +208,9 @@
       "game_title_ar": "بلاك ميث: ووكونغ",
       "resolution": "1080p",
       "preset": "Cinematic High",
-      "fps_a": 66,
-      "fps_b": 85,
-      "diff_pct": 28.8,
+      "fps_a": 73,
+      "fps_b": 93,
+      "diff_pct": 27.4,
       "winner": "b",
       "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
@@ -219,9 +219,9 @@
       "game_title_ar": "بلاك ميث: ووكونغ",
       "resolution": "1440p",
       "preset": "Cinematic High",
-      "fps_a": 37,
-      "fps_b": 53,
-      "diff_pct": 43.2,
+      "fps_a": 40,
+      "fps_b": 58,
+      "diff_pct": 45.0,
       "winner": "b",
       "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
@@ -231,8 +231,8 @@
       "resolution": "4K",
       "preset": "Cinematic High",
       "fps_a": 15,
-      "fps_b": 23,
-      "diff_pct": 53.3,
+      "fps_b": 25,
+      "diff_pct": 66.7,
       "winner": "b",
       "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
@@ -241,9 +241,9 @@
       "game_title_ar": "كاونتر سترايك 2",
       "resolution": "1080p",
       "preset": "Competitive High",
-      "fps_a": 285,
-      "fps_b": 310,
-      "diff_pct": 8.8,
+      "fps_a": 297,
+      "fps_b": 322,
+      "diff_pct": 8.4,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -252,8 +252,8 @@
       "game_title_ar": "كاونتر سترايك 2",
       "resolution": "1440p",
       "preset": "Competitive High",
-      "fps_a": 188,
-      "fps_b": 213,
+      "fps_a": 195,
+      "fps_b": 221,
       "diff_pct": 13.3,
       "winner": "b",
       "rt_badge_ar": null
@@ -263,9 +263,9 @@
       "game_title_ar": "كاونتر سترايك 2",
       "resolution": "4K",
       "preset": "Competitive High",
-      "fps_a": 96,
-      "fps_b": 111,
-      "diff_pct": 15.6,
+      "fps_a": 100,
+      "fps_b": 116,
+      "diff_pct": 16.0,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -307,9 +307,9 @@
       "game_title_ar": "كول أوف ديوتي: وورزون",
       "resolution": "1080p",
       "preset": "Ultra / High",
-      "fps_a": 160,
-      "fps_b": 195,
-      "diff_pct": 21.9,
+      "fps_a": 158,
+      "fps_b": 191,
+      "diff_pct": 20.9,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -319,8 +319,8 @@
       "resolution": "1440p",
       "preset": "Ultra / High",
       "fps_a": 96,
-      "fps_b": 134,
-      "diff_pct": 39.6,
+      "fps_b": 131,
+      "diff_pct": 36.5,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -329,9 +329,9 @@
       "game_title_ar": "كول أوف ديوتي: وورزون",
       "resolution": "4K",
       "preset": "Ultra / High",
-      "fps_a": 38,
+      "fps_a": 39,
       "fps_b": 61,
-      "diff_pct": 60.5,
+      "diff_pct": 56.4,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -340,9 +340,9 @@
       "game_title_ar": "أساسنز كريد ميراج",
       "resolution": "1080p",
       "preset": "Ultra High",
-      "fps_a": 116,
-      "fps_b": 141,
-      "diff_pct": 21.6,
+      "fps_a": 113,
+      "fps_b": 138,
+      "diff_pct": 22.1,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -351,9 +351,9 @@
       "game_title_ar": "أساسنز كريد ميراج",
       "resolution": "1440p",
       "preset": "Ultra High",
-      "fps_a": 73,
-      "fps_b": 101,
-      "diff_pct": 38.4,
+      "fps_a": 72,
+      "fps_b": 99,
+      "diff_pct": 37.5,
       "winner": "b",
       "rt_badge_ar": null
     },
@@ -362,9 +362,9 @@
       "game_title_ar": "أساسنز كريد ميراج",
       "resolution": "4K",
       "preset": "Ultra High",
-      "fps_a": 29,
-      "fps_b": 46,
-      "diff_pct": 58.6,
+      "fps_a": 28,
+      "fps_b": 45,
+      "diff_pct": 60.7,
       "winner": "b",
       "rt_badge_ar": null
     }
@@ -374,7 +374,7 @@
     "winner_name": "Lenovo Legion Pro 7i (Gen 9)",
     "score_a": 72.0,
     "score_b": 86.0,
-    "quick_verdict_ar": "يتفوق Lenovo Legion Pro 7i (Gen 9) في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 19.4% مقارنة بـ ASUS ROG Zephyrus G16 (2024). هذا التفوق يستند إلى معمارية Intel 14th Gen + RTX 4080 وتوازن العتاد المعماري ومنصة التشغيل المحمولة، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "quick_verdict_ar": "يتفوق Lenovo Legion Pro 7i (Gen 9) في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 19.4% مقارنة بـ ASUS ROG Zephyrus G16 (2024). هذا التفوق يستند إلى معمارية Intel 14th Gen + RTX 4080 وتوازن العتاد المعماري ومنصة التشغيل المحمولة وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~36.4%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
     "gaming_analysis_ar": "في فئة الحواسيب المحمولة، يوفر كلا الجهازين توازناً متقدماً بين الأداء المحمول والحرارة المحكومة، مع أفضلية في ثبات الترددات والأداء الرسومي لصالح Lenovo Legion Pro 7i (Gen 9) (بمؤشر 86/100) تحت الأحمال المطولة مقارنة بـ ASUS ROG Zephyrus G16 (2024) (72/100).",
     "productivity_analysis_ar": "تعتبر سعة البطارية وإدارة الطاقة والوزن هي العوامل الفاصلة في الإنتاجية اليومية للمصممين والمبرمجين؛ حيث يتميز ASUS ROG Zephyrus G16 (2024) بسهولة التنقل بوزن 1.9 كجم، بينما يوفر Lenovo Legion Pro 7i (Gen 9) منصة عمل قوية وثابتة.",
     "value_and_budget_ar": "يطرح ASUS ROG Zephyrus G16 (2024) تكلفة شراء أولية أقل بسعر $1999 مقارنة بـ $2199 (توفير $200، بينما يرتفع سعر منافسه بنسبة 10% عن السعر الأقل)، في حين يوفر Lenovo Legion Pro 7i (Gen 9) أداءً إضافياً بنسبة 19.4% يبرر الاستثمار لمن تتطلب أعمالهم أعلى مواصفات للتنقل واللعب.",
@@ -402,7 +402,7 @@
       "يتطلب وضعية تهوية جيدة على سطح مستوٍ لتفادي خنق تدفق الهواء السفلي"
     ],
     "who_should_buy_a": "المستخدم كثير التنقل وصانع المحتوى الذي يضع خفة الوزن (1.9 كجم) وسهولة الحمل في صدارة أولوياته، مع الاستفادة من شاشة OLED فائقة التباين والألوان وبطارية بسعة 90Wh.",
-    "who_should_buy_b": "اللاعب أو المحترف الذي يطلب أقصى استقرار وأداء في الألعاب الثقيلة وبرامج التصميم على حساب الوزن (2.6 كجم)، مع الاستفادة من منصة تبريد قوية وبطارية 99.9Wh."
+    "who_should_buy_b": "اللاعب أو المحترف الذي يطلب أقصى استقرار وأداء في الألعاب الثقيلة وبرامج التصميم على حساب الوزن (2.6 كجم)، مع الاستفادة من منصة تبريد قوية وبطارية بسعة 99.9Wh."
   },
   "affiliate_links_a": [
     {
@@ -529,7 +529,7 @@
         "url": "https://tech-comparisons.pages.dev/compare/rog-zephyrus-g16-vs-legion-pro-7i",
         "name": "مقارنة ASUS ROG Zephyrus G16 (2024) ضد Lenovo Legion Pro 7i (Gen 9) | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين ASUS ROG Zephyrus G16 (2024) و Lenovo Legion Pro 7i (Gen 9). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T21:45:50.235694+00:00",
+        "datePublished": "2026-10-19T21:57:44.685093+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -551,9 +551,9 @@
           "bestRating": "5",
           "worstRating": "1"
         },
-        "reviewBody": "يتفوق Lenovo Legion Pro 7i (Gen 9) في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 19.4% مقارنة بـ ASUS ROG Zephyrus G16 (2024). هذا التفوق يستند إلى معمارية Intel 14th Gen + RTX 4080 وتوازن العتاد المعماري ومنصة التشغيل المحمولة، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+        "reviewBody": "يتفوق Lenovo Legion Pro 7i (Gen 9) في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 19.4% مقارنة بـ ASUS ROG Zephyrus G16 (2024). هذا التفوق يستند إلى معمارية Intel 14th Gen + RTX 4080 وتوازن العتاد المعماري ومنصة التشغيل المحمولة وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~36.4%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
       }
     ]
   },
-  "created_at": "2026-10-19T21:45:50.235694+00:00"
+  "created_at": "2026-10-19T21:57:44.685093+00:00"
 }

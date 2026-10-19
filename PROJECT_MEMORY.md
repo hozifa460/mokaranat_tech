@@ -334,37 +334,43 @@ D:\tech_comparisons\
   - Audited compiled HTML to confirm zero Amazon links or mentions.
 
 ### Phase 17: PerformanceBars 100-Ceiling Normalization, Laptop FPS Realism & Linguistic Polish (2026-10-20)
-- **PerformanceBars CSS Clipping & Dynamic Normalization (`web/src/components/PerformanceBars.astro`):**
-  - **Issue Identified:** Visual meter bars previously rendered raw score widths via `style="width: ${Math.max(10, m.valA)}%"`. When scores exceeded 100 (e.g. 109.0 or 117.0), the bar overflowed its parent container (`overflow-hidden`), pushing the right-aligned `<bdi>` value badge off-screen.
-  - **Resolution:** Implemented mathematical ceiling normalization:
-    `const maxVal = Math.max(100, m.valA, m.valB);`
-    `const widthPctA = Math.min(100, Math.max(10, Math.round((m.valA / maxVal) * 100)));`
-    `const widthPctB = Math.min(100, Math.max(10, Math.round((m.valB / maxVal) * 100)));`
+- **PerformanceBars & ComparisonHero CSS Clipping & Dynamic Normalization (`web/src/components/`):**
+  - **Issue Identified:** Visual meter bars previously rendered raw score widths via `style="width: ${Math.max(10, m.valA)}%"`. When scores exceeded 100 (e.g. 109.0 or 117.0), the bar overflowed its parent container (`overflow-hidden`), pushing the right-aligned `<bdi>` value badge off-screen. Furthermore, missing numeric coercion risked producing `style="width: NaN%"` if an optional score was undefined.
+  - **Resolution:** Implemented mathematical ceiling normalization and numeric defenses:
+    `const valA = typeof m.valA === 'number' ? m.valA : (parseFloat(m.valA) || 0);`
+    `const valB = typeof m.valB === 'number' ? m.valB : (parseFloat(m.valB) || 0);`
+    `const maxVal = Math.max(100, valA, valB);`
+    `const widthPctA = Math.min(100, Math.max(10, Math.round((valA / maxVal) * 100)));`
+    `const widthPctB = Math.min(100, Math.max(10, Math.round((valB / maxVal) * 100)));`
     `const displayUnit = maxVal > 100 ? `/ ${formatVal(maxVal)}` : m.unit;`
-    Ensures that visual bar width never exceeds 100% and text inside `overflow-hidden` is never clipped off-screen while keeping display units and ratios mathematically sound.
+    Ensures that visual bar width never exceeds 100% and text inside `overflow-hidden` is never clipped off-screen while keeping display units and ratios mathematically sound. Similarly clamped Hero meters in `ComparisonHero.astro`.
 - **Hardware Spec 100 Ceiling & Flagship Capping (`core/data/seed_specs.json`, `core/services/fps_calculator.py`):**
   - **Issue Identified:** Previous calibrations for RTX 4080 Super and RX 7900 XTX had set `raster_1440p` to 109.0 and 117.0, violating the 0-100 normalized index design.
   - **Resolution:** Calibrated all hardware items in `seed_specs.json` so that NO score exceeds 100:
     - `rtx-4080-super`: benchmark_index: 95.0, gaming_scores: `{"raster_1080p": 94.0, "raster_1440p": 96.0, "raster_4k": 92.0}` (all <= 96.0 <= 98.0).
     - `rx-7900-xtx`: benchmark_index: 96.0, gaming_scores: `{"raster_1080p": 95.0, "raster_1440p": 98.0, "raster_4k": 94.0}` (all <= 98.0).
   - **Non-Linear Flagship Scaling in `fps_calculator.py`:** Added non-linear scaling for scores above 85.0 (`base_factor = (raw_score / 100.0) + 0.00115 * ((raw_score - 85.0) ** 2)`). Allows raw benchmark and raster scores in `seed_specs.json` to stay strictly within 0-100, while preserving authentic ~30-40% inter-tier scaling for flagship silicon (e.g. RTX 4080 Super +31.3% average lead over RTX 4070 Super at 1440p; RX 7900 XTX +37.9% lead over RX 7800 XT at 1440p).
-- **Laptop Gaming FPS Realism & Benchmarks (`core/data/seed_specs.json`, `core/services/fps_calculator.py`):**
-  - **Issue Identified:** ASUS ROG Zephyrus G16 (RTX 4070 Mobile 105W) previously had inflated scores (84.0 index, 79.0 raster_1440p) that erroneously beat desktop GPUs like the RTX 4060 Ti (8GB, 160W) and RX 7800 XT (16GB, 263W), and compressed the mobile gaming gap against the 175W desktop replacement Legion Pro 7i to only ~13%.
-  - **Resolution:** Grounded laptop specs in empirical reviews (Jarrod's Tech):
-    - `rog-zephyrus-g16`: benchmark_index: 72.0, gaming_scores: `{"raster_1080p": 76.0, "raster_1440p": 64.0, "raster_4k": 42.0}`, ray_tracing_score: 68.0.
-    - `legion-pro-7i`: benchmark_index: 86.0, gaming_scores: `{"raster_1080p": 90.0, "raster_1440p": 88.0, "raster_4k": 68.0}`, ray_tracing_score: 84.0.
-    - Result: Zephyrus G16 (105W) accurately trails desktop RTX 4060 Ti (8GB) across 1080p, 1440p, and 4K, trails desktop RX 7800 XT by a wide margin, and establishes the authentic 35-45% mobile gaming performance gap behind Legion Pro 7i (175W).
+- **Laptop Gaming FPS Realism, Underlying GPU Vendor Detection & Benchmarks (`core/data/seed_specs.json`, `core/services/fps_calculator.py`):**
+  - **Issue Identified:** ASUS ROG Zephyrus G16 (RTX 4070 Mobile 105W) previously had inflated scores (84.0 index, 79.0 raster_1440p) that beat desktop GPUs like RTX 4060 Ti (8GB, 160W) and RX 7800 XT (16GB, 263W). Furthermore, `FpsCalculator` checked OEM chassis brand (`item.brand == "ASUS"`), bypassing NVIDIA driver bias (`nvidia_bias: 0.98` in AC Mirage) and engine optimizations, causing G16 to tie desktop RTX 4060 Ti in actual rendered FPS in Assassin's Creed Mirage.
+  - **Resolution:**
+    - Grounded laptop specs in empirical reviews (Jarrod's Tech):
+      - `rog-zephyrus-g16`: benchmark_index: 72.0, gaming_scores: `{"raster_1080p": 76.0, "raster_1440p": 64.0, "raster_4k": 42.0}`, ray_tracing_score: 68.0.
+      - `legion-pro-7i`: benchmark_index: 86.0, gaming_scores: `{"raster_1080p": 90.0, "raster_1440p": 88.0, "raster_4k": 68.0}`, ray_tracing_score: 84.0.
+    - Implemented `FpsCalculator._get_gpu_vendor(item)` to accurately inspect laptop discrete GPU silicon and architecture, ensuring mobile NVIDIA Ada GPUs receive genuine driver bias and engine adjustments.
+    - Result: Zephyrus G16 (105W) strictly trails desktop RTX 4060 Ti (8GB) across every single title and resolution in actual rendered FPS, trails desktop RX 7800 XT by a wide margin, and establishes the authentic 35-45% mobile gaming performance gap behind Legion Pro 7i (175W).
 - **Linguistic Polish & Elimination of Repetition in Laptop Recommendation (`core/services/ai_editorial.py`):**
   - Eliminated duplicate phrasing in `_build_who_should_buy` for laptops where "مع الاستفادة من" and "شاشة" were repeated twice.
   - Cleanly combined into: `"المستخدم كثير التنقل وصانع المحتوى الذي يضع خفة الوزن (1.9 كجم) وسهولة الحمل في صدارة أولوياته، مع الاستفادة من شاشة OLED فائقة التباين والألوان وبطارية بسعة 90Wh."`
-  - Replaced awkward floating point battery representation (`90.0Wh`) with clean integer representation (`90Wh`) via `_format_num()`.
+  - Standardized heavy laptop recommendation to use clean battery phrasing (`وبطارية بسعة 99.9Wh`).
+  - Integrated `{fps_phrase}` into `_build_quick_verdict` for laptop matchups, dynamically surfacing the ~36.4% gaming FPS gap in executive verdicts.
 - **Automated Test Expansion & Full Pipeline Verification:**
-  - Added 3 dedicated unit tests in `core/tests/test_affiliate_and_editorial.py`:
-    - `test_seed_specs_scores_100_ceiling_and_flagship_capping`: confirms all scores across all items in `seed_specs.json` are <= 98.0 (<= 100).
-    - `test_laptop_gaming_fps_realism_against_desktops_and_gap`: validates G16 mobile trailing desktop 4060 Ti and 7800 XT, and 35-45% gap behind Legion Pro 7i.
-    - `test_laptop_who_should_buy_no_linguistic_repetition`: enforces exactly 1 occurrence of "مع الاستفادة من" and "شاشة", and validates clean battery formatting.
-  - Test suite expanded to 63 automated unit tests with 100% pass rate in 1.25s.
-  - Re-seeded SQLite database, regenerated all 7 programmatic comparison JSON collections, and verified 11 static pages compiled via Astro SSG with 0 errors in 2.22s.
+  - Expanded test suite to 64 automated unit tests:
+    - Added deep end-to-end assertions in `test_laptop_gaming_fps_realism_against_desktops_and_gap` verifying that `matrix_desktop = FpsCalculator.calculate_fps_matrix(g16, desktop_4060ti)` strictly trails across all 18 resolution-game pairs.
+    - Added dedicated test `test_fps_calculator_get_gpu_vendor_for_laptops_and_discrete_cards`.
+    - Added `test_seed_specs_scores_100_ceiling_and_flagship_capping`.
+    - Added `test_laptop_who_should_buy_no_linguistic_repetition`.
+  - 100% pass rate in 1.24s.
+  - Re-seeded SQLite database, regenerated all 7 programmatic comparison JSON collections, and verified 11 static pages compiled via Astro SSG with 0 errors in 1.99s.
 
 ---
 

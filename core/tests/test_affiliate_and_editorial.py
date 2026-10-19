@@ -1382,10 +1382,15 @@ def test_laptop_gaming_fps_realism_against_desktops_and_gap():
     assert desktop_7800xt.gaming_scores["raster_1440p"] > g16.gaming_scores["raster_1440p"] + 15.0
 
     # 3. G16 vs Legion Pro 7i authentic ~35-45% mobile gaming performance gap
-    matrix = FpsCalculator.calculate_fps_matrix(g16, legion)
-    leads_1440p = [((i.fps_b - i.fps_a) / i.fps_a) * 100 for i in matrix if i.resolution == "1440p"]
+    matrix_legion = FpsCalculator.calculate_fps_matrix(g16, legion)
+    leads_1440p = [((i.fps_b - i.fps_a) / i.fps_a) * 100 for i in matrix_legion if i.resolution == "1440p"]
     avg_gap = sum(leads_1440p) / len(leads_1440p)
     assert 34.0 <= avg_gap <= 45.0, f"Expected 34-45% gap between 105W and 175W laptops, got {avg_gap:.1f}%"
+
+    # 4. Actual calculated game FPS: G16 strictly trails desktop RTX 4060 Ti across ALL titles and resolutions
+    matrix_desktop = FpsCalculator.calculate_fps_matrix(g16, desktop_4060ti)
+    for item in matrix_desktop:
+        assert item.fps_a < item.fps_b, f"G16 ({item.fps_a}) unexpectedly matched/beat desktop 4060 Ti ({item.fps_b}) in {item.game_title} {item.resolution}"
 
 
 def test_laptop_who_should_buy_no_linguistic_repetition():
@@ -1411,6 +1416,24 @@ def test_laptop_who_should_buy_no_linguistic_repetition():
     # Verify clean wording
     assert "المستخدم كثير التنقل وصانع المحتوى الذي يضع خفة الوزن (1.9 كجم) وسهولة الحمل في صدارة أولوياته" in who_g16
     assert "مع الاستفادة من شاشة OLED فائقة التباين والألوان وبطارية بسعة 90Wh" in who_g16
+
+    # Verify heavy laptop wording
+    who_legion = verdict.who_should_buy_b
+    assert "وبطارية بسعة 99.9Wh" in who_legion
+
+
+def test_fps_calculator_get_gpu_vendor_for_laptops_and_discrete_cards():
+    """Verifies that FpsCalculator accurately resolves underlying GPU vendor for laptops."""
+    from core.services.fps_calculator import FpsCalculator
+    import json
+    from core.config import SEED_DATA_PATH
+    with open(SEED_DATA_PATH, "r", encoding="utf-8") as f:
+        data = {item["id"]: HardwareSpec.model_validate(item) for item in json.load(f)}
+
+    assert FpsCalculator._get_gpu_vendor(data["rog-zephyrus-g16"]) == "NVIDIA"
+    assert FpsCalculator._get_gpu_vendor(data["legion-pro-7i"]) == "NVIDIA"
+    assert FpsCalculator._get_gpu_vendor(data["rtx-4080-super"]) == "NVIDIA"
+    assert FpsCalculator._get_gpu_vendor(data["rx-7900-xtx"]) == "AMD"
 
 
 

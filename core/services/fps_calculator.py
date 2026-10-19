@@ -76,10 +76,30 @@ class FpsCalculator:
     """Calculates realistic expected FPS for hardware combinations across different resolutions."""
 
     @classmethod
+    def _get_gpu_vendor(cls, item: HardwareSpec) -> str:
+        """Determines the underlying GPU vendor (NVIDIA, AMD, INTEL) for the hardware item.
+        For laptops, inspects discrete GPU specs, architecture, and feature sets.
+        """
+        if item.category == "gpu":
+            return item.brand.upper()
+
+        gpu_field = str(item.raw_specs.get("gpu", "")).upper()
+        arch_field = str(item.architecture).upper()
+        features_field = " ".join(item.features).upper()
+        combined = f"{gpu_field} {arch_field} {features_field}"
+        if any(k in combined for k in ("NVIDIA", "RTX", "GEFORCE")):
+            return "NVIDIA"
+        elif any(k in combined for k in ("AMD", "RADEON", "RDNA")):
+            return "AMD"
+        elif any(k in combined for k in ("INTEL", "ARC")):
+            return "INTEL"
+        return item.brand.upper()
+
+    @classmethod
     def _get_vendor_bias(cls, game: Dict[str, Any], item: HardwareSpec) -> float:
         """Retrieves architectural/driver vendor bias factor for the given hardware brand."""
         vb = game.get("vendor_bias", {})
-        brand = item.brand.upper()
+        brand = cls._get_gpu_vendor(item)
         if brand == "NVIDIA":
             return vb.get("nvidia_bias", vb.get("nvidia", 1.0))
         elif brand == "AMD":
@@ -128,7 +148,7 @@ class FpsCalculator:
             effective_factor = (0.55 + 0.45 * effective_factor) * bias
         elif engine == "IW 9.0":
             # Heavy historic AMD RDNA console-level shader optimization: calibrate baseline with vendor bias
-            brand = item.brand.upper()
+            brand = cls._get_gpu_vendor(item)
             arch_adj = 0.038 if brand == "NVIDIA" else (-0.040 if brand == "AMD" else 0.0)
             effective_factor = (effective_factor + arch_adj) * bias
         else:

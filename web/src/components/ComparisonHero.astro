@@ -114,7 +114,7 @@ const formatVal = (v: any) => {
             <bdi dir="ltr" class="text-blue-600 dark:text-blue-400 text-lg font-black whitespace-nowrap">{formatVal(itemA.benchmark_index)} / 100</bdi>
           </div>
           <div class="w-full bg-slate-200 dark:bg-slate-700 h-3 rounded-full overflow-hidden">
-            <div class="bg-blue-600 h-full rounded-full transition-all" style={`width: ${itemA.benchmark_index}%`}></div>
+            <div class="bg-blue-600 h-full rounded-full transition-all" style={`width: ${Math.min(100, Math.max(10, Math.round(Number(itemA.benchmark_index) || 0)))}%`}></div>
           </div>
         </div>
 
@@ -195,7 +195,7 @@ const formatVal = (v: any) => {
             <bdi dir="ltr" class="text-indigo-600 dark:text-indigo-400 text-lg font-black whitespace-nowrap">{formatVal(itemB.benchmark_index)} / 100</bdi>
           </div>
           <div class="w-full bg-slate-200 dark:bg-slate-700 h-3 rounded-full overflow-hidden">
-            <div class="bg-indigo-600 h-full rounded-full transition-all" style={`width: ${itemB.benchmark_index}%`}></div>
+            <div class="bg-indigo-600 h-full rounded-full transition-all" style={`width: ${Math.min(100, Math.max(10, Math.round(Number(itemB.benchmark_index) || 0)))}%`}></div>
           </div>
         </div>
 

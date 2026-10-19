@@ -17,7 +17,7 @@ const metrics: { title: string; valA: number; valB: number; unit: string }[] = [
   }
 ];
 
-if (!isCpu) {
+if (!isCpu && itemA.ray_tracing_score != null && itemB.ray_tracing_score != null) {
   metrics.push({
     title: "أداء تتبع الأشعة (Ray Tracing Performance)",
     valA: itemA.ray_tracing_score,
@@ -75,13 +75,15 @@ const formatVal = (v: any) => {
 
   <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 space-y-8 shadow-sm">
     {metrics.map(m => {
-      const minVal = Math.min(m.valA, m.valB);
-      const diffPct = minVal > 0 ? (Math.abs(m.valA - m.valB) / minVal) * 100 : 0;
-      const isTie = m.valA === m.valB || diffPct < 3.0;
-      const winner = isTie ? 'tie' : (m.valA > m.valB ? 'a' : 'b');
-      const maxVal = Math.max(100, m.valA, m.valB);
-      const widthPctA = Math.min(100, Math.max(10, Math.round((m.valA / maxVal) * 100)));
-      const widthPctB = Math.min(100, Math.max(10, Math.round((m.valB / maxVal) * 100)));
+      const valA = typeof m.valA === 'number' ? m.valA : (parseFloat(m.valA) || 0);
+      const valB = typeof m.valB === 'number' ? m.valB : (parseFloat(m.valB) || 0);
+      const minVal = Math.min(valA, valB);
+      const diffPct = minVal > 0 ? (Math.abs(valA - valB) / minVal) * 100 : 0;
+      const isTie = valA === valB || diffPct < 3.0;
+      const winner = isTie ? 'tie' : (valA > valB ? 'a' : 'b');
+      const maxVal = Math.max(100, valA, valB);
+      const widthPctA = Math.min(100, Math.max(10, Math.round((valA / maxVal) * 100)));
+      const widthPctB = Math.min(100, Math.max(10, Math.round((valB / maxVal) * 100)));
       const displayUnit = maxVal > 100 ? `/ ${formatVal(maxVal)}` : m.unit;
       return (
         <div>

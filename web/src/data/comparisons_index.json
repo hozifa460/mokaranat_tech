@@ -8,7 +8,7 @@
     "winner_name": "تعادل متقارب في الأداء",
     "score_a": 82.5,
     "score_b": 81.0,
-    "created_at": "2026-10-19T21:45:49.445990+00:00"
+    "created_at": "2026-10-19T21:57:43.899017+00:00"
   },
   {
     "slug": "rtx-4080-super-vs-rx-7900-xtx",
@@ -19,7 +19,7 @@
     "winner_name": "تعادل متقارب في الأداء",
     "score_a": 95.0,
     "score_b": 96.0,
-    "created_at": "2026-10-19T21:45:49.592094+00:00"
+    "created_at": "2026-10-19T21:57:44.081256+00:00"
   },
   {
     "slug": "rtx-4060-ti-vs-rx-7700-xt",
@@ -30,7 +30,7 @@
     "winner_name": "AMD Radeon RX 7700 XT",
     "score_a": 68.0,
     "score_b": 74.0,
-    "created_at": "2026-10-19T21:45:49.734251+00:00"
+    "created_at": "2026-10-19T21:57:44.208007+00:00"
   },
   {
     "slug": "rtx-4070-super-vs-rtx-4080-super",
@@ -41,7 +41,7 @@
     "winner_name": "NVIDIA GeForce RTX 4080 Super",
     "score_a": 82.5,
     "score_b": 95.0,
-    "created_at": "2026-10-19T21:45:49.843660+00:00"
+    "created_at": "2026-10-19T21:57:44.307962+00:00"
   },
   {
     "slug": "rx-7800-xt-vs-rx-7900-xtx",
@@ -52,7 +52,7 @@
     "winner_name": "AMD Radeon RX 7900 XTX",
     "score_a": 81.0,
     "score_b": 96.0,
-    "created_at": "2026-10-19T21:45:49.983365+00:00"
+    "created_at": "2026-10-19T21:57:44.414559+00:00"
   },
   {
     "slug": "ryzen-7-7800x3d-vs-i7-14700k",
@@ -63,7 +63,7 @@
     "winner_name": "تعادل متقارب في الأداء",
     "score_a": 91.0,
     "score_b": 92.5,
-    "created_at": "2026-10-19T21:45:50.130263+00:00"
+    "created_at": "2026-10-19T21:57:44.520874+00:00"
   },
   {
     "slug": "rog-zephyrus-g16-vs-legion-pro-7i",
@@ -74,6 +74,6 @@
     "winner_name": "Lenovo Legion Pro 7i (Gen 9)",
     "score_a": 72.0,
     "score_b": 86.0,
-    "created_at": "2026-10-19T21:45:50.235694+00:00"
+    "created_at": "2026-10-19T21:57:44.685093+00:00"
   }
 ]

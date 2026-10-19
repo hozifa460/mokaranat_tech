@@ -187,7 +187,7 @@ class EditorialRuleEngine:
         elif winner_item.category == "cpu":
             role_desc = f"معمارية {winner_item.architecture} وتوزيع الموارد الحسابية المتطور وكفاءة معالجة المهام"
         else:
-            role_desc = f"معمارية {winner_item.architecture} وتوازن العتاد المعماري ومنصة التشغيل المحمولة"
+            role_desc = f"معمارية {winner_item.architecture} وتوازن العتاد المعماري ومنصة التشغيل المحمولة{fps_phrase}"
 
         return (
             f"يتفوق {winner_item.name} في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة {lead_pct_str}% "
@@ -886,7 +886,7 @@ class EditorialRuleEngine:
             else:
                 return (
                     f"اللاعب أو المحترف الذي يطلب أقصى استقرار وأداء في الألعاب الثقيلة وبرامج التصميم على حساب الوزن ({_format_num(weight)} كجم)، "
-                    f"مع الاستفادة من منصة تبريد قوية وبطارية {battery_str}Wh."
+                    f"مع الاستفادة من منصة تبريد قوية وبطارية بسعة {battery_str}Wh."
                 )
 
 
