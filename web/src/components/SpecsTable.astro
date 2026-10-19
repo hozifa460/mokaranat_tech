@@ -94,7 +94,7 @@ const formatVal = (v: any) => {
                   <div class="space-y-0.5">
                     <span class="font-bold text-emerald-600 dark:text-emerald-400">
                       {diff.key === 'launch_msrp_usd' ? (
-                        <>أوفر بنسبة <bdi dir="ltr" class="whitespace-nowrap">{formatVal(diff.diff_percentage)}%</bdi> مقارنة بسعر المنافس لصالح {isA ? itemA.name : itemB.name}</>
+                        <>أوفر بنسبة <bdi dir="ltr" class="whitespace-nowrap">{formatVal(diff.diff_percentage)}%</bdi> (خصم من السعر الأعلى) مقارنة بسعر المنافس لصالح {isA ? itemA.name : itemB.name}</>
                       ) : (
                         <><bdi dir="ltr" class="whitespace-nowrap">+{formatVal(diff.diff_percentage)}%</bdi> لصالح {isA ? itemA.name : itemB.name}</>
                       )}

@@ -64,13 +64,13 @@
       "pcie_interface": "PCIe 4.0 x16",
       "pcie_lanes": 16
     },
-    "benchmark_index": 93.5,
+    "benchmark_index": 96.0,
     "gaming_scores": {
-      "raster_1080p": 96.0,
-      "raster_1440p": 94.5,
-      "raster_4k": 91.0
+      "raster_1080p": 105.0,
+      "raster_1440p": 117.0,
+      "raster_4k": 100.0
     },
-    "ray_tracing_score": 75.0,
+    "ray_tracing_score": 76.0,
     "efficiency_score": 75.0,
     "features": [
       "FSR 3.1",
@@ -85,11 +85,11 @@
       "key": "benchmark_index",
       "label_ar": "مؤشر الأداء العام (Benchmark Index)",
       "value_a": 81.0,
-      "value_b": 93.5,
+      "value_b": 96.0,
       "unit": "/ 100",
       "winner": "b",
-      "diff_percentage": 15.4,
-      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 15.4%"
+      "diff_percentage": 18.5,
+      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 18.5%"
     },
     {
       "key": "launch_msrp_usd",
@@ -125,11 +125,11 @@
       "key": "ray_tracing_score",
       "label_ar": "كفاءة تتبع الأشعة (Ray Tracing)",
       "value_a": 67.0,
-      "value_b": 75.0,
+      "value_b": 76.0,
       "unit": "/ 100",
       "winner": "b",
-      "diff_percentage": 11.9,
-      "advantage_summary_ar": "معالجة متقدمة لتقنيات الإضاءة الواقعية بفارق 11.9%"
+      "diff_percentage": 13.4,
+      "advantage_summary_ar": "معالجة متقدمة لتقنيات الإضاءة الواقعية بفارق 13.4%"
     },
     {
       "key": "efficiency_score",
@@ -183,7 +183,7 @@
     }
   ],
   "performance_score_a": 81.0,
-  "performance_score_b": 93.5,
+  "performance_score_b": 96.0,
   "fps_benchmarks": [
     {
       "game_title": "Cyberpunk 2077",
@@ -191,9 +191,10 @@
       "resolution": "1080p",
       "preset": "Ultra High",
       "fps_a": 101,
-      "fps_b": 114,
-      "diff_pct": 12.9,
-      "winner": "b"
+      "fps_b": 125,
+      "diff_pct": 23.8,
+      "winner": "b",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -201,9 +202,10 @@
       "resolution": "1440p",
       "preset": "Ultra High",
       "fps_a": 68,
-      "fps_b": 78,
-      "diff_pct": 14.7,
-      "winner": "b"
+      "fps_b": 97,
+      "diff_pct": 42.6,
+      "winner": "b",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -211,9 +213,10 @@
       "resolution": "4K",
       "preset": "Ultra High",
       "fps_a": 35,
-      "fps_b": 46,
-      "diff_pct": 31.4,
-      "winner": "b"
+      "fps_b": 50,
+      "diff_pct": 42.9,
+      "winner": "b",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -221,9 +224,10 @@
       "resolution": "1080p",
       "preset": "Cinematic High",
       "fps_a": 72,
-      "fps_b": 81,
-      "diff_pct": 12.5,
-      "winner": "b"
+      "fps_b": 89,
+      "diff_pct": 23.6,
+      "winner": "b",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -231,9 +235,10 @@
       "resolution": "1440p",
       "preset": "Cinematic High",
       "fps_a": 45,
-      "fps_b": 52,
-      "diff_pct": 15.6,
-      "winner": "b"
+      "fps_b": 65,
+      "diff_pct": 44.4,
+      "winner": "b",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -241,9 +246,10 @@
       "resolution": "4K",
       "preset": "Cinematic High",
       "fps_a": 22,
-      "fps_b": 28,
-      "diff_pct": 27.3,
-      "winner": "b"
+      "fps_b": 31,
+      "diff_pct": 40.9,
+      "winner": "b",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
     {
       "game_title": "Counter-Strike 2",
@@ -251,9 +257,10 @@
       "resolution": "1080p",
       "preset": "Competitive High",
       "fps_a": 295,
-      "fps_b": 308,
-      "diff_pct": 4.4,
-      "winner": "b"
+      "fps_b": 321,
+      "diff_pct": 8.8,
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -261,9 +268,10 @@
       "resolution": "1440p",
       "preset": "Competitive High",
       "fps_a": 203,
-      "fps_b": 214,
-      "diff_pct": 5.4,
-      "winner": "b"
+      "fps_b": 236,
+      "diff_pct": 16.3,
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -271,9 +279,10 @@
       "resolution": "4K",
       "preset": "Competitive High",
       "fps_a": 111,
-      "fps_b": 122,
-      "diff_pct": 9.9,
-      "winner": "b"
+      "fps_b": 127,
+      "diff_pct": 14.4,
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -281,9 +290,10 @@
       "resolution": "1080p",
       "preset": "Ultra",
       "fps_a": 129,
-      "fps_b": 142,
-      "diff_pct": 10.1,
-      "winner": "b"
+      "fps_b": 155,
+      "diff_pct": 20.2,
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -291,9 +301,10 @@
       "resolution": "1440p",
       "preset": "Ultra",
       "fps_a": 94,
-      "fps_b": 106,
-      "diff_pct": 12.8,
-      "winner": "b"
+      "fps_b": 131,
+      "diff_pct": 39.4,
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -301,9 +312,10 @@
       "resolution": "4K",
       "preset": "Ultra",
       "fps_a": 52,
-      "fps_b": 67,
-      "diff_pct": 28.8,
-      "winner": "b"
+      "fps_b": 73,
+      "diff_pct": 40.4,
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -311,9 +323,10 @@
       "resolution": "1080p",
       "preset": "Ultra / High",
       "fps_a": 206,
-      "fps_b": 228,
-      "diff_pct": 10.7,
-      "winner": "b"
+      "fps_b": 250,
+      "diff_pct": 21.4,
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -321,9 +334,10 @@
       "resolution": "1440p",
       "preset": "Ultra / High",
       "fps_a": 141,
-      "fps_b": 160,
-      "diff_pct": 13.5,
-      "winner": "b"
+      "fps_b": 200,
+      "diff_pct": 41.8,
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -331,9 +345,10 @@
       "resolution": "4K",
       "preset": "Ultra / High",
       "fps_a": 71,
-      "fps_b": 92,
-      "diff_pct": 29.6,
-      "winner": "b"
+      "fps_b": 102,
+      "diff_pct": 43.7,
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -341,9 +356,10 @@
       "resolution": "1080p",
       "preset": "Ultra High",
       "fps_a": 140,
-      "fps_b": 155,
-      "diff_pct": 10.7,
-      "winner": "b"
+      "fps_b": 169,
+      "diff_pct": 20.7,
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -351,9 +367,10 @@
       "resolution": "1440p",
       "preset": "Ultra High",
       "fps_a": 101,
-      "fps_b": 114,
-      "diff_pct": 12.9,
-      "winner": "b"
+      "fps_b": 141,
+      "diff_pct": 39.6,
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -361,31 +378,32 @@
       "resolution": "4K",
       "preset": "Ultra High",
       "fps_a": 51,
-      "fps_b": 66,
-      "diff_pct": 29.4,
-      "winner": "b"
+      "fps_b": 72,
+      "diff_pct": 41.2,
+      "winner": "b",
+      "rt_badge_ar": null
     }
   ],
   "verdict": {
     "overall_winner": "b",
     "winner_name": "AMD Radeon RX 7900 XTX",
     "score_a": 81.0,
-    "score_b": 93.5,
-    "quick_verdict_ar": "يتفوق AMD Radeon RX 7900 XTX في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 15.4% مقارنة بـ AMD Radeon RX 7800 XT. هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~12.5%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "score_b": 96.0,
+    "quick_verdict_ar": "يتفوق AMD Radeon RX 7900 XTX في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 18.5% مقارنة بـ AMD Radeon RX 7800 XT. هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~37.4%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
     "gaming_analysis_ar": "في ساحة الألعاب، يتميز كرت AMD Radeon RX 7900 XTX بقوة معالجة خام فائقة وسعة ذاكرة رسومية هائلة تبلغ 24GB VRAM، في حين يقدم AMD Radeon RX 7800 XT بسعة 16GB توازناً ممتازاً على دقة 1440p، مع دعم كامل لكلا البطاقتين لتقنيات FSR 3.1 ومنافذ DisplayPort 2.1 الحديثة.",
     "productivity_analysis_ar": "على صعيد الإنتاجية والرندرة، تمنح سعة الذاكرة الكبيرة (24GB لـ AMD Radeon RX 7900 XTX) ميزة في معالجة المشاهد ثلاثية الأبعاد والمشاريع الضخمة، بينما يستهلك AMD Radeon RX 7800 XT طاقة أقل (263W مقابل 355W) مما يسهل تبريده في مختلف بيئات العمل.",
-    "value_and_budget_ar": "عند دراسة معادلة القيمة مقابل السعر، يطرح AMD Radeon RX 7800 XT تكلفة شراء أقل بسعر $499 (توفير $500، بينما يرتفع سعر منافسه بنسبة 100.2%)، في حين يقدم AMD Radeon RX 7900 XTX زيادة في الإطارات بمتوسط ~12.5% وسعة 24GB، مما يجعل AMD Radeon RX 7800 XT الخيار الأفضل لقيمة كل دولار، بينما يستهدف AMD Radeon RX 7900 XTX من يطلب أداءً أعلى واستثماراً أكثر استدامة للمستقبل.",
+    "value_and_budget_ar": "عند دراسة معادلة القيمة مقابل السعر، يطرح AMD Radeon RX 7800 XT تكلفة شراء أقل بسعر $499 (توفير $500، بينما يرتفع سعر منافسه بنسبة 100.2% عن السعر الأقل)، في حين يقدم AMD Radeon RX 7900 XTX زيادة في الإطارات بمتوسط ~38% وسعة 24GB، مما يجعل AMD Radeon RX 7800 XT الخيار الأفضل لقيمة كل دولار، بينما يستهدف AMD Radeon RX 7900 XTX من يطلب أداءً أعلى واستثماراً أكثر استدامة للمستقبل.",
     "pros_a": [
       "سعة ذاكرة رسومية وافرة (16GB VRAM) بناقل 256 بت تمنح أريحية ممتازة للألعاب بدقة 1440p و 4K وتمنع اختناق الذاكرة مع القوام المرتفع",
       "أداء رسومي خام (Rasterization) ممتاز ومؤشر عام تنافسي يبلغ 81/100",
       "دعم تقنيات FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ العرض الحديثة DisplayPort 2.1"
     ],
     "cons_a": [
-      "أداء رسومي إجمالي أقل مقارنة بالفئة الأعلى (93.5/100)"
+      "أداء رسومي إجمالي أقل مقارنة بالفئة الأعلى (96/100)"
     ],
     "pros_b": [
       "سعة ذاكرة رسومية هائلة (24GB VRAM) بناقل 384 بت تمنح أماناً كاملاً للألعاب بدقة 4K والرندرة الضخمة دون اختناق الذاكرة",
-      "أداء رسومي خام (Rasterization) ممتاز ومؤشر عام تنافسي يبلغ 93.5/100",
+      "أداء رسومي خام (Rasterization) ممتاز ومؤشر عام تنافسي يبلغ 96/100",
       "دعم تقنيات FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ العرض الحديثة DisplayPort 2.1"
     ],
     "cons_b": [
@@ -519,7 +537,7 @@
         "url": "https://tech-comparisons.pages.dev/compare/rx-7800-xt-vs-rx-7900-xtx",
         "name": "مقارنة AMD Radeon RX 7800 XT ضد AMD Radeon RX 7900 XTX | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين AMD Radeon RX 7800 XT و AMD Radeon RX 7900 XTX. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T18:06:31.601297+00:00",
+        "datePublished": "2026-10-19T20:59:05.471943+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -537,13 +555,13 @@
         },
         "reviewRating": {
           "@type": "Rating",
-          "ratingValue": 4.7,
+          "ratingValue": 4.8,
           "bestRating": "5",
           "worstRating": "1"
         },
-        "reviewBody": "يتفوق AMD Radeon RX 7900 XTX في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 15.4% مقارنة بـ AMD Radeon RX 7800 XT. هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~12.5%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+        "reviewBody": "يتفوق AMD Radeon RX 7900 XTX في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 18.5% مقارنة بـ AMD Radeon RX 7800 XT. هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~37.4%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
       }
     ]
   },
-  "created_at": "2026-10-19T18:06:31.601297+00:00"
+  "created_at": "2026-10-19T20:59:05.471943+00:00"
 }

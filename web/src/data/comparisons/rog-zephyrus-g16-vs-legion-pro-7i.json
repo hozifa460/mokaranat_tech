@@ -16,7 +16,7 @@
     "process_node_nm": 4.0,
     "tdp_w": 105,
     "raw_specs": {
-      "display": "16-inch OLED 2.5K 240Hz",
+      "display": "16-inch OLED 2.5K 240Hz 0.2ms",
       "weight_kg": 1.85,
       "battery_wh": 90,
       "cpu": "Intel Core Ultra 9 185H",
@@ -33,7 +33,7 @@
     "ray_tracing_score": 80.0,
     "efficiency_score": 86.0,
     "features": [
-      "ROG Nebula OLED Panel",
+      "ROG Nebula OLED Panel (0.2ms Response)",
       "CNC Aluminum Body",
       "Lightweight 1.85kg"
     ],
@@ -51,7 +51,7 @@
     "process_node_nm": 4.0,
     "tdp_w": 175,
     "raw_specs": {
-      "display": "16-inch IPS 2.5K 240Hz 500nits",
+      "display": "16-inch IPS 2.5K 240Hz 500nits Anti-Glare",
       "weight_kg": 2.6,
       "battery_wh": 99.9,
       "cpu": "Intel Core i9-14900HX",
@@ -70,6 +70,7 @@
     "features": [
       "Full 175W TGP GPU",
       "Coldfront 5.0 Vapor Chamber",
+      "500 nits High-Brightness IPS",
       "TrueStrike Keyboard"
     ],
     "pcie_interface": null
@@ -97,13 +98,13 @@
     },
     {
       "key": "tdp_w",
-      "label_ar": "استهلاك الطاقة المكتبي (TDP)",
+      "label_ar": "أقصى استهلاك رسومي متاح (GPU TGP / Thermal Budget)",
       "value_a": 105,
       "value_b": 175,
       "unit": "W",
-      "winner": "a",
+      "winner": "tie",
       "diff_percentage": 40.0,
-      "advantage_summary_ar": "استهلاك طاقة أقل وتوليد حراري أهدأ بفارق 40%"
+      "advantage_summary_ar": "مقياس هندسي: يمنح السحب الأعلى (مثل 175W) أداء رسومياً مستداماً وترددات بطاقة أعلى، بينما يتيح السحب المنضبط (مثل 105W) هيكلاً فائق النحافة وحرارة أقل"
     },
     {
       "key": "process_node_nm",
@@ -167,7 +168,8 @@
       "fps_a": 113,
       "fps_b": 126,
       "diff_pct": 11.5,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -177,7 +179,8 @@
       "fps_a": 72,
       "fps_b": 84,
       "diff_pct": 16.7,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -187,7 +190,8 @@
       "fps_a": 30,
       "fps_b": 43,
       "diff_pct": 43.3,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -197,7 +201,8 @@
       "fps_a": 78,
       "fps_b": 87,
       "diff_pct": 11.5,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -207,7 +212,8 @@
       "fps_a": 47,
       "fps_b": 54,
       "diff_pct": 14.9,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -217,7 +223,8 @@
       "fps_a": 18,
       "fps_b": 26,
       "diff_pct": 44.4,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
     {
       "game_title": "Counter-Strike 2",
@@ -227,7 +234,8 @@
       "fps_a": 300,
       "fps_b": 311,
       "diff_pct": 3.7,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -237,7 +245,8 @@
       "fps_a": 203,
       "fps_b": 214,
       "diff_pct": 5.4,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -247,7 +256,8 @@
       "fps_a": 103,
       "fps_b": 116,
       "diff_pct": 12.6,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -257,7 +267,8 @@
       "fps_a": 125,
       "fps_b": 136,
       "diff_pct": 8.8,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -267,7 +278,8 @@
       "fps_a": 87,
       "fps_b": 99,
       "diff_pct": 13.8,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -277,7 +289,8 @@
       "fps_a": 39,
       "fps_b": 55,
       "diff_pct": 41.0,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -287,7 +300,8 @@
       "fps_a": 181,
       "fps_b": 197,
       "diff_pct": 8.8,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -297,7 +311,8 @@
       "fps_a": 118,
       "fps_b": 135,
       "diff_pct": 14.4,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -307,7 +322,8 @@
       "fps_a": 49,
       "fps_b": 68,
       "diff_pct": 38.8,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -317,7 +333,8 @@
       "fps_a": 131,
       "fps_b": 143,
       "diff_pct": 9.2,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -327,7 +344,8 @@
       "fps_a": 90,
       "fps_b": 103,
       "diff_pct": 14.4,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -337,7 +355,8 @@
       "fps_a": 37,
       "fps_b": 52,
       "diff_pct": 40.5,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     }
   ],
   "verdict": {
@@ -348,29 +367,32 @@
     "quick_verdict_ar": "يتفوق Lenovo Legion Pro 7i (Gen 9) في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 8.3% مقارنة بـ ASUS ROG Zephyrus G16 (2024). هذا التفوق يستند إلى معمارية Intel 14th Gen + RTX 4080 وتوازن العتاد المعماري ومنصة التشغيل المحمولة، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
     "gaming_analysis_ar": "في فئة الحواسيب المحمولة، يوفر كلا الجهازين توازناً متقدماً بين الأداء المحمول والحرارة المحكومة، مع أفضلية في ثبات الترددات والأداء الرسومي لصالح Lenovo Legion Pro 7i (Gen 9) (بمؤشر 91/100) تحت الأحمال المطولة مقارنة بـ ASUS ROG Zephyrus G16 (2024) (84/100).",
     "productivity_analysis_ar": "تعتبر سعة البطارية وإدارة الطاقة والوزن هي العوامل الفاصلة في الإنتاجية اليومية للمصممين والمبرمجين؛ حيث يتميز ASUS ROG Zephyrus G16 (2024) بسهولة التنقل بوزن 1.9 كجم، بينما يوفر Lenovo Legion Pro 7i (Gen 9) منصة عمل قوية وثابتة.",
-    "value_and_budget_ar": "يطرح ASUS ROG Zephyrus G16 (2024) تكلفة شراء أولية أقل بسعر $1999 مقارنة بـ $2199 (توفير $200، بينما يزيد سعر منافسه بنسبة 10%)، في حين يوفر Lenovo Legion Pro 7i (Gen 9) أداءً إضافياً بنسبة 8.3% يبرر الاستثمار لمن تتطلب أعمالهم أعلى مواصفات للتنقل واللعب.",
+    "value_and_budget_ar": "يطرح ASUS ROG Zephyrus G16 (2024) تكلفة شراء أولية أقل بسعر $1999 مقارنة بـ $2199 (توفير $200، بينما يرتفع سعر منافسه بنسبة 10% عن السعر الأقل)، في حين يوفر Lenovo Legion Pro 7i (Gen 9) أداءً إضافياً بنسبة 8.3% يبرر الاستثمار لمن تتطلب أعمالهم أعلى مواصفات للتنقل واللعب.",
     "pros_a": [
-      "شاشة عرض متطورة (16-inch OLED 2.5K 240Hz)",
+      "شاشة OLED مذهلة (تباين لا نهائي، استجابة فائقة 0.2ms، وسواد حقيقي مثالي لصناع المحتوى والسينمائيين)",
       "تصميم أنيق ووزن خفيف (1.9 كجم) يسهل التنقل اليومي مقارنة بالمنافس (2.6 كجم)",
       "كفاءة استهلاك طاقة عالية بمؤشر 86/100"
     ],
     "cons_a": [
       "سعة بطارية أقل (90Wh مقابل 99.9Wh لدى Lenovo Legion Pro 7i (Gen 9))",
+      "شاشات OLED تتطلب عناية لتفادي تطبيع الصورة (Burn-in) مع العناصر الثابتة وسطوعها المستمر أقل في البيئات شديدة الإضاءة مقارنة بـ IPS",
+      "سحب طاقة رسومي محكوم (105W TGP) ليتناسب مع الهيكل النحيف والخفيف مقارنة بأجهزة الألعاب الضخمة",
       "خيارات ترقية العتاد الداخلي محدودة بطبيعة الأجهزة المحمولة",
       "يتطلب وضعية تهوية جيدة على سطح مستوٍ لتفادي خنق تدفق الهواء السفلي"
     ],
     "pros_b": [
-      "شاشة عرض متطورة (16-inch IPS 2.5K 240Hz 500nits)",
+      "شاشة IPS فائقة السطوع (500 nits لثبات الإضاءة والوضوح التام في الغرف المضيئة دون أي مخاطر لتطبيع الشاشة OLED Burn-in)",
       "أداء معالجة إجمالي قوي بمؤشر 91/100",
       "بطارية بسعة ضخمة (99.9 واط/ساعة) للاستخدام المطول خارج المنزل"
     ],
     "cons_b": [
       "سعر إطلاق رسمي أعلى ($2199)",
       "وزن الجهاز (2.6 كجم) أثقل نسبياً عند الحمل في الحقيبة مقارنة بـ ASUS ROG Zephyrus G16 (2024) (1.9 كجم)",
+      "وزن الجهاز (2.6 كجم) ثقيل مع شاحن ضخم مما يحد من سهولة التنقل اليومي ويجعله بديلاً مكتبياً",
       "خيارات ترقية العتاد الداخلي محدودة بطبيعة الأجهزة المحمولة",
       "يتطلب وضعية تهوية جيدة على سطح مستوٍ لتفادي خنق تدفق الهواء السفلي"
     ],
-    "who_should_buy_a": "اللاعب أو المحترف الذي يطلب أقصى استقرار وأداء في الألعاب الثقيلة وبرامج التصميم على حساب الوزن (1.9 كجم)، مع الاستفادة من منصة تبريد قوية وبطارية 90Wh.",
+    "who_should_buy_a": "المستخدم كثير التنقل وصانع المحتوى الذي يضع خفة الوزن (1.9 كجم) وسهولة الحمل في صدارة أولوياته مع الاستفادة من شاشة OLED فائقة التباين والألوان، مع الاستفادة من بطارية 90Wh وشاشة عالية الدقة.",
     "who_should_buy_b": "اللاعب أو المحترف الذي يطلب أقصى استقرار وأداء في الألعاب الثقيلة وبرامج التصميم على حساب الوزن (2.6 كجم)، مع الاستفادة من منصة تبريد قوية وبطارية 99.9Wh."
   },
   "affiliate_links_a": [
@@ -498,7 +520,7 @@
         "url": "https://tech-comparisons.pages.dev/compare/rog-zephyrus-g16-vs-legion-pro-7i",
         "name": "مقارنة ASUS ROG Zephyrus G16 (2024) ضد Lenovo Legion Pro 7i (Gen 9) | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين ASUS ROG Zephyrus G16 (2024) و Lenovo Legion Pro 7i (Gen 9). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T18:06:31.832427+00:00",
+        "datePublished": "2026-10-19T20:59:05.758525+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -524,5 +546,5 @@
       }
     ]
   },
-  "created_at": "2026-10-19T18:06:31.832427+00:00"
+  "created_at": "2026-10-19T20:59:05.758525+00:00"
 }

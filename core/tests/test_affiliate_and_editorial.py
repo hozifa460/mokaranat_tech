@@ -1076,6 +1076,158 @@ def test_ai_editorial_dynamic_retail_price_revision_from_metadata():
     assert "تعديل السعر الرسمي" in verdict.value_and_budget_ar
 
 
+def test_laptop_classification_and_weight_threshold_zephyrus_g16():
+    """Verifies that Zephyrus G16 (weight 1.85 kg <= 1.9) is recognized as portable/thin-and-light with OLED."""
+    g16 = HardwareSpec(
+        id="rog-zephyrus-g16", slug="rog-zephyrus-g16", name="ASUS ROG Zephyrus G16 (2024)",
+        category="laptop", brand="ASUS", release_year=2024, launch_msrp_usd=1999.0,
+        architecture="Meteor Lake + Ada", process_node_nm=4.0, tdp_w=105,
+        raw_specs={"weight_kg": 1.85, "display_tech": "OLED", "battery_wh": 90.0},
+        benchmark_index=84.0, features=["OLED 2.5K 240Hz 0.2ms"]
+    )
+    legion = HardwareSpec(
+        id="legion-pro-7i", slug="legion-pro-7i", name="Lenovo Legion Pro 7i (Gen 9)",
+        category="laptop", brand="Lenovo", release_year=2024, launch_msrp_usd=2199.0,
+        architecture="Intel 14th Gen + RTX 4080", process_node_nm=4.0, tdp_w=175,
+        raw_specs={"weight_kg": 2.6, "display_tech": "IPS", "battery_wh": 99.9},
+        benchmark_index=91.0, features=["500 nits High-Brightness IPS"]
+    )
+    verdict = EditorialRuleEngine.generate_verdict(g16, legion)
+    # Check who_should_buy_a recognizes portability and OLED
+    assert "كثير التنقل" in verdict.who_should_buy_a or "خفة الوزن" in verdict.who_should_buy_a
+    assert "1.9 كجم" in verdict.who_should_buy_a or "1.85" in verdict.who_should_buy_a
+    assert "OLED" in verdict.who_should_buy_a
+
+    # Check pros and cons for display
+    pros_a_text = " ".join(verdict.pros_a)
+    cons_a_text = " ".join(verdict.cons_a)
+    pros_b_text = " ".join(verdict.pros_b)
+    assert "OLED" in pros_a_text and "0.2ms" in pros_a_text
+    assert "Burn-in" in cons_a_text or "تطبيع" in cons_a_text
+    assert "500 nits" in pros_b_text and "IPS" in pros_b_text
+
+
+def test_laptop_tdp_custom_label_and_tie_nuance():
+    """Verifies that laptop tdp_w is compared as tie with GPU TGP / Thermal Budget nuance."""
+    from core.services.spec_engine import SpecEngine
+    g16 = HardwareSpec(
+        id="rog-zephyrus-g16", slug="rog-zephyrus-g16", name="ASUS ROG Zephyrus G16 (2024)",
+        category="laptop", brand="ASUS", release_year=2024, launch_msrp_usd=1999.0,
+        architecture="Meteor Lake + Ada", process_node_nm=4.0, tdp_w=105,
+        raw_specs={"weight_kg": 1.85, "display_tech": "OLED", "battery_wh": 90.0},
+        benchmark_index=84.0
+    )
+    legion = HardwareSpec(
+        id="legion-pro-7i", slug="legion-pro-7i", name="Lenovo Legion Pro 7i (Gen 9)",
+        category="laptop", brand="Lenovo", release_year=2024, launch_msrp_usd=2199.0,
+        architecture="Intel 14th Gen + RTX 4080", process_node_nm=4.0, tdp_w=175,
+        raw_specs={"weight_kg": 2.6, "display_tech": "IPS", "battery_wh": 99.9},
+        benchmark_index=91.0
+    )
+    diffs = SpecEngine.compare_specs(g16, legion)
+    tdp_diff = next(d for d in diffs if d.key == "tdp_w")
+    assert tdp_diff.winner == "tie"
+    assert "GPU TGP / Thermal Budget" in tdp_diff.label_ar
+    assert "مقياس هندسي" in tdp_diff.advantage_summary_ar
+
+
+def test_cpu_cleanliness_ray_tracing_null_and_platform_longevity():
+    """Verifies null ray_tracing_score for CPUs and AM5 2027+ / LGA 1700 EOL editorial badges."""
+    from core.services.spec_engine import SpecEngine
+    cpu_amd = HardwareSpec(
+        id="ryzen-7-7800x3d", slug="ryzen-7-7800x3d", name="AMD Ryzen 7 7800X3D",
+        category="cpu", brand="AMD", release_year=2023, launch_msrp_usd=449.0,
+        architecture="Zen 4 (3D V-Cache)", process_node_nm=5.0, tdp_w=120,
+        raw_specs={"total_cores": 8, "threads": 16, "socket": "AM5"},
+        benchmark_index=91.0, ray_tracing_score=None,
+        features=["96MB 3D V-Cache", "AM5 Platform Lifecycle through 2027+"]
+    )
+    cpu_intel = HardwareSpec(
+        id="i7-14700k", slug="i7-14700k", name="Intel Core i7-14700K",
+        category="cpu", brand="Intel", release_year=2023, launch_msrp_usd=409.0,
+        architecture="Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin)", process_node_nm=7.0, tdp_w=253,
+        raw_specs={"total_cores": 20, "threads": 28, "socket": "LGA 1700 (End of Life)", "process_node": "Intel 7 (10nm Enhanced SuperFin)"},
+        benchmark_index=92.5, ray_tracing_score=None,
+        features=["Intel 7 (10nm Enhanced SuperFin)"]
+    )
+
+    # 1. Spec diffs must NOT include ray_tracing_score for CPUs
+    diffs = SpecEngine.compare_specs(cpu_amd, cpu_intel)
+    assert not any(d.key == "ray_tracing_score" for d in diffs)
+
+    # 2. Process node must be a tie with Intel 7 vs TSMC 5nm note
+    nm_diff = next(d for d in diffs if d.key == "process_node_nm")
+    assert nm_diff.winner == "tie"
+    assert "Intel 7" in nm_diff.advantage_summary_ar
+
+    # 3. Editorial pros/cons must reflect AM5 2027+ and LGA 1700 EOL
+    verdict = EditorialRuleEngine.generate_verdict(cpu_amd, cpu_intel)
+    pros_amd = " ".join(verdict.pros_a)
+    cons_intel = " ".join(verdict.cons_b)
+    assert "2027+" in pros_amd and "AM5" in pros_amd
+    assert "LGA 1700" in cons_intel and ("منتهية" in cons_intel or "Dead-end" in cons_intel)
+
+
+def test_intertier_gpu_scaling_and_rt_badges():
+    """Verifies calibrated inter-tier scaling (4070S vs 4080S ~30%, 7800XT vs 7900XTX ~38%) and RT badges."""
+    import json
+    from core.config import SEED_DATA_PATH
+    with open(SEED_DATA_PATH, "r", encoding="utf-8") as f:
+        data = {item["id"]: HardwareSpec.model_validate(item) for item in json.load(f)}
+
+    # 1. RTX 4070S vs RTX 4080S
+    s_4070 = data["rtx-4070-super"]
+    s_4080 = data["rtx-4080-super"]
+    matrix_4080 = FpsCalculator.calculate_fps_matrix(s_4070, s_4080)
+    leads_4080 = [((i.fps_b - i.fps_a) / i.fps_a) * 100 for i in matrix_4080 if i.resolution == "1440p"]
+    avg_lead_4080 = sum(leads_4080) / len(leads_4080)
+    assert 28.0 <= avg_lead_4080 <= 33.0, f"Expected ~30% lead for 4080S, got {avg_lead_4080:.1f}%"
+
+    verdict_4080 = EditorialRuleEngine.generate_verdict(s_4070, s_4080, matrix_4080)
+    assert "~30" in verdict_4080.quick_verdict_ar or "~30" in verdict_4080.value_and_budget_ar
+
+    # 2. RX 7800 XT vs RX 7900 XTX
+    s_7800 = data["rx-7800-xt"]
+    s_7900 = data["rx-7900-xtx"]
+    matrix_7900 = FpsCalculator.calculate_fps_matrix(s_7800, s_7900)
+    leads_7900 = [((i.fps_b - i.fps_a) / i.fps_a) * 100 for i in matrix_7900 if i.resolution == "1440p"]
+    avg_lead_7900 = sum(leads_7900) / len(leads_7900)
+    assert 35.0 <= avg_lead_7900 <= 40.0, f"Expected ~38% lead for 7900XTX, got {avg_lead_7900:.1f}%"
+
+    verdict_7900 = EditorialRuleEngine.generate_verdict(s_7800, s_7900, matrix_7900)
+    assert "~37" in verdict_7900.quick_verdict_ar or "~38" in verdict_7900.value_and_budget_ar
+
+    # 3. Ray Tracing disclosures
+    cp_item = next(i for i in matrix_4080 if i.game_title == "Cyberpunk 2077")
+    wk_item = next(i for i in matrix_4080 if i.game_title == "Black Myth: Wukong")
+    cs_item = next(i for i in matrix_4080 if i.game_title == "Counter-Strike 2")
+    assert cp_item.rt_badge_ar == "⚡ تتبع الأشعة مفعّل (RT ON)"
+    assert wk_item.rt_badge_ar == "💡 إضاءة Lumen العتادية"
+    assert cs_item.rt_badge_ar is None
+
+    # 4. RTX 4060 Ti variant name clarity
+    s_4060 = data["rtx-4060-ti"]
+    assert s_4060.name == "NVIDIA GeForce RTX 4060 Ti (8GB)"
+
+
+def test_pricing_framing_markup_over_cheaper_msrp():
+    """Verifies that editorial value narratives explicitly frame price deltas as markup over cheaper MSRP."""
+    s_4070 = HardwareSpec(
+        id="card-a", slug="card-a", name="Card Alpha", category="gpu", brand="NVIDIA",
+        release_year=2024, launch_msrp_usd=500.0, architecture="Ada", process_node_nm=4.0,
+        tdp_w=200, benchmark_index=80.0
+    )
+    s_4080 = HardwareSpec(
+        id="card-b", slug="card-b", name="Card Beta", category="gpu", brand="NVIDIA",
+        release_year=2024, launch_msrp_usd=750.0, architecture="Ada", process_node_nm=4.0,
+        tdp_w=300, benchmark_index=95.0
+    )
+    verdict = EditorialRuleEngine.generate_verdict(s_4070, s_4080)
+    # Price difference is $250. Over $500 (cheaper), that is 50% markup.
+    assert "عن السعر الأقل" in verdict.value_and_budget_ar
+
+
+
 
 
 

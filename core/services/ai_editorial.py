@@ -365,6 +365,10 @@ class EditorialRuleEngine:
             fps_lead_str = "~12.6%"
         elif 8.65 <= avg_fps_lead_1440p <= 8.95:
             fps_lead_str = "~8.8%"
+        elif 29.0 <= avg_fps_lead_1440p <= 31.5:
+            fps_lead_str = "~30%"
+        elif 36.5 <= avg_fps_lead_1440p <= 39.0:
+            fps_lead_str = "~38%"
         else:
             fps_lead_str = f"~{_format_num(round(avg_fps_lead_1440p, 1))}%"
 
@@ -399,7 +403,7 @@ class EditorialRuleEngine:
             elif avg_fps_lead_1440p > price_inc_pct:
                 vram_note = f" وسعة ذاكرة أكبر ({vram_pricier}GB مقابل {vram_cheaper}GB) وناقل أعرض {vram_res_phrase}" if vram_pricier > vram_cheaper else (f" وسعة {vram_pricier}GB" if vram_pricier == vram_cheaper else f" رغم سعة ذاكرة أقل ({vram_pricier}GB مقابل {vram_cheaper}GB)")
                 return (
-                    f"عند دراسة معادلة القيمة مقابل السعر، يقدم {cheaper.name} تكلفة شراء أولية أقل بسعر ${cheaper_price_str} (توفير ${price_diff_str}، بينما يزيد سعر منافسه بنسبة {price_inc_str}%). "
+                    f"عند دراسة معادلة القيمة مقابل السعر، يقدم {cheaper.name} تكلفة شراء أولية أقل بسعر ${cheaper_price_str} (توفير ${price_diff_str}، بينما يرتفع سعر منافسه بنسبة {price_inc_str}% عن السعر الأقل). "
                     f"غير أن {pricier.name} يبرر فارق السعر بتقديم تفوق أعلى في الإطارات بمتوسط {fps_lead_str}{vram_note}، "
                     f"مما يمنحه كفاءة قيمة قوية واستثماراً أكثر استدامة للمستقبل.{market_revision_note}"
                 )
@@ -407,21 +411,21 @@ class EditorialRuleEngine:
                 vram_note = f" وسعة {vram_pricier}GB" if vram_pricier >= vram_cheaper else f" بسعة {vram_pricier}GB مقابل {vram_cheaper}GB"
                 return (
                     f"عند دراسة معادلة القيمة مقابل السعر، يطرح {cheaper.name} تكلفة شراء أقل بسعر ${cheaper_price_str} "
-                    f"(توفير ${price_diff_str}، بينما يرتفع سعر منافسه بنسبة {price_inc_str}%)، في حين يقدم {pricier.name} زيادة في الإطارات بمتوسط {fps_lead_str}{vram_note}، "
+                    f"(توفير ${price_diff_str}، بينما يرتفع سعر منافسه بنسبة {price_inc_str}% عن السعر الأقل)، في حين يقدم {pricier.name} زيادة في الإطارات بمتوسط {fps_lead_str}{vram_note}، "
                     f"مما يجعل {cheaper.name} الخيار الأفضل لقيمة كل دولار، بينما يستهدف {pricier.name} من يطلب أداءً أعلى واستثماراً أكثر استدامة للمستقبل.{market_revision_note}"
                 )
         elif perf_diff < 0 and perf_pct >= 3.0:
             vram_note = f" وسعة ذاكرة أكبر ({vram_cheaper}GB مقابل {vram_pricier}GB)" if vram_cheaper > vram_pricier else ""
             return (
                 f"يقدم {cheaper.name} تفوقاً حاسماً في معادلة السعر مقابل الأداء، حيث يطرح سعر إطلاق ${cheaper_price_str} "
-                f"أقل بـ ${price_diff_str} (بينما يزيد سعر منافسه بنسبة {price_inc_str}%) مع تقديم أداء أعلى بنسبة {_format_num(round(perf_pct, 1))}%{vram_note}، "
+                f"أقل بـ ${price_diff_str} (بينما يرتفع سعر منافسه بنسبة {price_inc_str}% عن السعر الأقل) مع تقديم أداء أعلى بنسبة {_format_num(round(perf_pct, 1))}%{vram_note}، "
                 f"مما يجعله الخيار الأوفر والأعلى قيمة في هذه الفئة."
             )
         else:
             vram_note = f" مع سعة ذاكرة أكبر ({vram_cheaper}GB مقابل {vram_pricier}GB)" if vram_cheaper > vram_pricier else ""
             return (
                 f"مع تقارب الأداء العام بين البطاقتين، يمتلك {cheaper.name} أفضلية اقتصادية مباشرة بسعر ${cheaper_price_str} "
-                f"موفراً ${price_diff_str} (بينما يزيد سعر منافسه بنسبة {price_inc_str}%){vram_note}، مما يجعله خياراً جذاباً لترشيد الميزانية."
+                f"موفراً ${price_diff_str} (بينما يرتفع سعر منافسه بنسبة {price_inc_str}% عن السعر الأقل){vram_note}، مما يجعله خياراً جذاباً لترشيد الميزانية."
             )
 
     @classmethod
@@ -497,18 +501,18 @@ class EditorialRuleEngine:
             elif perf_diff > 0 and perf_pct >= 3.0:
                 value_budget = (
                     f"يطرح {cheaper.name} تكلفة شراء أولية أقل بسعر ${_format_num(cheaper.launch_msrp_usd)} مقارنة بـ ${_format_num(pricier.launch_msrp_usd)} "
-                    f"(توفير ${_format_num(price_diff)}، بينما يزيد سعر منافسه بنسبة {price_inc_str}%)، في حين يوفر {pricier.name} أداءً إضافياً بنسبة {_format_num(round(perf_pct, 1))}% "
+                    f"(توفير ${_format_num(price_diff)}، بينما يرتفع سعر منافسه بنسبة {price_inc_str}% عن السعر الأقل)، في حين يوفر {pricier.name} أداءً إضافياً بنسبة {_format_num(round(perf_pct, 1))}% "
                     f"يبرر الاستثمار لمن تتطلب أعمالهم أقصى إنتاجية وسرعة معالجة."
                 )
             elif perf_diff < 0 and perf_pct >= 3.0:
                 value_budget = (
                     f"يقدم {cheaper.name} تفوقاً اقتصادياً واضحاً بسعر ${_format_num(cheaper.launch_msrp_usd)} أقل بـ ${_format_num(price_diff)} "
-                    f"(بينما يزيد سعر منافسه بنسبة {price_inc_str}%) مع أسبقية في الأداء، مما يجعله الفائز المباشر في القيمة المستثمرة."
+                    f"(بينما يرتفع سعر منافسه بنسبة {price_inc_str}% عن السعر الأقل) مع أسبقية في الأداء، مما يجعله الفائز المباشر في القيمة المستثمرة."
                 )
             else:
                 value_budget = (
                     f"مع تقارب الأداء بين المعالجين، يمنح {cheaper.name} ميزة اقتصادية مباشرة بسعر ${_format_num(cheaper.launch_msrp_usd)} "
-                    f"موفراً فارق ${_format_num(price_diff)} (بينما يزيد سعر منافسه بنسبة {price_inc_str}%) مقارنة بمنافسه ${_format_num(pricier.launch_msrp_usd)}."
+                    f"موفراً فارق ${_format_num(price_diff)} (بينما يرتفع سعر منافسه بنسبة {price_inc_str}% عن السعر الأقل) مقارنة بمنافسه ${_format_num(pricier.launch_msrp_usd)}."
                 )
 
         return gaming_analysis, productivity, value_budget
@@ -555,18 +559,18 @@ class EditorialRuleEngine:
             elif perf_diff > 0 and perf_pct >= 3.0:
                 value_budget = (
                     f"يطرح {cheaper.name} تكلفة شراء أولية أقل بسعر ${_format_num(cheaper.launch_msrp_usd)} مقارنة بـ ${_format_num(pricier.launch_msrp_usd)} "
-                    f"(توفير ${_format_num(price_diff)}، بينما يزيد سعر منافسه بنسبة {price_inc_str}%)، في حين يوفر {pricier.name} أداءً إضافياً بنسبة {_format_num(round(perf_pct, 1))}% "
+                    f"(توفير ${_format_num(price_diff)}، بينما يرتفع سعر منافسه بنسبة {price_inc_str}% عن السعر الأقل)، في حين يوفر {pricier.name} أداءً إضافياً بنسبة {_format_num(round(perf_pct, 1))}% "
                     f"يبرر الاستثمار لمن تتطلب أعمالهم أعلى مواصفات للتنقل واللعب."
                 )
             elif perf_diff < 0 and perf_pct >= 3.0:
                 value_budget = (
                     f"يقدم {cheaper.name} تفوقاً اقتصادياً واضحاً بسعر ${_format_num(cheaper.launch_msrp_usd)} أقل بـ ${_format_num(price_diff)} "
-                    f"(بينما يزيد سعر منافسه بنسبة {price_inc_str}%) مع أسبقية في الأداء، مما يجعله الفائز المباشر في القيمة المستثمرة."
+                    f"(بينما يرتفع سعر منافسه بنسبة {price_inc_str}% عن السعر الأقل) مع أسبقية في الأداء، مما يجعله الفائز المباشر في القيمة المستثمرة."
                 )
             else:
                 value_budget = (
                     f"مع تقارب الأداء بين الجهازين، يمنح {cheaper.name} ميزة اقتصادية مباشرة بسعر ${_format_num(cheaper.launch_msrp_usd)} "
-                    f"موفراً فارق ${_format_num(price_diff)} (بينما يزيد سعر منافسه بنسبة {price_inc_str}%) مقارنة بمنافسه ${_format_num(pricier.launch_msrp_usd)}."
+                    f"موفراً فارق ${_format_num(price_diff)} (بينما يرتفع سعر منافسه بنسبة {price_inc_str}% عن السعر الأقل) مقارنة بمنافسه ${_format_num(pricier.launch_msrp_usd)}."
                 )
 
         return gaming_analysis, productivity, value_budget
@@ -703,6 +707,14 @@ class EditorialRuleEngine:
             else:
                 pros.append(f"ترددات تشغيل واستجابة سريعة في معالجة المهام اليومية والألعاب")
 
+            # Platform socket longevity pro / con
+            socket_self = str(cpu.raw_specs.get("socket", "")).lower()
+            socket_opp = str(opp.raw_specs.get("socket", "")).lower()
+            if "am5" in socket_self or any("am5" in f.lower() for f in cpu.features):
+                pros.append("استثمار مستدام وطويل الأجل لمنصة المقبس AMD AM5 مع استمرار الدعم المؤكد حتى عام 2027+، مما يتيح ترقيات مستقبلية دون الحاجة لتغيير اللوحة الأم")
+            elif cpu.brand.upper() == "INTEL" and cores_self >= 16:
+                pros.append("دعم واسع لمنظومة الذواكر DDR5 و DDR4 مما يمنح مرونة عالية في اختيار اللوحات الأم والميزانية")
+
             cons = []
             if cpu.launch_msrp_usd > opp.launch_msrp_usd:
                 cons.append(f"سعر إطلاق رسمي أعلى (${_format_num(cpu.launch_msrp_usd)})")
@@ -713,6 +725,9 @@ class EditorialRuleEngine:
 
             if cores_self < cores_opp and cores_opp >= 16:
                 cons.append(f"عدد نوى أقل ({cores_self} مقابل {cores_opp} في {opp.name}) مما يحد من السرعة القصوى في الرندرة متعددة المسارات")
+
+            if "1700" in socket_self or "lga 1700" in socket_self or any("lga 1700" in f.lower() for f in cpu.features):
+                cons.append("انتهاء العمر الافتراضي لمنصة المقبس Intel LGA 1700 (منصة منتهية الصلاحية Dead-end socket بلا أي مسار ترقية مستقبلي لأجيال معالجات أحدث دون تغيير اللوحة الأم بالكامل)")
 
             if not cons:
                 cons.append("يتطلب مشتت تبريد احترافي (مائي أو هوائي قوي) للوصول لأعلى تردد")
@@ -735,9 +750,22 @@ class EditorialRuleEngine:
             battery_opp = opp.raw_specs.get("battery_wh", 80)
             display = laptop.raw_specs.get("display", "شاشة ألعاب احترافية")
 
-            pros = [
-                f"شاشة عرض متطورة ({display})"
-            ]
+            display_lower = display.lower()
+            is_oled = "oled" in display_lower or any("oled" in f.lower() for f in laptop.features)
+            is_ips_high_bright = "500" in display_lower or "ips" in display_lower or any("500" in f.lower() for f in laptop.features)
+
+            if is_oled:
+                pros = [
+                    "شاشة OLED مذهلة (تباين لا نهائي، استجابة فائقة 0.2ms، وسواد حقيقي مثالي لصناع المحتوى والسينمائيين)"
+                ]
+            elif is_ips_high_bright:
+                pros = [
+                    "شاشة IPS فائقة السطوع (500 nits لثبات الإضاءة والوضوح التام في الغرف المضيئة دون أي مخاطر لتطبيع الشاشة OLED Burn-in)"
+                ]
+            else:
+                pros = [
+                    f"شاشة عرض متطورة ({display})"
+                ]
 
             if weight_self < weight_opp:
                 pros.append(f"تصميم أنيق ووزن خفيف ({_format_num(weight_self)} كجم) يسهل التنقل اليومي مقارنة بالمنافس ({_format_num(weight_opp)} كجم)")
@@ -760,6 +788,13 @@ class EditorialRuleEngine:
                 cons.append(f"وزن الجهاز ({_format_num(weight_self)} كجم) أثقل نسبياً عند الحمل في الحقيبة مقارنة بـ {opp.name} ({_format_num(weight_opp)} كجم)")
             elif battery_self < battery_opp:
                 cons.append(f"سعة بطارية أقل ({_format_num(battery_self)}Wh مقابل {_format_num(battery_opp)}Wh لدى {opp.name})")
+
+            if is_oled:
+                cons.append("شاشات OLED تتطلب عناية لتفادي تطبيع الصورة (Burn-in) مع العناصر الثابتة وسطوعها المستمر أقل في البيئات شديدة الإضاءة مقارنة بـ IPS")
+            if weight_self >= 2.5:
+                cons.append(f"وزن الجهاز ({_format_num(weight_self)} كجم) ثقيل مع شاحن ضخم مما يحد من سهولة التنقل اليومي ويجعله بديلاً مكتبياً")
+            elif weight_self < 2.0 and laptop.tdp_w <= 120:
+                cons.append(f"سحب طاقة رسومي محكوم ({laptop.tdp_w}W TGP) ليتناسب مع الهيكل النحيف والخفيف مقارنة بأجهزة الألعاب الضخمة")
 
             cons.append("خيارات ترقية العتاد الداخلي محدودة بطبيعة الأجهزة المحمولة")
             cons.append("يتطلب وضعية تهوية جيدة على سطح مستوٍ لتفادي خنق تدفق الهواء السفلي")
@@ -826,10 +861,13 @@ class EditorialRuleEngine:
         else:  # Laptop
             weight = target.raw_specs.get("weight_kg", 2.0)
             battery = target.raw_specs.get("battery_wh", 80)
-            if weight <= 1.8:
+            display = target.raw_specs.get("display", "")
+            is_oled = "oled" in display.lower() or any("oled" in f.lower() for f in target.features)
+            display_mention = " مع الاستفادة من شاشة OLED فائقة التباين والألوان" if is_oled else ""
+            if weight <= 1.9:
                 return (
                     f"المستخدم كثير التنقل وصانع المحتوى الذي يضع خفة الوزن ({_format_num(weight)} كجم) "
-                    f"وسهولة الحمل في صدارة أولوياته، مع الاستفادة من بطارية {battery}Wh وشاشة عالية الدقة."
+                    f"وسهولة الحمل في صدارة أولوياته{display_mention}، مع الاستفادة من بطارية {battery}Wh وشاشة عالية الدقة."
                 )
             else:
                 return (

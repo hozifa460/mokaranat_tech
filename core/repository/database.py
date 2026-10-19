@@ -55,7 +55,7 @@ def initialize_schema(db_path: Path = DATABASE_PATH) -> None:
             raw_specs_json TEXT NOT NULL,
             benchmark_index REAL NOT NULL,
             gaming_scores_json TEXT NOT NULL,
-            ray_tracing_score REAL NOT NULL,
+            ray_tracing_score REAL,
             efficiency_score REAL NOT NULL,
             features_json TEXT NOT NULL,
             pcie_interface TEXT,
@@ -65,9 +65,38 @@ def initialize_schema(db_path: Path = DATABASE_PATH) -> None:
 
         # Migration: Add pcie_interface column if table already exists without it
         cursor.execute("PRAGMA table_info(hardware_specs);")
-        existing_cols = [r[1] for r in cursor.fetchall()]
-        if "pcie_interface" not in existing_cols:
+        columns = {r[1]: r for r in cursor.fetchall()}
+        if "pcie_interface" not in columns:
             cursor.execute("ALTER TABLE hardware_specs ADD COLUMN pcie_interface TEXT;")
+
+        # Migration: Make ray_tracing_score nullable if it was created with NOT NULL constraint
+        if "ray_tracing_score" in columns and columns["ray_tracing_score"][3] == 1:
+            cursor.execute("CREATE TABLE hardware_specs_dg_tmp AS SELECT * FROM hardware_specs;")
+            cursor.execute("DROP TABLE hardware_specs;")
+            cursor.execute("""
+            CREATE TABLE hardware_specs (
+                id TEXT PRIMARY KEY,
+                slug TEXT UNIQUE NOT NULL,
+                name TEXT NOT NULL,
+                category TEXT NOT NULL,
+                brand TEXT NOT NULL,
+                release_year INTEGER NOT NULL,
+                launch_msrp_usd REAL NOT NULL,
+                architecture TEXT NOT NULL,
+                process_node_nm REAL NOT NULL,
+                tdp_w INTEGER NOT NULL,
+                raw_specs_json TEXT NOT NULL,
+                benchmark_index REAL NOT NULL,
+                gaming_scores_json TEXT NOT NULL,
+                ray_tracing_score REAL,
+                efficiency_score REAL NOT NULL,
+                features_json TEXT NOT NULL,
+                pcie_interface TEXT,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
+            """)
+            cursor.execute("INSERT INTO hardware_specs SELECT * FROM hardware_specs_dg_tmp;")
+            cursor.execute("DROP TABLE hardware_specs_dg_tmp;")
 
         # Cache Table for Generated Comparisons & Editorial Verdicts
         cursor.execute("""

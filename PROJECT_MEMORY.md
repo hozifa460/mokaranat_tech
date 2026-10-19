@@ -304,6 +304,32 @@ D:\tech_comparisons\
   - Successfully committed and pushed all 53 project files to `https://github.com/hozifa460/mokaranat_tech` (`main` branch).
   - Verified repository contents via GitHub API.
 
+### Phase 16: Comprehensive Hardware Review & Architectural Calibration (2026-10-20)
+- **Laptop Classification Bug & Display Enhancements (`ai_editorial.py`, `spec_engine.py`, `seed_specs.json`):**
+  - Corrected laptop weight threshold in `EditorialRuleEngine._build_who_should_buy` from `weight <= 1.8` to `weight <= 1.9` kg, correctly recognizing the ASUS ROG Zephyrus G16 (1.85 kg) as a portable/thin-and-light machine with OLED display.
+  - Customized laptop `tdp_w` diffing in `SpecEngine` to render as `أقصى استهلاك رسومي متاح (GPU TGP / Thermal Budget)` marked as an informational tie with engineering nuance: high TGP (175W) yields sustained clock speeds whereas constrained TGP (105W) allows ultra-slim chassis and lower heat.
+  - Added OLED (0.2ms response, infinite contrast) vs IPS (500 nits, no burn-in risk) pros and cons to both laptops in editorial generation.
+- **CPU Cleanliness & Platform Longevity (`models.py`, `database.py`, `seed_specs.json`, `spec_engine.py`, `ai_editorial.py`):**
+  - Nullified `ray_tracing_score` for CPUs in `seed_specs.json`, `models.py`, and `database.py`, preventing irrelevant GPU RT metrics from leaking into CPU spec diffs and charts.
+  - Updated Intel Core i7-14700K process node to `Intel 7 (10nm Enhanced SuperFin)` and socket to `LGA 1700 (End of Life)`.
+  - Customized CPU process node comparison in `SpecEngine` to mark as tie with explicit architectural explanation comparing Intel 7 transistor density against TSMC 5nm.
+  - Added AM5 platform lifecycle support through 2027+ pro for Ryzen 7000 series, and dead-end socket EOL con for Intel LGA 1700.
+- **Inter-Tier GPU Scaling Calibration (`seed_specs.json`, `ai_editorial.py`):**
+  - Calibrated raster scores for RTX 4080 Super (raster 1440p: 109.0, 4K: 93.0) and RX 7900 XTX (raster 1440p: 117.0, 4K: 100.0) so RTX 4080 Super achieves ~30.2% average lead over RTX 4070 Super at 1440p (up from 12.5%), and RX 7900 XTX achieves ~37.4% lead over RX 7800 XT at 1440p / 4K.
+  - Updated AI editorial lead phrase to dynamically render calibrated leads (`~30%` and `~38%`).
+- **RTX 4060 Ti Variant Clarity (`seed_specs.json`):**
+  - Renamed in seed specs and database to `NVIDIA GeForce RTX 4060 Ti (8GB)`.
+- **Ray Tracing Disclosures (`models.py`, `fps_calculator.py`, `GamingFpsWidget.astro`):**
+  - Added `rt_badge_ar` field to `GamingFpsItem`.
+  - Assigned badges for RT-intensive games: `⚡ تتبع الأشعة مفعّل (RT ON)` for Cyberpunk 2077, and `💡 إضاءة Lumen العتادية` for Black Myth: Wukong.
+  - Rendered RT disclosure badge next to game titles in `GamingFpsWidget.astro`.
+- **Pricing Framing Consistency (`SpecsTable.astro`, `ai_editorial.py`):**
+  - Clarified in `SpecsTable.astro` that the savings percentage is calculated off the higher MSRP: `أوفر بنسبة {formatVal(diff.diff_percentage)}% (خصم من السعر الأعلى) مقارنة بسعر المنافس لصالح {winner}`.
+  - Clarified in `ai_editorial.py` that competitor markup is calculated over the cheaper MSRP: `يرتفع سعر منافسه بنسبة ... عن السعر الأقل`.
+- **Automated Test Expansion & SSG Build:**
+  - Added 5 new automated unit tests in `core/tests/test_affiliate_and_editorial.py`, expanding the test suite to 55 tests with 100% pass rate in 1.16s.
+  - Re-seeded SQLite database, regenerated all 7 comparison JSONs, and built all 11 static pages via Astro SSG with zero errors in 5.40s.
+
 ---
 
 ## 5. Rules for Future AI Agents & Maintainers

@@ -90,13 +90,13 @@
       "pcie_lanes": 16,
       "nvenc_encoders": 2
     },
-    "benchmark_index": 92.0,
+    "benchmark_index": 95.0,
     "gaming_scores": {
-      "raster_1080p": 95.0,
-      "raster_1440p": 93.0,
-      "raster_4k": 88.0
+      "raster_1080p": 102.0,
+      "raster_1440p": 109.0,
+      "raster_4k": 93.0
     },
-    "ray_tracing_score": 93.0,
+    "ray_tracing_score": 94.0,
     "efficiency_score": 88.0,
     "features": ["DLSS 3.5 Frame Generation", "AV1 Dual NVENC", "Reflex", "Full Ray Tracing Pipeline"]
   },
@@ -123,20 +123,20 @@
       "pcie_interface": "PCIe 4.0 x16",
       "pcie_lanes": 16
     },
-    "benchmark_index": 93.5,
+    "benchmark_index": 96.0,
     "gaming_scores": {
-      "raster_1080p": 96.0,
-      "raster_1440p": 94.5,
-      "raster_4k": 91.0
+      "raster_1080p": 105.0,
+      "raster_1440p": 117.0,
+      "raster_4k": 100.0
     },
-    "ray_tracing_score": 75.0,
+    "ray_tracing_score": 76.0,
     "efficiency_score": 75.0,
     "features": ["FSR 3.1", "24GB Massive VRAM", "DisplayPort 2.1", "Chiplet Architecture"]
   },
   {
     "id": "rtx-4060-ti",
     "slug": "rtx-4060-ti",
-    "name": "NVIDIA GeForce RTX 4060 Ti",
+    "name": "NVIDIA GeForce RTX 4060 Ti (8GB)",
     "category": "gpu",
     "brand": "NVIDIA",
     "release_year": 2023,
@@ -225,9 +225,9 @@
     "gaming_scores": {
       "gaming_overall": 98.0
     },
-    "ray_tracing_score": 85.0,
+    "ray_tracing_score": null,
     "efficiency_score": 96.0,
-    "features": ["96MB 3D V-Cache", "Best Gaming Power Efficiency", "AM5 Platform Lifecycle"]
+    "features": ["96MB 3D V-Cache", "Best Gaming Power Efficiency", "AM5 Platform Lifecycle through 2027+"]
   },
   {
     "id": "i7-14700k",
@@ -237,7 +237,7 @@
     "brand": "Intel",
     "release_year": 2023,
     "launch_msrp_usd": 409.0,
-    "architecture": "Raptor Lake Refresh",
+    "architecture": "Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin)",
     "process_node_nm": 7.0,
     "tdp_w": 253,
     "raw_specs": {
@@ -248,16 +248,17 @@
       "base_clock_ghz": 3.4,
       "boost_clock_ghz": 5.6,
       "l3_cache_mb": 33,
-      "socket": "LGA 1700",
+      "socket": "LGA 1700 (End of Life)",
+      "process_node": "Intel 7 (10nm Enhanced SuperFin)",
       "memory_support": "DDR5-5600 / DDR4-3200"
     },
     "benchmark_index": 92.5,
     "gaming_scores": {
       "gaming_overall": 92.0
     },
-    "ray_tracing_score": 88.0,
+    "ray_tracing_score": null,
     "efficiency_score": 68.0,
-    "features": ["20 Cores / 28 Threads", "Intel QuickSync Video", "PCIe 5.0 Support"]
+    "features": ["20 Cores / 28 Threads", "Intel QuickSync Video", "PCIe 5.0 Support", "Intel 7 (10nm Enhanced SuperFin)"]
   },
   {
     "id": "rog-zephyrus-g16",
@@ -271,7 +272,7 @@
     "process_node_nm": 4.0,
     "tdp_w": 105,
     "raw_specs": {
-      "display": "16-inch OLED 2.5K 240Hz",
+      "display": "16-inch OLED 2.5K 240Hz 0.2ms",
       "weight_kg": 1.85,
       "battery_wh": 90,
       "cpu": "Intel Core Ultra 9 185H",
@@ -287,7 +288,7 @@
     },
     "ray_tracing_score": 80.0,
     "efficiency_score": 86.0,
-    "features": ["ROG Nebula OLED Panel", "CNC Aluminum Body", "Lightweight 1.85kg"]
+    "features": ["ROG Nebula OLED Panel (0.2ms Response)", "CNC Aluminum Body", "Lightweight 1.85kg"]
   },
   {
     "id": "legion-pro-7i",
@@ -301,7 +302,7 @@
     "process_node_nm": 4.0,
     "tdp_w": 175,
     "raw_specs": {
-      "display": "16-inch IPS 2.5K 240Hz 500nits",
+      "display": "16-inch IPS 2.5K 240Hz 500nits Anti-Glare",
       "weight_kg": 2.6,
       "battery_wh": 99.9,
       "cpu": "Intel Core i9-14900HX",
@@ -317,6 +318,6 @@
     },
     "ray_tracing_score": 89.0,
     "efficiency_score": 72.0,
-    "features": ["Full 175W TGP GPU", "Coldfront 5.0 Vapor Chamber", "TrueStrike Keyboard"]
+    "features": ["Full 175W TGP GPU", "Coldfront 5.0 Vapor Chamber", "500 nits High-Brightness IPS", "TrueStrike Keyboard"]
   }
 ]

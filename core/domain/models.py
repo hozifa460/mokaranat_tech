@@ -22,7 +22,7 @@ class HardwareSpec(BaseModel):
     raw_specs: Dict[str, Any] = Field(default_factory=dict, description="Detailed technical specs (cores, clocks, vram, bus)")
     benchmark_index: float = Field(..., ge=0, le=100, description="Normalized overall performance index (0-100)")
     gaming_scores: Dict[str, float] = Field(default_factory=dict, description="Resolution rasterization indices (1080p, 1440p, 4k)")
-    ray_tracing_score: float = Field(default=50.0, ge=0, le=100)
+    ray_tracing_score: Optional[float] = Field(default=None, ge=0, le=100)
     efficiency_score: float = Field(default=50.0, ge=0, le=100)
     features: List[str] = Field(default_factory=list)
     pcie_interface: Optional[str] = Field(default=None, description="PCIe interface, e.g. 'PCIe 4.0 x8' or 'PCIe 4.0 x16'")
@@ -84,6 +84,7 @@ class GamingFpsItem(BaseModel):
     fps_b: int
     diff_pct: float
     winner: Literal["a", "b", "tie"]
+    rt_badge_ar: Optional[str] = None
 
 
 class AffiliateOffer(BaseModel):

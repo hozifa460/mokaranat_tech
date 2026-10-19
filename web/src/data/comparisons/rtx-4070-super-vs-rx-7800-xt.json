@@ -194,7 +194,8 @@
       "fps_a": 126,
       "fps_b": 101,
       "diff_pct": 24.8,
-      "winner": "a"
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -204,7 +205,8 @@
       "fps_a": 82,
       "fps_b": 68,
       "diff_pct": 20.6,
-      "winner": "a"
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -214,7 +216,8 @@
       "fps_a": 41,
       "fps_b": 35,
       "diff_pct": 17.1,
-      "winner": "a"
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -224,7 +227,8 @@
       "fps_a": 89,
       "fps_b": 72,
       "diff_pct": 23.6,
-      "winner": "a"
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -234,7 +238,8 @@
       "fps_a": 54,
       "fps_b": 45,
       "diff_pct": 20.0,
-      "winner": "a"
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -244,7 +249,8 @@
       "fps_a": 25,
       "fps_b": 22,
       "diff_pct": 13.6,
-      "winner": "a"
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
     {
       "game_title": "Counter-Strike 2",
@@ -254,7 +260,8 @@
       "fps_a": 315,
       "fps_b": 295,
       "diff_pct": 6.8,
-      "winner": "a"
+      "winner": "a",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -264,7 +271,8 @@
       "fps_a": 214,
       "fps_b": 203,
       "diff_pct": 5.4,
-      "winner": "a"
+      "winner": "a",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -274,7 +282,8 @@
       "fps_a": 116,
       "fps_b": 111,
       "diff_pct": 4.5,
-      "winner": "a"
+      "winner": "a",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -284,7 +293,8 @@
       "fps_a": 128,
       "fps_b": 129,
       "diff_pct": 0.8,
-      "winner": "tie"
+      "winner": "tie",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -294,7 +304,8 @@
       "fps_a": 90,
       "fps_b": 94,
       "diff_pct": 4.4,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -304,7 +315,8 @@
       "fps_a": 49,
       "fps_b": 52,
       "diff_pct": 6.1,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -314,7 +326,8 @@
       "fps_a": 181,
       "fps_b": 206,
       "diff_pct": 13.8,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -324,7 +337,8 @@
       "fps_a": 121,
       "fps_b": 141,
       "diff_pct": 16.5,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -334,7 +348,8 @@
       "fps_a": 61,
       "fps_b": 71,
       "diff_pct": 16.4,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -344,7 +359,8 @@
       "fps_a": 131,
       "fps_b": 140,
       "diff_pct": 6.9,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -354,7 +370,8 @@
       "fps_a": 92,
       "fps_b": 101,
       "diff_pct": 9.8,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -364,7 +381,8 @@
       "fps_a": 45,
       "fps_b": 51,
       "diff_pct": 13.3,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     }
   ],
   "verdict": {
@@ -375,7 +393,7 @@
     "quick_verdict_ar": "يظهر كل من NVIDIA GeForce RTX 4070 Super و AMD Radeon RX 7800 XT تقارباً استثنائياً في الأداء الكلي بفوارق هامشية ضمن هامش الخطأ الإحصائي (أقل من 3%). الحسم بينهما يعتمد بالدرجة الأولى على فارق السعر الفعلي في السوق المحلي وتفضيلات البرمجيات الخاصة بكل مستخدم.",
     "gaming_analysis_ar": "في ساحة الألعاب، يقدم كل من NVIDIA GeForce RTX 4070 Super و AMD Radeon RX 7800 XT أداءً متقارباً في المعالجة الرسومية التقليدية (Rasterization)، حيث يتميز NVIDIA GeForce RTX 4070 Super بأسبقية واضحة في تتبع الأشعة بمؤشر 85/100 مع منظومة DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) لبطاقات RTX، بينما يرد AMD Radeon RX 7800 XT بـ سعة ذاكرة وافرة تبلغ 16GB تمنح أريحية فائقة واستقراراً ممتازاً في ألعاب 1440p وقوام Ultra مع قدرة جيدة على تشغيل ألعاب 4K مع دعم تقنية FSR 3.1 وتوليد الإطارات مفتوحة المصدر المتوافقة عبر مختلف المنصات.",
     "productivity_analysis_ar": "على صعيد الإنتاجية والرندرة وصناعة المحتوى، يحسم NVIDIA GeForce RTX 4070 Super المنافسة بفضل تفوق منظومة CUDA و OptiX لتسريع محركات التصميم (مثل Blender و Premiere) وتطبيقات الذكاء الاصطناعي مع مشفر NVENC فائق السرعة من الجيل الثامن مع دعم تسريع وتشفير عتادي لـ AV1؛ ومع أن كلا المعماريتين تدعمان التشفير وفك التشفير العتادي لترميز AV1 الحديث (مشفر NVENC الجيل الثامن في Ada Lovelace مقابل محرك VCN 4.0 في RDNA 3) وسعة ذاكرة وافرة تبلغ 16GB لـ AMD Radeon RX 7800 XT، إلا أن أفضلية بيئة العمل البرمجية واستقرار التعريفات في تطبيقات الإنتاج تظل محسومة لصالح NVIDIA بفضل الدعم الواسع في برمجيات التصميم.",
-    "value_and_budget_ar": "مع تقارب الأداء العام بين البطاقتين، يمتلك AMD Radeon RX 7800 XT أفضلية اقتصادية مباشرة بسعر $499 موفراً $100 (بينما يزيد سعر منافسه بنسبة 20%) مع سعة ذاكرة أكبر (16GB مقابل 12GB)، مما يجعله خياراً جذاباً لترشيد الميزانية.",
+    "value_and_budget_ar": "مع تقارب الأداء العام بين البطاقتين، يمتلك AMD Radeon RX 7800 XT أفضلية اقتصادية مباشرة بسعر $499 موفراً $100 (بينما يرتفع سعر منافسه بنسبة 20% عن السعر الأقل) مع سعة ذاكرة أكبر (16GB مقابل 12GB)، مما يجعله خياراً جذاباً لترشيد الميزانية.",
     "pros_a": [
       "تفوق في تتبع الأشعة بمؤشر 85/100 ودعم كامل لتقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة)",
       "هيمنة بيئة العمل وصناعة المحتوى بفضل تسريع مكتبات CUDA و OptiX ومشفر NVENC من الجيل الثامن مع دعم تسريع وتشفير عتادي لـ AV1",
@@ -522,7 +540,7 @@
         "url": "https://tech-comparisons.pages.dev/compare/rtx-4070-super-vs-rx-7800-xt",
         "name": "مقارنة NVIDIA GeForce RTX 4070 Super ضد AMD Radeon RX 7800 XT | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4070 Super و AMD Radeon RX 7800 XT. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T18:06:30.999384+00:00",
+        "datePublished": "2026-10-19T20:59:04.645804+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -548,5 +566,5 @@
       }
     ]
   },
-  "created_at": "2026-10-19T18:06:30.999384+00:00"
+  "created_at": "2026-10-19T20:59:04.645804+00:00"
 }

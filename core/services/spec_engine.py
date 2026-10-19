@@ -48,22 +48,43 @@ class SpecEngine:
             summary_pattern="أوفر بالسعر بنسبة {diff}%"
         ))
 
-        # 3. Power Consumption (TDP Watts) - lower is better for thermals & efficiency
-        diffs.append(cls._compare_numeric(
-            key="tdp_w",
-            label_ar="استهلاك الطاقة المكتبي (TDP)",
-            val_a=item_a.tdp_w,
-            val_b=item_b.tdp_w,
-            unit="W",
-            higher_is_better=False,
-            summary_pattern="استهلاك طاقة أقل وتوليد حراري أهدأ بفارق {diff}%"
-        ))
+        # 3. Power Consumption (TDP Watts) - lower is better for desktops, customized for gaming laptops
+        is_laptop = item_a.category == "laptop" or item_b.category == "laptop"
+        if is_laptop:
+            tdp_diff_pct = round(abs(item_a.tdp_w - item_b.tdp_w) / max(item_a.tdp_w, item_b.tdp_w) * 100, 1) if max(item_a.tdp_w, item_b.tdp_w) > 0 else 0.0
+            diffs.append(SpecDiffItem(
+                key="tdp_w",
+                label_ar="أقصى استهلاك رسومي متاح (GPU TGP / Thermal Budget)",
+                value_a=item_a.tdp_w,
+                value_b=item_b.tdp_w,
+                unit="W",
+                winner="tie",
+                diff_percentage=tdp_diff_pct,
+                advantage_summary_ar="مقياس هندسي: يمنح السحب الأعلى (مثل 175W) أداء رسومياً مستداماً وترددات بطاقة أعلى، بينما يتيح السحب المنضبط (مثل 105W) هيكلاً فائق النحافة وحرارة أقل"
+            ))
+        else:
+            diffs.append(cls._compare_numeric(
+                key="tdp_w",
+                label_ar="استهلاك الطاقة المكتبي (TDP)",
+                val_a=item_a.tdp_w,
+                val_b=item_b.tdp_w,
+                unit="W",
+                higher_is_better=False,
+                summary_pattern="استهلاك طاقة أقل وتوليد حراري أهدأ بفارق {diff}%"
+            ))
 
         # 4. Manufacturing Process Node (nm)
         # Cross-architecture comparison (e.g. monolithic TSMC 4N vs chiplets 5nm/6nm) is misleading
         # due to differing transistor densities and packaging architectures. Treat as informational tie.
         is_cross_architecture = item_a.architecture.strip().lower() != item_b.architecture.strip().lower()
         if is_cross_architecture:
+            is_cpu_comparison = item_a.category == "cpu" or item_b.category == "cpu"
+            has_intel_cpu = is_cpu_comparison and ("intel" in item_a.brand.lower() or "intel" in item_b.brand.lower())
+            if has_intel_cpu:
+                proc_summary = "مقياس تقني استرشادي: تعتمد إنتل معيار Intel 7 (10nm Enhanced SuperFin) بكثافة ترانزستورات مكافئة لـ 7nm، وتختلف بنيوياً عن معيار TSMC 5nm في معالجات AMD"
+            else:
+                proc_summary = "مقياس تقني استرشادي: تختلف هندسة دقة التصنيع وكثافة الترانزستورات والتصميم (رقاقة أحادية Monolithic مقابل رقاقات Chiplets) بين المعماريات المختلفة"
+
             diffs.append(SpecDiffItem(
                 key="process_node_nm",
                 label_ar="دقة التصنيع (Process Node)",
@@ -72,7 +93,7 @@ class SpecEngine:
                 unit="nm",
                 winner="tie",
                 diff_percentage=0.0,
-                advantage_summary_ar="مقياس تقني استرشادي: تختلف هندسة دقة التصنيع وكثافة الترانزستورات والتصميم (رقاقة أحادية Monolithic مقابل رقاقات Chiplets) بين المعماريات المختلفة"
+                advantage_summary_ar=proc_summary
             ))
         else:
             diffs.append(cls._compare_numeric(
@@ -87,15 +108,16 @@ class SpecEngine:
 
         # 5. Ray Tracing Performance Score (Applicable to GPUs and Laptops with discrete GPUs)
         if item_a.category in ("gpu", "laptop") and item_b.category in ("gpu", "laptop"):
-            diffs.append(cls._compare_numeric(
-                key="ray_tracing_score",
-                label_ar="كفاءة تتبع الأشعة (Ray Tracing)",
-                val_a=item_a.ray_tracing_score,
-                val_b=item_b.ray_tracing_score,
-                unit="/ 100",
-                higher_is_better=True,
-                summary_pattern="معالجة متقدمة لتقنيات الإضاءة الواقعية بفارق {diff}%"
-            ))
+            if item_a.ray_tracing_score is not None and item_b.ray_tracing_score is not None:
+                diffs.append(cls._compare_numeric(
+                    key="ray_tracing_score",
+                    label_ar="كفاءة تتبع الأشعة (Ray Tracing)",
+                    val_a=item_a.ray_tracing_score,
+                    val_b=item_b.ray_tracing_score,
+                    unit="/ 100",
+                    higher_is_better=True,
+                    summary_pattern="معالجة متقدمة لتقنيات الإضاءة الواقعية بفارق {diff}%"
+                ))
 
         # 6. Energy Efficiency Score
         diffs.append(cls._compare_numeric(

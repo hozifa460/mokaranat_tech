@@ -104,7 +104,8 @@ class FpsCalculator:
 
         # Weight score based on ray tracing capability if title is RT heavy
         if game.get("rt_heavy"):
-            rt_multiplier = item.ray_tracing_score / 100.0
+            rt_score = item.ray_tracing_score if item.ray_tracing_score is not None else 50.0
+            rt_multiplier = rt_score / 100.0
             effective_factor = base_factor * (0.75 + 0.25 * rt_multiplier)
         else:
             effective_factor = base_factor
@@ -154,6 +155,12 @@ class FpsCalculator:
                     # Differences below 3% are within hardware measurement error margin
                     winner = "tie" if diff_pct < 3.0 else "b"
 
+                rt_badge_ar = None
+                if game.get("id") == "cyberpunk2077":
+                    rt_badge_ar = "⚡ تتبع الأشعة مفعّل (RT ON)"
+                elif game.get("id") == "wukong":
+                    rt_badge_ar = "💡 إضاءة Lumen العتادية"
+
                 results.append(GamingFpsItem(
                     game_title=game["title"],
                     game_title_ar=game["title_ar"],
@@ -162,7 +169,8 @@ class FpsCalculator:
                     fps_a=fps_a,
                     fps_b=fps_b,
                     diff_pct=diff_pct,
-                    winner=winner
+                    winner=winner,
+                    rt_badge_ar=rt_badge_ar
                 ))
 
         return results

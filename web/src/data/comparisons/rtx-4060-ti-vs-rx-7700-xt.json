@@ -1,13 +1,13 @@
 {
   "slug": "rtx-4060-ti-vs-rx-7700-xt",
   "category": "gpu",
-  "title_ar": "مقارنة NVIDIA GeForce RTX 4060 Ti ضد AMD Radeon RX 7700 XT | المواصفات والأداء والأسعار",
-  "meta_title_ar": "NVIDIA GeForce RTX 4060 Ti ضد AMD Radeon RX 7700 XT: أيهما يستحق الشراء؟ | مقارنات تك",
-  "meta_description_ar": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4060 Ti و AMD Radeon RX 7700 XT. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+  "title_ar": "مقارنة NVIDIA GeForce RTX 4060 Ti (8GB) ضد AMD Radeon RX 7700 XT | المواصفات والأداء والأسعار",
+  "meta_title_ar": "NVIDIA GeForce RTX 4060 Ti (8GB) ضد AMD Radeon RX 7700 XT: أيهما يستحق الشراء؟ | مقارنات تك",
+  "meta_description_ar": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4060 Ti (8GB) و AMD Radeon RX 7700 XT. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
   "item_a": {
     "id": "rtx-4060-ti",
     "slug": "rtx-4060-ti",
-    "name": "NVIDIA GeForce RTX 4060 Ti",
+    "name": "NVIDIA GeForce RTX 4060 Ti (8GB)",
     "category": "gpu",
     "brand": "NVIDIA",
     "release_year": 2023,
@@ -193,7 +193,8 @@
       "fps_a": 108,
       "fps_b": 94,
       "diff_pct": 14.9,
-      "winner": "a"
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -203,7 +204,8 @@
       "fps_a": 63,
       "fps_b": 59,
       "diff_pct": 6.8,
-      "winner": "a"
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -213,7 +215,8 @@
       "fps_a": 26,
       "fps_b": 26,
       "diff_pct": 0.0,
-      "winner": "tie"
+      "winner": "tie",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -223,7 +226,8 @@
       "fps_a": 76,
       "fps_b": 67,
       "diff_pct": 13.4,
-      "winner": "a"
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -233,7 +237,8 @@
       "fps_a": 41,
       "fps_b": 39,
       "diff_pct": 5.1,
-      "winner": "a"
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -243,7 +248,8 @@
       "fps_a": 16,
       "fps_b": 16,
       "diff_pct": 0.0,
-      "winner": "tie"
+      "winner": "tie",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
     },
     {
       "game_title": "Counter-Strike 2",
@@ -253,7 +259,8 @@
       "fps_a": 300,
       "fps_b": 288,
       "diff_pct": 4.2,
-      "winner": "a"
+      "winner": "a",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -263,7 +270,8 @@
       "fps_a": 196,
       "fps_b": 194,
       "diff_pct": 1.0,
-      "winner": "tie"
+      "winner": "tie",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -273,7 +281,8 @@
       "fps_a": 102,
       "fps_b": 102,
       "diff_pct": 0.0,
-      "winner": "tie"
+      "winner": "tie",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -283,7 +292,8 @@
       "fps_a": 113,
       "fps_b": 121,
       "diff_pct": 7.1,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -293,7 +303,8 @@
       "fps_a": 72,
       "fps_b": 83,
       "diff_pct": 15.3,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -303,7 +314,8 @@
       "fps_a": 32,
       "fps_b": 40,
       "diff_pct": 25.0,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -313,7 +325,8 @@
       "fps_a": 161,
       "fps_b": 193,
       "diff_pct": 19.9,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -323,7 +336,8 @@
       "fps_a": 97,
       "fps_b": 124,
       "diff_pct": 27.8,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -333,7 +347,8 @@
       "fps_a": 41,
       "fps_b": 54,
       "diff_pct": 31.7,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -343,7 +358,8 @@
       "fps_a": 116,
       "fps_b": 132,
       "diff_pct": 13.8,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -353,7 +369,8 @@
       "fps_a": 73,
       "fps_b": 89,
       "diff_pct": 21.9,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -363,7 +380,8 @@
       "fps_a": 30,
       "fps_b": 40,
       "diff_pct": 33.3,
-      "winner": "b"
+      "winner": "b",
+      "rt_badge_ar": null
     }
   ],
   "verdict": {
@@ -371,10 +389,10 @@
     "winner_name": "AMD Radeon RX 7700 XT",
     "score_a": 68.0,
     "score_b": 74.0,
-    "quick_verdict_ar": "يتفوق AMD Radeon RX 7700 XT في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 8.8% مقارنة بـ NVIDIA GeForce RTX 4060 Ti. هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~8.8%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
-    "gaming_analysis_ar": "في ساحة الألعاب، يحسم AMD Radeon RX 7700 XT الصدارة في الأداء الرسومي الخام (Raw Rasterization) ومعدلات الإطارات في العناوين التقليدية على دقتي 1080p و 1440p، مدعوماً بـ سعة ذاكرة متوازنة تبلغ 12GB (مقابل 8GB لدى منافسه) تمنح أريحية ممتازة بدقة 1440p و 1080p وتضمن تفادي اختناق الذاكرة مع أثقل حزم القوام مع دعم تقنية FSR 3.1 مفتوحة المصدر بما فيها توليد الإطارات (Frame Generation) عبر مختلف المنصات. في المقابل، يحتفظ NVIDIA GeForce RTX 4060 Ti بتفوقه النوعي في العناوين الثقيلة بتتبع الأشعة بمؤشر 72/100 (مقابل 60/100 لـ AMD Radeon RX 7700 XT)، مع الاستفادة من تقنيات NVIDIA: DLSS 3 لتوليد الإطارات (Frame Generation) و DLSS 3.5 لإعادة بناء الأشعة (Ray Reconstruction) لتعويض الفارق في الألعاب الداعمة، علماً بأن تقنية DLSS تظل حصرية لبيئة NVIDIA بينما توفر AMD تقنية FSR 3.1 كمعيار مفتوح يعمل عبر مختلف البطاقات.",
-    "productivity_analysis_ar": "على صعيد الإنتاجية والرندرة وصناعة المحتوى، يحسم NVIDIA GeForce RTX 4060 Ti المنافسة بفضل تفوق منظومة CUDA و OptiX لتسريع محركات التصميم (مثل Blender و Premiere) وتطبيقات الذكاء الاصطناعي مع مشفر NVENC فائق السرعة من الجيل الثامن مع دعم تسريع وتشفير عتادي لـ AV1؛ ومع أن كلا المعماريتين تدعمان التشفير وفك التشفير العتادي لترميز AV1 الحديث (مشفر NVENC الجيل الثامن في Ada Lovelace مقابل محرك VCN 4.0 في RDNA 3) وسعة ذاكرة متوازنة تبلغ 12GB لـ AMD Radeon RX 7700 XT، إلا أن أفضلية بيئة العمل البرمجية واستقرار التعريفات في تطبيقات الإنتاج تظل محسومة لصالح NVIDIA بفضل الدعم الواسع في برمجيات التصميم.",
-    "value_and_budget_ar": "عند دراسة معادلة القيمة مقابل السعر، يقدم NVIDIA GeForce RTX 4060 Ti تكلفة شراء أولية أقل بسعر $399 (توفير $50 لصالح الميزانيات المحدودة مع سحب طاقة منخفض يبلغ 160W). في المقابل، يطرح AMD Radeon RX 7700 XT سعراً أعلى بنسبة 12.5% ($449)، ومع تفوقه في معدل الإطارات بدقة 1440p بمتوسط ~8.8% وسعة ذاكرة أكبر (12GB مقابل 8GB) وناقل أعرض، فإن تكلفة الإطار الواحد (القيمة مقابل السعر) تصبح متطابقة عملياً بين البطاقتين (تعادل في القيمة الصافية). وبذلك لا يوجد فوز مطلق؛ حيث يمثل AMD Radeon RX 7700 XT استثماراً أكثر استدامة وتوازناً لتفادي اختناق القوام بدقة 1440p على المدى المتوسط، بينما يبقى NVIDIA GeForce RTX 4060 Ti ملائماً لمن تحكمهم ميزانية شراء صارمة وأولوية ترشيد الطاقة. تجدر الإشارة إلى أن AMD قامت لاحقاً بتعديل السعر الرسمي للبطاقة نزولاً إلى ما بين $419 و $399 في العديد من المتاجر، مما يقلص أو يلغي الفارق السعري الفعلي في السوق لصالح RX 7700 XT.",
+    "quick_verdict_ar": "يتفوق AMD Radeon RX 7700 XT في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 8.8% مقارنة بـ NVIDIA GeForce RTX 4060 Ti (8GB). هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~8.8%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "gaming_analysis_ar": "في ساحة الألعاب، يحسم AMD Radeon RX 7700 XT الصدارة في الأداء الرسومي الخام (Raw Rasterization) ومعدلات الإطارات في العناوين التقليدية على دقتي 1080p و 1440p، مدعوماً بـ سعة ذاكرة متوازنة تبلغ 12GB (مقابل 8GB لدى منافسه) تمنح أريحية ممتازة بدقة 1440p و 1080p وتضمن تفادي اختناق الذاكرة مع أثقل حزم القوام مع دعم تقنية FSR 3.1 مفتوحة المصدر بما فيها توليد الإطارات (Frame Generation) عبر مختلف المنصات. في المقابل، يحتفظ NVIDIA GeForce RTX 4060 Ti (8GB) بتفوقه النوعي في العناوين الثقيلة بتتبع الأشعة بمؤشر 72/100 (مقابل 60/100 لـ AMD Radeon RX 7700 XT)، مع الاستفادة من تقنيات NVIDIA: DLSS 3 لتوليد الإطارات (Frame Generation) و DLSS 3.5 لإعادة بناء الأشعة (Ray Reconstruction) لتعويض الفارق في الألعاب الداعمة، علماً بأن تقنية DLSS تظل حصرية لبيئة NVIDIA بينما توفر AMD تقنية FSR 3.1 كمعيار مفتوح يعمل عبر مختلف البطاقات.",
+    "productivity_analysis_ar": "على صعيد الإنتاجية والرندرة وصناعة المحتوى، يحسم NVIDIA GeForce RTX 4060 Ti (8GB) المنافسة بفضل تفوق منظومة CUDA و OptiX لتسريع محركات التصميم (مثل Blender و Premiere) وتطبيقات الذكاء الاصطناعي مع مشفر NVENC فائق السرعة من الجيل الثامن مع دعم تسريع وتشفير عتادي لـ AV1؛ ومع أن كلا المعماريتين تدعمان التشفير وفك التشفير العتادي لترميز AV1 الحديث (مشفر NVENC الجيل الثامن في Ada Lovelace مقابل محرك VCN 4.0 في RDNA 3) وسعة ذاكرة متوازنة تبلغ 12GB لـ AMD Radeon RX 7700 XT، إلا أن أفضلية بيئة العمل البرمجية واستقرار التعريفات في تطبيقات الإنتاج تظل محسومة لصالح NVIDIA بفضل الدعم الواسع في برمجيات التصميم.",
+    "value_and_budget_ar": "عند دراسة معادلة القيمة مقابل السعر، يقدم NVIDIA GeForce RTX 4060 Ti (8GB) تكلفة شراء أولية أقل بسعر $399 (توفير $50 لصالح الميزانيات المحدودة مع سحب طاقة منخفض يبلغ 160W). في المقابل، يطرح AMD Radeon RX 7700 XT سعراً أعلى بنسبة 12.5% ($449)، ومع تفوقه في معدل الإطارات بدقة 1440p بمتوسط ~8.8% وسعة ذاكرة أكبر (12GB مقابل 8GB) وناقل أعرض، فإن تكلفة الإطار الواحد (القيمة مقابل السعر) تصبح متطابقة عملياً بين البطاقتين (تعادل في القيمة الصافية). وبذلك لا يوجد فوز مطلق؛ حيث يمثل AMD Radeon RX 7700 XT استثماراً أكثر استدامة وتوازناً لتفادي اختناق القوام بدقة 1440p على المدى المتوسط، بينما يبقى NVIDIA GeForce RTX 4060 Ti (8GB) ملائماً لمن تحكمهم ميزانية شراء صارمة وأولوية ترشيد الطاقة. تجدر الإشارة إلى أن AMD قامت لاحقاً بتعديل السعر الرسمي للبطاقة نزولاً إلى ما بين $419 و $399 في العديد من المتاجر، مما يقلص أو يلغي الفارق السعري الفعلي في السوق لصالح RX 7700 XT.",
     "pros_a": [
       "تفوق في تتبع الأشعة بمؤشر 72/100 ودعم كامل لتقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة)",
       "هيمنة بيئة العمل وصناعة المحتوى بفضل تسريع مكتبات CUDA و OptiX ومشفر NVENC من الجيل الثامن مع دعم تسريع وتشفير عتادي لـ AV1",
@@ -402,9 +420,9 @@
       "store_key": "noon",
       "store_name_ar": "نون",
       "store_name_en": "Noon",
-      "product_title": "شراء NVIDIA GeForce RTX 4060 Ti من متجر نون",
-      "direct_url": "https://www.noon.com/search?q=NVIDIA+GeForce+RTX+4060+Ti",
-      "affiliate_url": "https://www.noon.com/search?q=NVIDIA+GeForce+RTX+4060+Ti&affiliate_id=TECHCOMP_NOON_AR",
+      "product_title": "شراء NVIDIA GeForce RTX 4060 Ti (8GB) من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=NVIDIA+GeForce+RTX+4060+Ti+%288GB%29",
+      "affiliate_url": "https://www.noon.com/search?q=NVIDIA+GeForce+RTX+4060+Ti+%288GB%29&affiliate_id=TECHCOMP_NOON_AR",
       "badge_color": "#FEE600",
       "text_color": "#1F2937"
     },
@@ -412,9 +430,9 @@
       "store_key": "newegg",
       "store_name_ar": "نيو إيج",
       "store_name_en": "Newegg",
-      "product_title": "شراء NVIDIA GeForce RTX 4060 Ti من متجر نيو إيج",
-      "direct_url": "https://www.newegg.com/p/pl?d=NVIDIA+GeForce+RTX+4060+Ti",
-      "affiliate_url": "https://www.newegg.com/p/pl?d=NVIDIA+GeForce+RTX+4060+Ti&cm_mmc=aff-techcomp_ar",
+      "product_title": "شراء NVIDIA GeForce RTX 4060 Ti (8GB) من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=NVIDIA+GeForce+RTX+4060+Ti+%288GB%29",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=NVIDIA+GeForce+RTX+4060+Ti+%288GB%29&cm_mmc=aff-techcomp_ar",
       "badge_color": "#F37021",
       "text_color": "#FFFFFF"
     },
@@ -422,9 +440,9 @@
       "store_key": "aliexpress",
       "store_name_ar": "علي إكسبريس",
       "store_name_en": "AliExpress",
-      "product_title": "شراء NVIDIA GeForce RTX 4060 Ti من متجر علي إكسبريس",
-      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=NVIDIA+GeForce+RTX+4060+Ti",
-      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=NVIDIA+GeForce+RTX+4060+Ti&aff_fcid=TECHCOMP_ALI_AR",
+      "product_title": "شراء NVIDIA GeForce RTX 4060 Ti (8GB) من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=NVIDIA+GeForce+RTX+4060+Ti+%288GB%29",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=NVIDIA+GeForce+RTX+4060+Ti+%288GB%29&aff_fcid=TECHCOMP_ALI_AR",
       "badge_color": "#FF4747",
       "text_color": "#FFFFFF"
     },
@@ -432,9 +450,9 @@
       "store_key": "jumia",
       "store_name_ar": "جوميا",
       "store_name_en": "Jumia",
-      "product_title": "شراء NVIDIA GeForce RTX 4060 Ti من متجر جوميا",
-      "direct_url": "https://www.jumia.com/catalog/?q=NVIDIA+GeForce+RTX+4060+Ti",
-      "affiliate_url": "https://www.jumia.com/catalog/?q=NVIDIA+GeForce+RTX+4060+Ti&tag=techcomparisons-jumia",
+      "product_title": "شراء NVIDIA GeForce RTX 4060 Ti (8GB) من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=NVIDIA+GeForce+RTX+4060+Ti+%288GB%29",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=NVIDIA+GeForce+RTX+4060+Ti+%288GB%29&tag=techcomparisons-jumia",
       "badge_color": "#F68B1E",
       "text_color": "#FFFFFF"
     }
@@ -487,7 +505,7 @@
       {
         "@type": "Product",
         "@id": "https://tech-comparisons.pages.dev/compare/rtx-4060-ti-vs-rx-7700-xt#productA",
-        "name": "NVIDIA GeForce RTX 4060 Ti",
+        "name": "NVIDIA GeForce RTX 4060 Ti (8GB)",
         "category": "GPU",
         "brand": {
           "@type": "Brand",
@@ -520,9 +538,9 @@
         "@type": "Review",
         "@id": "https://tech-comparisons.pages.dev/compare/rtx-4060-ti-vs-rx-7700-xt#review",
         "url": "https://tech-comparisons.pages.dev/compare/rtx-4060-ti-vs-rx-7700-xt",
-        "name": "مقارنة NVIDIA GeForce RTX 4060 Ti ضد AMD Radeon RX 7700 XT | المواصفات والأداء والأسعار",
-        "description": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4060 Ti و AMD Radeon RX 7700 XT. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T18:06:31.319485+00:00",
+        "name": "مقارنة NVIDIA GeForce RTX 4060 Ti (8GB) ضد AMD Radeon RX 7700 XT | المواصفات والأداء والأسعار",
+        "description": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4060 Ti (8GB) و AMD Radeon RX 7700 XT. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+        "datePublished": "2026-10-19T20:59:05.058820+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -536,7 +554,7 @@
         },
         "itemReviewed": {
           "@type": "Product",
-          "name": "NVIDIA GeForce RTX 4060 Ti vs AMD Radeon RX 7700 XT"
+          "name": "NVIDIA GeForce RTX 4060 Ti (8GB) vs AMD Radeon RX 7700 XT"
         },
         "reviewRating": {
           "@type": "Rating",
@@ -544,9 +562,9 @@
           "bestRating": "5",
           "worstRating": "1"
         },
-        "reviewBody": "يتفوق AMD Radeon RX 7700 XT في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 8.8% مقارنة بـ NVIDIA GeForce RTX 4060 Ti. هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~8.8%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+        "reviewBody": "يتفوق AMD Radeon RX 7700 XT في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 8.8% مقارنة بـ NVIDIA GeForce RTX 4060 Ti (8GB). هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~8.8%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
       }
     ]
   },
-  "created_at": "2026-10-19T18:06:31.319485+00:00"
+  "created_at": "2026-10-19T20:59:05.058820+00:00"
 }

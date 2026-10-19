@@ -53,16 +53,23 @@ const cleanRes = (res: string) => (res || '').replace(/4kg/i, '4K');
         const widthB = Math.max(12, Math.round((bench.fps_b / maxFps) * 100));
         return (
           <div class="p-5 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30 game-card" data-res={resClean} style={resClean === '1440p' ? '' : 'display: none;'}>
-            <div class="flex items-center justify-between mb-3">
+            <div class="flex items-start justify-between mb-3 gap-2">
               <div>
-                <h4 class="font-extrabold text-slate-900 dark:text-white text-base">
-                  {bench.game_title_ar}
-                </h4>
+                <div class="flex flex-wrap items-center gap-2">
+                  <h4 class="font-extrabold text-slate-900 dark:text-white text-base">
+                    {bench.game_title_ar}
+                  </h4>
+                  {(bench.rt_badge_ar || (bench.game_title === 'Cyberpunk 2077' ? '⚡ تتبع الأشعة مفعّل (RT ON)' : bench.game_title === 'Black Myth: Wukong' ? '💡 إضاءة Lumen العتادية' : null)) && (
+                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-50 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 border border-amber-200/60 dark:border-amber-800/60">
+                      {bench.rt_badge_ar || (bench.game_title === 'Cyberpunk 2077' ? '⚡ تتبع الأشعة مفعّل (RT ON)' : '💡 إضاءة Lumen العتادية')}
+                    </span>
+                  )}
+                </div>
                 <span class="text-xs text-slate-500 font-medium">
                   {bench.game_title} • إعدادات {bench.preset}
                 </span>
               </div>
-              <span class="px-2.5 py-1 rounded-md text-[11px] font-black bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-black bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 whitespace-nowrap">
                 {resClean}
               </span>
             </div>
