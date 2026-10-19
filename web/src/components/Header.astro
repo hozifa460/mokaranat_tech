@@ -1,0 +1,66 @@
+---
+---
+
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <a href="/" class="flex items-center gap-2 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white font-black text-xl shadow-md group-hover:scale-105 transition-transform">
+            ⚡
+          </div>
+          <div>
+            <span class="text-xl font-extrabold bg-gradient-to-l from-blue-600 via-indigo-600 to-slate-900 dark:to-white bg-clip-text text-transparent">
+              مقارنات تك
+            </span>
+            <span class="block text-[10px] text-slate-500 dark:text-slate-400 font-medium -mt-1">
+              الدليل العربي لأقوى عتاد الحاسوب
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 text-sm font-semibold">
+        <a href="/" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          الرئيسية
+        </a>
+        <a href="/category/gpu" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          🎮 كروت الشاشة (GPUs)
+        </a>
+        <a href="/category/cpu" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          ⚙️ المعالجات (CPUs)
+        </a>
+        <a href="/category/laptop" class="px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          💻 الحواسيب المحمولة
+        </a>
+      </nav>
+
+      <!-- Actions: Theme Toggle -->
+      <div class="flex items-center gap-3">
+        <button
+          id="theme-toggle"
+          type="button"
+          aria-label="تبديل الوضع الليلي والنهاري"
+          class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none transition-colors"
+        >
+          <span class="dark:hidden">🌙</span>
+          <span class="hidden dark:inline">☀️</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  }
+</script>

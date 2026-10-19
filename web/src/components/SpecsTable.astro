@@ -1,0 +1,114 @@
+---
+interface Props {
+  itemA: any;
+  itemB: any;
+  specDifferences: any[];
+}
+
+const { itemA, itemB, specDifferences } = Astro.props;
+
+const formatVal = (v: any) => {
+  if (typeof v === 'number') {
+    return Number.isInteger(v) ? v.toString() : v.toFixed(1).replace(/\.0$/, '');
+  }
+  if (typeof v === 'string' && /^-?\d+(\.\d+)?$/.test(v.trim())) {
+    const num = parseFloat(v);
+    return Number.isInteger(num) ? num.toString() : num.toFixed(1).replace(/\.0$/, '');
+  }
+  return v;
+};
+---
+
+<section class="my-12">
+  <div class="mb-6">
+    <h2 class="text-2xl font-black text-slate-900 dark:text-white flex items-center gap-2">
+      <span>📋</span>
+      <span>جدول المواصفات التقنية والمقارنة المباشرة</span>
+    </h2>
+    <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
+      مقارنة رأس برأس لجميع المعايير الهندسية مع توضيح الفائز في كل نقطة.
+    </p>
+  </div>
+
+  <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+    <table class="w-full text-right text-sm">
+      <thead class="bg-slate-50 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 border-b border-slate-200 dark:border-slate-800">
+        <tr>
+          <th scope="col" class="py-4 px-6 font-bold text-xs uppercase tracking-wider">
+            المعيار التقني
+          </th>
+          <th scope="col" class="py-4 px-6 font-bold text-xs text-blue-600 dark:text-blue-400">
+            {itemA.name}
+          </th>
+          <th scope="col" class="py-4 px-6 font-bold text-xs text-indigo-600 dark:text-indigo-400">
+            {itemB.name}
+          </th>
+          <th scope="col" class="py-4 px-6 font-bold text-xs">
+            التقييم والفارق
+          </th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
+        {specDifferences.map((diff, index) => {
+          const isA = diff.winner === 'a';
+          const isB = diff.winner === 'b';
+          const isTie = diff.winner === 'tie';
+
+          return (
+            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/40 transition-colors">
+              <td class="py-4 px-6 font-bold text-slate-900 dark:text-white">
+                {diff.label_ar}
+              </td>
+              <td class="py-4 px-6">
+                <div class="flex items-center gap-2">
+                  <span class={`font-extrabold ${isA ? 'text-blue-600 dark:text-blue-400' : ''}`}>
+                    <bdi dir="ltr" class="whitespace-nowrap">{formatVal(diff.value_a)} {diff.unit}</bdi>
+                  </span>
+                  {isA && (
+                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
+                      🏆 أفضل
+                    </span>
+                  )}
+                </div>
+              </td>
+              <td class="py-4 px-6">
+                <div class="flex items-center gap-2">
+                  <span class={`font-extrabold ${isB ? 'text-indigo-600 dark:text-indigo-400' : ''}`}>
+                    <bdi dir="ltr" class="whitespace-nowrap">{formatVal(diff.value_b)} {diff.unit}</bdi>
+                  </span>
+                  {isB && (
+                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300">
+                      🏆 أفضل
+                    </span>
+                  )}
+                </div>
+              </td>
+              <td class="py-4 px-6 text-xs">
+                {isTie ? (
+                  <div class="space-y-0.5">
+                    <span class="font-bold text-slate-500 dark:text-slate-400">
+                      {diff.advantage_summary_ar || 'تعادل / تقارب في الأداء'}
+                    </span>
+                  </div>
+                ) : (
+                  <div class="space-y-0.5">
+                    <span class="font-bold text-emerald-600 dark:text-emerald-400">
+                      {diff.key === 'launch_msrp_usd' ? (
+                        <>أوفر بنسبة <bdi dir="ltr" class="whitespace-nowrap">{formatVal(diff.diff_percentage)}%</bdi> مقارنة بسعر المنافس لصالح {isA ? itemA.name : itemB.name}</>
+                      ) : (
+                        <><bdi dir="ltr" class="whitespace-nowrap">+{formatVal(diff.diff_percentage)}%</bdi> لصالح {isA ? itemA.name : itemB.name}</>
+                      )}
+                    </span>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-snug">
+                      {diff.advantage_summary_ar}
+                    </p>
+                  </div>
+                )}
+              </td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+</section>

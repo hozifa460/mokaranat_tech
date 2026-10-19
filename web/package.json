@@ -1,0 +1,16 @@
+{
+  "name": "tech-comparisons-web",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.4.0",
+    "@astrojs/tailwind": "^5.1.5",
+    "tailwindcss": "^3.4.17"
+  }
+}

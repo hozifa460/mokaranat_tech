@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ComparisonHero from '../../components/ComparisonHero.astro';
+import PerformanceBars from '../../components/PerformanceBars.astro';
+import SpecsTable from '../../components/SpecsTable.astro';
+import GamingFpsWidget from '../../components/GamingFpsWidget.astro';
+import EditorialVerdict from '../../components/EditorialVerdict.astro';
+import AffiliateWidget from '../../components/AffiliateWidget.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import InternalLinksGrid from '../../components/InternalLinksGrid.astro';
+
+export async function getStaticPaths() {
+  const comparisonModules = import.meta.glob('../../data/comparisons/*.json', { eager: true });
+  
+  const comparisons = Object.values(comparisonModules).map((mod: any) => mod.default || mod);
+
+  return comparisons.map((comp: any) => ({
+    params: { slug: comp.slug },
+    props: {
+      comparison: comp,
+      allComparisons: comparisons.map((c: any) => ({
+        slug: c.slug,
+        category: c.category,
+        title_ar: c.title_ar,
+        winner_name: c.verdict.winner_name,
+        score_a: c.performance_score_a,
+        score_b: c.performance_score_b
+      }))
+    }
+  }));
+}
+
+const { comparison, allComparisons } = Astro.props;
+---
+
+<BaseLayout
+  title={comparison.meta_title_ar}
+  description={comparison.meta_description_ar}
+  schema={comparison.schema_json_ld}
+  ogType="article"
+>
+  <!-- Hero Section -->
+  <ComparisonHero
+    itemA={comparison.item_a}
+    itemB={comparison.item_b}
+    verdict={comparison.verdict}
+    category={comparison.category}
+  />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Top Ad Placement -->
+    <AdSlot slotId="ad-top-compare" format="horizontal" />
+
+    <!-- Performance Bars -->
+    <PerformanceBars
+      itemA={comparison.item_a}
+      itemB={comparison.item_b}
+    />
+
+    <!-- Side-by-side Technical Specs Table -->
+    <SpecsTable
+      itemA={comparison.item_a}
+      itemB={comparison.item_b}
+      specDifferences={comparison.spec_differences}
+    />
+
+    <!-- Gaming FPS Benchmarks -->
+    <GamingFpsWidget
+      fpsBenchmarks={comparison.fps_benchmarks}
+      itemA={comparison.item_a}
+      itemB={comparison.item_b}
+    />
+
+    <!-- Middle Ad Placement -->
+    <AdSlot slotId="ad-mid-verdict" format="rectangle" />
+
+    <!-- AI In-Depth Technical Verdict -->
+    <EditorialVerdict
+      verdict={comparison.verdict}
+      itemA={comparison.item_a}
+      itemB={comparison.item_b}
+    />
+
+    <!-- Multi-Store Affiliate Widget (Noon, Newegg, AliExpress, Jumia) -->
+    <AffiliateWidget
+      itemA={comparison.item_a}
+      itemB={comparison.item_b}
+      affiliateA={comparison.affiliate_links_a}
+      affiliateB={comparison.affiliate_links_b}
+    />
+
+    <!-- Bottom Ad Placement -->
+    <AdSlot slotId="ad-bottom-related" format="horizontal" />
+
+    <!-- Interlinking Related Comparisons Grid -->
+    <InternalLinksGrid
+      currentSlug={comparison.slug}
+      category={comparison.category}
+      allComparisons={allComparisons}
+    />
+
+  </div>
+</BaseLayout>

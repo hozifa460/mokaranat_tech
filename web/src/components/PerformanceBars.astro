@@ -1,0 +1,140 @@
+---
+interface Props {
+  itemA: any;
+  itemB: any;
+}
+
+const { itemA, itemB } = Astro.props;
+
+const isCpu = itemA.category === 'cpu' || itemB.category === 'cpu';
+
+const metrics: { title: string; valA: number; valB: number; unit: string }[] = [
+  {
+    title: "مؤشر الأداء الإجمالي (Overall Benchmark)",
+    valA: itemA.benchmark_index,
+    valB: itemB.benchmark_index,
+    unit: "/ 100"
+  }
+];
+
+if (!isCpu) {
+  metrics.push({
+    title: "أداء تتبع الأشعة (Ray Tracing Performance)",
+    valA: itemA.ray_tracing_score,
+    valB: itemB.ray_tracing_score,
+    unit: "/ 100"
+  });
+}
+
+metrics.push({
+  title: "مؤشر كفاءة الطاقة (Performance Per Watt)",
+  valA: itemA.efficiency_score,
+  valB: itemB.efficiency_score,
+  unit: "/ 100"
+});
+
+if (itemA.gaming_scores?.raster_1440p && itemB.gaming_scores?.raster_1440p) {
+  metrics.push({
+    title: "معدل القوة بدقة 1440p (2K Gaming)",
+    valA: itemA.gaming_scores.raster_1440p,
+    valB: itemB.gaming_scores.raster_1440p,
+    unit: "/ 100"
+  });
+} else if (itemA.gaming_scores?.gaming_overall && itemB.gaming_scores?.gaming_overall) {
+  metrics.push({
+    title: "الأداء العام في الألعاب (Gaming Index)",
+    valA: itemA.gaming_scores.gaming_overall,
+    valB: itemB.gaming_scores.gaming_overall,
+    unit: "/ 100"
+  });
+}
+const formatVal = (v: any) => {
+  if (typeof v === 'number') {
+    return Number.isInteger(v) ? v.toString() : v.toFixed(1).replace(/\.0$/, '');
+  }
+  if (typeof v === 'string' && /^-?\d+(\.\d+)?$/.test(v.trim())) {
+    const num = parseFloat(v);
+    return Number.isInteger(num) ? num.toString() : num.toFixed(1).replace(/\.0$/, '');
+  }
+  return v;
+};
+---
+
+<section class="my-12">
+  <div class="mb-6">
+    <h2 class="text-2xl font-black text-slate-900 dark:text-white flex items-center gap-2">
+      <span>📊</span>
+      <span>مقارنة مؤشرات الأداء الحسابي والمعياري</span>
+    </h2>
+    <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
+      {isCpu
+        ? "أشرطة بيانية توضح الفارق النسبي في سرعة المعالجة وتعدد الأنوية وكفاءة استهلاك الطاقة."
+        : "أشرطة بيانية توضح الفارق النسبي في مجالات المعالجة وتتبع الأشعة وكفاءة استهلاك الطاقة."}
+    </p>
+  </div>
+
+  <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 space-y-8 shadow-sm">
+    {metrics.map(m => {
+      const minVal = Math.min(m.valA, m.valB);
+      const diffPct = minVal > 0 ? (Math.abs(m.valA - m.valB) / minVal) * 100 : 0;
+      const isTie = m.valA === m.valB || diffPct < 3.0;
+      const winner = isTie ? 'tie' : (m.valA > m.valB ? 'a' : 'b');
+      return (
+        <div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-3 gap-2">
+            <span class="font-bold text-slate-900 dark:text-white text-base">
+              {m.title}
+            </span>
+            <div class="flex items-center gap-4 text-xs font-bold">
+              <span class={winner === 'a' ? 'text-blue-600 dark:text-blue-400 font-extrabold' : (winner === 'tie' ? 'text-blue-600/90 dark:text-blue-400/90' : 'text-slate-400')}>
+                {itemA.name}: <bdi dir="ltr" class="whitespace-nowrap">{formatVal(m.valA)} {m.unit}</bdi>
+              </span>
+              <span class="text-slate-300 dark:text-slate-700">|</span>
+              <span class={winner === 'b' ? 'text-indigo-600 dark:text-indigo-400 font-extrabold' : (winner === 'tie' ? 'text-indigo-600/90 dark:text-indigo-400/90' : 'text-slate-400')}>
+                {itemB.name}: <bdi dir="ltr" class="whitespace-nowrap">{formatVal(m.valB)} {m.unit}</bdi>
+              </span>
+              {winner === 'tie' && (
+                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-500">
+                  تعادل متقارب
+                </span>
+              )}
+            </div>
+          </div>
+
+          <!-- Dual Visual Bars -->
+          <div class="space-y-2">
+            <!-- Item A Bar -->
+            <div class="flex items-center gap-3">
+              <span class="w-24 sm:w-32 text-xs truncate font-medium text-slate-600 dark:text-slate-400">
+                {itemA.brand}
+              </span>
+              <div class="flex-1 bg-slate-100 dark:bg-slate-800 h-5 rounded-full overflow-hidden p-0.5">
+                <div
+                  class={`h-full rounded-full transition-all flex items-center justify-end px-2 text-[10px] font-black text-white ${winner === 'a' ? 'bg-gradient-to-r from-blue-500 to-blue-600' : (winner === 'tie' ? 'bg-blue-600' : 'bg-slate-400 dark:bg-slate-600')}`}
+                  style={`width: ${Math.max(10, m.valA)}%`}
+                >
+                  <bdi dir="ltr" class="whitespace-nowrap">{formatVal(m.valA)}</bdi>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item B Bar -->
+            <div class="flex items-center gap-3">
+              <span class="w-24 sm:w-32 text-xs truncate font-medium text-slate-600 dark:text-slate-400">
+                {itemB.brand}
+              </span>
+              <div class="flex-1 bg-slate-100 dark:bg-slate-800 h-5 rounded-full overflow-hidden p-0.5">
+                <div
+                  class={`h-full rounded-full transition-all flex items-center justify-end px-2 text-[10px] font-black text-white ${winner === 'b' ? 'bg-gradient-to-r from-indigo-500 to-indigo-600' : (winner === 'tie' ? 'bg-indigo-600' : 'bg-slate-400 dark:bg-slate-600')}`}
+                  style={`width: ${Math.max(10, m.valB)}%`}
+                >
+                  <bdi dir="ltr" class="whitespace-nowrap">{formatVal(m.valB)}</bdi>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</section>

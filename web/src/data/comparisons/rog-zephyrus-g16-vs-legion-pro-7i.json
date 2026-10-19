@@ -1,0 +1,528 @@
+{
+  "slug": "rog-zephyrus-g16-vs-legion-pro-7i",
+  "category": "laptop",
+  "title_ar": "مقارنة ASUS ROG Zephyrus G16 (2024) ضد Lenovo Legion Pro 7i (Gen 9) | المواصفات والأداء والأسعار",
+  "meta_title_ar": "ASUS ROG Zephyrus G16 (2024) ضد Lenovo Legion Pro 7i (Gen 9): أيهما يستحق الشراء؟ | مقارنات تك",
+  "meta_description_ar": "مقارنة شاملة وتفصيلية بين ASUS ROG Zephyrus G16 (2024) و Lenovo Legion Pro 7i (Gen 9). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+  "item_a": {
+    "id": "rog-zephyrus-g16",
+    "slug": "rog-zephyrus-g16",
+    "name": "ASUS ROG Zephyrus G16 (2024)",
+    "category": "laptop",
+    "brand": "ASUS",
+    "release_year": 2024,
+    "launch_msrp_usd": 1999.0,
+    "architecture": "Intel Meteor Lake + RTX 4070",
+    "process_node_nm": 4.0,
+    "tdp_w": 105,
+    "raw_specs": {
+      "display": "16-inch OLED 2.5K 240Hz",
+      "weight_kg": 1.85,
+      "battery_wh": 90,
+      "cpu": "Intel Core Ultra 9 185H",
+      "gpu": "RTX 4070 Mobile 8GB",
+      "ram_gb": 32,
+      "storage_tb": 1
+    },
+    "benchmark_index": 84.0,
+    "gaming_scores": {
+      "raster_1080p": 86.0,
+      "raster_1440p": 79.0,
+      "raster_4k": 54.0
+    },
+    "ray_tracing_score": 80.0,
+    "efficiency_score": 86.0,
+    "features": [
+      "ROG Nebula OLED Panel",
+      "CNC Aluminum Body",
+      "Lightweight 1.85kg"
+    ],
+    "pcie_interface": null
+  },
+  "item_b": {
+    "id": "legion-pro-7i",
+    "slug": "legion-pro-7i",
+    "name": "Lenovo Legion Pro 7i (Gen 9)",
+    "category": "laptop",
+    "brand": "Lenovo",
+    "release_year": 2024,
+    "launch_msrp_usd": 2199.0,
+    "architecture": "Intel 14th Gen + RTX 4080",
+    "process_node_nm": 4.0,
+    "tdp_w": 175,
+    "raw_specs": {
+      "display": "16-inch IPS 2.5K 240Hz 500nits",
+      "weight_kg": 2.6,
+      "battery_wh": 99.9,
+      "cpu": "Intel Core i9-14900HX",
+      "gpu": "RTX 4080 Mobile 12GB (175W)",
+      "ram_gb": 32,
+      "storage_tb": 1
+    },
+    "benchmark_index": 91.0,
+    "gaming_scores": {
+      "raster_1080p": 94.0,
+      "raster_1440p": 90.0,
+      "raster_4k": 76.0
+    },
+    "ray_tracing_score": 89.0,
+    "efficiency_score": 72.0,
+    "features": [
+      "Full 175W TGP GPU",
+      "Coldfront 5.0 Vapor Chamber",
+      "TrueStrike Keyboard"
+    ],
+    "pcie_interface": null
+  },
+  "spec_differences": [
+    {
+      "key": "benchmark_index",
+      "label_ar": "مؤشر الأداء العام (Benchmark Index)",
+      "value_a": 84.0,
+      "value_b": 91.0,
+      "unit": "/ 100",
+      "winner": "b",
+      "diff_percentage": 8.3,
+      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 8.3%"
+    },
+    {
+      "key": "launch_msrp_usd",
+      "label_ar": "سعر الإطلاق الرسمي",
+      "value_a": 1999.0,
+      "value_b": 2199.0,
+      "unit": "$",
+      "winner": "a",
+      "diff_percentage": 9.1,
+      "advantage_summary_ar": "أوفر بالسعر بنسبة 9.1%"
+    },
+    {
+      "key": "tdp_w",
+      "label_ar": "استهلاك الطاقة المكتبي (TDP)",
+      "value_a": 105,
+      "value_b": 175,
+      "unit": "W",
+      "winner": "a",
+      "diff_percentage": 40.0,
+      "advantage_summary_ar": "استهلاك طاقة أقل وتوليد حراري أهدأ بفارق 40%"
+    },
+    {
+      "key": "process_node_nm",
+      "label_ar": "دقة التصنيع (Process Node)",
+      "value_a": 4.0,
+      "value_b": 4.0,
+      "unit": "nm",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقياس تقني استرشادي: تختلف هندسة دقة التصنيع وكثافة الترانزستورات والتصميم (رقاقة أحادية Monolithic مقابل رقاقات Chiplets) بين المعماريات المختلفة"
+    },
+    {
+      "key": "ray_tracing_score",
+      "label_ar": "كفاءة تتبع الأشعة (Ray Tracing)",
+      "value_a": 80.0,
+      "value_b": 89.0,
+      "unit": "/ 100",
+      "winner": "b",
+      "diff_percentage": 11.2,
+      "advantage_summary_ar": "معالجة متقدمة لتقنيات الإضاءة الواقعية بفارق 11.2%"
+    },
+    {
+      "key": "efficiency_score",
+      "label_ar": "معيار الكفاءة مقابل الواط",
+      "value_a": 86.0,
+      "value_b": 72.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 19.4,
+      "advantage_summary_ar": "أداء أعلى لكل واط مستهلك"
+    },
+    {
+      "key": "weight_kg",
+      "label_ar": "وزن الجهاز المحمول",
+      "value_a": 1.85,
+      "value_b": 2.6,
+      "unit": "kg",
+      "winner": "a",
+      "diff_percentage": 28.8,
+      "advantage_summary_ar": "أخف وزناً وسهولة أعلى في التنقل اليومي"
+    },
+    {
+      "key": "battery_wh",
+      "label_ar": "سعة البطارية (Watt-hours)",
+      "value_a": 90.0,
+      "value_b": 99.9,
+      "unit": "Wh",
+      "winner": "b",
+      "diff_percentage": 11.0,
+      "advantage_summary_ar": "سعة بطارية أكبر للعمل لفترات أطول خارج المقبس"
+    }
+  ],
+  "performance_score_a": 84.0,
+  "performance_score_b": 91.0,
+  "fps_benchmarks": [
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 113,
+      "fps_b": 126,
+      "diff_pct": 11.5,
+      "winner": "b"
+    },
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 72,
+      "fps_b": 84,
+      "diff_pct": 16.7,
+      "winner": "b"
+    },
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 30,
+      "fps_b": 43,
+      "diff_pct": 43.3,
+      "winner": "b"
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1080p",
+      "preset": "Cinematic High",
+      "fps_a": 78,
+      "fps_b": 87,
+      "diff_pct": 11.5,
+      "winner": "b"
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1440p",
+      "preset": "Cinematic High",
+      "fps_a": 47,
+      "fps_b": 54,
+      "diff_pct": 14.9,
+      "winner": "b"
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "4K",
+      "preset": "Cinematic High",
+      "fps_a": 18,
+      "fps_b": 26,
+      "diff_pct": 44.4,
+      "winner": "b"
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1080p",
+      "preset": "Competitive High",
+      "fps_a": 300,
+      "fps_b": 311,
+      "diff_pct": 3.7,
+      "winner": "b"
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1440p",
+      "preset": "Competitive High",
+      "fps_a": 203,
+      "fps_b": 214,
+      "diff_pct": 5.4,
+      "winner": "b"
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "4K",
+      "preset": "Competitive High",
+      "fps_a": 103,
+      "fps_b": 116,
+      "diff_pct": 12.6,
+      "winner": "b"
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1080p",
+      "preset": "Ultra",
+      "fps_a": 125,
+      "fps_b": 136,
+      "diff_pct": 8.8,
+      "winner": "b"
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1440p",
+      "preset": "Ultra",
+      "fps_a": 87,
+      "fps_b": 99,
+      "diff_pct": 13.8,
+      "winner": "b"
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "4K",
+      "preset": "Ultra",
+      "fps_a": 39,
+      "fps_b": 55,
+      "diff_pct": 41.0,
+      "winner": "b"
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1080p",
+      "preset": "Ultra / High",
+      "fps_a": 181,
+      "fps_b": 197,
+      "diff_pct": 8.8,
+      "winner": "b"
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1440p",
+      "preset": "Ultra / High",
+      "fps_a": 118,
+      "fps_b": 135,
+      "diff_pct": 14.4,
+      "winner": "b"
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "4K",
+      "preset": "Ultra / High",
+      "fps_a": 49,
+      "fps_b": 68,
+      "diff_pct": 38.8,
+      "winner": "b"
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 131,
+      "fps_b": 143,
+      "diff_pct": 9.2,
+      "winner": "b"
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 90,
+      "fps_b": 103,
+      "diff_pct": 14.4,
+      "winner": "b"
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 37,
+      "fps_b": 52,
+      "diff_pct": 40.5,
+      "winner": "b"
+    }
+  ],
+  "verdict": {
+    "overall_winner": "b",
+    "winner_name": "Lenovo Legion Pro 7i (Gen 9)",
+    "score_a": 84.0,
+    "score_b": 91.0,
+    "quick_verdict_ar": "يتفوق Lenovo Legion Pro 7i (Gen 9) في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 8.3% مقارنة بـ ASUS ROG Zephyrus G16 (2024). هذا التفوق يستند إلى معمارية Intel 14th Gen + RTX 4080 وتوازن العتاد المعماري ومنصة التشغيل المحمولة، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "gaming_analysis_ar": "في فئة الحواسيب المحمولة، يوفر كلا الجهازين توازناً متقدماً بين الأداء المحمول والحرارة المحكومة، مع أفضلية في ثبات الترددات والأداء الرسومي لصالح Lenovo Legion Pro 7i (Gen 9) (بمؤشر 91/100) تحت الأحمال المطولة مقارنة بـ ASUS ROG Zephyrus G16 (2024) (84/100).",
+    "productivity_analysis_ar": "تعتبر سعة البطارية وإدارة الطاقة والوزن هي العوامل الفاصلة في الإنتاجية اليومية للمصممين والمبرمجين؛ حيث يتميز ASUS ROG Zephyrus G16 (2024) بسهولة التنقل بوزن 1.9 كجم، بينما يوفر Lenovo Legion Pro 7i (Gen 9) منصة عمل قوية وثابتة.",
+    "value_and_budget_ar": "يطرح ASUS ROG Zephyrus G16 (2024) تكلفة شراء أولية أقل بسعر $1999 مقارنة بـ $2199 (توفير $200، بينما يزيد سعر منافسه بنسبة 10%)، في حين يوفر Lenovo Legion Pro 7i (Gen 9) أداءً إضافياً بنسبة 8.3% يبرر الاستثمار لمن تتطلب أعمالهم أعلى مواصفات للتنقل واللعب.",
+    "pros_a": [
+      "شاشة عرض متطورة (16-inch OLED 2.5K 240Hz)",
+      "تصميم أنيق ووزن خفيف (1.9 كجم) يسهل التنقل اليومي مقارنة بالمنافس (2.6 كجم)",
+      "كفاءة استهلاك طاقة عالية بمؤشر 86/100"
+    ],
+    "cons_a": [
+      "سعة بطارية أقل (90Wh مقابل 99.9Wh لدى Lenovo Legion Pro 7i (Gen 9))",
+      "خيارات ترقية العتاد الداخلي محدودة بطبيعة الأجهزة المحمولة",
+      "يتطلب وضعية تهوية جيدة على سطح مستوٍ لتفادي خنق تدفق الهواء السفلي"
+    ],
+    "pros_b": [
+      "شاشة عرض متطورة (16-inch IPS 2.5K 240Hz 500nits)",
+      "أداء معالجة إجمالي قوي بمؤشر 91/100",
+      "بطارية بسعة ضخمة (99.9 واط/ساعة) للاستخدام المطول خارج المنزل"
+    ],
+    "cons_b": [
+      "سعر إطلاق رسمي أعلى ($2199)",
+      "وزن الجهاز (2.6 كجم) أثقل نسبياً عند الحمل في الحقيبة مقارنة بـ ASUS ROG Zephyrus G16 (2024) (1.9 كجم)",
+      "خيارات ترقية العتاد الداخلي محدودة بطبيعة الأجهزة المحمولة",
+      "يتطلب وضعية تهوية جيدة على سطح مستوٍ لتفادي خنق تدفق الهواء السفلي"
+    ],
+    "who_should_buy_a": "اللاعب أو المحترف الذي يطلب أقصى استقرار وأداء في الألعاب الثقيلة وبرامج التصميم على حساب الوزن (1.9 كجم)، مع الاستفادة من منصة تبريد قوية وبطارية 90Wh.",
+    "who_should_buy_b": "اللاعب أو المحترف الذي يطلب أقصى استقرار وأداء في الألعاب الثقيلة وبرامج التصميم على حساب الوزن (2.6 كجم)، مع الاستفادة من منصة تبريد قوية وبطارية 99.9Wh."
+  },
+  "affiliate_links_a": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء ASUS ROG Zephyrus G16 (2024) من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=ASUS+ROG+Zephyrus+G16+%282024%29",
+      "affiliate_url": "https://www.noon.com/search?q=ASUS+ROG+Zephyrus+G16+%282024%29&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء ASUS ROG Zephyrus G16 (2024) من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=ASUS+ROG+Zephyrus+G16+%282024%29",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=ASUS+ROG+Zephyrus+G16+%282024%29&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء ASUS ROG Zephyrus G16 (2024) من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=ASUS+ROG+Zephyrus+G16+%282024%29",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=ASUS+ROG+Zephyrus+G16+%282024%29&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء ASUS ROG Zephyrus G16 (2024) من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=ASUS+ROG+Zephyrus+G16+%282024%29",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=ASUS+ROG+Zephyrus+G16+%282024%29&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "affiliate_links_b": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء Lenovo Legion Pro 7i (Gen 9) من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=Lenovo+Legion+Pro+7i+%28Gen+9%29",
+      "affiliate_url": "https://www.noon.com/search?q=Lenovo+Legion+Pro+7i+%28Gen+9%29&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء Lenovo Legion Pro 7i (Gen 9) من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=Lenovo+Legion+Pro+7i+%28Gen+9%29",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=Lenovo+Legion+Pro+7i+%28Gen+9%29&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء Lenovo Legion Pro 7i (Gen 9) من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=Lenovo+Legion+Pro+7i+%28Gen+9%29",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=Lenovo+Legion+Pro+7i+%28Gen+9%29&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء Lenovo Legion Pro 7i (Gen 9) من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=Lenovo+Legion+Pro+7i+%28Gen+9%29",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=Lenovo+Legion+Pro+7i+%28Gen+9%29&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "schema_json_ld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/rog-zephyrus-g16-vs-legion-pro-7i#productA",
+        "name": "ASUS ROG Zephyrus G16 (2024)",
+        "category": "LAPTOP",
+        "brand": {
+          "@type": "Brand",
+          "name": "ASUS"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "1999",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/rog-zephyrus-g16-vs-legion-pro-7i#productB",
+        "name": "Lenovo Legion Pro 7i (Gen 9)",
+        "category": "LAPTOP",
+        "brand": {
+          "@type": "Brand",
+          "name": "Lenovo"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "2199",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://tech-comparisons.pages.dev/compare/rog-zephyrus-g16-vs-legion-pro-7i#review",
+        "url": "https://tech-comparisons.pages.dev/compare/rog-zephyrus-g16-vs-legion-pro-7i",
+        "name": "مقارنة ASUS ROG Zephyrus G16 (2024) ضد Lenovo Legion Pro 7i (Gen 9) | المواصفات والأداء والأسعار",
+        "description": "مقارنة شاملة وتفصيلية بين ASUS ROG Zephyrus G16 (2024) و Lenovo Legion Pro 7i (Gen 9). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+        "datePublished": "2026-10-19T18:06:31.832427+00:00",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "فريق تحرير مقارنات تك",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "itemReviewed": {
+          "@type": "Product",
+          "name": "ASUS ROG Zephyrus G16 (2024) vs Lenovo Legion Pro 7i (Gen 9)"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 4.5,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "reviewBody": "يتفوق Lenovo Legion Pro 7i (Gen 9) في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 8.3% مقارنة بـ ASUS ROG Zephyrus G16 (2024). هذا التفوق يستند إلى معمارية Intel 14th Gen + RTX 4080 وتوازن العتاد المعماري ومنصة التشغيل المحمولة، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+      }
+    ]
+  },
+  "created_at": "2026-10-19T18:06:31.832427+00:00"
+}

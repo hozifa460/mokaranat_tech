@@ -1,0 +1,79 @@
+[
+  {
+    "slug": "rtx-4070-super-vs-rx-7800-xt",
+    "category": "gpu",
+    "title_ar": "مقارنة NVIDIA GeForce RTX 4070 Super ضد AMD Radeon RX 7800 XT | المواصفات والأداء والأسعار",
+    "item_a_name": "NVIDIA GeForce RTX 4070 Super",
+    "item_b_name": "AMD Radeon RX 7800 XT",
+    "winner_name": "تعادل متقارب في الأداء",
+    "score_a": 82.5,
+    "score_b": 81.0,
+    "created_at": "2026-10-19T18:06:30.999384+00:00"
+  },
+  {
+    "slug": "rtx-4080-super-vs-rx-7900-xtx",
+    "category": "gpu",
+    "title_ar": "مقارنة NVIDIA GeForce RTX 4080 Super ضد AMD Radeon RX 7900 XTX | المواصفات والأداء والأسعار",
+    "item_a_name": "NVIDIA GeForce RTX 4080 Super",
+    "item_b_name": "AMD Radeon RX 7900 XTX",
+    "winner_name": "تعادل متقارب في الأداء",
+    "score_a": 92.0,
+    "score_b": 93.5,
+    "created_at": "2026-10-19T18:06:31.187644+00:00"
+  },
+  {
+    "slug": "rtx-4060-ti-vs-rx-7700-xt",
+    "category": "gpu",
+    "title_ar": "مقارنة NVIDIA GeForce RTX 4060 Ti ضد AMD Radeon RX 7700 XT | المواصفات والأداء والأسعار",
+    "item_a_name": "NVIDIA GeForce RTX 4060 Ti",
+    "item_b_name": "AMD Radeon RX 7700 XT",
+    "winner_name": "AMD Radeon RX 7700 XT",
+    "score_a": 68.0,
+    "score_b": 74.0,
+    "created_at": "2026-10-19T18:06:31.319485+00:00"
+  },
+  {
+    "slug": "rtx-4070-super-vs-rtx-4080-super",
+    "category": "gpu",
+    "title_ar": "مقارنة NVIDIA GeForce RTX 4070 Super ضد NVIDIA GeForce RTX 4080 Super | المواصفات والأداء والأسعار",
+    "item_a_name": "NVIDIA GeForce RTX 4070 Super",
+    "item_b_name": "NVIDIA GeForce RTX 4080 Super",
+    "winner_name": "NVIDIA GeForce RTX 4080 Super",
+    "score_a": 82.5,
+    "score_b": 92.0,
+    "created_at": "2026-10-19T18:06:31.464388+00:00"
+  },
+  {
+    "slug": "rx-7800-xt-vs-rx-7900-xtx",
+    "category": "gpu",
+    "title_ar": "مقارنة AMD Radeon RX 7800 XT ضد AMD Radeon RX 7900 XTX | المواصفات والأداء والأسعار",
+    "item_a_name": "AMD Radeon RX 7800 XT",
+    "item_b_name": "AMD Radeon RX 7900 XTX",
+    "winner_name": "AMD Radeon RX 7900 XTX",
+    "score_a": 81.0,
+    "score_b": 93.5,
+    "created_at": "2026-10-19T18:06:31.601297+00:00"
+  },
+  {
+    "slug": "ryzen-7-7800x3d-vs-i7-14700k",
+    "category": "cpu",
+    "title_ar": "مقارنة AMD Ryzen 7 7800X3D ضد Intel Core i7-14700K | المواصفات والأداء والأسعار",
+    "item_a_name": "AMD Ryzen 7 7800X3D",
+    "item_b_name": "Intel Core i7-14700K",
+    "winner_name": "تعادل متقارب في الأداء",
+    "score_a": 91.0,
+    "score_b": 92.5,
+    "created_at": "2026-10-19T18:06:31.715737+00:00"
+  },
+  {
+    "slug": "rog-zephyrus-g16-vs-legion-pro-7i",
+    "category": "laptop",
+    "title_ar": "مقارنة ASUS ROG Zephyrus G16 (2024) ضد Lenovo Legion Pro 7i (Gen 9) | المواصفات والأداء والأسعار",
+    "item_a_name": "ASUS ROG Zephyrus G16 (2024)",
+    "item_b_name": "Lenovo Legion Pro 7i (Gen 9)",
+    "winner_name": "Lenovo Legion Pro 7i (Gen 9)",
+    "score_a": 84.0,
+    "score_b": 91.0,
+    "created_at": "2026-10-19T18:06:31.832427+00:00"
+  }
+]

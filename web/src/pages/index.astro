@@ -1,0 +1,196 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AdSlot from '../components/AdSlot.astro';
+
+const comparisonModules = import.meta.glob('../data/comparisons/*.json', { eager: true });
+const allComparisons = Object.values(comparisonModules).map((mod: any) => mod.default || mod);
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "مقارنات تك",
+  "url": "https://tech-comparisons.pages.dev",
+  "description": "منصة عربية متخصصة في مقارنات عتاد الحاسوب، كروت الشاشة، المعالجات، والحواسيب المحمولة بمقارنة معمارية وتحليلات الأداء المتوقعة ومؤشرات الطاقة.",
+  "inLanguage": "ar"
+};
+
+const formatVal = (v: any) => {
+  if (typeof v === 'number') {
+    return Number.isInteger(v) ? v.toString() : v.toFixed(1).replace(/\.0$/, '');
+  }
+  if (typeof v === 'string' && /^-?\d+(\.\d+)?$/.test(v.trim())) {
+    const num = parseFloat(v);
+    return Number.isInteger(num) ? num.toString() : num.toFixed(1).replace(/\.0$/, '');
+  }
+  return v;
+};
+---
+
+<BaseLayout
+  title="مقارنات تك | مقارنات كروت الشاشة والمعالجات واللابتوبات بالأرقام"
+  description="دليلك العربي الأول لمقارنة عتاد الحاسوب بالأرقام الدقيقة، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وأفضل الأسعار من المتاجر المعتمدة."
+  schema={websiteSchema}
+>
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 overflow-hidden bg-gradient-to-b from-blue-50/70 via-white to-slate-50 dark:from-slate-900/60 dark:via-slate-950 dark:to-slate-950 border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 text-xs font-bold mb-6">
+        <span>🚀</span>
+        <span>بوابة المقارنات التقنية البرمجية الأولى عربياً</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tight leading-tight max-w-4xl mx-auto mb-6">
+        اختر عتادك القادم <span class="bg-gradient-to-l from-blue-600 to-indigo-600 bg-clip-text text-transparent">بدقة الأرقام</span> وليس مجرد تخمين
+      </h1>
+
+      <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+        مقارنات هندسية محايدة لكروت الشاشة والمعالجات والحواسيب المحمولة، مع معدل الإطارات في أحدث الألعاب وأسعار الشراء المباشرة.
+      </p>
+
+      <!-- Search / Filter Box -->
+      <div class="max-w-xl mx-auto relative mb-12">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="ابحث عن مقارنة... مثلاً RTX 4070 أو Ryzen 7 أو RX 7800"
+          class="w-full py-4 pr-12 pl-4 rounded-2xl border-2 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 shadow-lg text-sm transition-colors"
+        />
+        <span class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-slate-400">
+          🔍
+        </span>
+      </div>
+
+      <!-- Category Quick Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto text-right">
+        
+        <a href="/category/gpu" class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 dark:hover:border-blue-500 transition-all hover:shadow-lg group">
+          <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+            🎮
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">كروت الشاشة (GPUs)</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400">مقارنات بطاقات RTX و Radeon ومعدل إطارات الألعاب.</p>
+        </a>
+
+        <a href="/category/cpu" class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 dark:hover:border-blue-500 transition-all hover:shadow-lg group">
+          <div class="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+            ⚙️
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">المعالجات (CPUs)</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400">مقارنات معالجات Intel و AMD وسرعات الرندرة وتعدد الأنوية.</p>
+        </a>
+
+        <a href="/category/laptop" class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 dark:hover:border-blue-500 transition-all hover:shadow-lg group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+            💻
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">الحواسيب المحمولة</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400">مقارنات لابتوبات القيمنق والمونتاج، الشاشات والبطاريات.</p>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Top Ad Slot -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <AdSlot slotId="ad-home-top" format="horizontal" />
+  </div>
+
+  <!-- Featured Comparisons List -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
+          أحدث وأقوى المقارنات المعتمدة
+        </h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+          قائمة المقارنات الأكثر طلباً في السوق التقني الحالي.
+        </p>
+      </div>
+      <span class="text-xs font-bold px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400">
+        {allComparisons.length} مقارنة جاهزة
+      </span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="comparisons-list">
+      {allComparisons.map((comp: any) => (
+        <article
+          class="comp-item bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all flex flex-col justify-between group"
+          data-title={comp.title_ar.toLowerCase()}
+          data-a={comp.item_a.name.toLowerCase()}
+          data-b={comp.item_b.name.toLowerCase()}
+        >
+          <div>
+            <div class="flex items-center justify-between text-xs font-bold text-slate-400 mb-3">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 uppercase">
+                {comp.category}
+              </span>
+              <span class="text-emerald-600 dark:text-emerald-400 font-black">
+                {comp.verdict.overall_winner === 'tie' ? `🤝 ${comp.verdict.winner_name}` : `⭐ الفائز: ${comp.verdict.winner_name}`}
+              </span>
+            </div>
+
+            <h3 class="text-lg font-black text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-3 leading-snug">
+              <a href={`/compare/${comp.slug}`}>
+                {comp.title_ar}
+              </a>
+            </h3>
+
+            <!-- Micro Score Comparison -->
+            <div class="grid grid-cols-2 gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 mb-4 text-xs font-bold">
+              <div>
+                <span class="text-slate-400 block truncate">{comp.item_a.name}</span>
+                <bdi dir="ltr" class="text-blue-600 dark:text-blue-400 text-sm font-black">{formatVal(comp.performance_score_a)} / 100</bdi>
+              </div>
+              <div>
+                <span class="text-slate-400 block truncate">{comp.item_b.name}</span>
+                <bdi dir="ltr" class="text-indigo-600 dark:text-indigo-400 text-sm font-black">{formatVal(comp.performance_score_b)} / 100</bdi>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 mb-4 leading-relaxed">
+              {comp.verdict.quick_verdict_ar}
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+            <span class="text-xs text-slate-500">
+              {comp.item_a.launch_msrp_usd === comp.item_b.launch_msrp_usd ? <span>السعر متطابق: <bdi dir="ltr">${formatVal(comp.item_a.launch_msrp_usd)}</bdi></span> : <span><bdi dir="ltr">${formatVal(comp.item_a.launch_msrp_usd)}</bdi> مقابل <bdi dir="ltr">${formatVal(comp.item_b.launch_msrp_usd)}</bdi></span>}
+            </span>
+            <a
+              href={`/compare/${comp.slug}`}
+              class="px-4 py-2 rounded-xl text-xs font-bold bg-blue-600 text-white hover:bg-blue-700 transition-all flex items-center gap-1 shadow-sm"
+            >
+              <span>تفاصيل المقارنة</span>
+              <span>←</span>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Client-side filter script -->
+  <script is:inline>
+    const searchInput = document.getElementById('search-input');
+    const compCards = document.querySelectorAll('.comp-item');
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        compCards.forEach(card => {
+          const title = card.getAttribute('data-title') || '';
+          const nameA = card.getAttribute('data-a') || '';
+          const nameB = card.getAttribute('data-b') || '';
+          if (title.includes(query) || nameA.includes(query) || nameB.includes(query)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    }
+  </script>
+</BaseLayout>

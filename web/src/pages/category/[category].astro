@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdSlot from '../../components/AdSlot.astro';
+
+export async function getStaticPaths() {
+  const comparisonModules = import.meta.glob('../../data/comparisons/*.json', { eager: true });
+  const comparisons = Object.values(comparisonModules).map((mod: any) => mod.default || mod);
+
+  const categories = ['gpu', 'cpu', 'laptop'];
+
+  return categories.map((cat) => ({
+    params: { category: cat },
+    props: {
+      category: cat,
+      items: comparisons.filter((c: any) => c.category === cat)
+    }
+  }));
+}
+
+const { category, items } = Astro.props;
+
+const categoryInfo: Record<string, { title: string; desc: string; icon: string }> = {
+  gpu: {
+    title: "مقارنات كروت الشاشة (GPUs)",
+    desc: "مقارنات تفصيلية بين أحدث بطاقات NVIDIA RTX و AMD Radeon، مع قياسات الإطارات وتتبع الأشعة واستهلاك الطاقة.",
+    icon: "🎮"
+  },
+  cpu: {
+    title: "مقارنات المعالجات المركزية (CPUs)",
+    desc: "مقارنات رأس برأس بين معالجات Intel Core و AMD Ryzen للألعاب وصناعة المحتوى وتعدد المسارات.",
+    icon: "⚙️"
+  },
+  laptop: {
+    title: "مقارنات الحواسيب المحمولة (Laptops)",
+    desc: "دليل مقارنات أجهزة اللابتوب للألعاب والإنتاجية، مقارنة الشاشات والبطاريات وأنظمة التبريد.",
+    icon: "💻"
+  }
+};
+
+const currentInfo = categoryInfo[category] || {
+  title: `مقارنات ${category.toUpperCase()}`,
+  desc: "أحدث المقارنات المعيارية والتقنية",
+  icon: "⚡"
+};
+
+const formatVal = (v: any) => {
+  if (typeof v === 'number') {
+    return Number.isInteger(v) ? v.toString() : v.toFixed(1).replace(/\.0$/, '');
+  }
+  if (typeof v === 'string' && /^-?\d+(\.\d+)?$/.test(v.trim())) {
+    const num = parseFloat(v);
+    return Number.isInteger(num) ? num.toString() : num.toFixed(1).replace(/\.0$/, '');
+  }
+  return v;
+};
+---
+
+<BaseLayout
+  title={`${currentInfo.title} | مقارنات تك`}
+  description={currentInfo.desc}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    
+    <!-- Header Banner -->
+    <div class="mb-10 text-center max-w-3xl mx-auto">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-100 dark:bg-blue-950 text-3xl mb-4">
+        {currentInfo.icon}
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white mb-3">
+        {currentInfo.title}
+      </h1>
+      <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+        {currentInfo.desc}
+      </p>
+    </div>
+
+    <!-- Ad Slot -->
+    <AdSlot slotId={`ad-cat-${category}`} format="horizontal" />
+
+    <!-- Comparisons Grid -->
+    {items.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {items.map((comp: any) => (
+          <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:shadow-lg hover:border-blue-500 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between text-xs font-bold text-slate-400 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                  {comp.item_a.brand !== comp.item_b.brand ? `${comp.item_a.brand} ضد ${comp.item_b.brand}` : comp.item_a.brand}
+                </span>
+                <span class="text-emerald-600 dark:text-emerald-400 font-extrabold">
+                  {comp.verdict.overall_winner === 'tie' ? `🤝 ${comp.verdict.winner_name}` : `🏆 ${comp.verdict.winner_name}`}
+                </span>
+              </div>
+
+              <h2 class="text-lg font-black text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-4">
+                <a href={`/compare/${comp.slug}`}>
+                  {comp.title_ar}
+                </a>
+              </h2>
+
+              <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-3 mb-4 leading-relaxed">
+                {comp.verdict.quick_verdict_ar}
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <div class="text-xs font-bold text-slate-500">
+                <span>المؤشر: <bdi dir="ltr">{formatVal(comp.performance_score_a)} vs {formatVal(comp.performance_score_b)}</bdi></span>
+              </div>
+              <a
+                href={`/compare/${comp.slug}`}
+                class="px-4 py-2 rounded-xl text-xs font-bold bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 dark:hover:text-white transition-all flex items-center gap-1"
+              >
+                <span>شاهد المقارنة</span>
+                <span>←</span>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-16 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+        <p class="text-slate-500">لا توجد مقارنات متوفرة حالياً في هذا القسم. سيتم توليد المزيد قريباً!</p>
+      </div>
+    )}
+
+  </div>
+</BaseLayout>

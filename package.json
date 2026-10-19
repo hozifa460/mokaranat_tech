@@ -1,0 +1,15 @@
+{
+  "name": "tech-comparisons-workspace",
+  "version": "1.0.0",
+  "description": "Programmatic SEO (pSEO) Portal for Arabic Tech Comparisons",
+  "scripts": {
+    "dev": "npm --prefix web run dev",
+    "build": "npm --prefix web run build",
+    "preview": "npm --prefix web run preview",
+    "test:python": ".venv\\Scripts\\python.exe -m pytest core/tests -v",
+    "seed": ".venv\\Scripts\\python.exe scripts/seed_database.py",
+    "generate": ".venv\\Scripts\\python.exe scripts/generate_comparisons.py"
+  },
+  "author": "Tech Comparisons Team",
+  "license": "MIT"
+}

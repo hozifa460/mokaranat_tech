@@ -1,0 +1,133 @@
+---
+interface Props {
+  fpsBenchmarks: any[];
+  itemA: any;
+  itemB: any;
+}
+
+const { fpsBenchmarks, itemA, itemB } = Astro.props;
+
+if (!fpsBenchmarks || fpsBenchmarks.length === 0) {
+  return;
+}
+
+// Group benchmarks by resolution
+const resolutions = ['1080p', '1440p', '4K'];
+const cleanRes = (res: string) => (res || '').replace(/4kg/i, '4K');
+---
+
+<section class="my-12">
+  <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <div>
+      <h2 class="text-2xl font-black text-slate-900 dark:text-white flex items-center gap-2">
+        <span>🎮</span>
+        <span>تحليلات ومعدل الإطارات المتوقعة في الألعاب (Gaming FPS)</span>
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+        ملاحظة منهجية: معدلات الإطارات تقديرية محسوبة استناداً إلى اختبارات الأداء المعيارية الموثقة على منصة اختبار قياسية (معالج فئة عليا، 32GB DDR5، أحدث تعريفات التشغيل المستقرة) بإعدادات Ultra ودون تفعيل تقنيات رفع الدقة إلا إذا ذكر خلاف ذلك.
+      </p>
+    </div>
+
+    <!-- Resolution Tabs -->
+    <div class="inline-flex rounded-xl p-1 bg-slate-200 dark:bg-slate-800 self-start text-xs font-bold" id="res-tab-container">
+      {resolutions.map((res, i) => (
+        <button
+          type="button"
+          data-res={cleanRes(res)}
+          class={`px-4 py-2 rounded-lg transition-all ${i === 1 ? 'bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-sm' : 'text-slate-600 dark:text-slate-400 hover:text-slate-900'}`}
+        >
+          دقة {cleanRes(res)}
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="games-fps-grid">
+      {fpsBenchmarks.map((bench) => {
+        const resClean = cleanRes(bench.resolution);
+        const isWinnerA = bench.winner === 'a';
+        const isWinnerB = bench.winner === 'b';
+        const maxFps = Math.max(bench.fps_a, bench.fps_b, 60);
+        const widthA = Math.max(12, Math.round((bench.fps_a / maxFps) * 100));
+        const widthB = Math.max(12, Math.round((bench.fps_b / maxFps) * 100));
+        return (
+          <div class="p-5 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30 game-card" data-res={resClean} style={resClean === '1440p' ? '' : 'display: none;'}>
+            <div class="flex items-center justify-between mb-3">
+              <div>
+                <h4 class="font-extrabold text-slate-900 dark:text-white text-base">
+                  {bench.game_title_ar}
+                </h4>
+                <span class="text-xs text-slate-500 font-medium">
+                  {bench.game_title} • إعدادات {bench.preset}
+                </span>
+              </div>
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-black bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400">
+                {resClean}
+              </span>
+            </div>
+
+            <!-- Side by Side FPS Bars -->
+            <div class="space-y-3 pt-2">
+              
+              <!-- GPU A FPS -->
+              <div>
+                <div class="flex items-center justify-between text-xs font-bold mb-1">
+                  <span class="text-slate-600 dark:text-slate-400 truncate max-w-[200px]">{itemA.name}</span>
+                  <span class={`text-sm ${isWinnerA ? 'text-blue-600 dark:text-blue-400 font-black' : 'text-slate-700 dark:text-slate-300'}`}>
+                    <bdi dir="ltr">{bench.fps_a} FPS</bdi>
+                  </span>
+                </div>
+                <div class="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+                  <div class="bg-blue-600 h-full rounded-full transition-all" style={`width: ${widthA}%`}></div>
+                </div>
+              </div>
+
+              <!-- GPU B FPS -->
+              <div>
+                <div class="flex items-center justify-between text-xs font-bold mb-1">
+                  <span class="text-slate-600 dark:text-slate-400 truncate max-w-[200px]">{itemB.name}</span>
+                  <span class={`text-sm ${isWinnerB ? 'text-indigo-600 dark:text-indigo-400 font-black' : 'text-slate-700 dark:text-slate-300'}`}>
+                    <bdi dir="ltr">{bench.fps_b} FPS</bdi>
+                  </span>
+                </div>
+                <div class="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+                  <div class="bg-indigo-600 h-full rounded-full transition-all" style={`width: ${widthB}%`}></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  const container = document.getElementById('res-tab-container');
+  if (container) {
+    const buttons = container.querySelectorAll('button');
+    const cards = document.querySelectorAll('.game-card');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const selectedRes = btn.getAttribute('data-res');
+        buttons.forEach(b => {
+          b.classList.remove('bg-white', 'dark:bg-slate-900', 'text-blue-600', 'dark:text-blue-400', 'shadow-sm');
+          b.classList.add('text-slate-600', 'dark:text-slate-400');
+        });
+        btn.classList.add('bg-white', 'dark:bg-slate-900', 'text-blue-600', 'dark:text-blue-400', 'shadow-sm');
+        btn.classList.remove('text-slate-600', 'dark:text-slate-400');
+
+        cards.forEach(card => {
+          if (card.getAttribute('data-res') === selectedRes) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+</script>

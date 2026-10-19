@@ -1,0 +1,322 @@
+[
+  {
+    "id": "rtx-4070-super",
+    "slug": "rtx-4070-super",
+    "name": "NVIDIA GeForce RTX 4070 Super",
+    "category": "gpu",
+    "brand": "NVIDIA",
+    "release_year": 2024,
+    "launch_msrp_usd": 599.0,
+    "architecture": "Ada Lovelace",
+    "process_node_nm": 4.0,
+    "tdp_w": 220,
+    "pcie_interface": "PCIe 4.0 x16",
+    "raw_specs": {
+      "cuda_cores": 7168,
+      "base_clock_mhz": 1980,
+      "boost_clock_mhz": 2475,
+      "vram_gb": 12,
+      "memory_type": "GDDR6X",
+      "bus_width_bit": 192,
+      "bandwidth_gbps": 504.2,
+      "pcie_interface": "PCIe 4.0 x16",
+      "pcie_lanes": 16,
+      "nvenc_encoders": 1
+    },
+    "benchmark_index": 82.5,
+    "gaming_scores": {
+      "raster_1080p": 88.0,
+      "raster_1440p": 82.0,
+      "raster_4k": 68.0
+    },
+    "ray_tracing_score": 85.0,
+    "efficiency_score": 90.0,
+    "features": ["DLSS 3.5 Frame Generation", "AV1 NVENC", "Reflex", "4th Gen Tensor Cores"]
+  },
+  {
+    "id": "rx-7800-xt",
+    "slug": "rx-7800-xt",
+    "name": "AMD Radeon RX 7800 XT",
+    "category": "gpu",
+    "brand": "AMD",
+    "release_year": 2023,
+    "launch_msrp_usd": 499.0,
+    "architecture": "RDNA 3",
+    "process_node_nm": 5.0,
+    "tdp_w": 263,
+    "pcie_interface": "PCIe 4.0 x16",
+    "raw_specs": {
+      "stream_processors": 3840,
+      "base_clock_mhz": 1295,
+      "boost_clock_mhz": 2430,
+      "vram_gb": 16,
+      "memory_type": "GDDR6",
+      "bus_width_bit": 256,
+      "bandwidth_gbps": 624.0,
+      "pcie_interface": "PCIe 4.0 x16",
+      "pcie_lanes": 16
+    },
+    "benchmark_index": 81.0,
+    "gaming_scores": {
+      "raster_1080p": 87.0,
+      "raster_1440p": 83.5,
+      "raster_4k": 71.0
+    },
+    "ray_tracing_score": 67.0,
+    "efficiency_score": 78.0,
+    "features": ["FSR 3.1", "HYPR-RX", "AV1 Hardware Decode/Encode", "DisplayPort 2.1"]
+  },
+  {
+    "id": "rtx-4080-super",
+    "slug": "rtx-4080-super",
+    "name": "NVIDIA GeForce RTX 4080 Super",
+    "category": "gpu",
+    "brand": "NVIDIA",
+    "release_year": 2024,
+    "launch_msrp_usd": 999.0,
+    "architecture": "Ada Lovelace",
+    "process_node_nm": 4.0,
+    "tdp_w": 320,
+    "pcie_interface": "PCIe 4.0 x16",
+    "raw_specs": {
+      "cuda_cores": 10240,
+      "base_clock_mhz": 2295,
+      "boost_clock_mhz": 2550,
+      "vram_gb": 16,
+      "memory_type": "GDDR6X",
+      "bus_width_bit": 256,
+      "bandwidth_gbps": 736.0,
+      "pcie_interface": "PCIe 4.0 x16",
+      "pcie_lanes": 16,
+      "nvenc_encoders": 2
+    },
+    "benchmark_index": 92.0,
+    "gaming_scores": {
+      "raster_1080p": 95.0,
+      "raster_1440p": 93.0,
+      "raster_4k": 88.0
+    },
+    "ray_tracing_score": 93.0,
+    "efficiency_score": 88.0,
+    "features": ["DLSS 3.5 Frame Generation", "AV1 Dual NVENC", "Reflex", "Full Ray Tracing Pipeline"]
+  },
+  {
+    "id": "rx-7900-xtx",
+    "slug": "rx-7900-xtx",
+    "name": "AMD Radeon RX 7900 XTX",
+    "category": "gpu",
+    "brand": "AMD",
+    "release_year": 2022,
+    "launch_msrp_usd": 999.0,
+    "architecture": "RDNA 3",
+    "process_node_nm": 5.0,
+    "tdp_w": 355,
+    "pcie_interface": "PCIe 4.0 x16",
+    "raw_specs": {
+      "stream_processors": 6144,
+      "base_clock_mhz": 1855,
+      "boost_clock_mhz": 2500,
+      "vram_gb": 24,
+      "memory_type": "GDDR6",
+      "bus_width_bit": 384,
+      "bandwidth_gbps": 960.0,
+      "pcie_interface": "PCIe 4.0 x16",
+      "pcie_lanes": 16
+    },
+    "benchmark_index": 93.5,
+    "gaming_scores": {
+      "raster_1080p": 96.0,
+      "raster_1440p": 94.5,
+      "raster_4k": 91.0
+    },
+    "ray_tracing_score": 75.0,
+    "efficiency_score": 75.0,
+    "features": ["FSR 3.1", "24GB Massive VRAM", "DisplayPort 2.1", "Chiplet Architecture"]
+  },
+  {
+    "id": "rtx-4060-ti",
+    "slug": "rtx-4060-ti",
+    "name": "NVIDIA GeForce RTX 4060 Ti",
+    "category": "gpu",
+    "brand": "NVIDIA",
+    "release_year": 2023,
+    "launch_msrp_usd": 399.0,
+    "architecture": "Ada Lovelace",
+    "process_node_nm": 4.0,
+    "tdp_w": 160,
+    "pcie_interface": "PCIe 4.0 x8",
+    "raw_specs": {
+      "cuda_cores": 4352,
+      "base_clock_mhz": 2310,
+      "boost_clock_mhz": 2535,
+      "vram_gb": 8,
+      "memory_type": "GDDR6",
+      "bus_width_bit": 128,
+      "bandwidth_gbps": 288.0,
+      "pcie_interface": "PCIe 4.0 x8",
+      "pcie_lanes": 8,
+      "nvenc_encoders": 1
+    },
+    "benchmark_index": 68.0,
+    "gaming_scores": {
+      "raster_1080p": 78.0,
+      "raster_1440p": 65.0,
+      "raster_4k": 45.0
+    },
+    "ray_tracing_score": 72.0,
+    "efficiency_score": 92.0,
+    "features": ["DLSS 3 Frame Generation", "Ultra Low 160W TDP", "NVENC AV1"]
+  },
+  {
+    "id": "rx-7700-xt",
+    "slug": "rx-7700-xt",
+    "name": "AMD Radeon RX 7700 XT",
+    "category": "gpu",
+    "brand": "AMD",
+    "release_year": 2023,
+    "launch_msrp_usd": 449.0,
+    "architecture": "RDNA 3",
+    "process_node_nm": 5.0,
+    "tdp_w": 245,
+    "pcie_interface": "PCIe 4.0 x16",
+    "raw_specs": {
+      "stream_processors": 3456,
+      "base_clock_mhz": 1700,
+      "boost_clock_mhz": 2544,
+      "vram_gb": 12,
+      "memory_type": "GDDR6",
+      "bus_width_bit": 192,
+      "bandwidth_gbps": 432.0,
+      "pcie_interface": "PCIe 4.0 x16",
+      "pcie_lanes": 16,
+      "revised_msrp_usd": 419.0
+    },
+    "benchmark_index": 74.0,
+    "gaming_scores": {
+      "raster_1080p": 82.0,
+      "raster_1440p": 74.0,
+      "raster_4k": 55.0
+    },
+    "ray_tracing_score": 60.0,
+    "efficiency_score": 76.0,
+    "features": ["12GB VRAM", "FSR 3.1", "DisplayPort 2.1"]
+  },
+  {
+    "id": "ryzen-7-7800x3d",
+    "slug": "ryzen-7-7800x3d",
+    "name": "AMD Ryzen 7 7800X3D",
+    "category": "cpu",
+    "brand": "AMD",
+    "release_year": 2023,
+    "launch_msrp_usd": 449.0,
+    "architecture": "Zen 4 (3D V-Cache)",
+    "process_node_nm": 5.0,
+    "tdp_w": 120,
+    "raw_specs": {
+      "total_cores": 8,
+      "threads": 16,
+      "base_clock_ghz": 4.2,
+      "boost_clock_ghz": 5.0,
+      "l3_cache_mb": 96,
+      "socket": "AM5",
+      "memory_support": "DDR5-5200"
+    },
+    "benchmark_index": 91.0,
+    "gaming_scores": {
+      "gaming_overall": 98.0
+    },
+    "ray_tracing_score": 85.0,
+    "efficiency_score": 96.0,
+    "features": ["96MB 3D V-Cache", "Best Gaming Power Efficiency", "AM5 Platform Lifecycle"]
+  },
+  {
+    "id": "i7-14700k",
+    "slug": "i7-14700k",
+    "name": "Intel Core i7-14700K",
+    "category": "cpu",
+    "brand": "Intel",
+    "release_year": 2023,
+    "launch_msrp_usd": 409.0,
+    "architecture": "Raptor Lake Refresh",
+    "process_node_nm": 7.0,
+    "tdp_w": 253,
+    "raw_specs": {
+      "total_cores": 20,
+      "p_cores": 8,
+      "e_cores": 12,
+      "threads": 28,
+      "base_clock_ghz": 3.4,
+      "boost_clock_ghz": 5.6,
+      "l3_cache_mb": 33,
+      "socket": "LGA 1700",
+      "memory_support": "DDR5-5600 / DDR4-3200"
+    },
+    "benchmark_index": 92.5,
+    "gaming_scores": {
+      "gaming_overall": 92.0
+    },
+    "ray_tracing_score": 88.0,
+    "efficiency_score": 68.0,
+    "features": ["20 Cores / 28 Threads", "Intel QuickSync Video", "PCIe 5.0 Support"]
+  },
+  {
+    "id": "rog-zephyrus-g16",
+    "slug": "rog-zephyrus-g16",
+    "name": "ASUS ROG Zephyrus G16 (2024)",
+    "category": "laptop",
+    "brand": "ASUS",
+    "release_year": 2024,
+    "launch_msrp_usd": 1999.0,
+    "architecture": "Intel Meteor Lake + RTX 4070",
+    "process_node_nm": 4.0,
+    "tdp_w": 105,
+    "raw_specs": {
+      "display": "16-inch OLED 2.5K 240Hz",
+      "weight_kg": 1.85,
+      "battery_wh": 90,
+      "cpu": "Intel Core Ultra 9 185H",
+      "gpu": "RTX 4070 Mobile 8GB",
+      "ram_gb": 32,
+      "storage_tb": 1
+    },
+    "benchmark_index": 84.0,
+    "gaming_scores": {
+      "raster_1080p": 86.0,
+      "raster_1440p": 79.0,
+      "raster_4k": 54.0
+    },
+    "ray_tracing_score": 80.0,
+    "efficiency_score": 86.0,
+    "features": ["ROG Nebula OLED Panel", "CNC Aluminum Body", "Lightweight 1.85kg"]
+  },
+  {
+    "id": "legion-pro-7i",
+    "slug": "legion-pro-7i",
+    "name": "Lenovo Legion Pro 7i (Gen 9)",
+    "category": "laptop",
+    "brand": "Lenovo",
+    "release_year": 2024,
+    "launch_msrp_usd": 2199.0,
+    "architecture": "Intel 14th Gen + RTX 4080",
+    "process_node_nm": 4.0,
+    "tdp_w": 175,
+    "raw_specs": {
+      "display": "16-inch IPS 2.5K 240Hz 500nits",
+      "weight_kg": 2.6,
+      "battery_wh": 99.9,
+      "cpu": "Intel Core i9-14900HX",
+      "gpu": "RTX 4080 Mobile 12GB (175W)",
+      "ram_gb": 32,
+      "storage_tb": 1
+    },
+    "benchmark_index": 91.0,
+    "gaming_scores": {
+      "raster_1080p": 94.0,
+      "raster_1440p": 90.0,
+      "raster_4k": 76.0
+    },
+    "ray_tracing_score": 89.0,
+    "efficiency_score": 72.0,
+    "features": ["Full 175W TGP GPU", "Coldfront 5.0 Vapor Chamber", "TrueStrike Keyboard"]
+  }
+]

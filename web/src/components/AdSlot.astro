@@ -1,0 +1,29 @@
+---
+interface Props {
+  slotId?: string;
+  format?: 'horizontal' | 'rectangle' | 'responsive';
+  client?: string;
+}
+
+const { slotId = "1234567890", format = "responsive", client = "ca-pub-XXXXXXXXXXXXXXXX" } = Astro.props;
+---
+
+<div class="my-4 w-full overflow-hidden flex flex-col items-center justify-center">
+  <div class="w-full max-w-4xl text-center">
+    
+    <!-- Google AdSense Container -->
+    <ins
+      class="adsbygoogle block"
+      style="display:block;"
+      data-ad-client={client}
+      data-ad-slot={slotId}
+      data-ad-format={format}
+      data-full-width-responsive="true"
+    ></ins>
+
+  </div>
+</div>
+
+<script is:inline>
+  (window.adsbygoogle = window.adsbygoogle || []).push({});
+</script>

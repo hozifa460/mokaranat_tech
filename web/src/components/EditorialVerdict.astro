@@ -1,0 +1,135 @@
+---
+interface Props {
+  verdict: any;
+  itemA: any;
+  itemB: any;
+}
+
+const { verdict, itemA, itemB } = Astro.props;
+const isCpu = itemA.category === 'cpu' || itemB.category === 'cpu';
+---
+
+<section class="my-14">
+  <div class="mb-8">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 text-xs font-bold mb-3">
+      <span>📐</span>
+      <span>التحليل المعماري والهندسي (Technical Architecture Analysis)</span>
+    </div>
+    <h2 class="text-3xl font-black text-slate-900 dark:text-white">
+      خلاصة التحليل المعماري: أيهما تختار ولمن الأفضلية؟
+    </h2>
+  </div>
+
+  <div class="space-y-8">
+    
+    <!-- Gaming Analysis Card -->
+    <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+      <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-4">
+        <span class="text-blue-600">🎯</span>
+        <span>{isCpu ? "تحليل أداء الألعاب ومعالجة الإطارات (Gaming Performance & Frame Pacing)" : "تحليل الألعاب وتتبع الأشعة (Gaming & Ray Tracing)"}</span>
+      </h3>
+      <p class="text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+        {verdict.gaming_analysis_ar}
+      </p>
+    </div>
+
+    <!-- Productivity Card -->
+    <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+      <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-4">
+        <span class="text-indigo-600">💼</span>
+        <span>الإنتاجية والرندرة والذكاء الاصطناعي (Productivity & Workstation)</span>
+      </h3>
+      <p class="text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+        {verdict.productivity_analysis_ar}
+      </p>
+    </div>
+
+    <!-- Value & Budget Card -->
+    <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+      <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-4">
+        <span class="text-emerald-600">💰</span>
+        <span>معادلة القيمة مقابل السعر واستقرار الاستثمار</span>
+      </h3>
+      <p class="text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+        {verdict.value_and_budget_ar}
+      </p>
+    </div>
+
+    <!-- Pros & Cons Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+      
+      <!-- Pros/Cons Item A -->
+      <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h4 class="font-extrabold text-slate-900 dark:text-white text-lg mb-4 text-blue-600 dark:text-blue-400">
+          إيجابيات وسلبيات {itemA.name}
+        </h4>
+        <div class="space-y-4 text-sm">
+          <div>
+            <span class="font-bold text-emerald-600 dark:text-emerald-400 block mb-2">الإيجابيات:</span>
+            <ul class="space-y-1.5 list-disc list-inside text-slate-700 dark:text-slate-300">
+              {verdict.pros_a.map((pro: string) => (
+                <li>{pro}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <span class="font-bold text-rose-600 dark:text-rose-400 block mb-2">السلبيات:</span>
+            <ul class="space-y-1.5 list-disc list-inside text-slate-700 dark:text-slate-300">
+              {verdict.cons_a.map((con: string) => (
+                <li>{con}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pros/Cons Item B -->
+      <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h4 class="font-extrabold text-slate-900 dark:text-white text-lg mb-4 text-indigo-600 dark:text-indigo-400">
+          إيجابيات وسلبيات {itemB.name}
+        </h4>
+        <div class="space-y-4 text-sm">
+          <div>
+            <span class="font-bold text-emerald-600 dark:text-emerald-400 block mb-2">الإيجابيات:</span>
+            <ul class="space-y-1.5 list-disc list-inside text-slate-700 dark:text-slate-300">
+              {verdict.pros_b.map((pro: string) => (
+                <li>{pro}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <span class="font-bold text-rose-600 dark:text-rose-400 block mb-2">السلبيات:</span>
+            <ul class="space-y-1.5 list-disc list-inside text-slate-700 dark:text-slate-300">
+              {verdict.cons_b.map((con: string) => (
+                <li>{con}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Targeted Buyer Recommendation Box -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+      <div class="p-6 rounded-2xl bg-blue-50/70 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900">
+        <span class="text-xs font-black uppercase text-blue-600 dark:text-blue-400 block mb-2">
+          لمن نوصي بـ {itemA.name}؟
+        </span>
+        <p class="text-sm font-semibold text-slate-800 dark:text-slate-200 leading-relaxed">
+          {verdict.who_should_buy_a}
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-indigo-50/70 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-900">
+        <span class="text-xs font-black uppercase text-indigo-600 dark:text-indigo-400 block mb-2">
+          لمن نوصي بـ {itemB.name}؟
+        </span>
+        <p class="text-sm font-semibold text-slate-800 dark:text-slate-200 leading-relaxed">
+          {verdict.who_should_buy_b}
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>

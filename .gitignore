@@ -1,0 +1,27 @@
+# Python Virtual Environments & Cache
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Node & Astro
+web/node_modules/
+web/dist/
+web/.astro/
+
+# Environment Secrets
+.env
+.env.local
+
+# SQLite temporary WAL files
+core/data/*.db-wal
+core/data/*.db-shm
+
+# Tools & Binaries
+cloudflared.exe
+*.log
+
+# OS Files
+Thumbs.db
+.DS_Store

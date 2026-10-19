@@ -1,0 +1,136 @@
+---
+interface Props {
+  itemA: any;
+  itemB: any;
+  affiliateA: any[];
+  affiliateB: any[];
+}
+
+const { itemA, itemB, affiliateA, affiliateB } = Astro.props;
+
+const formatVal = (v: any) => {
+  if (typeof v === 'number') {
+    return Number.isInteger(v) ? v.toString() : v.toFixed(1).replace(/\.0$/, '');
+  }
+  if (typeof v === 'string' && /^-?\d+(\.\d+)?$/.test(v.trim())) {
+    const num = parseFloat(v);
+    return Number.isInteger(num) ? num.toString() : num.toFixed(1).replace(/\.0$/, '');
+  }
+  return v;
+};
+---
+
+<section class="my-14" id="buy-section">
+  <div class="mb-8">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-bold mb-3">
+      <span>🛒</span>
+      <span>مقارنة الأسعار والمتاجر المعتمدة</span>
+    </div>
+    <h2 class="text-3xl font-black text-slate-900 dark:text-white">
+      أفضل المتاجر لشراء {itemA.name} و {itemB.name}
+    </h2>
+    <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
+      روابط مباشرة للبحث وتفقد التوفر وأفضل الأسعار والشحن في الشرق الأوسط والعالم (متاجر معتمدة: نون، نيو إيج، علي إكسبريس، جوميا).
+    </p>
+    <div class="mt-3 p-3 rounded-xl bg-amber-50/90 dark:bg-amber-950/40 border border-amber-200/80 dark:border-amber-900/60 text-xs text-amber-900 dark:text-amber-200 leading-relaxed flex items-start gap-2">
+      <span class="text-base flex-shrink-0">⚠️</span>
+      <p>
+        <strong>تنبيه للمشترين:</strong> عند الشراء من المتاجر المفتوحة (مثل علي إكسبريس)، يُرجى التحقق من تقييم البائع والمراجعات الحقيقية لتفادي المنتجات المعاد تجديدها أو المعدلة.
+      </p>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    
+    <!-- Item A Store Links -->
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-7 shadow-sm">
+      <div class="flex items-center justify-between mb-5 border-b border-slate-100 dark:border-slate-800 pb-4">
+        <div>
+          <span class="text-xs text-blue-600 dark:text-blue-400 font-bold block">{itemA.brand}</span>
+          <h3 class="font-extrabold text-slate-900 dark:text-white text-lg">{itemA.name}</h3>
+        </div>
+        <div class="text-left">
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block font-medium">سعر الإطلاق الرسمي الاسترشادي</span>
+          <span class="text-xl font-black text-slate-900 dark:text-white"><bdi dir="ltr">${formatVal(itemA.launch_msrp_usd)}</bdi></span>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        {affiliateA.map((offer) => (
+          <a
+            href={offer.affiliate_url}
+            target="_blank"
+            rel="sponsored nofollow noopener"
+            class="flex items-center justify-between p-3.5 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50 hover:bg-blue-50 dark:bg-slate-800/40 dark:hover:bg-slate-800 transition-all group"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="px-2.5 py-1 rounded-md text-xs font-black shadow-sm"
+                style={`background-color: ${offer.badge_color}; color: ${offer.text_color};`}
+              >
+                {offer.store_name_ar}
+              </span>
+              <span class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                تفقد السعر على {offer.store_name_en}
+              </span>
+            </div>
+            <span class="text-xs font-bold text-blue-600 dark:text-blue-400 group-hover:translate-x-[-4px] transition-transform flex items-center gap-1">
+              <span>عرض السعر</span>
+              <span>←</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Item B Store Links -->
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-7 shadow-sm">
+      <div class="flex items-center justify-between mb-5 border-b border-slate-100 dark:border-slate-800 pb-4">
+        <div>
+          <span class="text-xs text-indigo-600 dark:text-indigo-400 font-bold block">{itemB.brand}</span>
+          <h3 class="font-extrabold text-slate-900 dark:text-white text-lg">{itemB.name}</h3>
+        </div>
+        <div class="text-left">
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block font-medium">سعر الإطلاق الرسمي الاسترشادي</span>
+          <span class="text-xl font-black text-slate-900 dark:text-white"><bdi dir="ltr">${formatVal(itemB.launch_msrp_usd)}</bdi></span>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        {affiliateB.map((offer) => (
+          <a
+            href={offer.affiliate_url}
+            target="_blank"
+            rel="sponsored nofollow noopener"
+            class="flex items-center justify-between p-3.5 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50 hover:bg-indigo-50 dark:bg-slate-800/40 dark:hover:bg-slate-800 transition-all group"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="px-2.5 py-1 rounded-md text-xs font-black shadow-sm"
+                style={`background-color: ${offer.badge_color}; color: ${offer.text_color};`}
+              >
+                {offer.store_name_ar}
+              </span>
+              <span class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                تفقد السعر على {offer.store_name_en}
+              </span>
+            </div>
+            <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 group-hover:translate-x-[-4px] transition-transform flex items-center gap-1">
+              <span>عرض السعر</span>
+              <span>←</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FTC & SEO Affiliate Disclosure Box -->
+  <div class="mt-6 p-4 rounded-2xl bg-amber-50/80 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 flex items-start sm:items-center gap-3 text-xs text-amber-900 dark:text-amber-200">
+    <span class="text-xl flex-shrink-0">⚖️</span>
+    <p class="leading-relaxed font-medium">
+      <strong>إفصاح الشفافية: قد نحصل على عمولة تسويقية عند الشراء من خلال هذه الروابط دون أي تكلفة إضافية عليك.</strong> يساعد هذا الدعم في تمويل منصة مقارنات تك وتوفير مقارنات وتحليلات تقنية محايدة ومجانية لجميع المستخدمين.
+    </p>
+  </div>
+</section>

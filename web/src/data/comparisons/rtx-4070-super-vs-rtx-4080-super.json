@@ -1,0 +1,551 @@
+{
+  "slug": "rtx-4070-super-vs-rtx-4080-super",
+  "category": "gpu",
+  "title_ar": "مقارنة NVIDIA GeForce RTX 4070 Super ضد NVIDIA GeForce RTX 4080 Super | المواصفات والأداء والأسعار",
+  "meta_title_ar": "NVIDIA GeForce RTX 4070 Super ضد NVIDIA GeForce RTX 4080 Super: أيهما يستحق الشراء؟ | مقارنات تك",
+  "meta_description_ar": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4070 Super و NVIDIA GeForce RTX 4080 Super. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+  "item_a": {
+    "id": "rtx-4070-super",
+    "slug": "rtx-4070-super",
+    "name": "NVIDIA GeForce RTX 4070 Super",
+    "category": "gpu",
+    "brand": "NVIDIA",
+    "release_year": 2024,
+    "launch_msrp_usd": 599.0,
+    "architecture": "Ada Lovelace",
+    "process_node_nm": 4.0,
+    "tdp_w": 220,
+    "raw_specs": {
+      "cuda_cores": 7168,
+      "base_clock_mhz": 1980,
+      "boost_clock_mhz": 2475,
+      "vram_gb": 12,
+      "memory_type": "GDDR6X",
+      "bus_width_bit": 192,
+      "bandwidth_gbps": 504.2,
+      "pcie_interface": "PCIe 4.0 x16",
+      "pcie_lanes": 16,
+      "nvenc_encoders": 1
+    },
+    "benchmark_index": 82.5,
+    "gaming_scores": {
+      "raster_1080p": 88.0,
+      "raster_1440p": 82.0,
+      "raster_4k": 68.0
+    },
+    "ray_tracing_score": 85.0,
+    "efficiency_score": 90.0,
+    "features": [
+      "DLSS 3.5 Frame Generation",
+      "AV1 NVENC",
+      "Reflex",
+      "4th Gen Tensor Cores"
+    ],
+    "pcie_interface": "PCIe 4.0 x16"
+  },
+  "item_b": {
+    "id": "rtx-4080-super",
+    "slug": "rtx-4080-super",
+    "name": "NVIDIA GeForce RTX 4080 Super",
+    "category": "gpu",
+    "brand": "NVIDIA",
+    "release_year": 2024,
+    "launch_msrp_usd": 999.0,
+    "architecture": "Ada Lovelace",
+    "process_node_nm": 4.0,
+    "tdp_w": 320,
+    "raw_specs": {
+      "cuda_cores": 10240,
+      "base_clock_mhz": 2295,
+      "boost_clock_mhz": 2550,
+      "vram_gb": 16,
+      "memory_type": "GDDR6X",
+      "bus_width_bit": 256,
+      "bandwidth_gbps": 736.0,
+      "pcie_interface": "PCIe 4.0 x16",
+      "pcie_lanes": 16,
+      "nvenc_encoders": 2
+    },
+    "benchmark_index": 92.0,
+    "gaming_scores": {
+      "raster_1080p": 95.0,
+      "raster_1440p": 93.0,
+      "raster_4k": 88.0
+    },
+    "ray_tracing_score": 93.0,
+    "efficiency_score": 88.0,
+    "features": [
+      "DLSS 3.5 Frame Generation",
+      "AV1 Dual NVENC",
+      "Reflex",
+      "Full Ray Tracing Pipeline"
+    ],
+    "pcie_interface": "PCIe 4.0 x16"
+  },
+  "spec_differences": [
+    {
+      "key": "benchmark_index",
+      "label_ar": "مؤشر الأداء العام (Benchmark Index)",
+      "value_a": 82.5,
+      "value_b": 92.0,
+      "unit": "/ 100",
+      "winner": "b",
+      "diff_percentage": 11.5,
+      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 11.5%"
+    },
+    {
+      "key": "launch_msrp_usd",
+      "label_ar": "سعر الإطلاق الرسمي",
+      "value_a": 599.0,
+      "value_b": 999.0,
+      "unit": "$",
+      "winner": "a",
+      "diff_percentage": 40.0,
+      "advantage_summary_ar": "أوفر بالسعر بنسبة 40%"
+    },
+    {
+      "key": "tdp_w",
+      "label_ar": "استهلاك الطاقة المكتبي (TDP)",
+      "value_a": 220,
+      "value_b": 320,
+      "unit": "W",
+      "winner": "a",
+      "diff_percentage": 31.2,
+      "advantage_summary_ar": "استهلاك طاقة أقل وتوليد حراري أهدأ بفارق 31.2%"
+    },
+    {
+      "key": "process_node_nm",
+      "label_ar": "دقة التصنيع (Process Node)",
+      "value_a": 4.0,
+      "value_b": 4.0,
+      "unit": "nm",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "متطابق في هذه القيمة"
+    },
+    {
+      "key": "ray_tracing_score",
+      "label_ar": "كفاءة تتبع الأشعة (Ray Tracing)",
+      "value_a": 85.0,
+      "value_b": 93.0,
+      "unit": "/ 100",
+      "winner": "b",
+      "diff_percentage": 9.4,
+      "advantage_summary_ar": "معالجة متقدمة لتقنيات الإضاءة الواقعية بفارق 9.4%"
+    },
+    {
+      "key": "efficiency_score",
+      "label_ar": "معيار الكفاءة مقابل الواط",
+      "value_a": 90.0,
+      "value_b": 88.0,
+      "unit": "/ 100",
+      "winner": "tie",
+      "diff_percentage": 2.3,
+      "advantage_summary_ar": "تعادل / تقارب في الأداء (فارق هامشي أقل من 3%)"
+    },
+    {
+      "key": "vram_gb",
+      "label_ar": "سعة الذاكرة الرسومية (VRAM)",
+      "value_a": 12.0,
+      "value_b": 16.0,
+      "unit": "GB",
+      "winner": "b",
+      "diff_percentage": 33.3,
+      "advantage_summary_ar": "سعة VRAM أكبر تمنح أماناً فائقاً في الألعاب بدقة 4K وعمليات الرندرة الضخمة"
+    },
+    {
+      "key": "bus_width_bit",
+      "label_ar": "عرض ناقل الذاكرة (Memory Bus)",
+      "value_a": 192.0,
+      "value_b": 256.0,
+      "unit": "bit",
+      "winner": "b",
+      "diff_percentage": 33.3,
+      "advantage_summary_ar": "عرض نطاق أوسع لنقل البيانات الرسومية بسلاسة"
+    },
+    {
+      "key": "boost_clock_mhz",
+      "label_ar": "تردد التعزيز (Boost Clock)",
+      "value_a": 2475.0,
+      "value_b": 2550.0,
+      "unit": "MHz",
+      "winner": "b",
+      "diff_percentage": 3.0,
+      "advantage_summary_ar": "تردد أعلى لسرعة معالجة الرسوميات الإطارية"
+    },
+    {
+      "key": "pcie_interface",
+      "label_ar": "واجهة التوصيل العتادية (PCIe Interface)",
+      "value_a": "PCIe 4.0 x16",
+      "value_b": "PCIe 4.0 x16",
+      "unit": "",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "واجهة توصيل متطابقة بكامل المسارات (16 مساراً)"
+    }
+  ],
+  "performance_score_a": 82.5,
+  "performance_score_b": 92.0,
+  "fps_benchmarks": [
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 126,
+      "fps_b": 139,
+      "diff_pct": 10.3,
+      "winner": "b"
+    },
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 82,
+      "fps_b": 95,
+      "diff_pct": 15.9,
+      "winner": "b"
+    },
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 41,
+      "fps_b": 54,
+      "diff_pct": 31.7,
+      "winner": "b"
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1080p",
+      "preset": "Cinematic High",
+      "fps_a": 89,
+      "fps_b": 98,
+      "diff_pct": 10.1,
+      "winner": "b"
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1440p",
+      "preset": "Cinematic High",
+      "fps_a": 54,
+      "fps_b": 62,
+      "diff_pct": 14.8,
+      "winner": "b"
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "4K",
+      "preset": "Cinematic High",
+      "fps_a": 25,
+      "fps_b": 33,
+      "diff_pct": 32.0,
+      "winner": "b"
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1080p",
+      "preset": "Competitive High",
+      "fps_a": 315,
+      "fps_b": 325,
+      "diff_pct": 3.2,
+      "winner": "b"
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1440p",
+      "preset": "Competitive High",
+      "fps_a": 214,
+      "fps_b": 226,
+      "diff_pct": 5.6,
+      "winner": "b"
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "4K",
+      "preset": "Competitive High",
+      "fps_a": 116,
+      "fps_b": 128,
+      "diff_pct": 10.3,
+      "winner": "b"
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1080p",
+      "preset": "Ultra",
+      "fps_a": 128,
+      "fps_b": 138,
+      "diff_pct": 7.8,
+      "winner": "b"
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1440p",
+      "preset": "Ultra",
+      "fps_a": 90,
+      "fps_b": 102,
+      "diff_pct": 13.3,
+      "winner": "b"
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "4K",
+      "preset": "Ultra",
+      "fps_a": 49,
+      "fps_b": 63,
+      "diff_pct": 28.6,
+      "winner": "b"
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1080p",
+      "preset": "Ultra / High",
+      "fps_a": 181,
+      "fps_b": 195,
+      "diff_pct": 7.7,
+      "winner": "b"
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1440p",
+      "preset": "Ultra / High",
+      "fps_a": 121,
+      "fps_b": 136,
+      "diff_pct": 12.4,
+      "winner": "b"
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "4K",
+      "preset": "Ultra / High",
+      "fps_a": 61,
+      "fps_b": 78,
+      "diff_pct": 27.9,
+      "winner": "b"
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 131,
+      "fps_b": 142,
+      "diff_pct": 8.4,
+      "winner": "b"
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 92,
+      "fps_b": 104,
+      "diff_pct": 13.0,
+      "winner": "b"
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 45,
+      "fps_b": 59,
+      "diff_pct": 31.1,
+      "winner": "b"
+    }
+  ],
+  "verdict": {
+    "overall_winner": "b",
+    "winner_name": "NVIDIA GeForce RTX 4080 Super",
+    "score_a": 82.5,
+    "score_b": 92.0,
+    "quick_verdict_ar": "يتفوق NVIDIA GeForce RTX 4080 Super في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 11.5% مقارنة بـ NVIDIA GeForce RTX 4070 Super. هذا التفوق يستند إلى معمارية Ada Lovelace وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~12.5%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "gaming_analysis_ar": "في ساحة الألعاب، يقدم كل من NVIDIA GeForce RTX 4070 Super و NVIDIA GeForce RTX 4080 Super دعماً متكاملاً لأحدث تقنيات DLSS 3 لتوليد الإطارات (Frame Generation) و DLSS 3.5 لإعادة بناء الأشعة (Ray Reconstruction) وكفاءة تتبع أشعة رائدة. يتفوق NVIDIA GeForce RTX 4080 Super بمؤشر أداء 92/100 وسعة ذاكرة 16GB مما يمنحه سلاسة إضافية على دقة 4K مقارنة بـ NVIDIA GeForce RTX 4070 Super (12GB).",
+    "productivity_analysis_ar": "على صعيد صُنّاع المحتوى ومحترفي التصميم، يستفيد كلا الكرتين من تسريع مكتبات CUDA و OptiX ومشفرات NVENC الحديثة في تطبيقات الرندرة والذكاء الاصطناعي، مع أسبقية لـ NVIDIA GeForce RTX 4080 Super في سرعة معالجة النماذج ثلاثية الأبعاد بفضل عدد أنوية CUDA الأكبر.",
+    "value_and_budget_ar": "عند دراسة معادلة القيمة مقابل السعر، يطرح NVIDIA GeForce RTX 4070 Super تكلفة شراء أقل بسعر $599 (توفير $400، بينما يرتفع سعر منافسه بنسبة 66.8%)، في حين يقدم NVIDIA GeForce RTX 4080 Super زيادة في الإطارات بمتوسط ~12.5% وسعة 16GB، مما يجعل NVIDIA GeForce RTX 4070 Super الخيار الأفضل لقيمة كل دولار، بينما يستهدف NVIDIA GeForce RTX 4080 Super من يطلب أداءً أعلى واستثماراً أكثر استدامة للمستقبل.",
+    "pros_a": [
+      "تفوق في تتبع الأشعة بمؤشر 85/100 ودعم كامل لتقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة)",
+      "هيمنة بيئة العمل وصناعة المحتوى بفضل تسريع مكتبات CUDA و OptiX ومشفر NVENC من الجيل الثامن مع دعم تسريع وتشفير عتادي لـ AV1",
+      "كفاءة طاقة ممتازة بمؤشر 90/100 وسحب طاقة منضبط (220W)"
+    ],
+    "cons_a": [
+      "سعة ذاكرة رسومية (12GB) أقل مقارنة بـ NVIDIA GeForce RTX 4080 Super (16GB) مما قد يحد من مرونة ألعاب 4K فائقة القوام مستقبلاً"
+    ],
+    "pros_b": [
+      "تفوق في تتبع الأشعة بمؤشر 93/100 ودعم كامل لتقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة)",
+      "هيمنة بيئة العمل وصناعة المحتوى بفضل تسريع مكتبات CUDA و OptiX ومشفر NVENC المزدوج لتسريع البث المباشر وتصدير الفيديو",
+      "كفاءة طاقة ممتازة بمؤشر 88/100 وسحب طاقة منضبط (320W)"
+    ],
+    "cons_b": [
+      "سعر إطلاق رسمي أعلى ($999) مقارنة بـ NVIDIA GeForce RTX 4070 Super ($599)"
+    ],
+    "who_should_buy_a": "المستخدم الذي يبحث عن نقطة التوازن المثالية بأداء متقدم وكفاءة طاقة عالية (220W) بسعر شراء أقل.",
+    "who_should_buy_b": "المستخدم الذي يستهدف أقصى أداء ممكن على الدقات المرتفعة مع سعة 16GB ومستعد للاستثمار في فئة الأداء الأعلى."
+  },
+  "affiliate_links_a": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء NVIDIA GeForce RTX 4070 Super من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=NVIDIA+GeForce+RTX+4070+Super",
+      "affiliate_url": "https://www.noon.com/search?q=NVIDIA+GeForce+RTX+4070+Super&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء NVIDIA GeForce RTX 4070 Super من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=NVIDIA+GeForce+RTX+4070+Super",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=NVIDIA+GeForce+RTX+4070+Super&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء NVIDIA GeForce RTX 4070 Super من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=NVIDIA+GeForce+RTX+4070+Super",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=NVIDIA+GeForce+RTX+4070+Super&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء NVIDIA GeForce RTX 4070 Super من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=NVIDIA+GeForce+RTX+4070+Super",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=NVIDIA+GeForce+RTX+4070+Super&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "affiliate_links_b": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء NVIDIA GeForce RTX 4080 Super من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=NVIDIA+GeForce+RTX+4080+Super",
+      "affiliate_url": "https://www.noon.com/search?q=NVIDIA+GeForce+RTX+4080+Super&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء NVIDIA GeForce RTX 4080 Super من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=NVIDIA+GeForce+RTX+4080+Super",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=NVIDIA+GeForce+RTX+4080+Super&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء NVIDIA GeForce RTX 4080 Super من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=NVIDIA+GeForce+RTX+4080+Super",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=NVIDIA+GeForce+RTX+4080+Super&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء NVIDIA GeForce RTX 4080 Super من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=NVIDIA+GeForce+RTX+4080+Super",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=NVIDIA+GeForce+RTX+4080+Super&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "schema_json_ld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4070-super-vs-rtx-4080-super#productA",
+        "name": "NVIDIA GeForce RTX 4070 Super",
+        "category": "GPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "NVIDIA"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "599",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4070-super-vs-rtx-4080-super#productB",
+        "name": "NVIDIA GeForce RTX 4080 Super",
+        "category": "GPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "NVIDIA"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "999",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4070-super-vs-rtx-4080-super#review",
+        "url": "https://tech-comparisons.pages.dev/compare/rtx-4070-super-vs-rtx-4080-super",
+        "name": "مقارنة NVIDIA GeForce RTX 4070 Super ضد NVIDIA GeForce RTX 4080 Super | المواصفات والأداء والأسعار",
+        "description": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4070 Super و NVIDIA GeForce RTX 4080 Super. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+        "datePublished": "2026-10-19T18:06:31.464388+00:00",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "فريق تحرير مقارنات تك",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "itemReviewed": {
+          "@type": "Product",
+          "name": "NVIDIA GeForce RTX 4070 Super vs NVIDIA GeForce RTX 4080 Super"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 4.6,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "reviewBody": "يتفوق NVIDIA GeForce RTX 4080 Super في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 11.5% مقارنة بـ NVIDIA GeForce RTX 4070 Super. هذا التفوق يستند إلى معمارية Ada Lovelace وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~12.5%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+      }
+    ]
+  },
+  "created_at": "2026-10-19T18:06:31.464388+00:00"
+}

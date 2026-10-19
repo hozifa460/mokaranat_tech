@@ -1,0 +1,87 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SchemaJsonLd from '../components/SchemaJsonLd.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalUrl?: string;
+  schema?: Record<string, any>;
+  ogType?: string;
+}
+
+const {
+  title,
+  description,
+  canonicalUrl = Astro.url.href,
+  schema,
+  ogType = 'website'
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content="ar_SA" />
+    <meta property="og:site_name" content="مقارنات تك" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Inline script to avoid Dark Mode flash (FOUC) -->
+    <script is:inline>
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'light';
+      })();
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    {schema && <SchemaJsonLd schema={schema} />}
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <!-- Top Affiliate Transparency Notice Bar (FTC & Google SEO Compliant) -->
+    <aside aria-label="Affiliate Transparency Disclosure" class="bg-slate-100 dark:bg-slate-800/90 text-slate-600 dark:text-slate-400 text-xs py-1.5 px-4 border-b border-slate-200 dark:border-slate-800 text-center font-medium">
+      <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
+        <span>⚖️</span>
+        <span>إفصاح الشفافية: قد نحصل على عمولة تسويقية عند الشراء من خلال هذه الروابط دون أي تكلفة إضافية عليك.</span>
+      </div>
+    </aside>
+
+    <Header />
+    
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

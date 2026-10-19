@@ -1,0 +1,553 @@
+{
+  "slug": "rtx-4080-super-vs-rx-7900-xtx",
+  "category": "gpu",
+  "title_ar": "مقارنة NVIDIA GeForce RTX 4080 Super ضد AMD Radeon RX 7900 XTX | المواصفات والأداء والأسعار",
+  "meta_title_ar": "NVIDIA GeForce RTX 4080 Super ضد AMD Radeon RX 7900 XTX: أيهما يستحق الشراء؟ | مقارنات تك",
+  "meta_description_ar": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4080 Super و AMD Radeon RX 7900 XTX. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+  "item_a": {
+    "id": "rtx-4080-super",
+    "slug": "rtx-4080-super",
+    "name": "NVIDIA GeForce RTX 4080 Super",
+    "category": "gpu",
+    "brand": "NVIDIA",
+    "release_year": 2024,
+    "launch_msrp_usd": 999.0,
+    "architecture": "Ada Lovelace",
+    "process_node_nm": 4.0,
+    "tdp_w": 320,
+    "raw_specs": {
+      "cuda_cores": 10240,
+      "base_clock_mhz": 2295,
+      "boost_clock_mhz": 2550,
+      "vram_gb": 16,
+      "memory_type": "GDDR6X",
+      "bus_width_bit": 256,
+      "bandwidth_gbps": 736.0,
+      "pcie_interface": "PCIe 4.0 x16",
+      "pcie_lanes": 16,
+      "nvenc_encoders": 2
+    },
+    "benchmark_index": 92.0,
+    "gaming_scores": {
+      "raster_1080p": 95.0,
+      "raster_1440p": 93.0,
+      "raster_4k": 88.0
+    },
+    "ray_tracing_score": 93.0,
+    "efficiency_score": 88.0,
+    "features": [
+      "DLSS 3.5 Frame Generation",
+      "AV1 Dual NVENC",
+      "Reflex",
+      "Full Ray Tracing Pipeline"
+    ],
+    "pcie_interface": "PCIe 4.0 x16"
+  },
+  "item_b": {
+    "id": "rx-7900-xtx",
+    "slug": "rx-7900-xtx",
+    "name": "AMD Radeon RX 7900 XTX",
+    "category": "gpu",
+    "brand": "AMD",
+    "release_year": 2022,
+    "launch_msrp_usd": 999.0,
+    "architecture": "RDNA 3",
+    "process_node_nm": 5.0,
+    "tdp_w": 355,
+    "raw_specs": {
+      "stream_processors": 6144,
+      "base_clock_mhz": 1855,
+      "boost_clock_mhz": 2500,
+      "vram_gb": 24,
+      "memory_type": "GDDR6",
+      "bus_width_bit": 384,
+      "bandwidth_gbps": 960.0,
+      "pcie_interface": "PCIe 4.0 x16",
+      "pcie_lanes": 16
+    },
+    "benchmark_index": 93.5,
+    "gaming_scores": {
+      "raster_1080p": 96.0,
+      "raster_1440p": 94.5,
+      "raster_4k": 91.0
+    },
+    "ray_tracing_score": 75.0,
+    "efficiency_score": 75.0,
+    "features": [
+      "FSR 3.1",
+      "24GB Massive VRAM",
+      "DisplayPort 2.1",
+      "Chiplet Architecture"
+    ],
+    "pcie_interface": "PCIe 4.0 x16"
+  },
+  "spec_differences": [
+    {
+      "key": "benchmark_index",
+      "label_ar": "مؤشر الأداء العام (Benchmark Index)",
+      "value_a": 92.0,
+      "value_b": 93.5,
+      "unit": "/ 100",
+      "winner": "tie",
+      "diff_percentage": 1.6,
+      "advantage_summary_ar": "تعادل / تقارب في الأداء (فارق هامشي أقل من 3%)"
+    },
+    {
+      "key": "launch_msrp_usd",
+      "label_ar": "سعر الإطلاق الرسمي",
+      "value_a": 999.0,
+      "value_b": 999.0,
+      "unit": "$",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "السعر متطابق"
+    },
+    {
+      "key": "tdp_w",
+      "label_ar": "استهلاك الطاقة المكتبي (TDP)",
+      "value_a": 320,
+      "value_b": 355,
+      "unit": "W",
+      "winner": "a",
+      "diff_percentage": 9.9,
+      "advantage_summary_ar": "استهلاك طاقة أقل وتوليد حراري أهدأ بفارق 9.9%"
+    },
+    {
+      "key": "process_node_nm",
+      "label_ar": "دقة التصنيع (Process Node)",
+      "value_a": 4.0,
+      "value_b": 5.0,
+      "unit": "nm",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقياس تقني استرشادي: تختلف هندسة دقة التصنيع وكثافة الترانزستورات والتصميم (رقاقة أحادية Monolithic مقابل رقاقات Chiplets) بين المعماريات المختلفة"
+    },
+    {
+      "key": "ray_tracing_score",
+      "label_ar": "كفاءة تتبع الأشعة (Ray Tracing)",
+      "value_a": 93.0,
+      "value_b": 75.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 24.0,
+      "advantage_summary_ar": "معالجة متقدمة لتقنيات الإضاءة الواقعية بفارق 24%"
+    },
+    {
+      "key": "efficiency_score",
+      "label_ar": "معيار الكفاءة مقابل الواط",
+      "value_a": 88.0,
+      "value_b": 75.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 17.3,
+      "advantage_summary_ar": "أداء أعلى لكل واط مستهلك"
+    },
+    {
+      "key": "vram_gb",
+      "label_ar": "سعة الذاكرة الرسومية (VRAM)",
+      "value_a": 16.0,
+      "value_b": 24.0,
+      "unit": "GB",
+      "winner": "b",
+      "diff_percentage": 50.0,
+      "advantage_summary_ar": "سعة VRAM أكبر تمنح أماناً فائقاً في الألعاب بدقة 4K وعمليات الرندرة الضخمة"
+    },
+    {
+      "key": "bus_width_bit",
+      "label_ar": "عرض ناقل الذاكرة (Memory Bus)",
+      "value_a": 256.0,
+      "value_b": 384.0,
+      "unit": "bit",
+      "winner": "b",
+      "diff_percentage": 50.0,
+      "advantage_summary_ar": "عرض نطاق أوسع لنقل البيانات الرسومية بسلاسة"
+    },
+    {
+      "key": "boost_clock_mhz",
+      "label_ar": "تردد التعزيز (Boost Clock)",
+      "value_a": 2550.0,
+      "value_b": 2500.0,
+      "unit": "MHz",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقياس استرشادي: تختلف كفاءة التردد وتعليمات الدورة (IPC) باختلاف المعمارية، ولا يقاس الأداء بالتردد الخام وحده"
+    },
+    {
+      "key": "pcie_interface",
+      "label_ar": "واجهة التوصيل العتادية (PCIe Interface)",
+      "value_a": "PCIe 4.0 x16",
+      "value_b": "PCIe 4.0 x16",
+      "unit": "",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "واجهة توصيل متطابقة بكامل المسارات (16 مساراً)"
+    }
+  ],
+  "performance_score_a": 92.0,
+  "performance_score_b": 93.5,
+  "fps_benchmarks": [
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 139,
+      "fps_b": 114,
+      "diff_pct": 21.9,
+      "winner": "a"
+    },
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 95,
+      "fps_b": 78,
+      "diff_pct": 21.8,
+      "winner": "a"
+    },
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 54,
+      "fps_b": 46,
+      "diff_pct": 17.4,
+      "winner": "a"
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1080p",
+      "preset": "Cinematic High",
+      "fps_a": 98,
+      "fps_b": 81,
+      "diff_pct": 21.0,
+      "winner": "a"
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1440p",
+      "preset": "Cinematic High",
+      "fps_a": 62,
+      "fps_b": 52,
+      "diff_pct": 19.2,
+      "winner": "a"
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "4K",
+      "preset": "Cinematic High",
+      "fps_a": 33,
+      "fps_b": 28,
+      "diff_pct": 17.9,
+      "winner": "a"
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1080p",
+      "preset": "Competitive High",
+      "fps_a": 325,
+      "fps_b": 308,
+      "diff_pct": 5.5,
+      "winner": "a"
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1440p",
+      "preset": "Competitive High",
+      "fps_a": 226,
+      "fps_b": 214,
+      "diff_pct": 5.6,
+      "winner": "a"
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "4K",
+      "preset": "Competitive High",
+      "fps_a": 128,
+      "fps_b": 122,
+      "diff_pct": 4.9,
+      "winner": "a"
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1080p",
+      "preset": "Ultra",
+      "fps_a": 138,
+      "fps_b": 142,
+      "diff_pct": 2.9,
+      "winner": "tie"
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1440p",
+      "preset": "Ultra",
+      "fps_a": 102,
+      "fps_b": 106,
+      "diff_pct": 3.9,
+      "winner": "b"
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "4K",
+      "preset": "Ultra",
+      "fps_a": 63,
+      "fps_b": 67,
+      "diff_pct": 6.3,
+      "winner": "b"
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1080p",
+      "preset": "Ultra / High",
+      "fps_a": 195,
+      "fps_b": 228,
+      "diff_pct": 16.9,
+      "winner": "b"
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1440p",
+      "preset": "Ultra / High",
+      "fps_a": 136,
+      "fps_b": 160,
+      "diff_pct": 17.6,
+      "winner": "b"
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "4K",
+      "preset": "Ultra / High",
+      "fps_a": 78,
+      "fps_b": 92,
+      "diff_pct": 17.9,
+      "winner": "b"
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 142,
+      "fps_b": 155,
+      "diff_pct": 9.2,
+      "winner": "b"
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 104,
+      "fps_b": 114,
+      "diff_pct": 9.6,
+      "winner": "b"
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 59,
+      "fps_b": 66,
+      "diff_pct": 11.9,
+      "winner": "b"
+    }
+  ],
+  "verdict": {
+    "overall_winner": "tie",
+    "winner_name": "تعادل متقارب في الأداء",
+    "score_a": 92.0,
+    "score_b": 93.5,
+    "quick_verdict_ar": "يظهر كل من NVIDIA GeForce RTX 4080 Super و AMD Radeon RX 7900 XTX تقارباً استثنائياً في الأداء الكلي بفوارق هامشية ضمن هامش الخطأ الإحصائي (أقل من 3%). الحسم بينهما يعتمد بالدرجة الأولى على فارق السعر الفعلي في السوق المحلي وتفضيلات البرمجيات الخاصة بكل مستخدم.",
+    "gaming_analysis_ar": "في ساحة الألعاب، يقدم كل من NVIDIA GeForce RTX 4080 Super و AMD Radeon RX 7900 XTX أداءً متقارباً في المعالجة الرسومية التقليدية (Rasterization)، حيث يتميز NVIDIA GeForce RTX 4080 Super بأسبقية واضحة في تتبع الأشعة بمؤشر 93/100 مع منظومة DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) لبطاقات RTX، بينما يرد AMD Radeon RX 7900 XTX بـ سعة ذاكرة رسومية هائلة تبلغ 24GB تمنح أماناً فائقاً واستقراراً في الألعاب بدقة 4K وقوام Ultra بدون اختناق الذاكرة مع دعم تقنية FSR 3.1 وتوليد الإطارات مفتوحة المصدر المتوافقة عبر مختلف المنصات.",
+    "productivity_analysis_ar": "على صعيد الإنتاجية والرندرة وصناعة المحتوى، يحسم NVIDIA GeForce RTX 4080 Super المنافسة بفضل تفوق منظومة CUDA و OptiX لتسريع محركات التصميم (مثل Blender و Premiere) وتطبيقات الذكاء الاصطناعي مع مشفر NVENC المزدوج (Dual NVENC) فائق السرعة من الجيل الثامن مع دعم تسريع وتشفير عتادي لـ AV1؛ ومع أن كلا المعماريتين تدعمان التشفير وفك التشفير العتادي لترميز AV1 الحديث (مشفر NVENC الجيل الثامن في Ada Lovelace مقابل محرك VCN 4.0 في RDNA 3) وسعة ذاكرة رسومية هائلة تبلغ 24GB لـ AMD Radeon RX 7900 XTX، إلا أن أفضلية بيئة العمل البرمجية واستقرار التعريفات في تطبيقات الإنتاج تظل محسومة لصالح NVIDIA بفضل الدعم الواسع في برمجيات التصميم.",
+    "value_and_budget_ar": "يتطابق كل من NVIDIA GeForce RTX 4080 Super و AMD Radeon RX 7900 XTX تماماً في سعر الإطلاق الرسمي البالغ $999. السعر متطابق بين القطعتين دون أي فارق، وتعتمد الجدوى الاقتصادية على تفوق الأداء المعماري والتقنيات المدعومة (مثل سعة VRAM الأكبر أو تقنيات تتبع الأشعة والذكاء الاصطناعي) بالإضافة إلى أفضل العروض المتاحة في المتاجر.",
+    "pros_a": [
+      "تفوق في تتبع الأشعة بمؤشر 93/100 ودعم كامل لتقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة)",
+      "هيمنة بيئة العمل وصناعة المحتوى بفضل تسريع مكتبات CUDA و OptiX ومشفر NVENC المزدوج لتسريع البث المباشر وتصدير الفيديو",
+      "كفاءة طاقة ممتازة بمؤشر 88/100 وسحب طاقة منضبط (320W)"
+    ],
+    "cons_a": [
+      "سعة ذاكرة رسومية (16GB) أقل مقارنة بـ AMD (24GB) مما قد يحد من مرونة ألعاب 4K فائقة القوام مستقبلاً",
+      "تتطلب كابل تزويد طاقة 16-pin 12VHPWR ومزود طاقة قوي داخل الصندوق"
+    ],
+    "pros_b": [
+      "سعة ذاكرة رسومية هائلة (24GB VRAM) بناقل 384 بت تمنح أماناً كاملاً للألعاب بدقة 4K والرندرة الضخمة دون اختناق الذاكرة",
+      "أداء رسومي خام (Rasterization) ممتاز ومؤشر عام تنافسي يبلغ 93.5/100",
+      "دعم تقنيات FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ العرض الحديثة DisplayPort 2.1"
+    ],
+    "cons_b": [
+      "أداء أقل في تتبع الأشعة (Ray Tracing) مقارنة بنواة RT Cores لدى NVIDIA (مؤشر 75/100)",
+      "افتقار لدعم بيئة تسريع CUDA المعتمدة صناعياً في برامج التصميم والذكاء الاصطناعي",
+      "استهلاك طاقة يصل إلى 355 واط يتطلب مزود طاقة وتبريداً قوياً داخل الصندوق"
+    ],
+    "who_should_buy_a": "اللاعب أو صانع المحتوى الذي يضع أولوية لبيئة عمل CUDA وتسريع الرندرة وتطبيقات الذكاء الاصطناعي، ويرغب في أحدث تقنيات تتبع الأشعة مع تقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) لبطاقات GeForce RTX، إلى جانب كفاءة استهلاك طاقة عالية بسحب 320W فقط.",
+    "who_should_buy_b": "اللاعب الذي يركز على أعلى أداء رسومي خام (Raw Raster FPS) مقابل السعر، مع الاستفادة من سعة ذاكرة رحبة تبلغ 24GB بناقل 384 بت لتفادي اختناق القوام، وتفضيل التقنيات المفتوحة مثل FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ DisplayPort 2.1 الحديثة."
+  },
+  "affiliate_links_a": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء NVIDIA GeForce RTX 4080 Super من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=NVIDIA+GeForce+RTX+4080+Super",
+      "affiliate_url": "https://www.noon.com/search?q=NVIDIA+GeForce+RTX+4080+Super&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء NVIDIA GeForce RTX 4080 Super من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=NVIDIA+GeForce+RTX+4080+Super",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=NVIDIA+GeForce+RTX+4080+Super&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء NVIDIA GeForce RTX 4080 Super من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=NVIDIA+GeForce+RTX+4080+Super",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=NVIDIA+GeForce+RTX+4080+Super&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء NVIDIA GeForce RTX 4080 Super من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=NVIDIA+GeForce+RTX+4080+Super",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=NVIDIA+GeForce+RTX+4080+Super&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "affiliate_links_b": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء AMD Radeon RX 7900 XTX من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=AMD+Radeon+RX+7900+XTX",
+      "affiliate_url": "https://www.noon.com/search?q=AMD+Radeon+RX+7900+XTX&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء AMD Radeon RX 7900 XTX من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=AMD+Radeon+RX+7900+XTX",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=AMD+Radeon+RX+7900+XTX&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء AMD Radeon RX 7900 XTX من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Radeon+RX+7900+XTX",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Radeon+RX+7900+XTX&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء AMD Radeon RX 7900 XTX من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=AMD+Radeon+RX+7900+XTX",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=AMD+Radeon+RX+7900+XTX&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "schema_json_ld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4080-super-vs-rx-7900-xtx#productA",
+        "name": "NVIDIA GeForce RTX 4080 Super",
+        "category": "GPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "NVIDIA"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "999",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4080-super-vs-rx-7900-xtx#productB",
+        "name": "AMD Radeon RX 7900 XTX",
+        "category": "GPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "AMD"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "999",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4080-super-vs-rx-7900-xtx#review",
+        "url": "https://tech-comparisons.pages.dev/compare/rtx-4080-super-vs-rx-7900-xtx",
+        "name": "مقارنة NVIDIA GeForce RTX 4080 Super ضد AMD Radeon RX 7900 XTX | المواصفات والأداء والأسعار",
+        "description": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4080 Super و AMD Radeon RX 7900 XTX. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+        "datePublished": "2026-10-19T18:06:31.187644+00:00",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "فريق تحرير مقارنات تك",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "itemReviewed": {
+          "@type": "Product",
+          "name": "NVIDIA GeForce RTX 4080 Super vs AMD Radeon RX 7900 XTX"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 4.7,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "reviewBody": "يظهر كل من NVIDIA GeForce RTX 4080 Super و AMD Radeon RX 7900 XTX تقارباً استثنائياً في الأداء الكلي بفوارق هامشية ضمن هامش الخطأ الإحصائي (أقل من 3%). الحسم بينهما يعتمد بالدرجة الأولى على فارق السعر الفعلي في السوق المحلي وتفضيلات البرمجيات الخاصة بكل مستخدم."
+      }
+    ]
+  },
+  "created_at": "2026-10-19T18:06:31.187644+00:00"
+}
