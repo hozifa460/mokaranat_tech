@@ -28,10 +28,18 @@ DEFAULT_MATCHUPS: List[Tuple[str, str]] = [
     ("rtx-4060-ti", "rx-7700-xt"),
     ("rtx-4070-super", "rtx-4080-super"),
     ("rx-7800-xt", "rx-7900-xtx"),
+    ("rtx-4090", "rx-7900-xtx"),
+    ("rtx-4070-ti-super", "rx-7900-xt"),
+    ("rtx-4060", "rx-7600-xt"),
     # CPUs
     ("ryzen-7-7800x3d", "i7-14700k"),
+    ("ryzen-9-7950x3d", "i9-14900k"),
+    ("ryzen-5-7600x", "i5-14600k"),
     # Laptops
-    ("rog-zephyrus-g16", "legion-pro-7i")
+    ("rog-zephyrus-g16", "legion-pro-7i"),
+    ("razer-blade-16-2024", "legion-pro-7i"),
+    ("macbook-pro-16-m3-max", "rog-zephyrus-g16"),
+    ("asus-tuf-gaming-a15", "rog-zephyrus-g16")
 ]
 
 

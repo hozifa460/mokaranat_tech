@@ -165,6 +165,16 @@
       "winner": "tie",
       "diff_percentage": 0.0,
       "advantage_summary_ar": "مقارنة شاشات: شاشة OLED تمتاز بتباين لانهائي وسواد حقيقي وزمن استجابة 0.2ms، بينما تمتاز شاشة IPS بـ 500 nits سطوع عالٍ وثابت دون مخاطر تطبيع (Burn-in)"
+    },
+    {
+      "key": "ram_gb",
+      "label_ar": "سعة الذاكرة العشوائية (RAM)",
+      "value_a": 32.0,
+      "value_b": 32.0,
+      "unit": "GB",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "متطابق في هذه القيمة"
     }
   ],
   "performance_score_a": 72.0,
@@ -529,7 +539,7 @@
         "url": "https://tech-comparisons.pages.dev/compare/rog-zephyrus-g16-vs-legion-pro-7i",
         "name": "مقارنة ASUS ROG Zephyrus G16 (2024) ضد Lenovo Legion Pro 7i (Gen 9) | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين ASUS ROG Zephyrus G16 (2024) و Lenovo Legion Pro 7i (Gen 9). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T21:57:44.685093+00:00",
+        "datePublished": "2026-10-19T22:28:54.820705+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -555,5 +565,5 @@
       }
     ]
   },
-  "created_at": "2026-10-19T21:57:44.685093+00:00"
+  "created_at": "2026-10-19T22:28:54.820705+00:00"
 }

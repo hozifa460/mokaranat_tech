@@ -87,7 +87,9 @@ class FpsCalculator:
         arch_field = str(item.architecture).upper()
         features_field = " ".join(item.features).upper()
         combined = f"{gpu_field} {arch_field} {features_field}"
-        if any(k in combined for k in ("NVIDIA", "RTX", "GEFORCE")):
+        if any(k in combined for k in ("APPLE", "M3", "M2", "M1", "SILICON")):
+            return "APPLE"
+        elif any(k in combined for k in ("NVIDIA", "RTX", "GEFORCE")):
             return "NVIDIA"
         elif any(k in combined for k in ("AMD", "RADEON", "RDNA")):
             return "AMD"
@@ -106,6 +108,8 @@ class FpsCalculator:
             return vb.get("amd_bias", vb.get("amd", 1.0))
         elif brand == "INTEL":
             return vb.get("intel_bias", vb.get("intel", 1.0))
+        elif brand == "APPLE":
+            return 1.0
         return 1.0
 
     @classmethod

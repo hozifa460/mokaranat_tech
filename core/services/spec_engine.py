@@ -294,6 +294,11 @@ class SpecEngine:
             lanes_a = raw_a.get("pcie_lanes") or (8 if "x8" in str(pcie_a).lower() else 16)
             lanes_b = raw_b.get("pcie_lanes") or (8 if "x8" in str(pcie_b).lower() else 16)
             if lanes_a == lanes_b:
+                summary = (
+                    f"واجهة توصيل متطابقة بكامل المسارات ({lanes_a} مساراً)"
+                    if lanes_a == 16
+                    else f"واجهة توصيل متطابقة تقتصر على {lanes_a} مسارات (PCIe 4.0 x{lanes_a}) على كلا البطاقتين"
+                )
                 items.append(SpecDiffItem(
                     key="pcie_interface",
                     label_ar="واجهة التوصيل العتادية (PCIe Interface)",
@@ -302,7 +307,7 @@ class SpecEngine:
                     unit="",
                     winner="tie",
                     diff_percentage=0.0,
-                    advantage_summary_ar=f"واجهة توصيل متطابقة بكامل المسارات ({lanes_a} مساراً)"
+                    advantage_summary_ar=summary
                 ))
             elif lanes_a > lanes_b:
                 items.append(SpecDiffItem(
@@ -442,12 +447,25 @@ class SpecEngine:
         display_a = raw_a.get("display")
         display_b = raw_b.get("display")
         if display_a and display_b:
-            is_oled_a = "oled" in str(display_a).lower()
-            is_oled_b = "oled" in str(display_b).lower()
-            if is_oled_a and not is_oled_b:
+            d_a = str(display_a).lower()
+            d_b = str(display_b).lower()
+            is_oled_a = "oled" in d_a
+            is_oled_b = "oled" in d_b
+            is_mini_a = "mini-led" in d_a or "retina xdr" in d_a
+            is_mini_b = "mini-led" in d_b or "retina xdr" in d_b
+
+            if is_oled_a and not is_oled_b and not is_mini_b:
                 advantage = "مقارنة شاشات: شاشة OLED تمتاز بتباين لانهائي وسواد حقيقي وزمن استجابة 0.2ms، بينما تمتاز شاشة IPS بـ 500 nits سطوع عالٍ وثابت دون مخاطر تطبيع (Burn-in)"
-            elif is_oled_b and not is_oled_a:
+            elif is_oled_b and not is_oled_a and not is_mini_a:
                 advantage = "مقارنة شاشات: شاشة OLED تمتاز بتباين لانهائي وسواد حقيقي وزمن استجابة 0.2ms، بينما تمتاز شاشة IPS بـ 500 nits سطوع عالٍ وثابت دون مخاطر تطبيع (Burn-in)"
+            elif is_mini_a and is_oled_b:
+                advantage = "مقارنة شاشات: شاشة Mini-LED تتفوق بسطوع فائق (1000-1600 nits) دون مخاطر تطبيع (Burn-in)، بينما تمتاز شاشة OLED بتباين لانهائي لكل بكسل وزمن استجابة 0.2ms"
+            elif is_mini_b and is_oled_a:
+                advantage = "مقارنة شاشات: شاشة OLED تمتاز بتباين لانهائي لكل بكسل وزمن استجابة 0.2ms، بينما تتفوق شاشة Mini-LED بسطوع فائق (1000-1600 nits) دون مخاطر تطبيع (Burn-in)"
+            elif (is_mini_a and not is_mini_b) or (is_mini_b and not is_mini_a):
+                advantage = "مقارنة شاشات: شاشة Mini-LED متقدمة بسطوع سينمائي (1000-1600 nits) ومناطق تعتيم محلي لتباين HDR وسواد عميق مقارنة بشاشات IPS التقليدية"
+            elif is_mini_a and is_mini_b:
+                advantage = "مقارنة شاشات: تقنية Mini-LED متطورة على كلا الجهازين بسطوع فائق ومناطق تعتيم محلي دقيقة لإنتاج محتوى HDR واللعب الاحترافي"
             else:
                 advantage = "مقارنة شاشات: تقنيات عرض متقدمة بمعدلات تحديث سريعة ملائمة للألعاب التنافسية وصناعة المحتوى"
 
@@ -460,6 +478,27 @@ class SpecEngine:
                 winner="tie",
                 diff_percentage=0.0,
                 advantage_summary_ar=advantage
+            ))
+
+        ram_a = raw_a.get("ram_gb")
+        ram_b = raw_b.get("ram_gb")
+        if ram_a and ram_b:
+            is_apple_a = "apple" in a.brand.lower() or "apple" in a.name.lower()
+            is_apple_b = "apple" in b.brand.lower() or "apple" in b.name.lower()
+            if is_apple_a or is_apple_b:
+                apple_bw = raw_a.get("unified_memory_bandwidth_gbps", 300) if is_apple_a else raw_b.get("unified_memory_bandwidth_gbps", 300)
+                ram_summary = f"ذاكرة موحدة (Unified Memory) فائقة السرعة ({apple_bw}GB/s) تمنح معمارية Apple Silicon سرعة تشارك بيانات فورية بين المعالج والرسوميات"
+            else:
+                ram_summary = "سعة ذاكرة عشوائية أكبر لتشغيل ألعاب العصر وتعدد المهام الثقيلة"
+
+            items.append(cls._compare_numeric(
+                key="ram_gb",
+                label_ar="سعة الذاكرة العشوائية (RAM)",
+                val_a=float(ram_a),
+                val_b=float(ram_b),
+                unit="GB",
+                higher_is_better=True,
+                summary_pattern=ram_summary
             ))
 
         return items

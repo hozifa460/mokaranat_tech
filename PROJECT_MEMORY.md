@@ -372,6 +372,53 @@ D:\tech_comparisons\
   - 100% pass rate in 1.24s.
   - Re-seeded SQLite database, regenerated all 7 programmatic comparison JSON collections, and verified 11 static pages compiled via Astro SSG with 0 errors in 1.99s.
 
+### Phase 18: Hardware Catalog Expansion & Programmatic Comparisons Engine (2026-10-20)
+- **Catalog Expansion to 22 Verified Hardware Items (`core/data/seed_specs.json`, `scripts/seed_database.py`):**
+  - **GPUs Added (5 items):**
+    1. `rtx-4090`: NVIDIA GeForce RTX 4090 (24GB GDDR6X, AD102, 16384 CUDA cores, 450W TDP, Dual NVENC AV1, PCIe 4.0 x16, 98.0 flagship benchmark index).
+    2. `rtx-4070-ti-super`: NVIDIA GeForce RTX 4070 Ti Super (16GB GDDR6X, AD103, 8448 CUDA cores, 256-bit bus, Dual NVENC AV1, PCIe 4.0 x16, 88.0 benchmark index).
+    3. `rtx-4060`: NVIDIA GeForce RTX 4060 (8GB GDDR6, AD107, 3072 CUDA cores, 128-bit bus, Single NVENC AV1, PCIe 4.0 x8, 115W TDP, 58.0 benchmark index).
+    4. `rx-7900-xt`: AMD Radeon RX 7900 XT (20GB GDDR6, Navi 31, 5376 SPs, 320-bit bus, DisplayPort 2.1, PCIe 4.0 x16, 315W TDP, 91.0 benchmark index).
+    5. `rx-7600-xt`: AMD Radeon RX 7600 XT (16GB GDDR6, Navi 33, 2048 SPs, 128-bit bus, DisplayPort 2.1, PCIe 4.0 x8, 190W TDP, 57.0 benchmark index).
+  - **CPUs Added (4 items):**
+    6. `i9-14900k`: Intel Core i9-14900K (24 cores [8P + 16E], 32 threads, 6.0 GHz TVB, Intel 7 / 10nm Enhanced SuperFin, LGA 1700 EOL, 253W TDP, 97.0 benchmark index, ray_tracing_score: null).
+    7. `ryzen-9-7950x3d`: AMD Ryzen 9 7950X3D (16 cores, 32 threads, 128MB 3D V-Cache, Zen 4, AM5 platform through 2027+, 120W TDP, 98.0 benchmark index, ray_tracing_score: null).
+    8. `i5-14600k`: Intel Core i5-14600K (14 cores [6P + 8E], 20 threads, 5.3 GHz boost, Intel 7, LGA 1700 EOL, 181W TDP, 82.0 benchmark index, ray_tracing_score: null).
+    9. `ryzen-5-7600x`: AMD Ryzen 5 7600X (6 cores, 12 threads, 32MB L3, Zen 4, AM5 platform through 2027+, 105W TDP, 78.0 benchmark index, ray_tracing_score: null).
+  - **Laptops Added (3 items):**
+    10. `razer-blade-16-2024`: Razer Blade 16 (2024) (i9-14900HX, RTX 4090 Mobile 16GB 175W, Dual-Mode Mini-LED [4K 120Hz / FHD+ 240Hz 1000 nits], 32GB RAM, 94.0 benchmark index).
+    11. `macbook-pro-16-m3-max`: Apple MacBook Pro 16 (M3 Max) (Apple Silicon M3 Max 3nm [16-core CPU, 40-core GPU], 48GB Unified Memory at 300GB/s, 16.2" Liquid Retina XDR Mini-LED 1600 nits, macOS, 22h battery, 92.0 benchmark index).
+    12. `asus-tuf-gaming-a15`: ASUS TUF Gaming A15 (2024) (AMD Ryzen 7 7735HS, RTX 4060 Mobile 140W, 15.6" FHD 144Hz 100% sRGB IPS, 90Wh battery, MIL-STD-810H durability, 68.0 benchmark index).
+  - **All score ceilings enforced:** strictly `<= 98.0` for all benchmark and gaming scores. All CPU ray tracing scores strictly `None`/`null`.
+
+- **Architectural & Editorial Enhancements (`core/services/`):**
+  - **Dual NVENC vs Single NVENC Recognition (`ai_editorial.py`):** Verified AD102 (RTX 4090) and AD103 (RTX 4070 Ti Super) receive Dual NVENC AV1 streaming & export pros, while AD107 (RTX 4060) receives accurate Single NVENC generation text.
+  - **PCIe Lane Detection & Symmetrical 8-Lane Warnings (`spec_engine.py`, `ai_editorial.py`):** Handled both cards having 8-lane interfaces (RTX 4060 vs RX 7600 XT), rendering clean Arabic diff explanations (`واجهة توصيل متطابقة تقتصر على 8 مسارات (PCIe 4.0 x8) على كلا البطاقتين`) and injecting cons regarding bandwidth bottlenecks on older PCIe 3.0 motherboards when VRAM fills up.
+  - **Apple Silicon & macOS Ecosystem Integration (`fps_calculator.py`, `spec_engine.py`, `ai_editorial.py`):**
+    - `fps_calculator.py`: Added `APPLE` vendor recognition with neutral 1.0 bias and 0.0 architectural adjustment.
+    - `spec_engine.py`: Integrated `ram_gb` comparison row highlighting Apple's 48GB Unified Memory with 300GB/s bandwidth.
+    - `ai_editorial.py`: Implemented `is_apple_vs_win` narrative branches:
+      - Gaming analysis awards victory to Windows (native DirectX 12, DLSS 3, anti-cheat) while highlighting macOS translation layer limitations (Game Porting Toolkit).
+      - Productivity analysis highlights Apple Silicon's 3nm M3 Max efficiency, ProRes hardware engines, 22-hour battery life, and 100% full unthrottled performance on battery vs Windows laptop throttling.
+      - Pros/cons accurately cover Apple's non-upgradable unified memory and lack of native DirectX 12 vs Windows laptop modularity and high fan noise/heat.
+  - **Display Technology Comparison (`spec_engine.py`, `ai_editorial.py`):**
+    - Differentiates Mini-LED (Liquid Retina XDR, Razer Dual-Mode 4K/FHD) vs OLED vs IPS (500 nits high-brightness), accurately noting peak brightness (1000-1600 nits), blooming, infinite contrast, and burn-in risks.
+  - **Equal VRAM Phrasing Polish (`ai_editorial.py`):**
+    - Corrected GPU narrative when competing cards share identical VRAM capacity (e.g. RTX 4090 vs RX 7900 XTX, both 24GB), generating `(بسعة متطابقة تبلغ 24GB لكلا البطاقتين)` instead of `(مقابل 24GB لدى منافسه)`.
+  - **GPU Flagship Winner Determination (`ai_editorial.py`):**
+    - Updated `generate_verdict` to check empirical FPS leads at 1440p/4K before tie evaluation, correctly awarding overall win to RTX 4090 over RX 7900 XTX (+12.6% FPS lead, DLSS 3.5, 98 vs 96 index) while respecting RX 7900 XTX value per dollar.
+
+- **Programmatic Comparison Matrix Expanded to 15 High-Intent Matchups (`scripts/generate_comparisons.py`):**
+  - Generated and exported 15 complete JSON comparison documents with zero Amazon links:
+    - 8 GPU matchups: 4070S vs 7800XT, 4080S vs 7900XTX, 4060Ti vs 7700XT, 4070S vs 4080S, 7800XT vs 7900XTX, 4090 vs 7900XTX, 4070Ti Super vs 7900XT, 4060 vs 7600XT.
+    - 3 CPU matchups: 7800X3D vs 14700K, 7950X3D vs 14900K, 7600X vs 14600K.
+    - 4 Laptop matchups: Zephyrus G16 vs Legion Pro 7i, Blade 16 vs Legion Pro 7i, MacBook Pro 16 M3 Max vs Zephyrus G16, TUF A15 vs Zephyrus G16.
+
+- **Automated Verification, SSG Build, & Test Suite Expansion:**
+  - Expanded automated unit test suite to 72 tests (`core/tests/test_phase18_expansion.py`): 100% pass rate in 1.27s.
+  - Verified static generation in Astro (`npm run build` in `web/`): 19 static HTML pages generated in 2.45s with 0 errors.
+  - Audited all 15 JSON documents: 100% zero Amazon compliance (Noon, Newegg, AliExpress, Jumia only).
+
 ---
 
 ## 5. Rules for Future AI Agents & Maintainers
@@ -380,7 +427,7 @@ D:\tech_comparisons\
 3. **Keep Code Clean & DRY:**
    - Do NOT duplicate comparison logic in Astro components; all comparison math belongs in `core/services/`.
    - Do NOT duplicate styling; use Tailwind utility classes and CSS variables in `global.css`.
-4. **Mandatory Test Execution:** Whenever you add a new hardware spec or modify calculation engines, run `pytest` via `D:\tech_comparisons\.venv\Scripts\python.exe -m pytest D:\tech_comparisons\core\tests` and confirm 100% pass rate.
+4. **Mandatory Test Execution:** Whenever you add a new hardware spec or modify calculation engines, run `pytest` via `D:\tech_comparisons\.venv\Scripts\python.exe -m pytest D:\tech_comparisons\core\tests -o pythonpath=.` and confirm 100% pass rate.
 5. **Update This File:** After any major modification, append your changes to Section 4 (Changelog).
 
 

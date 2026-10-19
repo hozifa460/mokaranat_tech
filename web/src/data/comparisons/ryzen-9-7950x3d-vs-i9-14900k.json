@@ -1,0 +1,357 @@
+{
+  "slug": "ryzen-9-7950x3d-vs-i9-14900k",
+  "category": "cpu",
+  "title_ar": "مقارنة AMD Ryzen 9 7950X3D ضد Intel Core i9-14900K | المواصفات والأداء والأسعار",
+  "meta_title_ar": "AMD Ryzen 9 7950X3D ضد Intel Core i9-14900K: أيهما يستحق الشراء؟ | مقارنات تك",
+  "meta_description_ar": "مقارنة شاملة وتفصيلية بين AMD Ryzen 9 7950X3D و Intel Core i9-14900K. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+  "item_a": {
+    "id": "ryzen-9-7950x3d",
+    "slug": "ryzen-9-7950x3d",
+    "name": "AMD Ryzen 9 7950X3D",
+    "category": "cpu",
+    "brand": "AMD",
+    "release_year": 2023,
+    "launch_msrp_usd": 699.0,
+    "architecture": "Zen 4 (3D V-Cache)",
+    "process_node_nm": 5.0,
+    "tdp_w": 120,
+    "raw_specs": {
+      "total_cores": 16,
+      "threads": 32,
+      "base_clock_ghz": 4.2,
+      "boost_clock_ghz": 5.7,
+      "l3_cache_mb": 128,
+      "socket": "AM5 (Lifecycle through 2027+)",
+      "memory_support": "DDR5-5200"
+    },
+    "benchmark_index": 98.0,
+    "gaming_scores": {
+      "gaming_overall": 98.0
+    },
+    "ray_tracing_score": null,
+    "efficiency_score": 95.0,
+    "features": [
+      "128MB 3D V-Cache",
+      "16 Cores / 32 Threads",
+      "AM5 Platform Lifecycle through 2027+",
+      "120W TDP Efficiency"
+    ],
+    "pcie_interface": null
+  },
+  "item_b": {
+    "id": "i9-14900k",
+    "slug": "i9-14900k",
+    "name": "Intel Core i9-14900K",
+    "category": "cpu",
+    "brand": "Intel",
+    "release_year": 2023,
+    "launch_msrp_usd": 589.0,
+    "architecture": "Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin)",
+    "process_node_nm": 7.0,
+    "tdp_w": 253,
+    "raw_specs": {
+      "total_cores": 24,
+      "p_cores": 8,
+      "e_cores": 16,
+      "threads": 32,
+      "base_clock_ghz": 3.2,
+      "boost_clock_ghz": 6.0,
+      "l3_cache_mb": 36,
+      "socket": "LGA 1700 (End of Life)",
+      "process_node": "Intel 7 (10nm Enhanced SuperFin)",
+      "memory_support": "DDR5-5600 / DDR4-3200"
+    },
+    "benchmark_index": 97.0,
+    "gaming_scores": {
+      "gaming_overall": 95.0
+    },
+    "ray_tracing_score": null,
+    "efficiency_score": 70.0,
+    "features": [
+      "Intel Thermal Velocity Boost 6.0GHz",
+      "24 Cores / 32 Threads",
+      "PCIe 5.0 Support",
+      "Integrated UHD 770"
+    ],
+    "pcie_interface": null
+  },
+  "spec_differences": [
+    {
+      "key": "benchmark_index",
+      "label_ar": "مؤشر الأداء العام (Benchmark Index)",
+      "value_a": 98.0,
+      "value_b": 97.0,
+      "unit": "/ 100",
+      "winner": "tie",
+      "diff_percentage": 1.0,
+      "advantage_summary_ar": "تعادل / تقارب في الأداء (فارق هامشي أقل من 3%)"
+    },
+    {
+      "key": "launch_msrp_usd",
+      "label_ar": "سعر الإطلاق الرسمي",
+      "value_a": 699.0,
+      "value_b": 589.0,
+      "unit": "$",
+      "winner": "b",
+      "diff_percentage": 15.7,
+      "advantage_summary_ar": "أوفر بالسعر بنسبة 15.7%"
+    },
+    {
+      "key": "tdp_w",
+      "label_ar": "استهلاك الطاقة المكتبي (TDP)",
+      "value_a": 120,
+      "value_b": 253,
+      "unit": "W",
+      "winner": "a",
+      "diff_percentage": 52.6,
+      "advantage_summary_ar": "استهلاك طاقة أقل وتوليد حراري أهدأ بفارق 52.6%"
+    },
+    {
+      "key": "process_node_nm",
+      "label_ar": "دقة التصنيع (Process Node)",
+      "value_a": 5.0,
+      "value_b": 7.0,
+      "unit": "nm",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقياس تقني استرشادي: تعتمد إنتل معيار Intel 7 (10nm Enhanced SuperFin) بكثافة ترانزستورات مكافئة لـ 7nm، وتختلف بنيوياً عن معيار TSMC 5nm في معالجات AMD"
+    },
+    {
+      "key": "efficiency_score",
+      "label_ar": "معيار الكفاءة مقابل الواط",
+      "value_a": 95.0,
+      "value_b": 70.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 35.7,
+      "advantage_summary_ar": "أداء أعلى لكل واط مستهلك"
+    },
+    {
+      "key": "total_cores",
+      "label_ar": "إجمالي الأنوية (Cores)",
+      "value_a": 16.0,
+      "value_b": 24.0,
+      "unit": "أنوية",
+      "winner": "b",
+      "diff_percentage": 50.0,
+      "advantage_summary_ar": "عدد أنوية أكبر لتعدد المهام والرندرة البرمجية الثقيلة"
+    },
+    {
+      "key": "threads",
+      "label_ar": "المسارات المعالجة (Threads)",
+      "value_a": 32.0,
+      "value_b": 32.0,
+      "unit": "مسار",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "متطابق في هذه القيمة"
+    },
+    {
+      "key": "l3_cache_mb",
+      "label_ar": "الذاكرة المخبئية المستوى الثالث (L3 Cache)",
+      "value_a": 128.0,
+      "value_b": 36.0,
+      "unit": "MB",
+      "winner": "a",
+      "diff_percentage": 255.6,
+      "advantage_summary_ar": "ذاكرة كاش أضخم لتقليل زمن التأخير وتسريع معدل الإطارات بالألعاب"
+    },
+    {
+      "key": "boost_clock_ghz",
+      "label_ar": "تردد التعزيز الأقصى (Boost Clock)",
+      "value_a": 5.7,
+      "value_b": 6.0,
+      "unit": "GHz",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقياس استرشادي: تختلف كفاءة التردد وتعليمات الدورة (IPC) باختلاف معمارية المعالج، ولا يقاس الأداء بالتردد الخام وحده"
+    }
+  ],
+  "performance_score_a": 98.0,
+  "performance_score_b": 97.0,
+  "fps_benchmarks": [],
+  "verdict": {
+    "overall_winner": "tie",
+    "winner_name": "تعادل متقارب في الأداء",
+    "score_a": 98.0,
+    "score_b": 97.0,
+    "quick_verdict_ar": "يظهر كل من AMD Ryzen 9 7950X3D و Intel Core i9-14900K تقارباً استثنائياً في الأداء الكلي بفوارق هامشية ضمن هامش الخطأ الإحصائي (أقل من 3%). الحسم بينهما يعتمد بالدرجة الأولى على فارق السعر الفعلي في السوق المحلي وتفضيلات البرمجيات الخاصة بكل مستخدم.",
+    "gaming_analysis_ar": "في تجارب الألعاب، يوفر AMD Ryzen 9 7950X3D (16 أنوية، 128MB كاش) سرعات إطارات مرتفعة للغاية مع أدنى زمن استجابة (1% low FPS) بفضل تقنية 3D V-Cache، في المقابل ينافس Intel Core i9-14900K (24 أنوية) بقوة في الألعاب متعددة المسارات واستقرار معدل التحديث.",
+    "productivity_analysis_ar": "في مهام البرمجة والضغط المكتبي وتصدير الفيديو والرندرة، يمنح Intel Core i9-14900K تفوقاً ملحوظاً في المعالجة المتوازية بفضل امتلاكه 24 نواة معالجة (مقابل 16 أنوية لدى منافسه)، بينما يقدم AMD Ryzen 9 7950X3D كفاءة طاقة ممتازة بسحب 120W فقط (مقابل 253W لـ Intel Core i9-14900K).",
+    "value_and_budget_ar": "مع تقارب الأداء بين المعالجين، يمنح Intel Core i9-14900K ميزة اقتصادية مباشرة بسعر $589 موفراً فارق $110 (بينما يرتفع سعر منافسه بنسبة 18.7% عن السعر الأقل) مقارنة بمنافسه $699.",
+    "pros_a": [
+      "معمارية Zen 4 (3D V-Cache) المتقدمة بدقة تصنيع 5nm",
+      "كفاءة طاقة ممتازة (120W TDP) ومؤشر أداء لكل واط يبلغ 95/100",
+      "ذاكرة كاش ضخمة (128MB L3) ترفع استقرار الإطارات الدنيا وتمنع التقطيع في الألعاب",
+      "استثمار مستدام وطويل الأجل لمنصة المقبس AMD AM5 مع استمرار الدعم المؤكد حتى عام 2027+، مما يتيح ترقيات مستقبلية دون الحاجة لتغيير اللوحة الأم"
+    ],
+    "cons_a": [
+      "سعر إطلاق رسمي أعلى ($699)",
+      "عدد نوى أقل (16 مقابل 24 في Intel Core i9-14900K) مما يحد من السرعة القصوى في الرندرة متعددة المسارات"
+    ],
+    "pros_b": [
+      "معمارية Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin)",
+      "مؤشر أداء متزن يبلغ (97/100) مع سحب طاقة 253W",
+      "توزيع نوى متطور (24 نوى معالجة) يمنح مرونة عالية في تعدد المهام وتشغيل التطبيقات الثقيلة",
+      "دعم واسع لمنظومة الذواكر DDR5 و DDR4 مما يمنح مرونة عالية في اختيار اللوحات الأم والميزانية"
+    ],
+    "cons_b": [
+      "استهلاك طاقة يصل إلى 253W عند كسر السرعة والضغط الكامل، وانبعاث حراري يتطلب تبريداً مائياً متقدماً",
+      "انتهاء العمر الافتراضي لمنصة المقبس Intel LGA 1700 (منصة منتهية الصلاحية Dead-end socket بلا أي مسار ترقية مستقبلي لأجيال معالجات أحدث دون تغيير اللوحة الأم بالكامل)"
+    ],
+    "who_should_buy_a": "اللاعب التنافسي الذي يضع أداء الألعاب وزمن الإطارات السلس في المقام الأول بفضل ذاكرة 3D V-Cache الكبيرة (128MB)، مع كفاءة استهلاك طاقة ممتازة (120W).",
+    "who_should_buy_b": "صانع المحتوى والمستخدم المحترف الذي يحتاج أقصى أداء في تعدد المهام والرندرة والمونتاج البرمجي بفضل تعدد الأنوية الكبير (24 نواة معالجة) وترددات Boost المرتفعة."
+  },
+  "affiliate_links_a": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء AMD Ryzen 9 7950X3D من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=AMD+Ryzen+9+7950X3D",
+      "affiliate_url": "https://www.noon.com/search?q=AMD+Ryzen+9+7950X3D&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء AMD Ryzen 9 7950X3D من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=AMD+Ryzen+9+7950X3D",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=AMD+Ryzen+9+7950X3D&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء AMD Ryzen 9 7950X3D من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Ryzen+9+7950X3D",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Ryzen+9+7950X3D&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء AMD Ryzen 9 7950X3D من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=AMD+Ryzen+9+7950X3D",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=AMD+Ryzen+9+7950X3D&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "affiliate_links_b": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء Intel Core i9-14900K من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=Intel+Core+i9-14900K",
+      "affiliate_url": "https://www.noon.com/search?q=Intel+Core+i9-14900K&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء Intel Core i9-14900K من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=Intel+Core+i9-14900K",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=Intel+Core+i9-14900K&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء Intel Core i9-14900K من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=Intel+Core+i9-14900K",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=Intel+Core+i9-14900K&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء Intel Core i9-14900K من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=Intel+Core+i9-14900K",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=Intel+Core+i9-14900K&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "schema_json_ld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/ryzen-9-7950x3d-vs-i9-14900k#productA",
+        "name": "AMD Ryzen 9 7950X3D",
+        "category": "CPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "AMD"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "699",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/ryzen-9-7950x3d-vs-i9-14900k#productB",
+        "name": "Intel Core i9-14900K",
+        "category": "CPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "Intel"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "589",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://tech-comparisons.pages.dev/compare/ryzen-9-7950x3d-vs-i9-14900k#review",
+        "url": "https://tech-comparisons.pages.dev/compare/ryzen-9-7950x3d-vs-i9-14900k",
+        "name": "مقارنة AMD Ryzen 9 7950X3D ضد Intel Core i9-14900K | المواصفات والأداء والأسعار",
+        "description": "مقارنة شاملة وتفصيلية بين AMD Ryzen 9 7950X3D و Intel Core i9-14900K. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+        "datePublished": "2026-10-19T22:28:54.574567+00:00",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "فريق تحرير مقارنات تك",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "itemReviewed": {
+          "@type": "Product",
+          "name": "AMD Ryzen 9 7950X3D vs Intel Core i9-14900K"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 4.9,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "reviewBody": "يظهر كل من AMD Ryzen 9 7950X3D و Intel Core i9-14900K تقارباً استثنائياً في الأداء الكلي بفوارق هامشية ضمن هامش الخطأ الإحصائي (أقل من 3%). الحسم بينهما يعتمد بالدرجة الأولى على فارق السعر الفعلي في السوق المحلي وتفضيلات البرمجيات الخاصة بكل مستخدم."
+      }
+    ]
+  },
+  "created_at": "2026-10-19T22:28:54.574567+00:00"
+}
