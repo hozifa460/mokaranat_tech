@@ -291,6 +291,19 @@ D:\tech_comparisons\
   - Total test count expanded to 50 tests (100% pass rate in 1.01s).
   - Re-seeded database, regenerated all 7 comparison JSONs with zero null fields, and compiled all 11 static pages via Astro in 1.96s.
 
+### Phase 15: Git Toolchain Provisioning, Tunnel Shutdown & GitHub Repository Deployment (2026-10-20)
+- **Temporary Cloudflare Tunnel Teardown:**
+  - Terminated background tunnel process `cloudflared.exe` completely, closing external preview routing.
+- **Git & GitHub Toolchain Provisioning:**
+  - Installed Git for Windows (`v2.55.0.5`) and GitHub CLI (`gh v2.102.0`) via `winget`.
+  - Configured Git executable paths permanently in the Windows User PATH.
+  - Successfully authenticated user account `hozifa460` via GitHub device flow and wired Git credential helper (`gh auth setup-git`).
+- **Repository Setup & Deployment:**
+  - Hardened `.gitignore` to strictly exclude `.venv/`, `node_modules/`, `dist/`, logs, and temporary files.
+  - Initialized Git repository, staged all clean architecture modules, tests, data files, Astro components, and documentation.
+  - Successfully committed and pushed all 53 project files to `https://github.com/hozifa460/mokaranat_tech` (`main` branch).
+  - Verified repository contents via GitHub API.
+
 ---
 
 ## 5. Rules for Future AI Agents & Maintainers
