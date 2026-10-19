@@ -414,10 +414,19 @@ D:\tech_comparisons\
     - 3 CPU matchups: 7800X3D vs 14700K, 7950X3D vs 14900K, 7600X vs 14600K.
     - 4 Laptop matchups: Zephyrus G16 vs Legion Pro 7i, Blade 16 vs Legion Pro 7i, MacBook Pro 16 M3 Max vs Zephyrus G16, TUF A15 vs Zephyrus G16.
 
-- **Automated Verification, SSG Build, & Test Suite Expansion:**
-  - Expanded automated unit test suite to 72 tests (`core/tests/test_phase18_expansion.py`): 100% pass rate in 1.27s.
-  - Verified static generation in Astro (`npm run build` in `web/`): 19 static HTML pages generated in 2.45s with 0 errors.
-  - Audited all 15 JSON documents: 100% zero Amazon compliance (Noon, Newegg, AliExpress, Jumia only).
+- **Phase 18 Adversarial Review & Architectural Hardening (Quality Review):**
+  - **Identified & Fixed 7 Critical Flaws in Prior Attempt:**
+    1. *Apple vs Windows Laptop Value Narrative Asymmetry:* Fixed `_build_laptop_narrative` in `ai_editorial.py` which previously assumed Windows laptops were always cheaper. Symmetrically accounts for cases where the Apple laptop is cheaper (e.g. MacBook Pro 16 at $3499 vs Razer Blade 16 at $3799) or within a 3% statistical margin.
+    2. *Contradictory Apple Silicon Quick Verdict:* Fixed `_build_quick_verdict` to eliminate claims of Apple Silicon having a gaming FPS lead over Windows gaming laptops, correctly attributing Apple's win to workstation compute and battery efficiency while acknowledging Windows gaming dominance.
+    3. *Asymmetric RAM Differential Summary Attribution:* Fixed `_compare_laptop_raw_specs` in `spec_engine.py` which previously assigned Apple Silicon's Unified Memory summary even when a Windows laptop had more RAM.
+    4. *False 4K Gaming Claims for Budget 16GB GPUs:* Fixed `_get_gpu_tier` and `_compare_gpu_raw_specs` to require `max_bench >= 75` for `upper_1440p`, preventing budget 128-bit cards (e.g. RX 7600 XT) from falsely claiming 4K gaming headroom.
+    5. *False 500 Nits IPS Display Attribution:* Fixed IPS display detection across `ai_editorial.py` and `spec_engine.py` to ensure only panels with explicit 500 nits specifications claim high brightness, avoiding false claims for standard budget IPS displays (e.g. ASUS TUF A15).
+    6. *Misleading "Lightweight" Claims for Heavy Laptops:* Restricted "وزن خفيف يسهل التنقل" in `ai_editorial.py` exclusively to sub-2.0 kg laptops, eliminating contradictory mobility praise for 2.45-2.6 kg desktop replacements.
+    7. *Linguistic Redundancy in Equal VRAM Narratives:* Eliminated duplicate capacity mentions in GPU narratives when comparing cards with matching VRAM.
+  - **Verification:**
+    - Full test suite expanded to 79 tests (`core/tests/`): 100% pass rate in 1.18s.
+    - Astro SSG build (`npm run build`): 19 static HTML routes generated in 4.67s with 0 errors.
+    - Zero Amazon compliance: verified across all 15 comparison JSON documents.
 
 ---
 

@@ -230,9 +230,9 @@ class SpecEngine:
         if vram_a and vram_b:
             max_vram = max(float(vram_a), float(vram_b))
             max_bench = max(a.benchmark_index, b.benchmark_index)
-            if max_bench >= 90 or max_vram >= 24:
+            if max_bench >= 90 or (max_bench >= 85 and max_vram >= 24):
                 vram_summary = "سعة VRAM أكبر تمنح أماناً فائقاً في الألعاب بدقة 4K وعمليات الرندرة الضخمة"
-            elif max_bench >= 80 or max_vram >= 16:
+            elif max_bench >= 75 and (max_bench >= 80 or max_vram >= 16):
                 vram_summary = "سعة VRAM أكبر تمنح أريحية فائقة في ألعاب 1440p و 4K وتطبيقات التصميم"
             else:
                 vram_summary = "سعة VRAM أكبر تمنح أريحية ممتازة في الألعاب بدقة 1440p وتفادي اختناق القوام"
@@ -454,10 +454,13 @@ class SpecEngine:
             is_mini_a = "mini-led" in d_a or "retina xdr" in d_a
             is_mini_b = "mini-led" in d_b or "retina xdr" in d_b
 
+            has_500 = "500" in d_a or "500" in d_b or any("500" in str(f).lower() for f in a.features + b.features)
+            ips_desc = "بـ 500 nits سطوع عالٍ وثابت دون مخاطر تطبيع (Burn-in)" if has_500 else "بثبات الإضاءة ومعدل تحديث سريع دون مخاطر تطبيع (Burn-in)"
+
             if is_oled_a and not is_oled_b and not is_mini_b:
-                advantage = "مقارنة شاشات: شاشة OLED تمتاز بتباين لانهائي وسواد حقيقي وزمن استجابة 0.2ms، بينما تمتاز شاشة IPS بـ 500 nits سطوع عالٍ وثابت دون مخاطر تطبيع (Burn-in)"
+                advantage = f"مقارنة شاشات: شاشة OLED تمتاز بتباين لانهائي وسواد حقيقي وزمن استجابة 0.2ms، بينما تمتاز شاشة IPS {ips_desc}"
             elif is_oled_b and not is_oled_a and not is_mini_a:
-                advantage = "مقارنة شاشات: شاشة OLED تمتاز بتباين لانهائي وسواد حقيقي وزمن استجابة 0.2ms، بينما تمتاز شاشة IPS بـ 500 nits سطوع عالٍ وثابت دون مخاطر تطبيع (Burn-in)"
+                advantage = f"مقارنة شاشات: شاشة OLED تمتاز بتباين لانهائي وسواد حقيقي وزمن استجابة 0.2ms، بينما تمتاز شاشة IPS {ips_desc}"
             elif is_mini_a and is_oled_b:
                 advantage = "مقارنة شاشات: شاشة Mini-LED تتفوق بسطوع فائق (1000-1600 nits) دون مخاطر تطبيع (Burn-in)، بينما تمتاز شاشة OLED بتباين لانهائي لكل بكسل وزمن استجابة 0.2ms"
             elif is_mini_b and is_oled_a:
@@ -483,19 +486,26 @@ class SpecEngine:
         ram_a = raw_a.get("ram_gb")
         ram_b = raw_b.get("ram_gb")
         if ram_a and ram_b:
+            val_a_f = float(ram_a)
+            val_b_f = float(ram_b)
             is_apple_a = "apple" in a.brand.lower() or "apple" in a.name.lower()
             is_apple_b = "apple" in b.brand.lower() or "apple" in b.name.lower()
-            if is_apple_a or is_apple_b:
-                apple_bw = raw_a.get("unified_memory_bandwidth_gbps", 300) if is_apple_a else raw_b.get("unified_memory_bandwidth_gbps", 300)
-                ram_summary = f"ذاكرة موحدة (Unified Memory) فائقة السرعة ({apple_bw}GB/s) تمنح معمارية Apple Silicon سرعة تشارك بيانات فورية بين المعالج والرسوميات"
+            apple_bw = raw_a.get("unified_memory_bandwidth_gbps", 300) if is_apple_a else raw_b.get("unified_memory_bandwidth_gbps", 300)
+
+            if (is_apple_a and val_a_f > val_b_f) or (is_apple_b and val_b_f > val_a_f):
+                ram_summary = f"سعة ذاكرة أكبر مدعومة بذاكرة موحدة (Unified Memory) فائقة السرعة ({apple_bw}GB/s) تمنح معمارية Apple Silicon سرعة تشارك بيانات فورية"
+            elif (is_apple_a and val_b_f > val_a_f) or (is_apple_b and val_a_f > val_b_f):
+                ram_summary = "سعة ذاكرة عشوائية أكبر لتشغيل ألعاب العصر وتعدد المهام الثقيلة مع إمكانية الترقية المستقبلية"
+            elif is_apple_a or is_apple_b:
+                ram_summary = f"سعة ذاكرة متكافئة مع تميز معمارية Apple Silicon بنطاق ترددي فائق للذاكرة الموحدة ({apple_bw}GB/s)"
             else:
                 ram_summary = "سعة ذاكرة عشوائية أكبر لتشغيل ألعاب العصر وتعدد المهام الثقيلة"
 
             items.append(cls._compare_numeric(
                 key="ram_gb",
                 label_ar="سعة الذاكرة العشوائية (RAM)",
-                val_a=float(ram_a),
-                val_b=float(ram_b),
+                val_a=val_a_f,
+                val_b=val_b_f,
                 unit="GB",
                 higher_is_better=True,
                 summary_pattern=ram_summary

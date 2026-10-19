@@ -214,3 +214,118 @@ def test_comparisons_manifest_count():
     }
 
     assert slugs == expected_slugs, f"Manifest slugs mismatch: {slugs.symmetric_difference(expected_slugs)}"
+
+
+def test_apple_vs_win_value_budget_symmetry_when_windows_is_pricier():
+    """Verify that when Windows laptop is more expensive than Apple laptop (e.g. Blade 16 $3799 vs MacBook $3499),
+    the value/budget analysis correctly recognizes Apple as cheaper ($3499, saving $300) without mathematical inversion.
+    """
+    repo = HardwareRepository()
+    blade = repo.get_hardware_by_id("razer-blade-16-2024")
+    macbook = repo.get_hardware_by_id("macbook-pro-16-m3-max")
+
+    verdict_forward = EditorialRuleEngine.generate_verdict(blade, macbook)
+    verdict_reverse = EditorialRuleEngine.generate_verdict(macbook, blade)
+
+    # In both directions:
+    for v in (verdict_forward, verdict_reverse):
+        # Apple is $3499, Windows is $3799. Diff is $300.
+        assert "3499" in v.value_and_budget_ar
+        assert "3799" in v.value_and_budget_ar
+        assert "توفير $300" in v.value_and_budget_ar
+        # Windows must NOT be called cheaper or saving money
+        assert "يطرح Razer Blade 16 (2024) معادلة اقتصادية متفوقة لهواة الألعاب بسعر $3799 موفراً $300" not in v.value_and_budget_ar
+
+
+def test_quick_verdict_apple_silicon_avoids_contradictory_gaming_fps_lead():
+    """Verify that when Apple MacBook Pro 16 wins overall against Zephyrus G16,
+    the quick verdict does NOT claim an average gaming FPS lead over Windows, avoiding contradiction with gaming analysis.
+    """
+    repo = HardwareRepository()
+    macbook = repo.get_hardware_by_id("macbook-pro-16-m3-max")
+    zephyrus = repo.get_hardware_by_id("rog-zephyrus-g16")
+
+    verdict = EditorialRuleEngine.generate_verdict(macbook, zephyrus)
+    assert "متوسط معدل الإطارات بالألعاب" not in verdict.quick_verdict_ar
+    assert "كفاءة المعالجة والإنتاجية" in verdict.quick_verdict_ar or "صناعة المحتوى" in verdict.quick_verdict_ar
+
+
+def test_ram_spec_engine_summary_attribution_symmetry():
+    """Verify that RAM spec diff summary is symmetrically attributed to the winner."""
+    win_lap_64gb = HardwareSpec(
+        id="win-64", slug="win-64", name="Windows Workstation 64GB", category="laptop", brand="Lenovo",
+        release_year=2024, launch_msrp_usd=3000.0, architecture="Intel 14th Gen", process_node_nm=4.0,
+        tdp_w=150, benchmark_index=90.0, raw_specs={"ram_gb": 64, "weight_kg": 2.2, "battery_wh": 90}
+    )
+    apple_lap_48gb = HardwareSpec(
+        id="mac-48", slug="mac-48", name="Apple MacBook Pro 48GB", category="laptop", brand="Apple",
+        release_year=2023, launch_msrp_usd=3499.0, architecture="Apple Silicon", process_node_nm=3.0,
+        tdp_w=100, benchmark_index=92.0, raw_specs={"ram_gb": 48, "weight_kg": 2.16, "battery_wh": 100, "unified_memory_bandwidth_gbps": 300}
+    )
+
+    diffs = SpecEngine.compare_specs(win_lap_64gb, apple_lap_48gb)
+    ram_diff = next(d for d in diffs if d.key == "ram_gb")
+    assert ram_diff.winner == "a"  # 64GB > 48GB
+    # Windows win must NOT claim Apple Unified Memory
+    assert "تمنح معمارية Apple Silicon" not in ram_diff.advantage_summary_ar
+    assert "الترقية" in ram_diff.advantage_summary_ar or "سعة ذاكرة عشوائية أكبر" in ram_diff.advantage_summary_ar
+
+
+def test_gpu_tier_sub_75_index_avoids_4k_claim_even_with_16gb_vram():
+    """Verify that sub-75 index cards with 16GB (e.g. RX 7600 XT at 57.0) are categorized as midrange
+    and do NOT make 4K gaming claims in VRAM diffs or editorial analysis.
+    """
+    repo = HardwareRepository()
+    rtx4060 = repo.get_hardware_by_id("rtx-4060")
+    rx7600xt = repo.get_hardware_by_id("rx-7600-xt")
+
+    from core.services.ai_editorial import _get_gpu_tier
+    tier = _get_gpu_tier(rtx4060, rx7600xt)
+    assert tier == "midrange_1080p_1440p", f"Expected midrange_1080p_1440p, got {tier}"
+
+    diffs = SpecEngine.compare_specs(rtx4060, rx7600xt)
+    vram_diff = next(d for d in diffs if d.key == "vram_gb")
+    assert "4K" not in vram_diff.advantage_summary_ar
+
+    verdict = EditorialRuleEngine.generate_verdict(rtx4060, rx7600xt)
+    assert "قدرة جيدة على تشغيل ألعاب 4K" not in verdict.gaming_analysis_ar
+
+
+def test_standard_ips_laptop_avoids_500_nits_claim():
+    """Verify ASUS TUF Gaming A15 (144Hz IPS) does NOT get falsely credited with 500 nits."""
+    repo = HardwareRepository()
+    tuf_a15 = repo.get_hardware_by_id("asus-tuf-gaming-a15")
+    zephyrus = repo.get_hardware_by_id("rog-zephyrus-g16")
+
+    diffs = SpecEngine.compare_specs(tuf_a15, zephyrus)
+    disp_diff = next(d for d in diffs if d.key == "display")
+    assert "500 nits" not in disp_diff.advantage_summary_ar
+
+    verdict = EditorialRuleEngine.generate_verdict(tuf_a15, zephyrus)
+    pros_tuf = " ".join(verdict.pros_a)
+    assert "500 nits" not in pros_tuf
+
+
+def test_heavy_laptop_above_2kg_avoids_lightweight_praise():
+    """Verify Razer Blade 16 (2.45 kg) is not praised as 'وزن خفيف يسهل التنقل اليومي'."""
+    repo = HardwareRepository()
+    blade = repo.get_hardware_by_id("razer-blade-16-2024")
+    legion = repo.get_hardware_by_id("legion-pro-7i")
+
+    verdict = EditorialRuleEngine.generate_verdict(blade, legion)
+    pros_blade = " ".join(verdict.pros_a)
+    assert "وزن خفيف" not in pros_blade
+    assert "يسهل التنقل اليومي" not in pros_blade
+    assert "بسهولة التنقل بوزن 2.5 كجم" not in verdict.productivity_analysis_ar
+
+
+def test_equal_vram_no_redundant_phrase():
+    """Verify RTX 4090 vs RX 7900 XTX (both 24GB) does not repeat '24GB' twice within 5 words."""
+    repo = HardwareRepository()
+    rtx4090 = repo.get_hardware_by_id("rtx-4090")
+    rx7900xtx = repo.get_hardware_by_id("rx-7900-xtx")
+
+    verdict = EditorialRuleEngine.generate_verdict(rtx4090, rx7900xtx)
+    assert "(بسعة متطابقة تبلغ 24GB لكلا البطاقتين)" not in verdict.gaming_analysis_ar
+    assert "متطابقة بين البطاقتين" in verdict.gaming_analysis_ar
+

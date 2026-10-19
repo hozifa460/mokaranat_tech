@@ -53,9 +53,9 @@ def _get_gpu_tier(a: HardwareSpec, b: HardwareSpec) -> str:
     """Classifies GPU matchup into 'flagship_4k', 'upper_1440p', or 'midrange_1080p_1440p'."""
     max_bench = max(a.benchmark_index, b.benchmark_index)
     max_vram = max(a.raw_specs.get("vram_gb", 0), b.raw_specs.get("vram_gb", 0))
-    if max_bench >= 90 or max_vram >= 24:
+    if max_bench >= 90 or (max_bench >= 85 and max_vram >= 24):
         return "flagship_4k"
-    if max_bench >= 80 or max_vram >= 16:
+    if max_bench >= 75 and (max_bench >= 80 or max_vram >= 16):
         return "upper_1440p"
     return "midrange_1080p_1440p"
 
@@ -169,6 +169,8 @@ class EditorialRuleEngine:
         lead_pct = ((winner_item.benchmark_index - loser_item.benchmark_index) / (loser_item.benchmark_index or 1)) * 100
         lead_pct_str = _format_num(round(lead_pct, 1))
 
+        is_apple_vs_win = (a.brand.upper() == "APPLE" and b.brand.upper() != "APPLE") or (b.brand.upper() == "APPLE" and a.brand.upper() != "APPLE")
+
         if winner_item.category in ("gpu", "laptop") and fps_matrix:
             fps_comp = [item for item in fps_matrix if item.resolution == "1440p"] or fps_matrix
             if fps_comp:
@@ -185,7 +187,11 @@ class EditorialRuleEngine:
                 else:
                     lead_str = f"~{_format_num(round(avg_lead, 1))}%"
 
-                if avg_lead >= 3.0:
+                if is_apple_vs_win and winner_item.brand.upper() == "APPLE":
+                    fps_phrase = " وتفوقاً كاسحاً في كفاءة المعالجة والإنتاجية وصناعة المحتوى المحمولة"
+                elif is_apple_vs_win and winner_item.brand.upper() != "APPLE":
+                    fps_phrase = f" وتفوقاً صريحاً في الألعاب الأصلية ومكتبة DirectX 12 بنسبة {lead_str}"
+                elif avg_lead >= 3.0:
                     fps_phrase = f" وتفوق في متوسط معدل الإطارات بالألعاب بنسبة {lead_str}"
                 elif avg_lead <= -3.0:
                     fps_phrase = f" مع احتفاظ المنافس بأسبقية في الألعاب التقليدية غير المعتمدة على تتبع الأشعة"
@@ -232,7 +238,12 @@ class EditorialRuleEngine:
             raster_diff = raster_amd - raster_nv
             raster_diff_pct = (abs(raster_diff) / (min(raster_nv, raster_amd) or 1)) * 100
 
-            vram_desc_amd = _vram_label(vram_amd)
+            if vram_amd == vram_nv:
+                vram_desc_amd = f"سعة ذاكرة رسومية تبلغ {vram_amd}GB"
+                vram_comp = "(متطابقة بين البطاقتين)"
+            else:
+                vram_desc_amd = _vram_label(vram_amd)
+                vram_comp = f"(مقابل {vram_nv}GB لدى منافسه)"
 
             if tier == "flagship_4k":
                 res_context_amd = "تمنح أماناً فائقاً واستقراراً في الألعاب بدقة 4K وقوام Ultra بدون اختناق الذاكرة"
@@ -249,8 +260,6 @@ class EditorialRuleEngine:
                 if _is_dual_nvenc(nv_item)
                 else "مشفر NVENC فائق السرعة من الجيل الثامن مع دعم تسريع وتشفير عتادي لـ AV1"
             )
-
-            vram_comp = f"(بسعة متطابقة تبلغ {vram_amd}GB لكلا البطاقتين)" if vram_amd == vram_nv else f"(مقابل {vram_nv}GB لدى منافسه)"
 
             if raster_diff > 0 and raster_diff_pct >= 3.0:
                 gaming_analysis = (
@@ -577,10 +586,15 @@ class EditorialRuleEngine:
             weight_b = b.raw_specs.get("weight_kg", 2.0)
             lighter = a if weight_a <= weight_b else b
             heavier = b if weight_a <= weight_b else a
+            min_w = min(weight_a, weight_b)
+            max_w = max(weight_a, weight_b)
+            if min_w < 2.0:
+                mobility_desc = f"حيث يتميز {lighter.name} بسهولة التنقل بوزن {_format_num(min_w)} كجم، بينما يوفر {heavier.name} منصة عمل قوية وثابتة."
+            else:
+                mobility_desc = f"حيث يقدم كلا الجهازين هيكلاً متيناً مخصصاً للأداء العالي مع أفضلية طفيفة في الوزن لصالح {lighter.name} ({_format_num(min_w)} كجم مقابل {_format_num(max_w)} كجم)."
             productivity = (
                 f"تعتبر سعة البطارية وإدارة الطاقة والوزن هي العوامل الفاصلة في الإنتاجية اليومية للمصممين والمبرمجين؛ "
-                f"حيث يتميز {lighter.name} بسهولة التنقل بوزن {_format_num(min(weight_a, weight_b))} كجم، "
-                f"بينما يوفر {heavier.name} منصة عمل قوية وثابتة."
+                f"{mobility_desc}"
             )
 
         if a.launch_msrp_usd == b.launch_msrp_usd:
@@ -601,12 +615,25 @@ class EditorialRuleEngine:
             if is_apple_vs_win:
                 apple_item = a if a.brand.upper() == "APPLE" else b
                 win_item = b if a.brand.upper() == "APPLE" else a
-                value_budget = (
-                    f"من منظور القيمة مقابل السعر، يطرح {win_item.name} معادلة اقتصادية متفوقة لهواة الألعاب بسعر ${_format_num(win_item.launch_msrp_usd)} "
-                    f"موفراً ${_format_num(price_diff)} مع قابلية ترقية الذواكر والتخزين مستقبلاً ودعم مكتبة الألعاب الشاملة؛ "
-                    f"في المقابل، يمثل {apple_item.name} استثماراً احترافياً موجهاً لبيئات الإنتاج وصناع المحتوى بسعر ${_format_num(apple_item.launch_msrp_usd)} "
-                    f"(زيادة {price_inc_str}% عن السعر الأقل)، حيث يبرر فارق السعر عبر جودة الشاشة الاستثنائية وكفاءة العمل الكامل على البطارية دون شاحن."
-                )
+                if price_inc_pct < 3.0:
+                    value_budget = (
+                        f"يتقارب {a.name} و {b.name} بشكل شبه متطابق في سعر الإطلاق (${_format_num(cheaper.launch_msrp_usd)} مقابل ${_format_num(pricier.launch_msrp_usd)})؛ "
+                        f"وتتحدد الجدوى بناءً على بيئة الاستخدام: بيئة Windows لألعاب PC والتطبيقات المعتمدة على تسريع CUDA، "
+                        f"مقابل بيئة macOS لصناع المحتوى وكفاءة العمل الفائقة على البطارية."
+                    )
+                elif win_item.launch_msrp_usd < apple_item.launch_msrp_usd:
+                    value_budget = (
+                        f"من منظور القيمة مقابل السعر، يطرح {win_item.name} معادلة اقتصادية متفوقة لهواة الألعاب بسعر ${_format_num(win_item.launch_msrp_usd)} "
+                        f"(توفير ${_format_num(price_diff)}، بينما يرتفع سعر منافسه بنسبة {price_inc_str}% عن السعر الأقل) مع قابلية ترقية الذواكر والتخزين مستقبلاً ودعم مكتبة الألعاب الشاملة؛ "
+                        f"في المقابل، يمثل {apple_item.name} استثماراً احترافياً موجهاً لبيئات الإنتاج وصناع المحتوى بسعر ${_format_num(apple_item.launch_msrp_usd)} "
+                        f"حيث يبرر فارق السعر عبر جودة الشاشة الاستثنائية وكفاءة العمل الكامل على البطارية دون شاحن."
+                    )
+                else:
+                    value_budget = (
+                        f"من منظور القيمة مقابل السعر، يطرح {apple_item.name} تكلفة شراء أقل بسعر ${_format_num(apple_item.launch_msrp_usd)} "
+                        f"(توفير ${_format_num(price_diff)}، بينما يرتفع سعر منافسه بنسبة {price_inc_str}% عن السعر الأقل) مع عمر بطارية أسطوري وأداء متطابق 100% على البطارية وشاشة احترافية؛ "
+                        f"في حين يبرر {win_item.name} سعره البالغ ${_format_num(win_item.launch_msrp_usd)} لعشاق الألعاب التنافسية بمكتبة ألعاب DirectX 12 الشاملة وتقنيات DLSS 3 وقابلية الترقية المستقبلية."
+                    )
             elif price_inc_pct < 3.0:
                 value_budget = (
                     f"يتقارب {a.name} و {b.name} بشكل شبه متطابق في سعر الإطلاق (${_format_num(cheaper.launch_msrp_usd)} مقابل ${_format_num(pricier.launch_msrp_usd)}) "
@@ -811,7 +838,9 @@ class EditorialRuleEngine:
             display_lower = display.lower()
             is_mini_led = "mini-led" in display_lower or "liquid retina xdr" in display_lower or any("mini-led" in f.lower() for f in laptop.features)
             is_oled = "oled" in display_lower or any("oled" in f.lower() for f in laptop.features)
-            is_ips_high_bright = "500" in display_lower or "ips" in display_lower or any("500" in f.lower() for f in laptop.features)
+            is_ips = "ips" in display_lower or any("ips" in f.lower() for f in laptop.features) or str(laptop.raw_specs.get("display_tech", "")).upper() == "IPS"
+            is_ips_high_bright = is_ips and ("500" in display_lower or any("500" in f.lower() for f in laptop.features))
+            is_ips_standard = is_ips and not is_ips_high_bright
             is_apple = laptop.brand.upper() == "APPLE"
             is_opp_apple = opp.brand.upper() == "APPLE"
 
@@ -825,6 +854,8 @@ class EditorialRuleEngine:
                 screen_pro = "شاشة OLED مذهلة (تباين لا نهائي، استجابة فائقة 0.2ms، وسواد حقيقي مثالي لصناع المحتوى والسينمائيين)"
             elif is_ips_high_bright:
                 screen_pro = "شاشة IPS فائقة السطوع (500 nits لثبات الإضاءة والوضوح التام في الغرف المضيئة دون أي مخاطر لتطبيع الشاشة OLED Burn-in)"
+            elif is_ips_standard:
+                screen_pro = f"شاشة IPS سريعة الاستجابة ({display}) بدون أي مخاطر لتطبيع الشاشة (Burn-in)"
             else:
                 screen_pro = f"شاشة عرض متطورة ({display})"
 
@@ -841,6 +872,8 @@ class EditorialRuleEngine:
                 ]
                 if laptop.launch_msrp_usd > opp.launch_msrp_usd:
                     cons.append(f"سعر إطلاق رسمي مرتفع (${_format_num(laptop.launch_msrp_usd)}) يستهدف فئة المحترفين وصناع المحتوى بشكل خاص")
+                if weight_self > weight_opp:
+                    cons.append(f"وزن الجهاز ({_format_num(weight_self)} كجم) أثقل نسبياً مقارنة بـ {opp.name} ({_format_num(weight_opp)} كجم)")
                 if is_mini_led:
                     cons.append("تظهر هالات ضوئية طفيفة (Blooming) حول العناصر البيضاء الساطعة على الخلفيات الداكنة مقارنة بشاشات OLED")
                 return pros, cons
@@ -852,17 +885,27 @@ class EditorialRuleEngine:
                     f"معالجة رسومية مخصصة مع دعم كامل لتقنيات NVIDIA DLSS 3 وتوليد الإطارات (Frame Generation) وتتبع الأشعة العتادي",
                     "قابلية ترقية العتاد الداخلي وسهولة استبدال أو زيادة سعة الذواكر وتخزين M.2 NVMe SSD مستقبلاً"
                 ]
+                if weight_self < weight_opp:
+                    if weight_self < 2.0:
+                        pros.append(f"تصميم أنيق ووزن خفيف ({_format_num(weight_self)} كجم) يسهل التنقل اليومي مقارنة بـ {opp.name} ({_format_num(weight_opp)} كجم)")
+                    else:
+                        pros.append(f"وزن أخف نسبياً ({_format_num(weight_self)} كجم) مقارنة بـ {opp.name} ({_format_num(weight_opp)} كجم)")
                 cons = [
                     "تراجع ملحوظ في الأداء الرسومي عند العمل على البطارية مع عمر بطارية أقصر بكثير مقارنة بمعالجات Apple Silicon",
                     f"انبعاثات حرارية وصوت مراوح مرتفع عند الضغط القصوى مقارنة بهدوء وكفاءة معالجات ARM"
                 ]
+                if laptop.launch_msrp_usd > opp.launch_msrp_usd:
+                    cons.append(f"سعر إطلاق رسمي أعلى (${_format_num(laptop.launch_msrp_usd)})")
                 if weight_self > weight_opp:
                     cons.append(f"وزن الجهاز ({_format_num(weight_self)} كجم) والشاحن أكبر مقارنة بـ {opp.name}")
                 return pros, cons
 
             pros = [screen_pro]
             if weight_self < weight_opp:
-                pros.append(f"تصميم أنيق ووزن خفيف ({_format_num(weight_self)} كجم) يسهل التنقل اليومي مقارنة بالمنافس ({_format_num(weight_opp)} كجم)")
+                if weight_self < 2.0:
+                    pros.append(f"تصميم أنيق ووزن خفيف ({_format_num(weight_self)} كجم) يسهل التنقل اليومي مقارنة بالمنافس ({_format_num(weight_opp)} كجم)")
+                else:
+                    pros.append(f"وزن أخف نسبياً ({_format_num(weight_self)} كجم) مقارنة بالمنافس ({_format_num(weight_opp)} كجم)")
             elif laptop.benchmark_index > opp.benchmark_index:
                 pros.append(f"أداء معالجة إجمالي قوي بمؤشر {_format_num(laptop.benchmark_index)}/100")
             else:
