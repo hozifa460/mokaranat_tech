@@ -12,7 +12,7 @@
     "winner_name": "تعادل متقارب في الأداء",
     "score_a": 82.5,
     "score_b": 81.0,
-    "created_at": "2026-10-20T19:44:00.859387+00:00"
+    "created_at": "2026-10-20T20:05:35.457974+00:00"
   },
   {
     "slug": "rtx-4080-super-vs-rx-7900-xtx",
@@ -27,7 +27,7 @@
     "winner_name": "تعادل متقارب في الأداء",
     "score_a": 91.5,
     "score_b": 92.0,
-    "created_at": "2026-10-20T19:44:01.250898+00:00"
+    "created_at": "2026-10-20T20:05:35.833970+00:00"
   },
   {
     "slug": "rtx-4060-ti-vs-rx-7700-xt",
@@ -42,7 +42,7 @@
     "winner_name": "AMD Radeon RX 7700 XT",
     "score_a": 68.0,
     "score_b": 74.0,
-    "created_at": "2026-10-20T19:44:01.414298+00:00"
+    "created_at": "2026-10-20T20:05:36.028924+00:00"
   },
   {
     "slug": "rtx-4070-super-vs-rtx-4080-super",
@@ -57,7 +57,7 @@
     "winner_name": "NVIDIA GeForce RTX 4080 Super",
     "score_a": 82.5,
     "score_b": 91.5,
-    "created_at": "2026-10-20T19:44:01.655373+00:00"
+    "created_at": "2026-10-20T20:05:36.195195+00:00"
   },
   {
     "slug": "rx-7800-xt-vs-rx-7900-xtx",
@@ -72,7 +72,7 @@
     "winner_name": "AMD Radeon RX 7900 XTX",
     "score_a": 81.0,
     "score_b": 92.0,
-    "created_at": "2026-10-20T19:44:01.944401+00:00"
+    "created_at": "2026-10-20T20:05:36.339556+00:00"
   },
   {
     "slug": "rtx-4090-vs-rx-7900-xtx",
@@ -87,7 +87,7 @@
     "winner_name": "NVIDIA GeForce RTX 4090",
     "score_a": 98.0,
     "score_b": 92.0,
-    "created_at": "2026-10-20T19:44:02.251669+00:00"
+    "created_at": "2026-10-20T20:05:36.499001+00:00"
   },
   {
     "slug": "rtx-4070-ti-super-vs-rx-7900-xt",
@@ -102,7 +102,7 @@
     "winner_name": "تعادل متقارب في الأداء",
     "score_a": 88.0,
     "score_b": 89.0,
-    "created_at": "2026-10-20T19:44:02.536913+00:00"
+    "created_at": "2026-10-20T20:05:36.660866+00:00"
   },
   {
     "slug": "rtx-4060-vs-rx-7600-xt",
@@ -117,7 +117,7 @@
     "winner_name": "تعادل متقارب في الأداء",
     "score_a": 58.0,
     "score_b": 57.0,
-    "created_at": "2026-10-20T19:44:02.807122+00:00"
+    "created_at": "2026-10-20T20:05:36.873296+00:00"
   },
   {
     "slug": "ryzen-7-7800x3d-vs-i7-14700k",
@@ -132,7 +132,7 @@
     "winner_name": "تعادل متقارب في الأداء",
     "score_a": 91.0,
     "score_b": 92.5,
-    "created_at": "2026-10-20T19:44:03.011249+00:00"
+    "created_at": "2026-10-20T20:05:37.079337+00:00"
   },
   {
     "slug": "ryzen-9-7950x3d-vs-i9-14900k",
@@ -147,7 +147,7 @@
     "winner_name": "تعادل متقارب في الأداء",
     "score_a": 98.0,
     "score_b": 97.0,
-    "created_at": "2026-10-20T19:44:03.175715+00:00"
+    "created_at": "2026-10-20T20:05:37.216971+00:00"
   },
   {
     "slug": "ryzen-5-7600x-vs-i5-14600k",
@@ -162,7 +162,7 @@
     "winner_name": "Intel Core i5-14600K",
     "score_a": 78.0,
     "score_b": 82.0,
-    "created_at": "2026-10-20T19:44:03.315340+00:00"
+    "created_at": "2026-10-20T20:05:37.374875+00:00"
   },
   {
     "slug": "rog-zephyrus-g16-vs-legion-pro-7i",
@@ -177,7 +177,7 @@
     "winner_name": "Lenovo Legion Pro 7i (Gen 9)",
     "score_a": 72.0,
     "score_b": 86.0,
-    "created_at": "2026-10-20T19:44:03.469755+00:00"
+    "created_at": "2026-10-20T20:05:37.537439+00:00"
   },
   {
     "slug": "razer-blade-16-2024-vs-legion-pro-7i",
@@ -192,7 +192,7 @@
     "winner_name": "Razer Blade 16 (2024)",
     "score_a": 94.0,
     "score_b": 86.0,
-    "created_at": "2026-10-20T19:44:03.600123+00:00"
+    "created_at": "2026-10-20T20:05:37.751610+00:00"
   },
   {
     "slug": "macbook-pro-16-m3-max-vs-rog-zephyrus-g16",
@@ -207,7 +207,7 @@
     "winner_name": "Apple MacBook Pro 16 (M3 Max)",
     "score_a": 92.0,
     "score_b": 72.0,
-    "created_at": "2026-10-20T19:44:03.760039+00:00"
+    "created_at": "2026-10-20T20:05:37.870294+00:00"
   },
   {
     "slug": "asus-tuf-gaming-a15-vs-rog-zephyrus-g16",
@@ -222,7 +222,7 @@
     "winner_name": "ASUS ROG Zephyrus G16 (2024)",
     "score_a": 68.0,
     "score_b": 72.0,
-    "created_at": "2026-10-20T19:44:03.898455+00:00"
+    "created_at": "2026-10-20T20:05:38.029301+00:00"
   },
   {
     "slug": "rtx-4090-vs-rtx-4080-super",
@@ -237,7 +237,7 @@
     "winner_name": "NVIDIA GeForce RTX 4090",
     "score_a": 98.0,
     "score_b": 91.5,
-    "created_at": "2026-10-20T19:44:04.089145+00:00"
+    "created_at": "2026-10-20T20:05:38.156703+00:00"
   },
   {
     "slug": "rtx-4090-vs-rx-7900-xt",
@@ -252,7 +252,7 @@
     "winner_name": "NVIDIA GeForce RTX 4090",
     "score_a": 98.0,
     "score_b": 89.0,
-    "created_at": "2026-10-20T19:44:04.256775+00:00"
+    "created_at": "2026-10-20T20:05:38.319806+00:00"
   },
   {
     "slug": "rtx-4090-vs-rtx-4070-ti-super",
@@ -267,7 +267,7 @@
     "winner_name": "NVIDIA GeForce RTX 4090",
     "score_a": 98.0,
     "score_b": 88.0,
-    "created_at": "2026-10-20T19:44:04.406375+00:00"
+    "created_at": "2026-10-20T20:05:38.468214+00:00"
   },
   {
     "slug": "rtx-4090-vs-rtx-4070-super",
@@ -282,7 +282,7 @@
     "winner_name": "NVIDIA GeForce RTX 4090",
     "score_a": 98.0,
     "score_b": 82.5,
-    "created_at": "2026-10-20T19:44:04.563951+00:00"
+    "created_at": "2026-10-20T20:05:38.651887+00:00"
   },
   {
     "slug": "rtx-4090-vs-rx-7800-xt",
@@ -297,7 +297,7 @@
     "winner_name": "NVIDIA GeForce RTX 4090",
     "score_a": 98.0,
     "score_b": 81.0,
-    "created_at": "2026-10-20T19:44:04.719525+00:00"
+    "created_at": "2026-10-20T20:05:38.834591+00:00"
   },
   {
     "slug": "rtx-4090-vs-rx-7700-xt",
@@ -312,7 +312,7 @@
     "winner_name": "NVIDIA GeForce RTX 4090",
     "score_a": 98.0,
     "score_b": 74.0,
-    "created_at": "2026-10-20T19:44:04.927404+00:00"
+    "created_at": "2026-10-20T20:05:39.100251+00:00"
   },
   {
     "slug": "rtx-4090-vs-rtx-4060-ti",
@@ -327,7 +327,7 @@
     "winner_name": "NVIDIA GeForce RTX 4090",
     "score_a": 98.0,
     "score_b": 68.0,
-    "created_at": "2026-10-20T19:44:05.114129+00:00"
+    "created_at": "2026-10-20T20:05:39.284128+00:00"
   },
   {
     "slug": "rtx-4090-vs-rtx-4060",
@@ -342,7 +342,7 @@
     "winner_name": "NVIDIA GeForce RTX 4090",
     "score_a": 98.0,
     "score_b": 58.0,
-    "created_at": "2026-10-20T19:44:05.331238+00:00"
+    "created_at": "2026-10-20T20:05:39.426747+00:00"
   },
   {
     "slug": "rtx-4090-vs-rx-7600-xt",
@@ -357,7 +357,7 @@
     "winner_name": "NVIDIA GeForce RTX 4090",
     "score_a": 98.0,
     "score_b": 57.0,
-    "created_at": "2026-10-20T19:44:05.470865+00:00"
+    "created_at": "2026-10-20T20:05:39.566372+00:00"
   },
   {
     "slug": "rx-7900-xtx-vs-rx-7900-xt",
@@ -372,7 +372,7 @@
     "winner_name": "AMD Radeon RX 7900 XTX",
     "score_a": 92.0,
     "score_b": 89.0,
-    "created_at": "2026-10-20T19:44:05.593537+00:00"
+    "created_at": "2026-10-20T20:05:39.753004+00:00"
   },
   {
     "slug": "rx-7900-xtx-vs-rtx-4070-ti-super",
@@ -387,7 +387,7 @@
     "winner_name": "AMD Radeon RX 7900 XTX",
     "score_a": 92.0,
     "score_b": 88.0,
-    "created_at": "2026-10-20T19:44:05.748419+00:00"
+    "created_at": "2026-10-20T20:05:39.882657+00:00"
   },
   {
     "slug": "rx-7900-xtx-vs-rtx-4070-super",
@@ -402,7 +402,7 @@
     "winner_name": "AMD Radeon RX 7900 XTX",
     "score_a": 92.0,
     "score_b": 82.5,
-    "created_at": "2026-10-20T19:44:05.914047+00:00"
+    "created_at": "2026-10-20T20:05:40.028269+00:00"
   },
   {
     "slug": "rx-7900-xtx-vs-rx-7700-xt",
@@ -417,7 +417,7 @@
     "winner_name": "AMD Radeon RX 7900 XTX",
     "score_a": 92.0,
     "score_b": 74.0,
-    "created_at": "2026-10-20T19:44:06.052199+00:00"
+    "created_at": "2026-10-20T20:05:40.184218+00:00"
   },
   {
     "slug": "rx-7900-xtx-vs-rtx-4060-ti",
@@ -432,7 +432,7 @@
     "winner_name": "AMD Radeon RX 7900 XTX",
     "score_a": 92.0,
     "score_b": 68.0,
-    "created_at": "2026-10-20T19:44:06.194418+00:00"
+    "created_at": "2026-10-20T20:05:40.317066+00:00"
   },
   {
     "slug": "rx-7900-xtx-vs-rtx-4060",
@@ -447,7 +447,7 @@
     "winner_name": "AMD Radeon RX 7900 XTX",
     "score_a": 92.0,
     "score_b": 58.0,
-    "created_at": "2026-10-20T19:44:06.437869+00:00"
+    "created_at": "2026-10-20T20:05:40.476841+00:00"
   },
   {
     "slug": "rx-7900-xtx-vs-rx-7600-xt",
@@ -462,7 +462,7 @@
     "winner_name": "AMD Radeon RX 7900 XTX",
     "score_a": 92.0,
     "score_b": 57.0,
-    "created_at": "2026-10-20T19:44:06.566526+00:00"
+    "created_at": "2026-10-20T20:05:40.624955+00:00"
   },
   {
     "slug": "rtx-4080-super-vs-rx-7900-xt",
@@ -477,7 +477,7 @@
     "winner_name": "NVIDIA GeForce RTX 4080 Super",
     "score_a": 91.5,
     "score_b": 89.0,
-    "created_at": "2026-10-20T19:44:06.694796+00:00"
+    "created_at": "2026-10-20T20:05:40.753214+00:00"
   },
   {
     "slug": "rtx-4080-super-vs-rtx-4070-ti-super",
@@ -492,7 +492,7 @@
     "winner_name": "NVIDIA GeForce RTX 4080 Super",
     "score_a": 91.5,
     "score_b": 88.0,
-    "created_at": "2026-10-20T19:44:06.814477+00:00"
+    "created_at": "2026-10-20T20:05:40.945700+00:00"
   },
   {
     "slug": "rtx-4080-super-vs-rx-7800-xt",
@@ -507,7 +507,7 @@
     "winner_name": "NVIDIA GeForce RTX 4080 Super",
     "score_a": 91.5,
     "score_b": 81.0,
-    "created_at": "2026-10-20T19:44:06.983025+00:00"
+    "created_at": "2026-10-20T20:05:41.054511+00:00"
   },
   {
     "slug": "rtx-4080-super-vs-rx-7700-xt",
@@ -522,7 +522,7 @@
     "winner_name": "NVIDIA GeForce RTX 4080 Super",
     "score_a": 91.5,
     "score_b": 74.0,
-    "created_at": "2026-10-20T19:44:07.089739+00:00"
+    "created_at": "2026-10-20T20:05:41.265944+00:00"
   },
   {
     "slug": "rtx-4080-super-vs-rtx-4060-ti",
@@ -537,7 +537,7 @@
     "winner_name": "NVIDIA GeForce RTX 4080 Super",
     "score_a": 91.5,
     "score_b": 68.0,
-    "created_at": "2026-10-20T19:44:07.247417+00:00"
+    "created_at": "2026-10-20T20:05:41.408562+00:00"
   },
   {
     "slug": "rtx-4080-super-vs-rtx-4060",
@@ -552,7 +552,7 @@
     "winner_name": "NVIDIA GeForce RTX 4080 Super",
     "score_a": 91.5,
     "score_b": 58.0,
-    "created_at": "2026-10-20T19:44:07.441722+00:00"
+    "created_at": "2026-10-20T20:05:41.551181+00:00"
   },
   {
     "slug": "rtx-4080-super-vs-rx-7600-xt",
@@ -567,7 +567,7 @@
     "winner_name": "NVIDIA GeForce RTX 4080 Super",
     "score_a": 91.5,
     "score_b": 57.0,
-    "created_at": "2026-10-20T19:44:07.559406+00:00"
+    "created_at": "2026-10-20T20:05:41.650878+00:00"
   },
   {
     "slug": "rx-7900-xt-vs-rtx-4070-super",
@@ -582,7 +582,7 @@
     "winner_name": "AMD Radeon RX 7900 XT",
     "score_a": 89.0,
     "score_b": 82.5,
-    "created_at": "2026-10-20T19:44:07.752077+00:00"
+    "created_at": "2026-10-20T20:05:41.856265+00:00"
   },
   {
     "slug": "rx-7900-xt-vs-rx-7800-xt",
@@ -597,7 +597,7 @@
     "winner_name": "AMD Radeon RX 7900 XT",
     "score_a": 89.0,
     "score_b": 81.0,
-    "created_at": "2026-10-20T19:44:07.880187+00:00"
+    "created_at": "2026-10-20T20:05:41.973950+00:00"
   },
   {
     "slug": "rx-7900-xt-vs-rx-7700-xt",
@@ -612,7 +612,7 @@
     "winner_name": "AMD Radeon RX 7900 XT",
     "score_a": 89.0,
     "score_b": 74.0,
-    "created_at": "2026-10-20T19:44:08.030933+00:00"
+    "created_at": "2026-10-20T20:05:42.118449+00:00"
   },
   {
     "slug": "rx-7900-xt-vs-rtx-4060-ti",
@@ -627,7 +627,7 @@
     "winner_name": "AMD Radeon RX 7900 XT",
     "score_a": 89.0,
     "score_b": 68.0,
-    "created_at": "2026-10-20T19:44:08.186516+00:00"
+    "created_at": "2026-10-20T20:05:43.424853+00:00"
   },
   {
     "slug": "rx-7900-xt-vs-rtx-4060",
@@ -642,7 +642,7 @@
     "winner_name": "AMD Radeon RX 7900 XT",
     "score_a": 89.0,
     "score_b": 58.0,
-    "created_at": "2026-10-20T19:44:08.329680+00:00"
+    "created_at": "2026-10-20T20:05:44.885943+00:00"
   },
   {
     "slug": "rx-7900-xt-vs-rx-7600-xt",
@@ -657,7 +657,7 @@
     "winner_name": "AMD Radeon RX 7900 XT",
     "score_a": 89.0,
     "score_b": 57.0,
-    "created_at": "2026-10-20T19:44:08.484543+00:00"
+    "created_at": "2026-10-20T20:05:45.931545+00:00"
   },
   {
     "slug": "rtx-4070-ti-super-vs-rtx-4070-super",
@@ -672,7 +672,7 @@
     "winner_name": "NVIDIA GeForce RTX 4070 Ti Super",
     "score_a": 88.0,
     "score_b": 82.5,
-    "created_at": "2026-10-20T19:44:10.296993+00:00"
+    "created_at": "2026-10-20T20:05:46.131322+00:00"
   },
   {
     "slug": "rtx-4070-ti-super-vs-rx-7800-xt",
@@ -687,7 +687,7 @@
     "winner_name": "NVIDIA GeForce RTX 4070 Ti Super",
     "score_a": 88.0,
     "score_b": 81.0,
-    "created_at": "2026-10-20T19:44:11.729445+00:00"
+    "created_at": "2026-10-20T20:05:46.649102+00:00"
   },
   {
     "slug": "rtx-4070-ti-super-vs-rx-7700-xt",
@@ -702,7 +702,7 @@
     "winner_name": "NVIDIA GeForce RTX 4070 Ti Super",
     "score_a": 88.0,
     "score_b": 74.0,
-    "created_at": "2026-10-20T19:44:12.092528+00:00"
+    "created_at": "2026-10-20T20:05:48.384829+00:00"
   },
   {
     "slug": "rtx-4070-ti-super-vs-rtx-4060-ti",
@@ -717,7 +717,7 @@
     "winner_name": "NVIDIA GeForce RTX 4070 Ti Super",
     "score_a": 88.0,
     "score_b": 68.0,
-    "created_at": "2026-10-20T19:44:14.192199+00:00"
+    "created_at": "2026-10-20T20:05:49.684359+00:00"
   },
   {
     "slug": "rtx-4070-ti-super-vs-rtx-4060",
@@ -732,7 +732,7 @@
     "winner_name": "NVIDIA GeForce RTX 4070 Ti Super",
     "score_a": 88.0,
     "score_b": 58.0,
-    "created_at": "2026-10-20T19:44:15.704768+00:00"
+    "created_at": "2026-10-20T20:05:49.873185+00:00"
   },
   {
     "slug": "rtx-4070-ti-super-vs-rx-7600-xt",
@@ -747,7 +747,7 @@
     "winner_name": "NVIDIA GeForce RTX 4070 Ti Super",
     "score_a": 88.0,
     "score_b": 57.0,
-    "created_at": "2026-10-20T19:44:15.924214+00:00"
+    "created_at": "2026-10-20T20:05:49.997130+00:00"
   },
   {
     "slug": "rtx-4070-super-vs-rx-7700-xt",
@@ -762,7 +762,7 @@
     "winner_name": "NVIDIA GeForce RTX 4070 Super",
     "score_a": 82.5,
     "score_b": 74.0,
-    "created_at": "2026-10-20T19:44:16.088773+00:00"
+    "created_at": "2026-10-20T20:05:50.125736+00:00"
   },
   {
     "slug": "rtx-4070-super-vs-rtx-4060-ti",
@@ -777,7 +777,7 @@
     "winner_name": "NVIDIA GeForce RTX 4070 Super",
     "score_a": 82.5,
     "score_b": 68.0,
-    "created_at": "2026-10-20T19:44:16.239373+00:00"
+    "created_at": "2026-10-20T20:05:50.324126+00:00"
   },
   {
     "slug": "rtx-4070-super-vs-rtx-4060",
@@ -792,7 +792,7 @@
     "winner_name": "NVIDIA GeForce RTX 4070 Super",
     "score_a": 82.5,
     "score_b": 58.0,
-    "created_at": "2026-10-20T19:44:16.438183+00:00"
+    "created_at": "2026-10-20T20:05:50.491668+00:00"
   },
   {
     "slug": "rtx-4070-super-vs-rx-7600-xt",
@@ -807,7 +807,7 @@
     "winner_name": "NVIDIA GeForce RTX 4070 Super",
     "score_a": 82.5,
     "score_b": 57.0,
-    "created_at": "2026-10-20T19:44:16.595761+00:00"
+    "created_at": "2026-10-20T20:05:50.684156+00:00"
   },
   {
     "slug": "rx-7800-xt-vs-rx-7700-xt",
@@ -822,7 +822,7 @@
     "winner_name": "AMD Radeon RX 7800 XT",
     "score_a": 81.0,
     "score_b": 74.0,
-    "created_at": "2026-10-20T19:44:16.690874+00:00"
+    "created_at": "2026-10-20T20:05:50.851979+00:00"
   },
   {
     "slug": "rx-7800-xt-vs-rtx-4060-ti",
@@ -837,7 +837,7 @@
     "winner_name": "AMD Radeon RX 7800 XT",
     "score_a": 81.0,
     "score_b": 68.0,
-    "created_at": "2026-10-20T19:44:16.849448+00:00"
+    "created_at": "2026-10-20T20:05:50.975585+00:00"
   },
   {
     "slug": "rx-7800-xt-vs-rtx-4060",
@@ -852,7 +852,7 @@
     "winner_name": "AMD Radeon RX 7800 XT",
     "score_a": 81.0,
     "score_b": 58.0,
-    "created_at": "2026-10-20T19:44:17.047917+00:00"
+    "created_at": "2026-10-20T20:05:51.277680+00:00"
   },
   {
     "slug": "rx-7800-xt-vs-rx-7600-xt",
@@ -867,7 +867,7 @@
     "winner_name": "AMD Radeon RX 7800 XT",
     "score_a": 81.0,
     "score_b": 57.0,
-    "created_at": "2026-10-20T19:44:17.161614+00:00"
+    "created_at": "2026-10-20T20:05:51.467921+00:00"
   },
   {
     "slug": "rx-7700-xt-vs-rtx-4060",
@@ -882,7 +882,7 @@
     "winner_name": "AMD Radeon RX 7700 XT",
     "score_a": 74.0,
     "score_b": 58.0,
-    "created_at": "2026-10-20T19:44:17.316125+00:00"
+    "created_at": "2026-10-20T20:05:51.733338+00:00"
   },
   {
     "slug": "rx-7700-xt-vs-rx-7600-xt",
@@ -897,7 +897,7 @@
     "winner_name": "AMD Radeon RX 7700 XT",
     "score_a": 74.0,
     "score_b": 57.0,
-    "created_at": "2026-10-20T19:44:17.566274+00:00"
+    "created_at": "2026-10-20T20:05:51.927450+00:00"
   },
   {
     "slug": "rtx-4060-ti-vs-rtx-4060",
@@ -912,7 +912,7 @@
     "winner_name": "NVIDIA GeForce RTX 4060 Ti (8GB)",
     "score_a": 68.0,
     "score_b": 58.0,
-    "created_at": "2026-10-20T19:44:17.683563+00:00"
+    "created_at": "2026-10-20T20:05:52.090273+00:00"
   },
   {
     "slug": "rtx-4060-ti-vs-rx-7600-xt",
@@ -927,7 +927,7 @@
     "winner_name": "NVIDIA GeForce RTX 4060 Ti (8GB)",
     "score_a": 68.0,
     "score_b": 57.0,
-    "created_at": "2026-10-20T19:44:17.876644+00:00"
+    "created_at": "2026-10-20T20:05:52.250865+00:00"
   },
   {
     "slug": "ryzen-9-7950x3d-vs-i7-14700k",
@@ -942,7 +942,7 @@
     "winner_name": "AMD Ryzen 9 7950X3D",
     "score_a": 98.0,
     "score_b": 92.5,
-    "created_at": "2026-10-20T19:44:18.089046+00:00"
+    "created_at": "2026-10-20T20:05:52.469757+00:00"
   },
   {
     "slug": "ryzen-9-7950x3d-vs-ryzen-7-7800x3d",
@@ -957,7 +957,7 @@
     "winner_name": "AMD Ryzen 9 7950X3D",
     "score_a": 98.0,
     "score_b": 91.0,
-    "created_at": "2026-10-20T19:44:18.274867+00:00"
+    "created_at": "2026-10-20T20:05:52.678858+00:00"
   },
   {
     "slug": "ryzen-9-7950x3d-vs-i5-14600k",
@@ -972,7 +972,7 @@
     "winner_name": "AMD Ryzen 9 7950X3D",
     "score_a": 98.0,
     "score_b": 82.0,
-    "created_at": "2026-10-20T19:44:18.426724+00:00"
+    "created_at": "2026-10-20T20:05:52.845410+00:00"
   },
   {
     "slug": "ryzen-9-7950x3d-vs-ryzen-5-7600x",
@@ -987,7 +987,7 @@
     "winner_name": "AMD Ryzen 9 7950X3D",
     "score_a": 98.0,
     "score_b": 78.0,
-    "created_at": "2026-10-20T19:44:18.542418+00:00"
+    "created_at": "2026-10-20T20:05:52.971485+00:00"
   },
   {
     "slug": "i9-14900k-vs-i7-14700k",
@@ -1002,7 +1002,7 @@
     "winner_name": "Intel Core i9-14900K",
     "score_a": 97.0,
     "score_b": 92.5,
-    "created_at": "2026-10-20T19:44:18.705917+00:00"
+    "created_at": "2026-10-20T20:05:53.181749+00:00"
   },
   {
     "slug": "i9-14900k-vs-ryzen-7-7800x3d",
@@ -1017,7 +1017,7 @@
     "winner_name": "Intel Core i9-14900K",
     "score_a": 97.0,
     "score_b": 91.0,
-    "created_at": "2026-10-20T19:44:18.832578+00:00"
+    "created_at": "2026-10-20T20:05:53.281618+00:00"
   },
   {
     "slug": "i9-14900k-vs-i5-14600k",
@@ -1032,7 +1032,7 @@
     "winner_name": "Intel Core i9-14900K",
     "score_a": 97.0,
     "score_b": 82.0,
-    "created_at": "2026-10-20T19:44:18.965209+00:00"
+    "created_at": "2026-10-20T20:05:53.438021+00:00"
   },
   {
     "slug": "i9-14900k-vs-ryzen-5-7600x",
@@ -1047,7 +1047,7 @@
     "winner_name": "Intel Core i9-14900K",
     "score_a": 97.0,
     "score_b": 78.0,
-    "created_at": "2026-10-20T19:44:19.097853+00:00"
+    "created_at": "2026-10-20T20:05:53.588621+00:00"
   },
   {
     "slug": "i7-14700k-vs-i5-14600k",
@@ -1062,7 +1062,7 @@
     "winner_name": "Intel Core i7-14700K",
     "score_a": 92.5,
     "score_b": 82.0,
-    "created_at": "2026-10-20T19:44:19.225809+00:00"
+    "created_at": "2026-10-20T20:05:53.735471+00:00"
   },
   {
     "slug": "i7-14700k-vs-ryzen-5-7600x",
@@ -1077,7 +1077,7 @@
     "winner_name": "Intel Core i7-14700K",
     "score_a": 92.5,
     "score_b": 78.0,
-    "created_at": "2026-10-20T19:44:19.343835+00:00"
+    "created_at": "2026-10-20T20:05:53.850165+00:00"
   },
   {
     "slug": "ryzen-7-7800x3d-vs-i5-14600k",
@@ -1092,7 +1092,7 @@
     "winner_name": "AMD Ryzen 7 7800X3D",
     "score_a": 91.0,
     "score_b": 82.0,
-    "created_at": "2026-10-20T19:44:19.459525+00:00"
+    "created_at": "2026-10-20T20:05:53.986861+00:00"
   },
   {
     "slug": "ryzen-7-7800x3d-vs-ryzen-5-7600x",
@@ -1107,7 +1107,7 @@
     "winner_name": "AMD Ryzen 7 7800X3D",
     "score_a": 91.0,
     "score_b": 78.0,
-    "created_at": "2026-10-20T19:44:19.569506+00:00"
+    "created_at": "2026-10-20T20:05:54.113319+00:00"
   },
   {
     "slug": "razer-blade-16-2024-vs-macbook-pro-16-m3-max",
@@ -1122,7 +1122,7 @@
     "winner_name": "تعادل متقارب في الأداء",
     "score_a": 94.0,
     "score_b": 92.0,
-    "created_at": "2026-10-20T19:44:19.747548+00:00"
+    "created_at": "2026-10-20T20:05:54.282226+00:00"
   },
   {
     "slug": "razer-blade-16-2024-vs-rog-zephyrus-g16",
@@ -1137,7 +1137,7 @@
     "winner_name": "Razer Blade 16 (2024)",
     "score_a": 94.0,
     "score_b": 72.0,
-    "created_at": "2026-10-20T19:44:19.875206+00:00"
+    "created_at": "2026-10-20T20:05:54.482690+00:00"
   },
   {
     "slug": "razer-blade-16-2024-vs-asus-tuf-gaming-a15",
@@ -1152,7 +1152,7 @@
     "winner_name": "Razer Blade 16 (2024)",
     "score_a": 94.0,
     "score_b": 68.0,
-    "created_at": "2026-10-20T19:44:20.066743+00:00"
+    "created_at": "2026-10-20T20:05:54.610609+00:00"
   },
   {
     "slug": "macbook-pro-16-m3-max-vs-legion-pro-7i",
@@ -1167,7 +1167,7 @@
     "winner_name": "Apple MacBook Pro 16 (M3 Max)",
     "score_a": 92.0,
     "score_b": 86.0,
-    "created_at": "2026-10-20T19:44:20.349526+00:00"
+    "created_at": "2026-10-20T20:05:54.789404+00:00"
   },
   {
     "slug": "macbook-pro-16-m3-max-vs-asus-tuf-gaming-a15",
@@ -1182,7 +1182,7 @@
     "winner_name": "Apple MacBook Pro 16 (M3 Max)",
     "score_a": 92.0,
     "score_b": 68.0,
-    "created_at": "2026-10-20T19:44:20.564414+00:00"
+    "created_at": "2026-10-20T20:05:54.903697+00:00"
   },
   {
     "slug": "legion-pro-7i-vs-asus-tuf-gaming-a15",
@@ -1197,6 +1197,6 @@
     "winner_name": "Lenovo Legion Pro 7i (Gen 9)",
     "score_a": 86.0,
     "score_b": 68.0,
-    "created_at": "2026-10-20T19:44:20.664447+00:00"
+    "created_at": "2026-10-20T20:05:55.047267+00:00"
   }
 ]

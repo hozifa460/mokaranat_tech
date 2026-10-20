@@ -345,6 +345,28 @@ def test_spec_engine_gpu_vram_summary_tier_aware_no_4k_hyperbole():
     # Flagship with 24GB accurately cites 4K
     assert "4K" in diff_flag_map["vram_gb"].advantage_summary_ar
 
+    # Sub-65 index test: RTX 4060 (58) vs RX 7600 XT (57) strictly cites 1080p
+    gpu_4060 = HardwareSpec(
+        id="rtx-4060", slug="rtx-4060", name="NVIDIA GeForce RTX 4060",
+        category="gpu", brand="NVIDIA", release_year=2023, launch_msrp_usd=299.0,
+        architecture="Ada Lovelace", process_node_nm=4.0, tdp_w=115,
+        raw_specs={"vram_gb": 8, "bus_width_bit": 128},
+        benchmark_index=58.0
+    )
+    gpu_7600xt = HardwareSpec(
+        id="rx-7600-xt", slug="rx-7600-xt", name="AMD Radeon RX 7600 XT",
+        category="gpu", brand="AMD", release_year=2024, launch_msrp_usd=329.0,
+        architecture="RDNA 3", process_node_nm=6.0, tdp_w=190,
+        raw_specs={"vram_gb": 16, "bus_width_bit": 128},
+        benchmark_index=57.0
+    )
+    diffs_sub65 = SpecEngine.compare_specs(gpu_4060, gpu_7600xt)
+    diff_sub65_map = {d.key: d for d in diffs_sub65}
+    assert diff_sub65_map["vram_gb"].winner == "b"
+    assert "1080p" in diff_sub65_map["vram_gb"].advantage_summary_ar
+    assert "1440p" not in diff_sub65_map["vram_gb"].advantage_summary_ar
+    assert "4K" not in diff_sub65_map["vram_gb"].advantage_summary_ar
+
 
 def test_spec_engine_gpu_pcie_interface_comparison():
     gpu_4060ti = HardwareSpec(

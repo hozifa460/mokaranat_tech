@@ -251,6 +251,8 @@ class SpecEngine:
                 vram_summary = "سعة VRAM أكبر تمنح أماناً فائقاً في الألعاب بدقة 4K وعمليات الرندرة الضخمة"
             elif max_bench >= 75 and (max_bench >= 80 or max_vram >= 16):
                 vram_summary = "سعة VRAM أكبر تمنح أريحية فائقة في ألعاب 1440p و 4K وتطبيقات التصميم"
+            elif max_bench < 65:
+                vram_summary = "سعة VRAM أكبر تمنح أريحية ممتازة في الألعاب بدقة 1080p وتفادي اختناق القوام"
             else:
                 vram_summary = "سعة VRAM أكبر تمنح أريحية ممتازة في الألعاب بدقة 1440p وتفادي اختناق القوام"
 

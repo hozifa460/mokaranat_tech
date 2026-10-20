@@ -1470,6 +1470,38 @@ def test_nvidia_vs_nvidia_ray_tracing_pro_and_con_logic():
     cons_4060_text = " ".join(cons_b)
     assert "أداء رسومي إجمالي أقل مقارنة بـ NVIDIA GeForce RTX 4090 (98/100)" in cons_4060_text
 
+    # Cross-brand check: RTX 4060 (RT=50) vs RX 7700 XT (RT=60)
+    spec_7700 = HardwareSpec(
+        id="rx-7700-xt", slug="rx-7700-xt", name="AMD Radeon RX 7700 XT", category="gpu", brand="AMD",
+        release_year=2023, launch_msrp_usd=449.0, architecture="RDNA 3", process_node_nm=5.0,
+        tdp_w=245, raw_specs={"stream_processors": 3456, "vram_gb": 12, "bus_width_bit": 192},
+        benchmark_index=74.0, gaming_scores={"raster_1080p": 82.0, "raster_1440p": 74.0, "raster_4k": 55.0},
+        ray_tracing_score=60.0, efficiency_score=76.0, features=["12GB VRAM", "FSR 3"]
+    )
+    pros_7700, cons_7700, pros_4060_cb, cons_4060_cb = EditorialRuleEngine._build_gpu_pros_cons(spec_7700, spec_4060)
+    # RX 7700 XT has RT 60 > RTX 4060 RT 50 -> RX 7700 XT must NOT get an RT deficit con
+    cons_7700_text = " ".join(cons_7700)
+    assert "أداء أقل في تتبع الأشعة" not in cons_7700_text
+
+    # Cross-brand narrative: RTX 4060 must not claim 'تفوق نوعي' over RX 7700 XT
+    g_cb, _, _ = EditorialRuleEngine._build_gpu_narrative(spec_7700, spec_4060, None)
+    assert "بتفوقه النوعي في العناوين الثقيلة بتتبع الأشعة" not in g_cb
+    assert "تتبع أشعة بمؤشر 50/100" in g_cb
+
+    # AMD sub-65 VRAM pro check: RX 7600 XT (57.0) must not praise 1440p
+    spec_7600 = HardwareSpec(
+        id="rx-7600-xt", slug="rx-7600-xt", name="AMD Radeon RX 7600 XT", category="gpu", brand="AMD",
+        release_year=2024, launch_msrp_usd=329.0, architecture="RDNA 3", process_node_nm=6.0,
+        tdp_w=190, raw_specs={"vram_gb": 16, "bus_width_bit": 128},
+        benchmark_index=57.0, gaming_scores={"raster_1080p": 63.0, "raster_1440p": 47.0, "raster_4k": 25.0},
+        ray_tracing_score=42.0, efficiency_score=78.0, features=["16GB VRAM"]
+    )
+    pros_7600, _, _, _ = EditorialRuleEngine._build_gpu_pros_cons(spec_7600, spec_4060)
+    pros_7600_text = " ".join(pros_7600)
+    assert "1080p" in pros_7600_text
+    assert "1440p" not in pros_7600_text
+    assert "4K" not in pros_7600_text
+
 
 def test_gpu_target_resolution_helper_and_who_should_buy():
     """Verifies that _get_gpu_target_resolution correctly classifies GPU resolutions and who_should_buy respects them."""

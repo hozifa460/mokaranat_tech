@@ -281,18 +281,18 @@ class EditorialRuleEngine:
                 vram_desc_amd = _vram_label(vram_amd)
                 vram_comp = f"(مقابل {vram_nv}GB لدى منافسه)"
 
-            if tier == "flagship_4k":
-                res_context_amd = "تمنح أماناً فائقاً واستقراراً في الألعاب بدقة 4K وقوام Ultra بدون اختناق الذاكرة"
-                res_context_nv = "على دقة 4K و 1440p"
-            elif tier == "upper_1440p":
-                res_context_amd = "تمنح أريحية فائقة واستقراراً ممتازاً في ألعاب 1440p وقوام Ultra مع قدرة جيدة على تشغيل ألعاب 4K"
-                res_context_nv = "على دقة 1440p"
-            elif max(nv_item.benchmark_index, amd_item.benchmark_index) < 65:
+            if amd_item.benchmark_index < 65:
                 res_context_amd = "تمنح أريحية ممتازة بدقة 1080p وتضمن تفادي اختناق الذاكرة مع أثقل حزم القوام"
-                res_context_nv = "على دقة 1080p"
+            elif amd_item.benchmark_index < 80:
+                if vram_amd >= 16:
+                    res_context_amd = "تمنح أريحية ممتازة بدقة 1080p و 1440p وتضمن تفادي اختناق الذاكرة مع أثقل حزم القوام"
+                else:
+                    res_context_amd = "تمنح أريحية ممتازة بدقة 1440p و 1080p وتضمن تفادي اختناق الذاكرة مع أثقل حزم القوام"
             else:
-                res_context_amd = "تمنح أريحية ممتازة بدقة 1440p و 1080p وتضمن تفادي اختناق الذاكرة مع أثقل حزم القوام"
-                res_context_nv = "على دقتي 1080p و 1440p"
+                if vram_amd >= 24 or amd_item.benchmark_index >= 90:
+                    res_context_amd = "تمنح أماناً فائقاً واستقراراً في الألعاب بدقة 4K وقوام Ultra بدون اختناق الذاكرة"
+                else:
+                    res_context_amd = "تمنح أريحية فائقة واستقراراً ممتازاً في ألعاب 1440p وقوام Ultra مع قدرة جيدة على تشغيل ألعاب 4K"
 
             nvenc_desc = (
                 "مشفر NVENC المزدوج (Dual NVENC) فائق السرعة من الجيل الثامن مع دعم تسريع وتشفير عتادي لـ AV1"
@@ -300,27 +300,49 @@ class EditorialRuleEngine:
                 else "مشفر NVENC فائق السرعة من الجيل الثامن مع دعم تسريع وتشفير عتادي لـ AV1"
             )
 
+            target_res_amd = _get_gpu_target_resolution(amd_item)
+            res_context_lead = f"على {target_res_amd}"
+
+            rt_nv = nv_item.ray_tracing_score or 0
+            rt_amd = amd_item.ray_tracing_score or 0
+
             if raster_diff > 0 and raster_diff_pct >= 3.0:
+                if rt_nv > rt_amd:
+                    rt_clause = (
+                        f"في المقابل، يحتفظ {nv_item.name} بتفوقه النوعي في العناوين الثقيلة بتتبع الأشعة بمؤشر "
+                        f"{_format_num(nv_item.ray_tracing_score)}/100 (مقابل {_format_num(amd_item.ray_tracing_score)}/100 لـ {amd_item.name})، "
+                        f"مع الاستفادة من تقنيات NVIDIA: DLSS 3 لتوليد الإطارات (Frame Generation) و DLSS 3.5 لإعادة بناء الأشعة (Ray Reconstruction) لتعويض الفارق في الألعاب الداعمة، "
+                    )
+                else:
+                    rt_clause = (
+                        f"في المقابل، يدعم {nv_item.name} تقنيات DLSS 3 لتوليد الإطارات (Frame Generation) و DLSS 3.5 لإعادة بناء الأشعة (Ray Reconstruction) "
+                        f"مع تتبع أشعة بمؤشر {_format_num(nv_item.ray_tracing_score)}/100 (مقارنة بـ {_format_num(amd_item.ray_tracing_score)}/100 لـ {amd_item.name}) لتعويض الفارق في الألعاب الداعمة، "
+                    )
                 gaming_analysis = (
                     f"في ساحة الألعاب، يحسم {amd_item.name} الصدارة في الأداء الرسومي الخام (Raw Rasterization) "
-                    f"ومعدلات الإطارات في العناوين التقليدية {res_context_nv}، مدعوماً بـ {vram_desc_amd} "
+                    f"ومعدلات الإطارات في العناوين التقليدية {res_context_lead}، مدعوماً بـ {vram_desc_amd} "
                     f"{vram_comp} {res_context_amd} مع دعم تقنية FSR 3.1 مفتوحة المصدر بما فيها توليد الإطارات (Frame Generation) عبر مختلف المنصات. "
-                    f"في المقابل، يحتفظ {nv_item.name} بتفوقه النوعي في العناوين الثقيلة بتتبع الأشعة بمؤشر "
-                    f"{_format_num(nv_item.ray_tracing_score)}/100 (مقابل {_format_num(amd_item.ray_tracing_score)}/100 لـ {amd_item.name})، "
-                    f"مع الاستفادة من تقنيات NVIDIA: DLSS 3 لتوليد الإطارات (Frame Generation) و DLSS 3.5 لإعادة بناء الأشعة (Ray Reconstruction) لتعويض الفارق في الألعاب الداعمة، "
+                    f"{rt_clause}"
                     f"علماً بأن تقنية DLSS تظل حصرية لبيئة NVIDIA بينما توفر AMD تقنية FSR 3.1 كمعيار مفتوح يعمل عبر مختلف البطاقات."
                 )
             elif raster_diff < 0 and raster_diff_pct >= 3.0:
+                if rt_nv > rt_amd:
+                    rt_clause_nv = f"مع تفوق كاسح في العناوين الثقيلة بتتبع الأشعة بمؤشر {_format_num(nv_item.ray_tracing_score)}/100 ودعم كامل لتقنيات DLSS 3 لتوليد الإطارات (Frame Generation) و DLSS 3.5 لإعادة بناء الأشعة (Ray Reconstruction)"
+                else:
+                    rt_clause_nv = f"مع دعم كامل لتقنيات DLSS 3 لتوليد الإطارات (Frame Generation) و DLSS 3.5 لإعادة بناء الأشعة (Ray Reconstruction) ومؤشر تتبع أشعة {_format_num(nv_item.ray_tracing_score)}/100"
                 gaming_analysis = (
-                    f"في ساحة الألعاب، يقدم {nv_item.name} تفوقاً ملحوظاً في مجمل الأداء الرسومي مع تفوق كاسح في العناوين الثقيلة بتتبع الأشعة بمؤشر "
-                    f"{_format_num(nv_item.ray_tracing_score)}/100 ودعم كامل لتقنيات DLSS 3 لتوليد الإطارات (Frame Generation) و DLSS 3.5 لإعادة بناء الأشعة (Ray Reconstruction)، "
+                    f"في ساحة الألعاب، يقدم {nv_item.name} تفوقاً ملحوظاً في مجمل الأداء الرسومي {rt_clause_nv}، "
                     f"بينما ينافس {amd_item.name} بقوة رسومية خام متميزة و {vram_desc_amd} {vram_comp} "
                     f"{res_context_amd} مع دعم تقنية FSR 3.1 وتوليد الإطارات المفتوح عبر المنصات."
                 )
             else:
+                if rt_nv > rt_amd:
+                    rt_tie_clause = f"حيث يتميز {nv_item.name} بأسبقية واضحة في تتبع الأشعة بمؤشر {_format_num(nv_item.ray_tracing_score)}/100 مع منظومة DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) لبطاقات RTX، "
+                else:
+                    rt_tie_clause = f"مع دعم {nv_item.name} لمنظومة DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) لبطاقات RTX مع تتبع أشعة بمؤشر {_format_num(nv_item.ray_tracing_score)}/100، "
                 gaming_analysis = (
                     f"في ساحة الألعاب، يقدم كل من {nv_item.name} و {amd_item.name} أداءً متقارباً في المعالجة الرسومية التقليدية (Rasterization)، "
-                    f"حيث يتميز {nv_item.name} بأسبقية واضحة في تتبع الأشعة بمؤشر {_format_num(nv_item.ray_tracing_score)}/100 مع منظومة DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) لبطاقات RTX، "
+                    f"{rt_tie_clause}"
                     f"بينما يرد {amd_item.name} بـ {vram_desc_amd} {vram_comp} {res_context_amd} مع دعم تقنية FSR 3.1 وتوليد الإطارات مفتوحة المصدر المتوافقة عبر مختلف المنصات."
                 )
 
@@ -452,6 +474,8 @@ class EditorialRuleEngine:
             vram_res_phrase = "بدقة 4K والدقات الفائقة"
         elif gpu_tier == "upper_1440p":
             vram_res_phrase = "بدقة 1440p و 4K"
+        elif max(a.benchmark_index, b.benchmark_index) < 65:
+            vram_res_phrase = "بدقة 1080p"
         else:
             vram_res_phrase = "بدقة 1440p"
 
@@ -809,13 +833,18 @@ class EditorialRuleEngine:
                     vram_pro_text = f"{vram_desc}{bus_desc} تمنح أماناً كاملاً للألعاب بدقة 4K والرندرة الضخمة دون اختناق الذاكرة"
                 elif v_self >= 16:
                     vram_desc = f"سعة ذاكرة رسومية وافرة ({v_self}GB VRAM)"
-                    if card.benchmark_index >= 75.0:
+                    if card.benchmark_index >= 80.0:
                         vram_pro_text = f"{vram_desc}{bus_desc} تمنح أريحية ممتازة للألعاب بدقة 1440p و 4K وتمنع اختناق الذاكرة مع القوام المرتفع"
+                    elif card.benchmark_index < 65.0:
+                        vram_pro_text = f"{vram_desc}{bus_desc} تمنح أريحية ممتازة للألعاب بدقة 1080p وتفادي اختناق الذاكرة مع القوام المرتفع"
                     else:
                         vram_pro_text = f"{vram_desc}{bus_desc} تمنح أريحية ممتازة للألعاب بدقة 1080p و 1440p وتفادي اختناق الذاكرة مع القوام المرتفع"
                 else:
                     vram_desc = f"سعة ذاكرة رسومية متوازنة ({v_self}GB VRAM)"
-                    vram_pro_text = f"{vram_desc}{bus_desc} تمنح أريحية ممتازة للألعاب بدقة 1440p وتفادي اختناق الذاكرة مع القوام المرتفع"
+                    if card.benchmark_index < 65.0:
+                        vram_pro_text = f"{vram_desc}{bus_desc} تمنح أريحية ممتازة للألعاب بدقة 1080p وتفادي اختناق الذاكرة مع القوام المرتفع"
+                    else:
+                        vram_pro_text = f"{vram_desc}{bus_desc} تمنح أريحية ممتازة للألعاب بدقة 1440p وتفادي اختناق الذاكرة مع القوام المرتفع"
 
                 pros = [
                     vram_pro_text,
@@ -826,7 +855,8 @@ class EditorialRuleEngine:
                 if is_constrained_lanes:
                     cons.append(_get_pcie_con(lanes))
                 if is_opp_nvidia:
-                    cons.append(f"أداء أقل في تتبع الأشعة (Ray Tracing) مقارنة بنواة RT Cores لدى NVIDIA (مؤشر {_format_num(card.ray_tracing_score)}/100)")
+                    if (card.ray_tracing_score or 0) < (opp.ray_tracing_score or 0):
+                        cons.append(f"أداء أقل في تتبع الأشعة (Ray Tracing) مقارنة بنواة RT Cores لدى NVIDIA (مؤشر {_format_num(card.ray_tracing_score)}/100)")
                     cons.append("افتقار لدعم بيئة تسريع CUDA المعتمدة صناعياً في برامج التصميم والذكاء الاصطناعي")
                 elif card.benchmark_index < opp.benchmark_index:
                     cons.append(f"أداء رسومي إجمالي أقل مقارنة بالفئة الأعلى ({_format_num(opp.benchmark_index)}/100)")
@@ -1120,7 +1150,7 @@ class EditorialRuleEngine:
             rival_is_x3d = "x3d" in rival.name.lower() or rival_l3 >= 64
 
             if is_x3d and rival_is_x3d:
-                if target.benchmark_index >= rival.benchmark_index:
+                if cores > rival_cores:
                     return (
                         f"المستخدم المحترف وصانع المحتوى الذي يجمع بين بث الألعاب والرندرة الثقيلة بفضل {cores} نواة معالجة، "
                         f"مع الاستفادة من ذاكرة 3D V-Cache الضخمة ({_format_num(l3)}MB) لأداء ألعاب فائق دون تقديم أي تنازلات في الإنتاجية."

@@ -318,15 +318,17 @@ def test_quality_gate_laptop_personas_accuracy():
 
 
 def test_quality_gate_nvidia_pros_cons_rt_superiority_and_performance_con():
-    """Rule 1: Intra-Brand NVIDIA vs NVIDIA Pros/Cons.
+    """Rule 1: Intra-Brand NVIDIA vs NVIDIA Pros/Cons and Cross-Brand RT Neutrality.
     - Only claim 'تفوق في تتبع الأشعة' if card.ray_tracing_score > opp.ray_tracing_score.
     - Otherwise, use neutral 'دعم كامل لتقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) مع تتبع أشعة بمؤشر X/100'.
     - If card.benchmark_index < opp.benchmark_index - 3.0, append performance con 'أداء رسومي إجمالي أقل مقارنة بـ'.
+    - If AMD RT score >= NVIDIA RT score, AMD card must NOT receive an RT deficit con, and NVIDIA must NOT claim 'تفوق نوعي'.
     """
     for fpath in _get_comparison_files():
         doc = _load_comparison(fpath)
         slug = doc["slug"]
         verdict = doc["verdict"]
+        gaming_analysis = verdict.get("gaming_analysis_ar", "")
 
         for item, opp, pros, cons in [
             (doc["item_a"], doc["item_b"], verdict["pros_a"], verdict["cons_a"]),
@@ -345,6 +347,10 @@ def test_quality_gate_nvidia_pros_cons_rt_superiority_and_performance_con():
                     assert "دعم كامل لتقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) مع تتبع أشعة بمؤشر" in pros_text, (
                         f"{slug}: NVIDIA card {item['name']} missing neutral RT pro: {pros_text}"
                     )
+                    # In gaming narrative, must not claim 'تفوقه النوعي' if RT score is lower/equal
+                    assert f"يحتفظ {item['name']} بتفوقه النوعي في العناوين الثقيلة بتتبع الأشعة" not in gaming_analysis, (
+                        f"{slug}: NVIDIA card {item['name']} (RT={rt_self}) falsely claimed qualitative RT superiority over {opp['name']} (RT={rt_opp}) in narrative: {gaming_analysis}"
+                    )
                 else:
                     assert "تفوق في تتبع الأشعة بمؤشر" in pros_text, (
                         f"{slug}: Winning NVIDIA card {item['name']} missing RT superiority pro: {pros_text}"
@@ -355,10 +361,20 @@ def test_quality_gate_nvidia_pros_cons_rt_superiority_and_performance_con():
                         f"{slug}: Weaker NVIDIA card {item['name']} missing performance deficit con against {opp['name']}: {cons_text}"
                     )
 
+            # Check AMD card RT con against NVIDIA
+            if item.get("category") == "gpu" and item.get("brand", "").upper() == "AMD" and opp.get("brand", "").upper() == "NVIDIA":
+                rt_amd = item.get("ray_tracing_score") or 0
+                rt_nv = opp.get("ray_tracing_score") or 0
+                cons_text = " ".join(cons)
+                if rt_amd >= rt_nv:
+                    assert "أداء أقل في تتبع الأشعة (Ray Tracing) مقارنة بنواة RT Cores لدى NVIDIA" not in cons_text, (
+                        f"{slug}: AMD card {item['name']} (RT={rt_amd}) falsely penalised with RT deficit con against weaker NVIDIA {opp['name']} (RT={rt_nv}): {cons_text}"
+                    )
+
 
 def test_quality_gate_gpu_resolution_grounding_by_benchmark_index():
     """Rule 2: Resolution Grounding in GPU Comparisons.
-    - No GPU with benchmark_index < 65 described as smooth 1440p card in gaming_analysis_ar or who_should_buy.
+    - No GPU with benchmark_index < 65 described as smooth 1440p or 4K card in gaming_analysis_ar, who_should_buy, or pros.
     - Target resolution for index < 65 is 'دقة 1080p'.
     - In rtx-4060-ti-vs-rtx-4060: who_should_buy_a targets 'دقة 1080p و 1440p' (not 'الدقات المرتفعة').
     - In AMD vs AMD comparisons with RX 7600 XT: RX 7600 XT targets 'دقة 1080p' in who_should_buy and narrative.
@@ -369,16 +385,32 @@ def test_quality_gate_gpu_resolution_grounding_by_benchmark_index():
         verdict = doc["verdict"]
         gaming_analysis = verdict.get("gaming_analysis_ar", "")
 
-        for item, who in [
-            (doc["item_a"], verdict["who_should_buy_a"]),
-            (doc["item_b"], verdict["who_should_buy_b"])
+        for item, who, pros in [
+            (doc["item_a"], verdict["who_should_buy_a"], verdict["pros_a"]),
+            (doc["item_b"], verdict["who_should_buy_b"], verdict["pros_b"])
         ]:
             if item.get("category") == "gpu":
                 bi = item.get("benchmark_index", 0)
                 if bi < 65:
+                    pros_text = " ".join(pros)
+                    # Sub-65 GPU pros must never praise 1440p or 4K
+                    assert "1440p" not in pros_text, (
+                        f"{slug}: Sub-65 GPU {item['name']} falsely praised 1440p in pros: {pros_text}"
+                    )
+                    assert "4K" not in pros_text, (
+                        f"{slug}: Sub-65 GPU {item['name']} falsely praised 4K in pros: {pros_text}"
+                    )
+                    # Gaming analysis checks
                     assert "توازناً ممتازاً على دقة 1440p" not in gaming_analysis, (
                         f"{slug}: Sub-65 GPU {item['name']} described with 'توازناً ممتازاً على دقة 1440p': {gaming_analysis}"
                     )
+                    assert "ألعاب 1440p وقوام Ultra" not in gaming_analysis or item['id'] not in slug or "rx-7600-xt" not in item['id'], (
+                        f"{slug}: Sub-65 GPU {item['name']} falsely described with 1440p Ultra: {gaming_analysis}"
+                    )
+                    assert "بدقة 4K وقوام Ultra" not in gaming_analysis or item['id'] not in slug or "rx-7600-xt" not in item['id'], (
+                        f"{slug}: Sub-65 GPU {item['name']} falsely described with 4K Ultra: {gaming_analysis}"
+                    )
+                    # Who should buy checks
                     assert "لتشغيل ألعاب دقة 1440p بسلاسة" not in who, (
                         f"{slug}: Sub-65 GPU {item['name']} described with 'لتشغيل ألعاب دقة 1440p بسلاسة': {who}"
                     )
