@@ -71,6 +71,23 @@ def _vram_label(vram_gb: int) -> str:
     return f"سعة ذاكرة تبلغ {vram_gb}GB"
 
 
+def _get_gpu_target_resolution(card: HardwareSpec) -> str:
+    """Returns the grounded target gaming resolution for a GPU based on benchmark index and VRAM."""
+    bench = card.benchmark_index
+    vram = card.raw_specs.get("vram_gb", 0)
+    if bench < 65:
+        return "دقة 1080p"
+    elif bench < 80:
+        if vram <= 8:
+            return "دقة 1080p و 1440p"
+        else:
+            return "دقة 1440p"
+    else:
+        if bench >= 90 or vram >= 24:
+            return "دقة 4K"
+        return "دقة 1440p و 4K"
+
+
 class EditorialRuleEngine:
     """100% deterministic Rule Engine generating objective, mathematically verified Arabic editorial verdicts."""
 
@@ -270,6 +287,9 @@ class EditorialRuleEngine:
             elif tier == "upper_1440p":
                 res_context_amd = "تمنح أريحية فائقة واستقراراً ممتازاً في ألعاب 1440p وقوام Ultra مع قدرة جيدة على تشغيل ألعاب 4K"
                 res_context_nv = "على دقة 1440p"
+            elif max(nv_item.benchmark_index, amd_item.benchmark_index) < 65:
+                res_context_amd = "تمنح أريحية ممتازة بدقة 1080p وتضمن تفادي اختناق الذاكرة مع أثقل حزم القوام"
+                res_context_nv = "على دقة 1080p"
             else:
                 res_context_amd = "تمنح أريحية ممتازة بدقة 1440p و 1080p وتضمن تفادي اختناق الذاكرة مع أثقل حزم القوام"
                 res_context_nv = "على دقتي 1080p و 1440p"
@@ -313,8 +333,8 @@ class EditorialRuleEngine:
         elif a.brand.upper() == "NVIDIA" and b.brand.upper() == "NVIDIA":
             higher_card = a if a.benchmark_index >= b.benchmark_index else b
             lower_card = b if a.benchmark_index >= b.benchmark_index else a
-            tier = gpu_tier
-            res_lead = "سلاسة إضافية على دقة 4K" if tier == "flagship_4k" else "سلاسة إضافية ومعدل إطارات أعلى على دقة 1440p"
+            target_res_high = _get_gpu_target_resolution(higher_card)
+            res_lead = f"سلاسة إضافية ومعدل إطارات أعلى على {target_res_high}"
             gaming_analysis = (
                 f"في ساحة الألعاب، يقدم كل من {a.name} و {b.name} دعماً متكاملاً لأحدث تقنيات DLSS 3 لتوليد الإطارات (Frame Generation) و DLSS 3.5 لإعادة بناء الأشعة (Ray Reconstruction) "
                 f"وكفاءة تتبع أشعة رائدة. يتفوق {higher_card.name} بمؤشر أداء {_format_num(higher_card.benchmark_index)}/100 وسعة ذاكرة {higher_card.raw_specs.get('vram_gb', 0)}GB "
@@ -330,17 +350,21 @@ class EditorialRuleEngine:
             vram_high = higher_card.raw_specs.get("vram_gb", 0)
             vram_low = lower_card.raw_specs.get("vram_gb", 0)
             vram_high_label = _vram_label(vram_high)
+            target_res_high = _get_gpu_target_resolution(higher_card)
+            target_res_low = _get_gpu_target_resolution(lower_card)
             gaming_analysis = (
-                f"في ساحة الألعاب، يتميز كرت {higher_card.name} بقوة معالجة خام فائقة و{vram_high_label} VRAM، "
-                f"في حين يقدم {lower_card.name} بسعة {vram_low}GB توازناً ممتازاً على دقة 1440p، مع دعم كامل لكلا البطاقتين لتقنيات FSR 3.1 ومنافذ DisplayPort 2.1 الحديثة."
+                f"في ساحة الألعاب، يتميز كرت {higher_card.name} بقوة معالجة خام فائقة على {target_res_high} و{vram_high_label} VRAM، "
+                f"في حين يقدم {lower_card.name} بسعة {vram_low}GB توازناً ممتازاً على {target_res_low}، مع دعم كامل لكلا البطاقتين لتقنيات FSR 3.1 ومنافذ DisplayPort 2.1 الحديثة."
             )
             productivity = (
                 f"على صعيد الإنتاجية والرندرة، تمنح سعة الذاكرة الكبيرة ({vram_high}GB لـ {higher_card.name}) ميزة في معالجة المشاهد ثلاثية الأبعاد والمشاريع الضخمة، "
                 f"بينما يستهلك {lower_card.name} طاقة أقل ({lower_card.tdp_w}W مقابل {higher_card.tdp_w}W) مما يسهل تبريده في مختلف بيئات العمل."
             )
         else:
+            target_res_a = _get_gpu_target_resolution(a)
+            target_res_b = _get_gpu_target_resolution(b)
             gaming_analysis = (
-                f"في ساحة الألعاب، يقدم {a.name} أداءً متزناً بدقة 1440p و4K، بينما يوفر {b.name} قدرات تنافسية في معدل الإطارات واستقرار المعالجة الرسومية."
+                f"في ساحة الألعاب، يقدم {a.name} أداءً متزناً على {target_res_a}، بينما يوفر {b.name} قدرات تنافسية على {target_res_b} في معدل الإطارات واستقرار المعالجة الرسومية."
             )
             productivity = (
                 f"على صعيد صُنّاع المحتوى والرندرة والذكاء الاصطناعي، توفر البطاقتان قدرات معالجة مناسبة مع اختلاف في استهلاك الطاقة وإدارة الحرارة."
@@ -490,7 +514,22 @@ class EditorialRuleEngine:
         is_a_x3d = "x3d" in a.name.lower() or l3_a >= 64
         is_b_x3d = "x3d" in b.name.lower() or l3_b >= 64
 
-        if is_a_x3d and not is_b_x3d:
+        if is_a_x3d and is_b_x3d:
+            if cores_a != cores_b:
+                single_ccd = a if cores_a < cores_b else b
+                dual_ccd = b if cores_a < cores_b else a
+                cores_single = min(cores_a, cores_b)
+                cores_dual = max(cores_a, cores_b)
+                gaming_analysis = (
+                    f"في ساحة الألعاب، يقدم كل من {a.name} و {b.name} أداءً ريادياً ومعدلات إطارات استثنائية بفضل تقنية 3D V-Cache، "
+                    f"مع أسبقية طفيفة لـ {single_ccd.name} ({cores_single} أنوية) في استقرار معدلات الإطارات الدنيا (1% low FPS) وسلاسة اللعب بفضل معمارية الشريحة الواحدة Single CCD دون أي تأخير بين الشرائح، "
+                    f"في حين يجمع {dual_ccd.name} ({cores_dual} نواة) بين قوة ألعاب 3D V-Cache والتفوق الكاسح في تعدد المهام والبث المباشر وصناعة المحتوى."
+                )
+            else:
+                gaming_analysis = (
+                    f"في ساحة الألعاب، يقدم كل من {a.name} و {b.name} أداءً ريادياً ومعدلات إطارات استثنائية بفضل تقنية 3D V-Cache المتطورة."
+                )
+        elif is_a_x3d and not is_b_x3d:
             cache_cpu, multi_cpu = a, b
             cache_cores, multi_cores = cores_a, cores_b
             cache_l3 = l3_a
@@ -723,14 +762,23 @@ class EditorialRuleEngine:
                 else:
                     power_pro = f"كفاءة طاقة ممتازة بمؤشر {_format_num(card.efficiency_score)}/100 وسحب طاقة منضبط ({card.tdp_w}W)"
 
+                rt_self = card.ray_tracing_score or 0
+                rt_opp = opp.ray_tracing_score or 0
+                if rt_self > rt_opp:
+                    rt_pro = f"تفوق في تتبع الأشعة بمؤشر {_format_num(card.ray_tracing_score)}/100 ودعم كامل لتقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة)"
+                else:
+                    rt_pro = f"دعم كامل لتقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) مع تتبع أشعة بمؤشر {_format_num(card.ray_tracing_score)}/100"
+
                 pros = [
-                    f"تفوق في تتبع الأشعة بمؤشر {_format_num(card.ray_tracing_score)}/100 ودعم كامل لتقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة)",
+                    rt_pro,
                     nvenc_pro,
                     power_pro
                 ]
                 cons = []
                 if is_constrained_lanes:
                     cons.append(_get_pcie_con(lanes))
+                if card.benchmark_index < opp.benchmark_index - 3.0:
+                    cons.append(f"أداء رسومي إجمالي أقل مقارنة بـ {opp.name} ({_format_num(opp.benchmark_index)}/100)")
                 if v_self < v_opp:
                     rival_label = "AMD" if is_opp_amd else opp.name
                     if tier == "midrange_1080p_1440p":
@@ -1043,19 +1091,20 @@ class EditorialRuleEngine:
                     f"وتفضيل التقنيات المفتوحة مثل FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ DisplayPort 2.1 الحديثة."
                 )
             elif is_nvidia and rival.brand.upper() == "NVIDIA":
+                target_res = _get_gpu_target_resolution(target)
                 if target.benchmark_index >= rival.benchmark_index:
-                    return f"المستخدم الذي يستهدف أقصى أداء ممكن على الدقات المرتفعة مع سعة {vram}GB ومستعد للاستثمار في فئة الأداء الأعلى."
+                    return f"المستخدم الذي يستهدف أقصى أداء ممكن على {target_res} مع سعة {vram}GB ومستعد للاستثمار في فئة الأداء الأعلى."
                 else:
                     tdp_desc = f"كفاءة طاقة متقدمة ({target.tdp_w}W)" if target.tdp_w >= 260 else f"كفاءة طاقة عالية ({target.tdp_w}W)"
-                    return f"المستخدم الذي يبحث عن نقطة التوازن المثالية بأداء متقدم و{tdp_desc} بسعر شراء أقل."
+                    return f"المستخدم الذي يبحث عن نقطة التوازن المثالية لتشغيل الألعاب على {target_res} مع {tdp_desc} بسعر شراء أقل."
             elif is_amd and rival.brand.upper() == "AMD":
+                target_res = _get_gpu_target_resolution(target)
                 if target.benchmark_index >= rival.benchmark_index:
-                    target_res = "4K" if target.benchmark_index >= 90 or vram >= 24 else "1440p"
                     vram_desc_word = "فائقة" if vram >= 24 else "وافرة"
-                    return f"اللاعب الذي يستهدف أقصى أداء رسومي على دقة {target_res} مع سعة ذاكرة {vram_desc_word} تبلغ {vram}GB للمشاريع والألعاب الضخمة."
+                    return f"اللاعب الذي يستهدف أقصى أداء رسومي على {target_res} مع سعة ذاكرة {vram_desc_word} تبلغ {vram}GB للمشاريع والألعاب الضخمة."
                 else:
                     eff_clause = f"واستهلاك طاقة منضبط ({target.tdp_w}W)." if target.tdp_w < 260 else f"وكفاءة معمارية متقدمة ({target.tdp_w}W)."
-                    return f"اللاعب الذي يركز على أفضل قيمة شرائية لتشغيل ألعاب دقة 1440p بسلاسة تامة {eff_clause}"
+                    return f"اللاعب الذي يركز على أفضل قيمة شرائية لتشغيل ألعاب {target_res} بسلاسة تامة {eff_clause}"
             else:
                 return f"المستخدم الذي يفضل منصة {target.brand} بمعمارية {target.architecture} ومؤشر أداء {_format_num(target.benchmark_index)}/100."
 

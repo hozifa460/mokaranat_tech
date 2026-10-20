@@ -2,13 +2,24 @@
 interface Props {
   currentSlug: string;
   category: string;
+  item_a_id?: string;
+  item_b_id?: string;
   allComparisons: any[];
 }
 
-const { currentSlug, category, allComparisons } = Astro.props;
+const { currentSlug, category, item_a_id, item_b_id, allComparisons } = Astro.props;
 
 // Prioritize comparisons from the same category to spread internal PageRank within category hubs
 const sameCategory = allComparisons.filter(c => c.slug !== currentSlug && c.category === category);
+
+if (item_a_id || item_b_id) {
+  sameCategory.sort((x, y) => {
+    const xShares = (x.item_a_id === item_a_id || x.item_a_id === item_b_id || x.item_b_id === item_a_id || x.item_b_id === item_b_id) ? 1 : 0;
+    const yShares = (y.item_a_id === item_a_id || y.item_a_id === item_b_id || y.item_b_id === item_a_id || y.item_b_id === item_b_id) ? 1 : 0;
+    return yShares - xShares;
+  });
+}
+
 const otherCategory = allComparisons.filter(c => c.slug !== currentSlug && c.category !== category);
 const related = [...sameCategory, ...otherCategory].slice(0, 6);
 

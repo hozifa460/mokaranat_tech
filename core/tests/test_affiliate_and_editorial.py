@@ -1436,6 +1436,130 @@ def test_fps_calculator_get_gpu_vendor_for_laptops_and_discrete_cards():
     assert FpsCalculator._get_gpu_vendor(data["rx-7900-xtx"]) == "AMD"
 
 
+def test_nvidia_vs_nvidia_ray_tracing_pro_and_con_logic():
+    """Verifies that in NVIDIA vs NVIDIA matchups, weaker cards do not claim RT superiority,
+    receive neutral DLSS 3 / 3.5 pro, and get performance con if benchmark index < opp.benchmark_index - 3.0.
+    """
+    spec_4090 = HardwareSpec(
+        id="rtx-4090", slug="rtx-4090", name="NVIDIA GeForce RTX 4090", category="gpu", brand="NVIDIA",
+        release_year=2022, launch_msrp_usd=1599.0, architecture="Ada Lovelace", process_node_nm=4.0,
+        tdp_w=450, raw_specs={"cuda_cores": 16384, "vram_gb": 24, "bus_width_bit": 384, "nvenc_encoders": 2},
+        benchmark_index=98.0, gaming_scores={"raster_1080p": 98.0, "raster_1440p": 98.0, "raster_4k": 98.0},
+        ray_tracing_score=98.0, efficiency_score=85.0, features=["DLSS 3.5", "Dual NVENC"]
+    )
+    spec_4060 = HardwareSpec(
+        id="rtx-4060", slug="rtx-4060", name="NVIDIA GeForce RTX 4060", category="gpu", brand="NVIDIA",
+        release_year=2023, launch_msrp_usd=299.0, architecture="Ada Lovelace", process_node_nm=4.0,
+        tdp_w=115, raw_specs={"cuda_cores": 3072, "vram_gb": 8, "bus_width_bit": 128, "nvenc_encoders": 1, "pcie_lanes": 8},
+        benchmark_index=58.0, gaming_scores={"raster_1080p": 62.0, "raster_1440p": 48.0, "raster_4k": 26.0},
+        ray_tracing_score=50.0, efficiency_score=94.0, features=["DLSS 3", "NVENC AV1"]
+    )
+
+    pros_a, cons_a, pros_b, cons_b = EditorialRuleEngine._build_gpu_pros_cons(spec_4090, spec_4060)
+
+    # 4090 has higher RT (98 vs 50) -> claims superiority
+    pros_4090_text = " ".join(pros_a)
+    assert "تفوق في تتبع الأشعة بمؤشر 98/100" in pros_4090_text
+
+    # 4060 has lower RT (50 vs 98) -> MUST NOT claim superiority, must have neutral wording
+    pros_4060_text = " ".join(pros_b)
+    assert "تفوق في تتبع الأشعة" not in pros_4060_text
+    assert "دعم كامل لتقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) مع تتبع أشعة بمؤشر 50/100" in pros_4060_text
+
+    # 4060 has benchmark_index 58 < 98 - 3 -> MUST have performance con
+    cons_4060_text = " ".join(cons_b)
+    assert "أداء رسومي إجمالي أقل مقارنة بـ NVIDIA GeForce RTX 4090 (98/100)" in cons_4060_text
+
+
+def test_gpu_target_resolution_helper_and_who_should_buy():
+    """Verifies that _get_gpu_target_resolution correctly classifies GPU resolutions and who_should_buy respects them."""
+    from core.services.ai_editorial import _get_gpu_target_resolution
+
+    # Sub-65 card: 1080p
+    c_1080p = HardwareSpec(
+        id="c1", slug="c1", name="Card 1080p", category="gpu", brand="NVIDIA",
+        release_year=2023, launch_msrp_usd=299.0, architecture="Ada", process_node_nm=4.0,
+        tdp_w=115, raw_specs={"vram_gb": 8}, benchmark_index=58.0
+    )
+    assert _get_gpu_target_resolution(c_1080p) == "دقة 1080p"
+
+    # 65-79 with 8GB: 1080p and 1440p
+    c_hybrid = HardwareSpec(
+        id="c2", slug="c2", name="Card Hybrid", category="gpu", brand="NVIDIA",
+        release_year=2023, launch_msrp_usd=399.0, architecture="Ada", process_node_nm=4.0,
+        tdp_w=160, raw_specs={"vram_gb": 8}, benchmark_index=68.0
+    )
+    assert _get_gpu_target_resolution(c_hybrid) == "دقة 1080p و 1440p"
+
+    # 65-79 with 12GB: 1440p
+    c_1440p = HardwareSpec(
+        id="c3", slug="c3", name="Card 1440p", category="gpu", brand="AMD",
+        release_year=2023, launch_msrp_usd=449.0, architecture="RDNA 3", process_node_nm=5.0,
+        tdp_w=245, raw_specs={"vram_gb": 12}, benchmark_index=74.0
+    )
+    assert _get_gpu_target_resolution(c_1440p) == "دقة 1440p"
+
+    # >= 80 with < 90 and < 24GB: 1440p and 4K
+    c_upper = HardwareSpec(
+        id="c4", slug="c4", name="Card Upper", category="gpu", brand="NVIDIA",
+        release_year=2024, launch_msrp_usd=799.0, architecture="Ada", process_node_nm=4.0,
+        tdp_w=285, raw_specs={"vram_gb": 16}, benchmark_index=88.0
+    )
+    assert _get_gpu_target_resolution(c_upper) == "دقة 1440p و 4K"
+
+    # >= 90 or >= 24GB: 4K
+    c_4k = HardwareSpec(
+        id="c5", slug="c5", name="Card 4K", category="gpu", brand="NVIDIA",
+        release_year=2022, launch_msrp_usd=1599.0, architecture="Ada", process_node_nm=4.0,
+        tdp_w=450, raw_specs={"vram_gb": 24}, benchmark_index=98.0
+    )
+    assert _get_gpu_target_resolution(c_4k) == "دقة 4K"
+
+    # Who should buy test for 4060 Ti vs 4060
+    who_ti = EditorialRuleEngine._build_who_should_buy(c_hybrid, c_1080p)
+    assert "دقة 1080p و 1440p" in who_ti
+    assert "الدقات المرتفعة" not in who_ti
+
+    who_4060 = EditorialRuleEngine._build_who_should_buy(c_1080p, c_hybrid)
+    assert "دقة 1080p" in who_4060
+    assert "1440p" not in who_4060
+
+
+def test_dual_x3d_narrative_single_vs_dual_ccd_symmetry():
+    """Verifies that comparing two X3D CPUs correctly contrasts single-CCD vs dual-CCD in both argument orders."""
+    spec_7950x3d = HardwareSpec(
+        id="ryzen-9-7950x3d", slug="ryzen-9-7950x3d", name="AMD Ryzen 9 7950X3D", category="cpu", brand="AMD",
+        release_year=2023, launch_msrp_usd=699.0, architecture="Zen 4 (3D V-Cache)", process_node_nm=5.0,
+        tdp_w=120, raw_specs={"total_cores": 16, "threads": 32, "l3_cache_mb": 128},
+        benchmark_index=98.0, gaming_scores={"gaming_overall": 98.0}, ray_tracing_score=None, efficiency_score=95.0,
+        features=["128MB 3D V-Cache", "16 Cores"]
+    )
+    spec_7800x3d = HardwareSpec(
+        id="ryzen-7-7800x3d", slug="ryzen-7-7800x3d", name="AMD Ryzen 7 7800X3D", category="cpu", brand="AMD",
+        release_year=2023, launch_msrp_usd=449.0, architecture="Zen 4 (3D V-Cache)", process_node_nm=5.0,
+        tdp_w=120, raw_specs={"total_cores": 8, "threads": 16, "l3_cache_mb": 96},
+        benchmark_index=91.0, gaming_scores={"gaming_overall": 96.0}, ray_tracing_score=None, efficiency_score=96.0,
+        features=["96MB 3D V-Cache", "8 Cores"]
+    )
+
+    # Order 1: (7950X3D, 7800X3D)
+    g1, p1, v1 = EditorialRuleEngine._build_cpu_narrative(spec_7950x3d, spec_7800x3d)
+    assert "معمارية الشريحة الواحدة Single CCD دون أي تأخير بين الشرائح" in g1
+    assert "استقرار معدلات الإطارات الدنيا (1% low FPS)" in g1
+    assert "أسبقية طفيفة لـ AMD Ryzen 7 7800X3D (8 أنوية)" in g1
+    assert "AMD Ryzen 9 7950X3D (16 نواة)" in g1
+    assert "تعدد المهام والبث المباشر" in g1
+
+    # Order 2: (7800X3D, 7950X3D)
+    g2, p2, v2 = EditorialRuleEngine._build_cpu_narrative(spec_7800x3d, spec_7950x3d)
+    assert "معمارية الشريحة الواحدة Single CCD دون أي تأخير بين الشرائح" in g2
+    assert "استقرار معدلات الإطارات الدنيا (1% low FPS)" in g2
+    assert "أسبقية طفيفة لـ AMD Ryzen 7 7800X3D (8 أنوية)" in g2
+    assert "AMD Ryzen 9 7950X3D (16 نواة)" in g2
+    assert "تعدد المهام والبث المباشر" in g2
+
+
+
 
 
 

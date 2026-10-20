@@ -315,3 +315,123 @@ def test_quality_gate_laptop_personas_accuracy():
     doc_tuf = _load_comparison(fpath_tuf)
     who_tuf = doc_tuf["verdict"]["who_should_buy_a"]
     assert "MIL-STD-810H" in who_tuf, f"TUF A15 missing MIL-STD-810H durability persona: {who_tuf}"
+
+
+def test_quality_gate_nvidia_pros_cons_rt_superiority_and_performance_con():
+    """Rule 1: Intra-Brand NVIDIA vs NVIDIA Pros/Cons.
+    - Only claim 'تفوق في تتبع الأشعة' if card.ray_tracing_score > opp.ray_tracing_score.
+    - Otherwise, use neutral 'دعم كامل لتقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) مع تتبع أشعة بمؤشر X/100'.
+    - If card.benchmark_index < opp.benchmark_index - 3.0, append performance con 'أداء رسومي إجمالي أقل مقارنة بـ'.
+    """
+    for fpath in _get_comparison_files():
+        doc = _load_comparison(fpath)
+        slug = doc["slug"]
+        verdict = doc["verdict"]
+
+        for item, opp, pros, cons in [
+            (doc["item_a"], doc["item_b"], verdict["pros_a"], verdict["cons_a"]),
+            (doc["item_b"], doc["item_a"], verdict["pros_b"], verdict["cons_b"])
+        ]:
+            if item.get("category") == "gpu" and item.get("brand", "").upper() == "NVIDIA":
+                rt_self = item.get("ray_tracing_score") or 0
+                rt_opp = opp.get("ray_tracing_score") or 0
+                pros_text = " ".join(pros)
+                cons_text = " ".join(cons)
+
+                if rt_self <= rt_opp:
+                    assert "تفوق في تتبع الأشعة" not in pros_text, (
+                        f"{slug}: NVIDIA card {item['name']} (RT={rt_self}) falsely claimed RT superiority over {opp['name']} (RT={rt_opp}) in pros: {pros_text}"
+                    )
+                    assert "دعم كامل لتقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) مع تتبع أشعة بمؤشر" in pros_text, (
+                        f"{slug}: NVIDIA card {item['name']} missing neutral RT pro: {pros_text}"
+                    )
+                else:
+                    assert "تفوق في تتبع الأشعة بمؤشر" in pros_text, (
+                        f"{slug}: Winning NVIDIA card {item['name']} missing RT superiority pro: {pros_text}"
+                    )
+
+                if item.get("benchmark_index", 0) < opp.get("benchmark_index", 0) - 3.0:
+                    assert any("أداء رسومي إجمالي أقل مقارنة بـ" in con for con in cons), (
+                        f"{slug}: Weaker NVIDIA card {item['name']} missing performance deficit con against {opp['name']}: {cons_text}"
+                    )
+
+
+def test_quality_gate_gpu_resolution_grounding_by_benchmark_index():
+    """Rule 2: Resolution Grounding in GPU Comparisons.
+    - No GPU with benchmark_index < 65 described as smooth 1440p card in gaming_analysis_ar or who_should_buy.
+    - Target resolution for index < 65 is 'دقة 1080p'.
+    - In rtx-4060-ti-vs-rtx-4060: who_should_buy_a targets 'دقة 1080p و 1440p' (not 'الدقات المرتفعة').
+    - In AMD vs AMD comparisons with RX 7600 XT: RX 7600 XT targets 'دقة 1080p' in who_should_buy and narrative.
+    """
+    for fpath in _get_comparison_files():
+        doc = _load_comparison(fpath)
+        slug = doc["slug"]
+        verdict = doc["verdict"]
+        gaming_analysis = verdict.get("gaming_analysis_ar", "")
+
+        for item, who in [
+            (doc["item_a"], verdict["who_should_buy_a"]),
+            (doc["item_b"], verdict["who_should_buy_b"])
+        ]:
+            if item.get("category") == "gpu":
+                bi = item.get("benchmark_index", 0)
+                if bi < 65:
+                    assert "توازناً ممتازاً على دقة 1440p" not in gaming_analysis, (
+                        f"{slug}: Sub-65 GPU {item['name']} described with 'توازناً ممتازاً على دقة 1440p': {gaming_analysis}"
+                    )
+                    assert "لتشغيل ألعاب دقة 1440p بسلاسة" not in who, (
+                        f"{slug}: Sub-65 GPU {item['name']} described with 'لتشغيل ألعاب دقة 1440p بسلاسة': {who}"
+                    )
+                    assert "1440p" not in who, (
+                        f"{slug}: Sub-65 GPU {item['name']} falsely targets 1440p in who_should_buy: {who}"
+                    )
+                    assert "الدقات المرتفعة" not in who, (
+                        f"{slug}: Sub-65 GPU {item['name']} falsely targets 'الدقات المرتفعة' in who_should_buy: {who}"
+                    )
+
+    # Specific check: rtx-4060-ti-vs-rtx-4060
+    fpath_4060ti_4060 = os.path.join(COMPARISONS_DIR, "rtx-4060-ti-vs-rtx-4060.json")
+    if os.path.exists(fpath_4060ti_4060):
+        doc = _load_comparison(fpath_4060ti_4060)
+        who_a = doc["verdict"]["who_should_buy_a"]
+        who_b = doc["verdict"]["who_should_buy_b"]
+        assert "الدقات المرتفعة" not in who_a, f"4060 Ti falsely claims 'الدقات المرتفعة': {who_a}"
+        assert "دقة 1080p و 1440p" in who_a, f"4060 Ti missing 'دقة 1080p و 1440p': {who_a}"
+        assert "دقة 1080p" in who_b, f"4060 missing 'دقة 1080p': {who_b}"
+
+    # Specific check: rx-7800-xt-vs-rx-7600-xt
+    fpath_7800_7600 = os.path.join(COMPARISONS_DIR, "rx-7800-xt-vs-rx-7600-xt.json")
+    if os.path.exists(fpath_7800_7600):
+        doc = _load_comparison(fpath_7800_7600)
+        who_b = doc["verdict"]["who_should_buy_b"]
+        gaming = doc["verdict"]["gaming_analysis_ar"]
+        assert "دقة 1080p" in who_b, f"RX 7600 XT missing 'دقة 1080p' in who_should_buy: {who_b}"
+        assert "توازناً ممتازاً على دقة 1080p" in gaming, f"RX 7600 XT missing 'توازناً ممتازاً على دقة 1080p': {gaming}"
+
+
+def test_quality_gate_dual_x3d_cpu_gaming_narrative():
+    """Rule 3: Dual-X3D CPU Gaming Analysis.
+    - In ryzen-9-7950x3d-vs-ryzen-7-7800x3d, single_ccd (7800X3D) and dual_ccd (7950X3D) are accurately contrasted.
+    - 7800X3D holds slight edge in pure gaming 1% low FPS consistency thanks to Single-CCD design.
+    - 7950X3D combines 3D V-Cache with 16-core heavy multitasking/streaming superiority.
+    - Must NOT claim 7950X3D has an edge in 1% low FPS.
+    """
+    fpath_x3d = os.path.join(COMPARISONS_DIR, "ryzen-9-7950x3d-vs-ryzen-7-7800x3d.json")
+    assert os.path.exists(fpath_x3d), f"File {fpath_x3d} does not exist"
+    doc = _load_comparison(fpath_x3d)
+    gaming = doc["verdict"]["gaming_analysis_ar"]
+
+    assert "معمارية الشريحة الواحدة Single CCD دون أي تأخير بين الشرائح" in gaming, (
+        f"Missing Single-CCD explanation in gaming analysis: {gaming}"
+    )
+    assert "استقرار معدلات الإطارات الدنيا (1% low FPS)" in gaming, (
+        f"Missing 1% low FPS consistency mention: {gaming}"
+    )
+    assert "3D V-Cache" in gaming, f"Missing 3D V-Cache mention: {gaming}"
+    assert "أسبقية طفيفة لـ AMD Ryzen 9 7950X3D في استقرار 1% low FPS" not in gaming, (
+        f"7950X3D falsely credited with 1% low FPS edge: {gaming}"
+    )
+    assert "AMD Ryzen 7 7800X3D" in gaming, f"Missing 7800X3D in gaming analysis: {gaming}"
+    assert "تعدد المهام والبث المباشر" in gaming or "صناعة المحتوى" in gaming, (
+        f"Missing multitasking/streaming description for 7950X3D: {gaming}"
+    )

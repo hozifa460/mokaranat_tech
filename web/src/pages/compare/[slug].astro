@@ -36,7 +36,9 @@ export async function getStaticPaths() {
         title_ar: c.title_ar,
         winner_name: c.verdict.winner_name,
         score_a: c.performance_score_a,
-        score_b: c.performance_score_b
+        score_b: c.performance_score_b,
+        item_a_id: c.item_a?.id,
+        item_b_id: c.item_b?.id
       }))
     }
   }));
@@ -119,6 +121,8 @@ const { comparison, allComparisons } = Astro.props;
     <InternalLinksGrid
       currentSlug={comparison.slug}
       category={comparison.category}
+      item_a_id={comparison.item_a.id}
+      item_b_id={comparison.item_b.id}
       allComparisons={allComparisons}
     />
 

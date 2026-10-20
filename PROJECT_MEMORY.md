@@ -1,5 +1,5 @@
 # PROJECT MEMORY: Tech Comparisons (مقارنات تك)
-**Last Updated:** 2026-10-19  
+**Last Updated:** 2026-10-21  
 **Status:** In Active Production / Validated & Verified  
 **Project Path:** `D:\tech_comparisons`
 
@@ -493,6 +493,34 @@ D:\tech_comparisons\
   - Strict Quality Gate (`test_quality_gate.py`): 12/12 audits passed with 0 failures across all 80 exported comparison JSON files.
   - Astro SSG Build (`npm run build`): 84 static HTML routes compiled with 0 errors in 4.33s.
   - Strict ZERO Amazon compliance verified across all 80 JSON datasets.
+
+### Phase 21: Contextual Editorial Hardening, Cross-Tier Resolution Grounding, Dual-X3D Architectural Analysis & Smart Interlinking (2026-10-21)
+- **NVIDIA vs NVIDIA Ray Tracing & Pros/Cons Logic (`core/services/ai_editorial.py`):**
+  - Eliminated false claims of ray tracing superiority in intra-brand NVIDIA comparisons where both cards support the exact same feature set (DLSS 3.5, Ada Lovelace RT cores).
+  - Strictly enforced conditional RT superiority in pros: only use `"تفوق في تتبع الأشعة بمؤشر X/100..."` when `card.ray_tracing_score > opp.ray_tracing_score`.
+  - When `card.ray_tracing_score <= opp.ray_tracing_score`, dynamically output neutral capability framing: `"دعم كامل لتقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) مع تتبع أشعة بمؤشر X/100"`.
+  - Injected an objective con whenever `card.benchmark_index < opp.benchmark_index - 3.0`: `f"أداء رسومي إجمالي أقل مقارنة بـ {opp.name} ({_format_num(opp.benchmark_index)}/100)"`, ensuring lower-tier GPUs (e.g. RTX 4060 vs RTX 4090) explicitly acknowledge their benchmark and raster deficit.
+- **Cross-Tier GPU Resolution Grounding (`core/services/ai_editorial.py`):**
+  - Implemented `_get_gpu_target_resolution(card)` to ground target resolution claims in empirical `benchmark_index` and VRAM capacity:
+    - `benchmark_index < 65.0`: strictly `"دقة 1080p"` (entry/budget cards: RTX 4060, RX 7600 XT).
+    - `65.0 <= benchmark_index < 80.0`: `"دقة 1080p و 1440p"` if VRAM <= 8GB; `"دقة 1440p"` if VRAM >= 12GB.
+    - `benchmark_index >= 80.0`: `"دقة 1440p و 4K"` if VRAM <= 16GB; `"دقة 4K"` if VRAM >= 20GB.
+  - Grounded GPU narratives (`_build_gpu_narrative`) across NVIDIA vs NVIDIA, AMD vs AMD, and fallback branches.
+  - Guarded cross-brand narrative when `max_bench < 65.0` so neither budget card claims smooth 1440p gaming.
+  - Grounded buyer persona recommendations (`_build_who_should_buy`) so no GPU with `benchmark_index < 65.0` claims smooth 1440p gaming.
+- **Dual-X3D CPU Gaming Architecture Branch (`core/services/ai_editorial.py`):**
+  - Added dedicated `is_a_x3d and is_b_x3d` branch in `_build_cpu_narrative` accurately contrasting single-CCD vs dual-CCD Zen 4 3D V-Cache architectures:
+    - Single-CCD (Ryzen 7 7800X3D: 8 cores / 16 threads, all on single V-Cache CCD) highlighted for pure gaming 1% low FPS consistency without inter-CCD latency or core scheduling overhead (`معمارية الشريحة الواحدة Single CCD دون أي تأخير بين الشرائح`).
+    - Dual-CCD (Ryzen 9 7950X3D: 16 cores / 32 threads, 8 cores with 3D V-Cache + 8 standard high-frequency cores) highlighted for heavy multitasking, streaming, and content creation alongside elite gaming.
+- **Smart Related Interlinking (`web/src/components/InternalLinksGrid.astro` & `web/src/pages/compare/[slug].astro`):**
+  - Enhanced related comparison discovery by passing `item_a_id` and `item_b_id` from comparison documents to `InternalLinksGrid.astro`.
+  - Implemented prioritized stable sorting: comparisons sharing either `item_a_id` or `item_b_id` with the current page appear first (e.g. RTX 4090 vs RTX 4060 page prioritizes other RTX 4090 and RTX 4060 matchups), retaining manifest order among ties and falling back to same-category comparisons to fill the 6-slot grid.
+- **Matrix Regeneration & Quality Gate Suite Expansion (`core/tests/`):**
+  - Re-executed `scripts/generate_comparisons.py`: all 80 programmatic comparison JSON files and `comparisons_index.json` regenerated with updated editorial logic.
+  - Expanded `core/tests/test_quality_gate.py` with 3 comprehensive audit tests covering NVIDIA vs NVIDIA RT pros/cons, GPU resolution grounding across all 80 pairs, and dual-X3D architectural analysis.
+  - Expanded `core/tests/test_affiliate_and_editorial.py` with 3 focused unit tests verifying RT pro/con logic, resolution helper/persona output, and dual-X3D narrative symmetry.
+  - Full test suite expanded to 102 tests passing 100% in under 2 seconds.
+  - Static build (`npm run build`) compiled all 84 static routes in under 5 seconds with 0 errors.
 
 ---
 
