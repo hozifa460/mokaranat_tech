@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://mokaranat-tech.pages.dev/sitemap.xml
 Sitemap: https://mokaranat-tech.pages.dev/sitemap-index.xml
