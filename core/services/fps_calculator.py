@@ -5,7 +5,7 @@ Estimates and formats side-by-side gaming FPS performance across modern AAA titl
 """
 
 import re
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 from core.domain.models import HardwareSpec, GamingFpsItem
 
 GAMES_BENCHMARK_PROFILES: List[Dict[str, Any]] = [
@@ -135,6 +135,19 @@ class FpsCalculator:
             delta = raw_score - 85.0
             base_factor = (raw_score / 100.0) + 0.00115 * (delta ** 2)
 
+        # Halo-tier GPU adjustment:
+        # Grounded in massive silicon advantage (e.g. AD102 with 16,384 CUDA cores, 1008 GB/s bandwidth, 450W TDP)
+        # Allows RTX 4090 to achieve an authentic ~20-30% gaming FPS lead over high-end GPUs like RX 7900 XTX.
+        raw_specs_dict = item.raw_specs if isinstance(item.raw_specs, dict) else {}
+        cuda_cores = raw_specs_dict.get("cuda_cores", 0)
+        die_name = str(raw_specs_dict.get("die", "")).upper()
+        is_halo_gpu = (
+            item.category == "gpu"
+            and (cuda_cores >= 15000 or die_name in ("AD102", "GB202") or (item.tdp_w >= 400 and item.brand.upper() == "NVIDIA"))
+        )
+        if is_halo_gpu:
+            base_factor *= 1.16
+
         # Weight score based on ray tracing capability if title is RT heavy
         if game.get("rt_heavy"):
             rt_score = item.ray_tracing_score if item.ray_tracing_score is not None else 50.0
@@ -161,6 +174,23 @@ class FpsCalculator:
         return max(15, int(round(base_target * effective_factor)))
 
     @classmethod
+    def is_macos(cls, item: HardwareSpec) -> bool:
+        """Determines whether a hardware item operates under macOS."""
+        raw_os = str(item.raw_specs.get("os", "")) if isinstance(item.raw_specs, dict) else ""
+        return (
+            raw_os == "macOS"
+            or item.brand.upper() == "APPLE"
+            or "macOS" in raw_os
+        )
+
+    @classmethod
+    def get_macos_note(cls, item_a: HardwareSpec, item_b: HardwareSpec) -> Optional[str]:
+        """Provides methodology disclaimer when a matchup involves a macOS device."""
+        if cls.is_macos(item_a) or cls.is_macos(item_b):
+            return "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+        return None
+
+    @classmethod
     def calculate_fps_matrix(cls, item_a: HardwareSpec, item_b: HardwareSpec) -> List[GamingFpsItem]:
         results: List[GamingFpsItem] = []
 
@@ -169,6 +199,7 @@ class FpsCalculator:
             return results
 
         resolutions = ["1080p", "1440p", "4K"]
+        platform_note = cls.get_macos_note(item_a, item_b)
 
         for game in GAMES_BENCHMARK_PROFILES:
             for raw_res in resolutions:
@@ -205,7 +236,8 @@ class FpsCalculator:
                     fps_b=fps_b,
                     diff_pct=diff_pct,
                     winner=winner,
-                    rt_badge_ar=rt_badge_ar
+                    rt_badge_ar=rt_badge_ar,
+                    platform_note_ar=platform_note
                 ))
 
         return results

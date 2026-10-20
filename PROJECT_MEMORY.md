@@ -428,6 +428,35 @@ D:\tech_comparisons\
     - Astro SSG build (`npm run build`): 19 static HTML routes generated in 4.67s with 0 errors.
     - Zero Amazon compliance: verified across all 15 comparison JSON documents.
 
+### Phase 19: Contextual Rule Engine & Self-Auditing Quality Gate (2026-10-20)
+- **MacBook Pro 16 (M3 Max) vs ROG Zephyrus G16 Realism Calibration (`seed_specs.json`, `fps_calculator.py`, `GamingFpsWidget.astro`):**
+  - Calibrated MacBook Pro 16 gaming scores in `seed_specs.json` (`raster_1080p: 55.0, raster_1440p: 46.0, raster_4k: 30.0, ray_tracing_score: 45.0`) ensuring Windows RTX gaming laptops (ROG Zephyrus G16 with RTX 4070 Mobile) win native gaming benchmarks across all titles.
+  - Added `platform_note_ar` to `GamingFpsItem` and implemented `is_macos` / `get_macos_note` in `FpsCalculator`, documenting macOS translation layer (Metal/GPTK) performance penalties and anti-cheat incompatibility.
+  - Added warning banner in `GamingFpsWidget.astro` when a macOS laptop is compared against a Windows machine.
+- **High-End GPU Scaling Calibration (`seed_specs.json`, `fps_calculator.py`):**
+  - Calibrated `rtx-4080-super` (`benchmark_index: 91.5`) and `rx-7900-xtx` (`benchmark_index: 92.0`), strictly preserving statistical margin tie (< 3% delta).
+  - Added halo GPU scaling in `fps_calculator.py` (`1.16x` multiplier for cards with >= 15000 CUDA cores / AD102 / 450W), giving RTX 4090 a >= 6% benchmark index lead and >= 20% average FPS lead over RX 7900 XTX.
+  - Added `revised_msrp_usd: 749.0` to `rx-7900-xt` in `seed_specs.json` and integrated dynamic official retail revision notes into `_build_value_budget_gpu`.
+- **Contextual Rule Engine Refactoring (`spec_engine.py`, `ai_editorial.py`):**
+  - *Power Claims Sanitization:* Strictly barred describing power consumption as "منضبط" or "فقط" for GPUs with TDP >= 260W or CPUs with TDP >= 150W. Added high power consumption, 850W+ PSU, and 12VHPWR cable bend precautions to RTX 4090 cons. Prevented CPUs consuming more power than rivals (e.g. i5-14600K 181W vs Ryzen 5 7600X 105W) from receiving energy efficiency pros while simultaneously listing high power cons.
+  - *VRAM 4K Gating:* Restricted dedicated 4K gaming praise in VRAM pros strictly to GPUs with `benchmark_index >= 75.0`.
+  - *CPU Architectural Nuances:* Restricted L3 cache praise as "ضخمة" strictly to processors with >= 64MB cache (X3D). Added core count deficit cons for CPUs with >= 30% fewer cores (e.g. Ryzen 5 7600X 6-cores vs i5-14600K 14-cores). Differentiated `who_should_buy` between AMD (AM5 lifecycle, sub-150W efficiency) and Intel (multicore productivity, DDR4/DDR5 flexibility).
+  - *Laptop Contextual Rules:* Handled equal laptop TDP (175W vs 175W in Blade 16 vs Legion Pro 7i) as mutually providing maximum 175W TGP for sustainable clocks. Decoupled benchmark advantage from weight in pros. Guaranteed no laptop praises and criticizes battery life simultaneously. Differentiated buyer personas by price, performance, and mobility (TUF A15 budget value/durability, Blade 16 halo RTX 4090/Mini-LED, Legion Pro 7i RTX 4080 sustained performance/vapor chamber).
+- **Automated Quality Gate Test Suite (`core/tests/test_quality_gate.py`):**
+  - Built comprehensive self-auditing test suite asserting all 7 quality rules across all 15 JSON documents in `web/src/data/comparisons/*.json`:
+    1. Score range check: all scores strictly between 0 and 100.
+    2. Buyer recommendation differentiation: SequenceMatcher similarity <= 0.75 across all comparisons.
+    3. Coherence check: zero contradictory pros/cons on any device.
+    4. Realistic power claims: no high-TDP hardware praised with "منضبط" or "فقط".
+    5. VRAM 4K claims: no sub-75 index GPUs claim 4K gaming in pros.
+    6. Platform realism: macOS never beats Windows RTX gaming laptops in gaming FPS.
+    7. Equal TDP spec diff neutrality: no biased "السحب الأعلى مقابل السحب المنضبط" phrasing.
+  - Added zero-Amazon compliance and high-end GPU calibration assertions.
+- **Verification:**
+  - Full test suite expanded to 89 tests (`core/tests/`): 100% pass rate in 1.44s.
+  - Re-seeded SQLite database with updated specs and regenerated all 15 comparison JSON collections.
+  - Astro SSG build (`npm run build`): 19 static HTML routes generated in 6.33s with 0 errors.
+
 ---
 
 ## 5. Rules for Future AI Agents & Maintainers

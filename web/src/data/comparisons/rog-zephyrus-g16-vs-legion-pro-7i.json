@@ -189,7 +189,8 @@
       "fps_b": 133,
       "diff_pct": 27.9,
       "winner": "b",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -200,7 +201,8 @@
       "fps_b": 89,
       "diff_pct": 45.9,
       "winner": "b",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -211,7 +213,8 @@
       "fps_b": 41,
       "diff_pct": 70.8,
       "winner": "b",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -222,7 +225,8 @@
       "fps_b": 93,
       "diff_pct": 27.4,
       "winner": "b",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -233,7 +237,8 @@
       "fps_b": 58,
       "diff_pct": 45.0,
       "winner": "b",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -244,7 +249,8 @@
       "fps_b": 25,
       "diff_pct": 66.7,
       "winner": "b",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -255,7 +261,8 @@
       "fps_b": 322,
       "diff_pct": 8.4,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -266,7 +273,8 @@
       "fps_b": 221,
       "diff_pct": 13.3,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -277,7 +285,8 @@
       "fps_b": 116,
       "diff_pct": 16.0,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -288,7 +297,8 @@
       "fps_b": 135,
       "diff_pct": 22.7,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -299,7 +309,8 @@
       "fps_b": 98,
       "diff_pct": 40.0,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -310,7 +321,8 @@
       "fps_b": 49,
       "diff_pct": 63.3,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -321,7 +333,8 @@
       "fps_b": 191,
       "diff_pct": 20.9,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -332,7 +345,8 @@
       "fps_b": 131,
       "diff_pct": 36.5,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -343,7 +357,8 @@
       "fps_b": 61,
       "diff_pct": 56.4,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -354,7 +369,8 @@
       "fps_b": 138,
       "diff_pct": 22.1,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -365,7 +381,8 @@
       "fps_b": 99,
       "diff_pct": 37.5,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -376,7 +393,8 @@
       "fps_b": 45,
       "diff_pct": 60.7,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     }
   ],
   "verdict": {
@@ -390,8 +408,7 @@
     "value_and_budget_ar": "يطرح ASUS ROG Zephyrus G16 (2024) تكلفة شراء أولية أقل بسعر $1999 مقارنة بـ $2199 (توفير $200، بينما يرتفع سعر منافسه بنسبة 10% عن السعر الأقل)، في حين يوفر Lenovo Legion Pro 7i (Gen 9) أداءً إضافياً بنسبة 19.4% يبرر الاستثمار لمن تتطلب أعمالهم أعلى مواصفات للتنقل واللعب.",
     "pros_a": [
       "شاشة OLED مذهلة (تباين لا نهائي، استجابة فائقة 0.2ms، وسواد حقيقي مثالي لصناع المحتوى والسينمائيين)",
-      "تصميم أنيق ووزن خفيف (1.9 كجم) يسهل التنقل اليومي مقارنة بالمنافس (2.6 كجم)",
-      "كفاءة استهلاك طاقة عالية بمؤشر 86/100"
+      "تصميم أنيق ووزن خفيف (1.9 كجم) يسهل التنقل اليومي مقارنة بالمنافس (2.6 كجم)"
     ],
     "cons_a": [
       "سعة بطارية أقل (90Wh مقابل 99.9Wh لدى Lenovo Legion Pro 7i (Gen 9))",
@@ -402,7 +419,7 @@
     ],
     "pros_b": [
       "شاشة IPS فائقة السطوع (500 nits لثبات الإضاءة والوضوح التام في الغرف المضيئة دون أي مخاطر لتطبيع الشاشة OLED Burn-in)",
-      "أداء معالجة إجمالي قوي بمؤشر 86/100",
+      "أداء معالجة إجمالي قوي بمؤشر 86/100 للألعاب الثقيلة وصناعة المحتوى",
       "بطارية بسعة ضخمة (99.9 واط/ساعة) للاستخدام المطول خارج المنزل"
     ],
     "cons_b": [
@@ -412,7 +429,7 @@
       "يتطلب وضعية تهوية جيدة على سطح مستوٍ لتفادي خنق تدفق الهواء السفلي"
     ],
     "who_should_buy_a": "المستخدم كثير التنقل وصانع المحتوى الذي يضع خفة الوزن (1.9 كجم) وسهولة الحمل في صدارة أولوياته، مع الاستفادة من شاشة OLED فائقة التباين والألوان وبطارية بسعة 90Wh.",
-    "who_should_buy_b": "اللاعب أو المحترف الذي يطلب أقصى استقرار وأداء في الألعاب الثقيلة وبرامج التصميم على حساب الوزن (2.6 كجم)، مع الاستفادة من منصة تبريد قوية وبطارية بسعة 99.9Wh."
+    "who_should_buy_b": "اللاعب أو المحترف الذي يبحث عن أقوى أداء رسومي مستدام بطاقة كاملة (RTX 4080 Mobile 12GB (175W)) دون الاكتراث بالوزن والحجم، مع الاستفادة من منصة تبريد غرف البخار الفائقة وبطارية بسعة 99.9Wh."
   },
   "affiliate_links_a": [
     {
@@ -539,7 +556,7 @@
         "url": "https://tech-comparisons.pages.dev/compare/rog-zephyrus-g16-vs-legion-pro-7i",
         "name": "مقارنة ASUS ROG Zephyrus G16 (2024) ضد Lenovo Legion Pro 7i (Gen 9) | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين ASUS ROG Zephyrus G16 (2024) و Lenovo Legion Pro 7i (Gen 9). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T22:48:52.411225+00:00",
+        "datePublished": "2026-10-20T03:33:30.526007+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -565,5 +582,5 @@
       }
     ]
   },
-  "created_at": "2026-10-19T22:48:52.411225+00:00"
+  "created_at": "2026-10-20T03:33:30.526007+00:00"
 }

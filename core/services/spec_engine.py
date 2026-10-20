@@ -51,19 +51,31 @@ class SpecEngine:
         # 3. Power Consumption (TDP Watts) - lower is better for desktops, customized for gaming laptops
         is_laptop = item_a.category == "laptop" or item_b.category == "laptop"
         if is_laptop:
-            max_tgp = max(item_a.tdp_w, item_b.tdp_w)
-            min_tgp = min(item_a.tdp_w, item_b.tdp_w)
-            tdp_diff_pct = round(abs(item_a.tdp_w - item_b.tdp_w) / max_tgp * 100, 1) if max_tgp > 0 else 0.0
-            diffs.append(SpecDiffItem(
-                key="tdp_w",
-                label_ar="أقصى استهلاك رسومي متاح (GPU TGP / Thermal Budget)",
-                value_a=item_a.tdp_w,
-                value_b=item_b.tdp_w,
-                unit="W",
-                winner="tie",
-                diff_percentage=tdp_diff_pct,
-                advantage_summary_ar=f"مقياس هندسي: يمنح السحب الأعلى ({max_tgp}W) أداء رسومياً مستداماً وترددات بطاقة أعلى، بينما يتيح السحب المنضبط ({min_tgp}W) هيكلاً فائق النحافة وحرارة أقل"
-            ))
+            if item_a.tdp_w == item_b.tdp_w:
+                diffs.append(SpecDiffItem(
+                    key="tdp_w",
+                    label_ar="أقصى استهلاك رسومي متاح (GPU TGP / Thermal Budget)",
+                    value_a=item_a.tdp_w,
+                    value_b=item_b.tdp_w,
+                    unit="W",
+                    winner="tie",
+                    diff_percentage=0.0,
+                    advantage_summary_ar=f"كلا الجهازين يوفران أقصى طاقة رسومية كاملة ({item_a.tdp_w}W TGP) لأعلى أداء مستدام"
+                ))
+            else:
+                max_tgp = max(item_a.tdp_w, item_b.tdp_w)
+                min_tgp = min(item_a.tdp_w, item_b.tdp_w)
+                tdp_diff_pct = round(abs(item_a.tdp_w - item_b.tdp_w) / max_tgp * 100, 1) if max_tgp > 0 else 0.0
+                diffs.append(SpecDiffItem(
+                    key="tdp_w",
+                    label_ar="أقصى استهلاك رسومي متاح (GPU TGP / Thermal Budget)",
+                    value_a=item_a.tdp_w,
+                    value_b=item_b.tdp_w,
+                    unit="W",
+                    winner="tie",
+                    diff_percentage=tdp_diff_pct,
+                    advantage_summary_ar=f"مقياس هندسي: يمنح السحب الأعلى ({max_tgp}W) أداء رسومياً مستداماً وترددات بطاقة أعلى، بينما يتيح السحب المنضبط ({min_tgp}W) هيكلاً فائق النحافة وحرارة أقل"
+                ))
         else:
             diffs.append(cls._compare_numeric(
                 key="tdp_w",

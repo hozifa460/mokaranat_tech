@@ -198,7 +198,8 @@
       "fps_b": 75,
       "diff_pct": 18.7,
       "winner": "a",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -209,7 +210,8 @@
       "fps_b": 40,
       "diff_pct": 17.5,
       "winner": "a",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -220,7 +222,8 @@
       "fps_b": 16,
       "diff_pct": 12.5,
       "winner": "a",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -231,7 +234,8 @@
       "fps_b": 53,
       "diff_pct": 17.0,
       "winner": "a",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -242,7 +246,8 @@
       "fps_b": 27,
       "diff_pct": 14.8,
       "winner": "a",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -253,7 +258,8 @@
       "fps_b": 15,
       "diff_pct": 0.0,
       "winner": "tie",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -264,7 +270,8 @@
       "fps_b": 270,
       "diff_pct": 5.6,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -275,7 +282,8 @@
       "fps_b": 173,
       "diff_pct": 5.8,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -286,7 +294,8 @@
       "fps_b": 90,
       "diff_pct": 4.4,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -297,7 +306,8 @@
       "fps_b": 102,
       "diff_pct": 3.0,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -308,7 +318,8 @@
       "fps_b": 59,
       "diff_pct": 3.5,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -319,7 +330,8 @@
       "fps_b": 25,
       "diff_pct": 8.7,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -330,7 +342,8 @@
       "fps_b": 161,
       "diff_pct": 13.4,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -341,7 +354,8 @@
       "fps_b": 87,
       "diff_pct": 10.1,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -352,7 +366,8 @@
       "fps_b": 32,
       "diff_pct": 6.7,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -363,7 +378,8 @@
       "fps_b": 111,
       "diff_pct": 9.9,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -374,7 +390,8 @@
       "fps_b": 64,
       "diff_pct": 10.3,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -385,7 +402,8 @@
       "fps_b": 25,
       "diff_pct": 19.0,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     }
   ],
   "verdict": {
@@ -407,7 +425,7 @@
       "سعة ذاكرة رسومية (8GB) بناقل 128 بت أقل مقارنة بـ AMD (16GB) مما قد يحد من استقرار ألعاب 1440p ذات القوام الثقيل مستقبلاً"
     ],
     "pros_b": [
-      "سعة ذاكرة رسومية وافرة (16GB VRAM) بناقل 128 بت تمنح أريحية ممتازة للألعاب بدقة 1440p و 4K وتمنع اختناق الذاكرة مع القوام المرتفع",
+      "سعة ذاكرة رسومية وافرة (16GB VRAM) بناقل 128 بت تمنح أريحية ممتازة للألعاب بدقة 1080p و 1440p وتفادي اختناق الذاكرة مع القوام المرتفع",
       "أداء رسومي خام (Rasterization) ممتاز ومؤشر عام تنافسي يبلغ 57/100",
       "دعم تقنيات FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ العرض الحديثة DisplayPort 2.1"
     ],
@@ -545,7 +563,7 @@
         "url": "https://tech-comparisons.pages.dev/compare/rtx-4060-vs-rx-7600-xt",
         "name": "مقارنة NVIDIA GeForce RTX 4060 (8GB) ضد AMD Radeon RX 7600 XT | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4060 (8GB) و AMD Radeon RX 7600 XT. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T22:48:51.945280+00:00",
+        "datePublished": "2026-10-20T03:33:30.033452+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -571,5 +589,5 @@
       }
     ]
   },
-  "created_at": "2026-10-19T22:48:51.945280+00:00"
+  "created_at": "2026-10-20T03:33:30.033452+00:00"
 }

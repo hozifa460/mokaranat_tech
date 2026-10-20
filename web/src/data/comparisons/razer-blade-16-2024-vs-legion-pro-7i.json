@@ -105,7 +105,7 @@
       "unit": "W",
       "winner": "tie",
       "diff_percentage": 0.0,
-      "advantage_summary_ar": "مقياس هندسي: يمنح السحب الأعلى (175W) أداء رسومياً مستداماً وترددات بطاقة أعلى، بينما يتيح السحب المنضبط (175W) هيكلاً فائق النحافة وحرارة أقل"
+      "advantage_summary_ar": "كلا الجهازين يوفران أقصى طاقة رسومية كاملة (175W TGP) لأعلى أداء مستدام"
     },
     {
       "key": "process_node_nm",
@@ -190,7 +190,8 @@
       "fps_b": 133,
       "diff_pct": 21.1,
       "winner": "a",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -201,7 +202,8 @@
       "fps_b": 89,
       "diff_pct": 25.8,
       "winner": "a",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -212,7 +214,8 @@
       "fps_b": 41,
       "diff_pct": 26.8,
       "winner": "a",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -223,7 +226,8 @@
       "fps_b": 93,
       "diff_pct": 21.5,
       "winner": "a",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -234,7 +238,8 @@
       "fps_b": 58,
       "diff_pct": 25.9,
       "winner": "a",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -245,7 +250,8 @@
       "fps_b": 25,
       "diff_pct": 28.0,
       "winner": "a",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -256,7 +262,8 @@
       "fps_b": 322,
       "diff_pct": 8.1,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -267,7 +274,8 @@
       "fps_b": 221,
       "diff_pct": 10.0,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -278,7 +286,8 @@
       "fps_b": 116,
       "diff_pct": 7.8,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -289,7 +298,8 @@
       "fps_b": 135,
       "diff_pct": 17.8,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -300,7 +310,8 @@
       "fps_b": 98,
       "diff_pct": 23.5,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -311,7 +322,8 @@
       "fps_b": 49,
       "diff_pct": 22.4,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -322,7 +334,8 @@
       "fps_b": 191,
       "diff_pct": 17.3,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -333,7 +346,8 @@
       "fps_b": 131,
       "diff_pct": 22.1,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -344,7 +358,8 @@
       "fps_b": 61,
       "diff_pct": 21.3,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -355,7 +370,8 @@
       "fps_b": 138,
       "diff_pct": 18.8,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -366,7 +382,8 @@
       "fps_b": 99,
       "diff_pct": 24.2,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -377,7 +394,8 @@
       "fps_b": 45,
       "diff_pct": 24.4,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     }
   ],
   "verdict": {
@@ -392,7 +410,7 @@
     "pros_a": [
       "شاشة Mini-LED مزدوجة النمط (Dual-Mode) تدعم دقة 4K بتردد 120Hz للإنتاجية ونمط FHD+ فائق السرعة بتردد 240Hz للألعاب بسطوع 1000 nits",
       "وزن أخف نسبياً (2.5 كجم) مقارنة بالمنافس (2.6 كجم)",
-      "بطارية بسعة متزنة (95.2 واط/ساعة)"
+      "أداء رسومي رائد بفضل كرت NVIDIA GeForce RTX 4090 Mobile 16GB (175W) ومؤشر أداء استثنائي (94/100)"
     ],
     "cons_a": [
       "سعر إطلاق رسمي أعلى ($3799)",
@@ -411,8 +429,8 @@
       "خيارات ترقية العتاد الداخلي محدودة بطبيعة الأجهزة المحمولة",
       "يتطلب وضعية تهوية جيدة على سطح مستوٍ لتفادي خنق تدفق الهواء السفلي"
     ],
-    "who_should_buy_a": "اللاعب أو المحترف الذي يطلب أقصى استقرار وأداء في الألعاب الثقيلة وبرامج التصميم على حساب الوزن (2.5 كجم)، مع الاستفادة من منصة تبريد قوية وبطارية بسعة 95.2Wh.",
-    "who_should_buy_b": "اللاعب أو المحترف الذي يطلب أقصى استقرار وأداء في الألعاب الثقيلة وبرامج التصميم على حساب الوزن (2.6 كجم)، مع الاستفادة من منصة تبريد قوية وبطارية بسعة 99.9Wh."
+    "who_should_buy_a": "المستخدم والمحترف الذي يطلب قمة الأداء الرسومي المطلق دون أي تنازلات مع كرت NVIDIA GeForce RTX 4090 Mobile 16GB (175W) وشاشة Dual-Mode Mini-LED المتطورة في هيكل ألومنيوم فائق الفخامة، ومستعد للاستثمار في أعلى فئة أداء وبطارية بسعة 95.2Wh.",
+    "who_should_buy_b": "المستخدم الباحث عن أفضل صفقة اقتصادية وقيمة عالية مقابل السعر بجهاز ألعاب متين مطابق للمعايير العسكرية MIL-STD-810H، مع قابلية كاملة لترقية الذواكر والتخزين وبطارية 99.9Wh دون إنفاق ميزانية باهظة."
   },
   "affiliate_links_a": [
     {
@@ -539,7 +557,7 @@
         "url": "https://tech-comparisons.pages.dev/compare/razer-blade-16-2024-vs-legion-pro-7i",
         "name": "مقارنة Razer Blade 16 (2024) ضد Lenovo Legion Pro 7i (Gen 9) | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين Razer Blade 16 (2024) و Lenovo Legion Pro 7i (Gen 9). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T22:48:52.531556+00:00",
+        "datePublished": "2026-10-20T03:33:30.685141+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -565,5 +583,5 @@
       }
     ]
   },
-  "created_at": "2026-10-19T22:48:52.531556+00:00"
+  "created_at": "2026-10-20T03:33:30.685141+00:00"
 }

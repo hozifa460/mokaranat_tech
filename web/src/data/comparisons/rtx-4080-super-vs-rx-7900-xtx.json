@@ -27,7 +27,7 @@
       "pcie_lanes": 16,
       "nvenc_encoders": 2
     },
-    "benchmark_index": 95.0,
+    "benchmark_index": 91.5,
     "gaming_scores": {
       "raster_1080p": 94.0,
       "raster_1440p": 96.0,
@@ -65,7 +65,7 @@
       "pcie_interface": "PCIe 4.0 x16",
       "pcie_lanes": 16
     },
-    "benchmark_index": 96.0,
+    "benchmark_index": 92.0,
     "gaming_scores": {
       "raster_1080p": 95.0,
       "raster_1440p": 98.0,
@@ -85,11 +85,11 @@
     {
       "key": "benchmark_index",
       "label_ar": "مؤشر الأداء العام (Benchmark Index)",
-      "value_a": 95.0,
-      "value_b": 96.0,
+      "value_a": 91.5,
+      "value_b": 92.0,
       "unit": "/ 100",
       "winner": "tie",
-      "diff_percentage": 1.1,
+      "diff_percentage": 0.5,
       "advantage_summary_ar": "تعادل / تقارب في الأداء (فارق هامشي أقل من 3%)"
     },
     {
@@ -183,8 +183,8 @@
       "advantage_summary_ar": "واجهة توصيل متطابقة بكامل المسارات (16 مساراً)"
     }
   ],
-  "performance_score_a": 95.0,
-  "performance_score_b": 96.0,
+  "performance_score_a": 91.5,
+  "performance_score_b": 92.0,
   "fps_benchmarks": [
     {
       "game_title": "Cyberpunk 2077",
@@ -195,7 +195,8 @@
       "fps_b": 127,
       "diff_pct": 19.7,
       "winner": "a",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -206,7 +207,8 @@
       "fps_b": 97,
       "diff_pct": 15.5,
       "winner": "a",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -217,7 +219,8 @@
       "fps_b": 52,
       "diff_pct": 15.4,
       "winner": "a",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -228,7 +231,8 @@
       "fps_b": 90,
       "diff_pct": 17.8,
       "winner": "a",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -239,7 +243,8 @@
       "fps_b": 65,
       "diff_pct": 13.8,
       "winner": "a",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -250,7 +255,8 @@
       "fps_b": 32,
       "diff_pct": 15.6,
       "winner": "a",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -261,7 +267,8 @@
       "fps_b": 323,
       "diff_pct": 4.6,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -272,7 +279,8 @@
       "fps_b": 237,
       "diff_pct": 2.5,
       "winner": "tie",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -283,7 +291,8 @@
       "fps_b": 129,
       "diff_pct": 3.9,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -294,7 +303,8 @@
       "fps_b": 158,
       "diff_pct": 5.3,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -305,7 +315,8 @@
       "fps_b": 132,
       "diff_pct": 9.1,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -316,7 +327,8 @@
       "fps_b": 76,
       "diff_pct": 8.6,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -327,7 +339,8 @@
       "fps_b": 254,
       "diff_pct": 20.4,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -338,7 +351,8 @@
       "fps_b": 201,
       "diff_pct": 25.6,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -349,7 +363,8 @@
       "fps_b": 105,
       "diff_pct": 22.1,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -360,7 +375,8 @@
       "fps_b": 172,
       "diff_pct": 11.7,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -371,7 +387,8 @@
       "fps_b": 142,
       "diff_pct": 15.4,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -382,14 +399,15 @@
       "fps_b": 74,
       "diff_pct": 13.8,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     }
   ],
   "verdict": {
     "overall_winner": "tie",
     "winner_name": "تعادل متقارب في الأداء",
-    "score_a": 95.0,
-    "score_b": 96.0,
+    "score_a": 91.5,
+    "score_b": 92.0,
     "quick_verdict_ar": "يظهر كل من NVIDIA GeForce RTX 4080 Super و AMD Radeon RX 7900 XTX تقارباً استثنائياً في الأداء الكلي بفوارق هامشية ضمن هامش الخطأ الإحصائي (أقل من 3%). الحسم بينهما يعتمد بالدرجة الأولى على فارق السعر الفعلي في السوق المحلي وتفضيلات البرمجيات الخاصة بكل مستخدم.",
     "gaming_analysis_ar": "في ساحة الألعاب، يقدم كل من NVIDIA GeForce RTX 4080 Super و AMD Radeon RX 7900 XTX أداءً متقارباً في المعالجة الرسومية التقليدية (Rasterization)، حيث يتميز NVIDIA GeForce RTX 4080 Super بأسبقية واضحة في تتبع الأشعة بمؤشر 94/100 مع منظومة DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) لبطاقات RTX، بينما يرد AMD Radeon RX 7900 XTX بـ سعة ذاكرة رسومية هائلة تبلغ 24GB (مقابل 16GB لدى منافسه) تمنح أماناً فائقاً واستقراراً في الألعاب بدقة 4K وقوام Ultra بدون اختناق الذاكرة مع دعم تقنية FSR 3.1 وتوليد الإطارات مفتوحة المصدر المتوافقة عبر مختلف المنصات.",
     "productivity_analysis_ar": "على صعيد الإنتاجية والرندرة وصناعة المحتوى، يحسم NVIDIA GeForce RTX 4080 Super المنافسة بفضل تفوق منظومة CUDA و OptiX لتسريع محركات التصميم (مثل Blender و Premiere) وتطبيقات الذكاء الاصطناعي مع مشفر NVENC المزدوج (Dual NVENC) فائق السرعة من الجيل الثامن مع دعم تسريع وتشفير عتادي لـ AV1؛ ومع أن كلا المعماريتين تدعمان التشفير وفك التشفير العتادي لترميز AV1 الحديث (مشفر NVENC الجيل الثامن في Ada Lovelace مقابل محرك VCN 4.0 في RDNA 3) وسعة ذاكرة رسومية هائلة تبلغ 24GB لـ AMD Radeon RX 7900 XTX، إلا أن أفضلية بيئة العمل البرمجية واستقرار التعريفات في تطبيقات الإنتاج تظل محسومة لصالح NVIDIA بفضل الدعم الواسع في برمجيات التصميم.",
@@ -397,7 +415,7 @@
     "pros_a": [
       "تفوق في تتبع الأشعة بمؤشر 94/100 ودعم كامل لتقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة)",
       "هيمنة بيئة العمل وصناعة المحتوى بفضل تسريع مكتبات CUDA و OptiX ومشفر NVENC المزدوج لتسريع البث المباشر وتصدير الفيديو",
-      "كفاءة طاقة ممتازة بمؤشر 88/100 وسحب طاقة منضبط (320W)"
+      "كفاءة طاقة معمارية متقدمة بمؤشر 88/100 باستطاعة (320W)"
     ],
     "cons_a": [
       "سعة ذاكرة رسومية (16GB) أقل مقارنة بـ AMD (24GB) مما قد يحد من مرونة ألعاب 4K فائقة القوام مستقبلاً",
@@ -405,7 +423,7 @@
     ],
     "pros_b": [
       "سعة ذاكرة رسومية هائلة (24GB VRAM) بناقل 384 بت تمنح أماناً كاملاً للألعاب بدقة 4K والرندرة الضخمة دون اختناق الذاكرة",
-      "أداء رسومي خام (Rasterization) ممتاز ومؤشر عام تنافسي يبلغ 96/100",
+      "أداء رسومي خام (Rasterization) ممتاز ومؤشر عام تنافسي يبلغ 92/100",
       "دعم تقنيات FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ العرض الحديثة DisplayPort 2.1"
     ],
     "cons_b": [
@@ -413,7 +431,7 @@
       "افتقار لدعم بيئة تسريع CUDA المعتمدة صناعياً في برامج التصميم والذكاء الاصطناعي",
       "استهلاك طاقة يصل إلى 355 واط يتطلب مزود طاقة وتبريداً قوياً داخل الصندوق"
     ],
-    "who_should_buy_a": "اللاعب أو صانع المحتوى الذي يضع أولوية لبيئة عمل CUDA وتسريع الرندرة وتطبيقات الذكاء الاصطناعي، ويرغب في أحدث تقنيات تتبع الأشعة مع تقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) لبطاقات GeForce RTX، إلى جانب كفاءة استهلاك طاقة عالية بسحب 320W فقط.",
+    "who_should_buy_a": "اللاعب أو صانع المحتوى الذي يضع أولوية لبيئة عمل CUDA وتسريع الرندرة وتطبيقات الذكاء الاصطناعي، ويرغب في أحدث تقنيات تتبع الأشعة مع تقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) لبطاقات GeForce RTX، إلى جانب كفاءة طاقة معمارية متقدمة باستطاعة 320W.",
     "who_should_buy_b": "اللاعب الذي يركز على أعلى أداء رسومي خام (Raw Raster FPS) مقابل السعر، مع الاستفادة من سعة ذاكرة رحبة تبلغ 24GB بناقل 384 بت لتفادي اختناق القوام، وتفضيل التقنيات المفتوحة مثل FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ DisplayPort 2.1 الحديثة."
   },
   "affiliate_links_a": [
@@ -541,7 +559,7 @@
         "url": "https://tech-comparisons.pages.dev/compare/rtx-4080-super-vs-rx-7900-xtx",
         "name": "مقارنة NVIDIA GeForce RTX 4080 Super ضد AMD Radeon RX 7900 XTX | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4080 Super و AMD Radeon RX 7900 XTX. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T22:48:51.211331+00:00",
+        "datePublished": "2026-10-20T03:33:29.371125+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -559,7 +577,7 @@
         },
         "reviewRating": {
           "@type": "Rating",
-          "ratingValue": 4.8,
+          "ratingValue": 4.6,
           "bestRating": "5",
           "worstRating": "1"
         },
@@ -567,5 +585,5 @@
       }
     ]
   },
-  "created_at": "2026-10-19T22:48:51.211331+00:00"
+  "created_at": "2026-10-20T03:33:29.371125+00:00"
 }

@@ -195,7 +195,8 @@
       "fps_b": 102,
       "diff_pct": 25.5,
       "winner": "a",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -206,7 +207,8 @@
       "fps_b": 68,
       "diff_pct": 20.6,
       "winner": "a",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -217,7 +219,8 @@
       "fps_b": 35,
       "diff_pct": 17.1,
       "winner": "a",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -228,7 +231,8 @@
       "fps_b": 72,
       "diff_pct": 25.0,
       "winner": "a",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -239,7 +243,8 @@
       "fps_b": 45,
       "diff_pct": 20.0,
       "winner": "a",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -250,7 +255,8 @@
       "fps_b": 22,
       "diff_pct": 13.6,
       "winner": "a",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -261,7 +267,8 @@
       "fps_b": 296,
       "diff_pct": 6.8,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -272,7 +279,8 @@
       "fps_b": 203,
       "diff_pct": 5.4,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -283,7 +291,8 @@
       "fps_b": 111,
       "diff_pct": 4.5,
       "winner": "a",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -294,7 +303,8 @@
       "fps_b": 129,
       "diff_pct": 0.0,
       "winner": "tie",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -305,7 +315,8 @@
       "fps_b": 94,
       "diff_pct": 4.4,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -316,7 +327,8 @@
       "fps_b": 52,
       "diff_pct": 6.1,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -327,7 +339,8 @@
       "fps_b": 207,
       "diff_pct": 13.1,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -338,7 +351,8 @@
       "fps_b": 141,
       "diff_pct": 16.5,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -349,7 +363,8 @@
       "fps_b": 71,
       "diff_pct": 16.4,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -360,7 +375,8 @@
       "fps_b": 141,
       "diff_pct": 6.0,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -371,7 +387,8 @@
       "fps_b": 101,
       "diff_pct": 9.8,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -382,7 +399,8 @@
       "fps_b": 51,
       "diff_pct": 13.3,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     }
   ],
   "verdict": {
@@ -410,7 +428,8 @@
     ],
     "cons_b": [
       "أداء أقل في تتبع الأشعة (Ray Tracing) مقارنة بنواة RT Cores لدى NVIDIA (مؤشر 67/100)",
-      "افتقار لدعم بيئة تسريع CUDA المعتمدة صناعياً في برامج التصميم والذكاء الاصطناعي"
+      "افتقار لدعم بيئة تسريع CUDA المعتمدة صناعياً في برامج التصميم والذكاء الاصطناعي",
+      "استهلاك طاقة يبلغ 263 واط يتطلب مزود طاقة وتبريداً مناسباً داخل الصندوق"
     ],
     "who_should_buy_a": "اللاعب أو صانع المحتوى الذي يضع أولوية لبيئة عمل CUDA وتسريع الرندرة وتطبيقات الذكاء الاصطناعي، ويرغب في أحدث تقنيات تتبع الأشعة مع تقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) لبطاقات GeForce RTX، إلى جانب كفاءة استهلاك طاقة عالية بسحب 220W فقط.",
     "who_should_buy_b": "اللاعب الذي يركز على أعلى أداء رسومي خام (Raw Raster FPS) مقابل السعر، مع الاستفادة من سعة ذاكرة رحبة تبلغ 16GB بناقل 256 بت لتفادي اختناق القوام، وتفضيل التقنيات المفتوحة مثل FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ DisplayPort 2.1 الحديثة."
@@ -540,7 +559,7 @@
         "url": "https://tech-comparisons.pages.dev/compare/rtx-4070-super-vs-rx-7800-xt",
         "name": "مقارنة NVIDIA GeForce RTX 4070 Super ضد AMD Radeon RX 7800 XT | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4070 Super و AMD Radeon RX 7800 XT. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T22:48:51.065263+00:00",
+        "datePublished": "2026-10-20T03:33:29.195152+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -566,5 +585,5 @@
       }
     ]
   },
-  "created_at": "2026-10-19T22:48:51.065263+00:00"
+  "created_at": "2026-10-20T03:33:29.195152+00:00"
 }

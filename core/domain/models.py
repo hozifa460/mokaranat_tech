@@ -85,6 +85,7 @@ class GamingFpsItem(BaseModel):
     diff_pct: float
     winner: Literal["a", "b", "tie"]
     rt_badge_ar: Optional[str] = None
+    platform_note_ar: Optional[str] = None
 
 
 class AffiliateOffer(BaseModel):

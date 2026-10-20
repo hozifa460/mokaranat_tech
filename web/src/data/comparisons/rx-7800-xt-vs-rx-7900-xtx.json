@@ -64,7 +64,7 @@
       "pcie_interface": "PCIe 4.0 x16",
       "pcie_lanes": 16
     },
-    "benchmark_index": 96.0,
+    "benchmark_index": 92.0,
     "gaming_scores": {
       "raster_1080p": 95.0,
       "raster_1440p": 98.0,
@@ -85,11 +85,11 @@
       "key": "benchmark_index",
       "label_ar": "مؤشر الأداء العام (Benchmark Index)",
       "value_a": 81.0,
-      "value_b": 96.0,
+      "value_b": 92.0,
       "unit": "/ 100",
       "winner": "b",
-      "diff_percentage": 18.5,
-      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 18.5%"
+      "diff_percentage": 13.6,
+      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 13.6%"
     },
     {
       "key": "launch_msrp_usd",
@@ -183,7 +183,7 @@
     }
   ],
   "performance_score_a": 81.0,
-  "performance_score_b": 96.0,
+  "performance_score_b": 92.0,
   "fps_benchmarks": [
     {
       "game_title": "Cyberpunk 2077",
@@ -194,7 +194,8 @@
       "fps_b": 127,
       "diff_pct": 24.5,
       "winner": "b",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -205,7 +206,8 @@
       "fps_b": 97,
       "diff_pct": 42.6,
       "winner": "b",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
     },
     {
       "game_title": "Cyberpunk 2077",
@@ -216,7 +218,8 @@
       "fps_b": 52,
       "diff_pct": 48.6,
       "winner": "b",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -227,7 +230,8 @@
       "fps_b": 90,
       "diff_pct": 25.0,
       "winner": "b",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -238,7 +242,8 @@
       "fps_b": 65,
       "diff_pct": 44.4,
       "winner": "b",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
     },
     {
       "game_title": "Black Myth: Wukong",
@@ -249,7 +254,8 @@
       "fps_b": 32,
       "diff_pct": 45.5,
       "winner": "b",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -260,7 +266,8 @@
       "fps_b": 323,
       "diff_pct": 9.1,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -271,7 +278,8 @@
       "fps_b": 237,
       "diff_pct": 16.7,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Counter-Strike 2",
@@ -282,7 +290,8 @@
       "fps_b": 129,
       "diff_pct": 16.2,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -293,7 +302,8 @@
       "fps_b": 158,
       "diff_pct": 22.5,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -304,7 +314,8 @@
       "fps_b": 132,
       "diff_pct": 40.4,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Red Dead Redemption 2",
@@ -315,7 +326,8 @@
       "fps_b": 76,
       "diff_pct": 46.2,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -326,7 +338,8 @@
       "fps_b": 254,
       "diff_pct": 22.7,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -337,7 +350,8 @@
       "fps_b": 201,
       "diff_pct": 42.6,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Call of Duty: Warzone",
@@ -348,7 +362,8 @@
       "fps_b": 105,
       "diff_pct": 47.9,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -359,7 +374,8 @@
       "fps_b": 172,
       "diff_pct": 22.0,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -370,7 +386,8 @@
       "fps_b": 142,
       "diff_pct": 40.6,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     },
     {
       "game_title": "Assassin's Creed Mirage",
@@ -381,15 +398,16 @@
       "fps_b": 74,
       "diff_pct": 45.1,
       "winner": "b",
-      "rt_badge_ar": null
+      "rt_badge_ar": null,
+      "platform_note_ar": null
     }
   ],
   "verdict": {
     "overall_winner": "b",
     "winner_name": "AMD Radeon RX 7900 XTX",
     "score_a": 81.0,
-    "score_b": 96.0,
-    "quick_verdict_ar": "يتفوق AMD Radeon RX 7900 XTX في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 18.5% مقارنة بـ AMD Radeon RX 7800 XT. هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~38%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "score_b": 92.0,
+    "quick_verdict_ar": "يتفوق AMD Radeon RX 7900 XTX في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 13.6% مقارنة بـ AMD Radeon RX 7800 XT. هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~38%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
     "gaming_analysis_ar": "في ساحة الألعاب، يتميز كرت AMD Radeon RX 7900 XTX بقوة معالجة خام فائقة وسعة ذاكرة رسومية هائلة تبلغ 24GB VRAM، في حين يقدم AMD Radeon RX 7800 XT بسعة 16GB توازناً ممتازاً على دقة 1440p، مع دعم كامل لكلا البطاقتين لتقنيات FSR 3.1 ومنافذ DisplayPort 2.1 الحديثة.",
     "productivity_analysis_ar": "على صعيد الإنتاجية والرندرة، تمنح سعة الذاكرة الكبيرة (24GB لـ AMD Radeon RX 7900 XTX) ميزة في معالجة المشاهد ثلاثية الأبعاد والمشاريع الضخمة، بينما يستهلك AMD Radeon RX 7800 XT طاقة أقل (263W مقابل 355W) مما يسهل تبريده في مختلف بيئات العمل.",
     "value_and_budget_ar": "عند دراسة معادلة القيمة مقابل السعر، يطرح AMD Radeon RX 7800 XT تكلفة شراء أقل بسعر $499 (توفير $500، بينما يرتفع سعر منافسه بنسبة 100.2% عن السعر الأقل)، في حين يقدم AMD Radeon RX 7900 XTX زيادة في الإطارات بمتوسط ~38% وسعة 24GB، مما يجعل AMD Radeon RX 7800 XT الخيار الأفضل لقيمة كل دولار، بينما يستهدف AMD Radeon RX 7900 XTX من يطلب أداءً أعلى واستثماراً أكثر استدامة للمستقبل.",
@@ -399,17 +417,18 @@
       "دعم تقنيات FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ العرض الحديثة DisplayPort 2.1"
     ],
     "cons_a": [
-      "أداء رسومي إجمالي أقل مقارنة بالفئة الأعلى (96/100)"
+      "أداء رسومي إجمالي أقل مقارنة بالفئة الأعلى (92/100)",
+      "استهلاك طاقة يبلغ 263 واط يتطلب مزود طاقة وتبريداً مناسباً داخل الصندوق"
     ],
     "pros_b": [
       "سعة ذاكرة رسومية هائلة (24GB VRAM) بناقل 384 بت تمنح أماناً كاملاً للألعاب بدقة 4K والرندرة الضخمة دون اختناق الذاكرة",
-      "أداء رسومي خام (Rasterization) ممتاز ومؤشر عام تنافسي يبلغ 96/100",
+      "أداء رسومي خام (Rasterization) ممتاز ومؤشر عام تنافسي يبلغ 92/100",
       "دعم تقنيات FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ العرض الحديثة DisplayPort 2.1"
     ],
     "cons_b": [
       "استهلاك طاقة يصل إلى 355 واط يتطلب مزود طاقة وتبريداً قوياً داخل الصندوق"
     ],
-    "who_should_buy_a": "اللاعب الذي يركز على أفضل قيمة شرائية لتشغيل ألعاب دقة 1440p بسلاسة تامة واستهلاك طاقة منضبط.",
+    "who_should_buy_a": "اللاعب الذي يركز على أفضل قيمة شرائية لتشغيل ألعاب دقة 1440p بسلاسة تامة وكفاءة معمارية متقدمة (263W).",
     "who_should_buy_b": "اللاعب الذي يستهدف أقصى أداء رسومي على دقة 4K مع سعة ذاكرة فائقة تبلغ 24GB للمشاريع والألعاب الضخمة."
   },
   "affiliate_links_a": [
@@ -537,7 +556,7 @@
         "url": "https://tech-comparisons.pages.dev/compare/rx-7800-xt-vs-rx-7900-xtx",
         "name": "مقارنة AMD Radeon RX 7800 XT ضد AMD Radeon RX 7900 XTX | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين AMD Radeon RX 7800 XT و AMD Radeon RX 7900 XTX. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T22:48:51.569822+00:00",
+        "datePublished": "2026-10-20T03:33:29.693871+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -555,13 +574,13 @@
         },
         "reviewRating": {
           "@type": "Rating",
-          "ratingValue": 4.8,
+          "ratingValue": 4.6,
           "bestRating": "5",
           "worstRating": "1"
         },
-        "reviewBody": "يتفوق AMD Radeon RX 7900 XTX في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 18.5% مقارنة بـ AMD Radeon RX 7800 XT. هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~38%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+        "reviewBody": "يتفوق AMD Radeon RX 7900 XTX في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 13.6% مقارنة بـ AMD Radeon RX 7800 XT. هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~38%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
       }
     ]
   },
-  "created_at": "2026-10-19T22:48:51.569822+00:00"
+  "created_at": "2026-10-20T03:33:29.693871+00:00"
 }

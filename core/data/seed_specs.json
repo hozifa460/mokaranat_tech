@@ -90,7 +90,7 @@
       "pcie_lanes": 16,
       "nvenc_encoders": 2
     },
-    "benchmark_index": 95.0,
+    "benchmark_index": 91.5,
     "gaming_scores": {
       "raster_1080p": 94.0,
       "raster_1440p": 96.0,
@@ -123,7 +123,7 @@
       "pcie_interface": "PCIe 4.0 x16",
       "pcie_lanes": 16
     },
-    "benchmark_index": 96.0,
+    "benchmark_index": 92.0,
     "gaming_scores": {
       "raster_1080p": 95.0,
       "raster_1440p": 98.0,
@@ -448,9 +448,10 @@
       "bandwidth_gbps": 800.0,
       "pcie_interface": "PCIe 4.0 x16",
       "pcie_lanes": 16,
-      "displayport": "DisplayPort 2.1"
+      "displayport": "DisplayPort 2.1",
+      "revised_msrp_usd": 749.0
     },
-    "benchmark_index": 91.0,
+    "benchmark_index": 89.0,
     "gaming_scores": {
       "raster_1080p": 93.0,
       "raster_1440p": 92.0,
@@ -667,11 +668,11 @@
     },
     "benchmark_index": 92.0,
     "gaming_scores": {
-      "raster_1080p": 82.0,
-      "raster_1440p": 78.0,
-      "raster_4k": 65.0
+      "raster_1080p": 55.0,
+      "raster_1440p": 46.0,
+      "raster_4k": 30.0
     },
-    "ray_tracing_score": 72.0,
+    "ray_tracing_score": 45.0,
     "efficiency_score": 98.0,
     "features": ["Apple M3 Max 3nm Silicon", "Liquid Retina XDR Mini-LED", "48GB Unified Memory (300 GB/s)", "Extraordinary Battery Efficiency (22h)"]
   },

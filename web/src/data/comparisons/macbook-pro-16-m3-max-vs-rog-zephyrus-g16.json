@@ -28,11 +28,11 @@
     },
     "benchmark_index": 92.0,
     "gaming_scores": {
-      "raster_1080p": 82.0,
-      "raster_1440p": 78.0,
-      "raster_4k": 65.0
+      "raster_1080p": 55.0,
+      "raster_1440p": 46.0,
+      "raster_4k": 30.0
     },
-    "ray_tracing_score": 72.0,
+    "ray_tracing_score": 45.0,
     "efficiency_score": 98.0,
     "features": [
       "Apple M3 Max 3nm Silicon",
@@ -121,12 +121,12 @@
     {
       "key": "ray_tracing_score",
       "label_ar": "كفاءة تتبع الأشعة (Ray Tracing)",
-      "value_a": 72.0,
+      "value_a": 45.0,
       "value_b": 68.0,
       "unit": "/ 100",
-      "winner": "a",
-      "diff_percentage": 5.9,
-      "advantage_summary_ar": "معالجة متقدمة لتقنيات الإضاءة الواقعية بفارق 5.9%"
+      "winner": "b",
+      "diff_percentage": 51.1,
+      "advantage_summary_ar": "معالجة متقدمة لتقنيات الإضاءة الواقعية بفارق 51.1%"
     },
     {
       "key": "efficiency_score",
@@ -187,198 +187,216 @@
       "game_title_ar": "سايبربانك 2077",
       "resolution": "1080p",
       "preset": "Ultra High",
-      "fps_a": 105,
+      "fps_a": 65,
       "fps_b": 104,
-      "diff_pct": 1.0,
-      "winner": "tie",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "diff_pct": 60.0,
+      "winner": "b",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
     },
     {
       "game_title": "Cyberpunk 2077",
       "game_title_ar": "سايبربانك 2077",
       "resolution": "1440p",
       "preset": "Ultra High",
-      "fps_a": 70,
+      "fps_a": 38,
       "fps_b": 61,
-      "diff_pct": 14.8,
-      "winner": "a",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "diff_pct": 60.5,
+      "winner": "b",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
     },
     {
       "game_title": "Cyberpunk 2077",
       "game_title_ar": "سايبربانك 2077",
       "resolution": "4K",
       "preset": "Ultra High",
-      "fps_a": 35,
+      "fps_a": 15,
       "fps_b": 24,
-      "diff_pct": 45.8,
-      "winner": "a",
-      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)"
+      "diff_pct": 60.0,
+      "winner": "b",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
     },
     {
       "game_title": "Black Myth: Wukong",
       "game_title_ar": "بلاك ميث: ووكونغ",
       "resolution": "1080p",
-      "preset": "Cinematic High",
-      "fps_a": 72,
-      "fps_b": 73,
-      "diff_pct": 1.4,
-      "winner": "tie",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
-    },
-    {
-      "game_title": "Black Myth: Wukong",
-      "game_title_ar": "بلاك ميث: ووكونغ",
-      "resolution": "1440p",
       "preset": "Cinematic High",
       "fps_a": 45,
+      "fps_b": 73,
+      "diff_pct": 62.2,
+      "winner": "b",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1440p",
+      "preset": "Cinematic High",
+      "fps_a": 25,
       "fps_b": 40,
-      "diff_pct": 12.5,
-      "winner": "a",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
+      "diff_pct": 60.0,
+      "winner": "b",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
     },
     {
       "game_title": "Black Myth: Wukong",
       "game_title_ar": "بلاك ميث: ووكونغ",
       "resolution": "4K",
       "preset": "Cinematic High",
-      "fps_a": 21,
+      "fps_a": 15,
       "fps_b": 15,
-      "diff_pct": 40.0,
-      "winner": "a",
-      "rt_badge_ar": "💡 إضاءة Lumen العتادية"
-    },
-    {
-      "game_title": "Counter-Strike 2",
-      "game_title_ar": "كاونتر سترايك 2",
-      "resolution": "1080p",
-      "preset": "Competitive High",
-      "fps_a": 294,
-      "fps_b": 297,
-      "diff_pct": 1.0,
+      "diff_pct": 0.0,
       "winner": "tie",
-      "rt_badge_ar": null
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1080p",
+      "preset": "Competitive High",
+      "fps_a": 255,
+      "fps_b": 297,
+      "diff_pct": 16.5,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
     },
     {
       "game_title": "Counter-Strike 2",
       "game_title_ar": "كاونتر سترايك 2",
       "resolution": "1440p",
       "preset": "Competitive High",
-      "fps_a": 202,
+      "fps_a": 170,
       "fps_b": 195,
-      "diff_pct": 3.6,
-      "winner": "a",
-      "rt_badge_ar": null
+      "diff_pct": 14.7,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
     },
     {
       "game_title": "Counter-Strike 2",
       "game_title_ar": "كاونتر سترايك 2",
       "resolution": "4K",
       "preset": "Competitive High",
-      "fps_a": 110,
-      "fps_b": 100,
-      "diff_pct": 10.0,
-      "winner": "a",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Red Dead Redemption 2",
-      "game_title_ar": "ريد ديد ريدمبشن 2",
-      "resolution": "1080p",
-      "preset": "Ultra",
-      "fps_a": 119,
-      "fps_b": 110,
-      "diff_pct": 8.2,
-      "winner": "a",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Red Dead Redemption 2",
-      "game_title_ar": "ريد ديد ريدمبشن 2",
-      "resolution": "1440p",
-      "preset": "Ultra",
-      "fps_a": 86,
-      "fps_b": 70,
-      "diff_pct": 22.9,
-      "winner": "a",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Red Dead Redemption 2",
-      "game_title_ar": "ريد ديد ريدمبشن 2",
-      "resolution": "4K",
-      "preset": "Ultra",
-      "fps_a": 47,
-      "fps_b": 30,
-      "diff_pct": 56.7,
-      "winner": "a",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Call of Duty: Warzone",
-      "game_title_ar": "كول أوف ديوتي: وورزون",
-      "resolution": "1080p",
-      "preset": "Ultra / High",
-      "fps_a": 172,
-      "fps_b": 158,
-      "diff_pct": 8.9,
-      "winner": "a",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Call of Duty: Warzone",
-      "game_title_ar": "كول أوف ديوتي: وورزون",
-      "resolution": "1440p",
-      "preset": "Ultra / High",
-      "fps_a": 117,
-      "fps_b": 96,
-      "diff_pct": 21.9,
-      "winner": "a",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Call of Duty: Warzone",
-      "game_title_ar": "كول أوف ديوتي: وورزون",
-      "resolution": "4K",
-      "preset": "Ultra / High",
-      "fps_a": 58,
-      "fps_b": 39,
-      "diff_pct": 48.7,
-      "winner": "a",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Assassin's Creed Mirage",
-      "game_title_ar": "أساسنز كريد ميراج",
-      "resolution": "1080p",
-      "preset": "Ultra High",
-      "fps_a": 125,
-      "fps_b": 113,
-      "diff_pct": 10.6,
-      "winner": "a",
-      "rt_badge_ar": null
-    },
-    {
-      "game_title": "Assassin's Creed Mirage",
-      "game_title_ar": "أساسنز كريد ميراج",
-      "resolution": "1440p",
-      "preset": "Ultra High",
       "fps_a": 89,
+      "fps_b": 100,
+      "diff_pct": 12.4,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1080p",
+      "preset": "Ultra",
+      "fps_a": 80,
+      "fps_b": 110,
+      "diff_pct": 37.5,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1440p",
+      "preset": "Ultra",
+      "fps_a": 51,
+      "fps_b": 70,
+      "diff_pct": 37.3,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "4K",
+      "preset": "Ultra",
+      "fps_a": 22,
+      "fps_b": 30,
+      "diff_pct": 36.4,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1080p",
+      "preset": "Ultra / High",
+      "fps_a": 116,
+      "fps_b": 158,
+      "diff_pct": 36.2,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1440p",
+      "preset": "Ultra / High",
+      "fps_a": 69,
+      "fps_b": 96,
+      "diff_pct": 39.1,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "4K",
+      "preset": "Ultra / High",
+      "fps_a": 27,
+      "fps_b": 39,
+      "diff_pct": 44.4,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 84,
+      "fps_b": 113,
+      "diff_pct": 34.5,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 52,
       "fps_b": 72,
-      "diff_pct": 23.6,
-      "winner": "a",
-      "rt_badge_ar": null
+      "diff_pct": 38.5,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
     },
     {
       "game_title": "Assassin's Creed Mirage",
       "game_title_ar": "أساسنز كريد ميراج",
       "resolution": "4K",
       "preset": "Ultra High",
-      "fps_a": 44,
+      "fps_a": 20,
       "fps_b": 28,
-      "diff_pct": 57.1,
-      "winner": "a",
-      "rt_badge_ar": null
+      "diff_pct": 40.0,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
     }
   ],
   "verdict": {
@@ -542,7 +560,7 @@
         "url": "https://tech-comparisons.pages.dev/compare/macbook-pro-16-m3-max-vs-rog-zephyrus-g16",
         "name": "مقارنة Apple MacBook Pro 16 (M3 Max) ضد ASUS ROG Zephyrus G16 (2024) | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين Apple MacBook Pro 16 (M3 Max) و ASUS ROG Zephyrus G16 (2024). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-19T22:48:52.635368+00:00",
+        "datePublished": "2026-10-20T03:33:30.895489+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
@@ -568,5 +586,5 @@
       }
     ]
   },
-  "created_at": "2026-10-19T22:48:52.635368+00:00"
+  "created_at": "2026-10-20T03:33:30.895489+00:00"
 }
