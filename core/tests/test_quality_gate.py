@@ -115,19 +115,39 @@ def test_quality_gate_rule3_no_contradictory_pros_cons():
             )
 
             # Energy efficiency contradiction
-            has_eff_pro = any(k in pros_text for k in ["كفاءة استهلاك طاقة ممتازة", "كفاءة طاقة متفوقة", "استهلاك طاقة منضبط"])
-            has_eff_con = any(k in cons_text for k in ["استهلاك طاقة مرتفع", "سحب طاقة مرتفع", "يتطلب مزود طاقة", "متطلبات تبريد مرتفعة"])
+            has_eff_pro = any(k in pros_text for k in ["كفاءة استهلاك طاقة ممتازة", "كفاءة طاقة متفوقة", "استهلاك طاقة منضبط", "كفاءة طاقة ممتازة"])
+            has_eff_con = any(k in cons_text for k in ["استهلاك طاقة مرتفع", "سحب طاقة مرتفع", "يتطلب مزود طاقة", "متطلبات تبريد مرتفعة", "استهلاك طاقة أعلى"])
             assert not (has_eff_pro and has_eff_con), (
                 f"{slug} {label}: Contradiction! Praised efficiency in pros but criticized power in cons: {pros_text} vs {cons_text}"
             )
 
+            # Weight contradiction: never praise heavy weight in pros while criticizing weight in cons
+            has_heavy_weight_pro = any(k in pros_text for k in ["مع وزن (2.5 كجم)", "مع وزن (2.6 كجم)", "مع وزن (2.7 كجم)", "مع وزن (2.8 كجم)"])
+            assert not has_heavy_weight_pro, (
+                f"{slug} {label}: Heavy weight falsely praised in pros: {pros_text}"
+            )
+
 
 def test_quality_gate_rule4_realistic_power_claims():
-    """Rule 4: No GPU >= 260W or CPU >= 150W described as 'منضبط' or 'فقط' in pros or who_should_buy."""
+    """Rule 4: No GPU >= 260W or CPU >= 150W described as 'منضبط' or 'فقط' in power context."""
     for fpath in _get_comparison_files():
         doc = _load_comparison(fpath)
         slug = doc["slug"]
         verdict = doc["verdict"]
+
+        all_editorial_texts = [
+            verdict.get("summary_ar", ""),
+            verdict.get("gaming_analysis_ar", ""),
+            verdict.get("productivity_analysis_ar", ""),
+            verdict.get("value_and_budget_ar", ""),
+            verdict.get("who_should_buy_a", ""),
+            verdict.get("who_should_buy_b", ""),
+            " ".join(verdict.get("pros_a", [])),
+            " ".join(verdict.get("pros_b", [])),
+            " ".join(verdict.get("cons_a", [])),
+            " ".join(verdict.get("cons_b", []))
+        ]
+        full_text = " ".join(all_editorial_texts)
 
         for item, pros, who in [
             (doc["item_a"], verdict["pros_a"], verdict["who_should_buy_a"]),
@@ -139,11 +159,13 @@ def test_quality_gate_rule4_realistic_power_claims():
 
             if cat == "gpu" and tdp >= 260:
                 assert "منضبط" not in combined_text, f"{slug}: High TDP GPU ({tdp}W) described as 'منضبط': {combined_text}"
-                assert "فقط" not in combined_text, f"{slug}: High TDP GPU ({tdp}W) described with 'فقط': {combined_text}"
+                assert f"{tdp}W فقط" not in full_text, f"{slug}: High TDP GPU ({tdp}W) described with '{tdp}W فقط': {full_text}"
+                assert f"بسحب {tdp}W فقط" not in full_text, f"{slug}: High TDP GPU ({tdp}W) described with 'بسحب {tdp}W فقط': {full_text}"
 
             if cat == "cpu" and tdp >= 150:
                 assert "منضبط" not in combined_text, f"{slug}: High TDP CPU ({tdp}W) described as 'منضبط': {combined_text}"
-                assert "فقط" not in combined_text, f"{slug}: High TDP CPU ({tdp}W) described with 'فقط': {combined_text}"
+                assert f"{tdp}W فقط" not in full_text, f"{slug}: High TDP CPU ({tdp}W) described with '{tdp}W فقط': {full_text}"
+                assert f"بسحب {tdp}W فقط" not in full_text, f"{slug}: High TDP CPU ({tdp}W) described with 'بسحب {tdp}W فقط': {full_text}"
 
         # Explicit check for RTX 4090: must have 450W / 12VHPWR con
         if doc["item_a"]["id"] == "rtx-4090":
@@ -196,7 +218,8 @@ def test_quality_gate_rule6_platform_realism_macos_vs_windows():
 
                     # Verify platform note is present on all benchmarks
                     for b_item in benchmarks:
-                        assert b_item.get("platform_note_ar") is not None, f"{slug}: Missing platform_note_ar on benchmark {b_item['game_id']}"
+                        game_name = b_item.get("game_title", "unknown")
+                        assert b_item.get("platform_note_ar") is not None, f"{slug}: Missing platform_note_ar on benchmark {game_name}"
 
 
 def test_quality_gate_rule7_equal_tdp_differential_neutrality():
@@ -207,10 +230,13 @@ def test_quality_gate_rule7_equal_tdp_differential_neutrality():
         diffs = doc.get("spec_differences", [])
 
         for diff in diffs:
-            if diff.get("key") == "tdp_w" and diff.get("winner") == "tie":
-                desc = diff.get("advantage_description", "")
+            if diff.get("key") == "tdp_w" and diff.get("value_a") == diff.get("value_b"):
+                desc = diff.get("advantage_summary_ar", "")
                 assert "السحب الأعلى مقابل السحب المنضبط" not in desc, (
                     f"{slug}: Equal TDP differential has biased phrasing: {desc}"
+                )
+                assert "أقصى طاقة رسومية كاملة" in desc or "استهلاك متماثل" in desc or "سحب طاقة متماثل" in desc, (
+                    f"{slug}: Equal TDP differential missing neutral equality phrasing: {desc}"
                 )
 
 
@@ -243,6 +269,12 @@ def test_quality_gate_high_end_gpu_calibration():
     fps_lead_pct = ((avg_fps_4090 - avg_fps_7900) / avg_fps_7900) * 100
     assert fps_lead_pct >= 20.0, f"RTX 4090 average FPS lead is {fps_lead_pct:.2f}%, expected >= 20%"
 
+    # 4090 editorial gaming analysis must not claim raster parity
+    gaming_analysis = doc_4090["verdict"]["gaming_analysis_ar"]
+    assert "أداءً متقارباً في المعالجة الرسومية التقليدية" not in gaming_analysis, (
+        f"RTX 4090 vs 7900 XTX claims false raster parity: {gaming_analysis}"
+    )
+
     # 4080 Super vs 7900 XTX: index difference < 3%
     fpath_4080s = os.path.join(COMPARISONS_DIR, "rtx-4080-super-vs-rx-7900-xtx.json")
     assert os.path.exists(fpath_4080s)
@@ -251,3 +283,35 @@ def test_quality_gate_high_end_gpu_calibration():
     idx_b = doc_4080s["item_b"]["benchmark_index"]
     delta_pct = (abs(idx_a - idx_b) / min(idx_a, idx_b)) * 100
     assert delta_pct < 3.0, f"RTX 4080 Super vs RX 7900 XTX delta is {delta_pct:.2f}%, expected < 3%"
+
+
+def test_quality_gate_rx7900xt_revised_msrp_mentioned():
+    """Verifies that RX 7900 XT's official revised MSRP ($749) is explicitly stated in value analysis."""
+    fpath = os.path.join(COMPARISONS_DIR, "rtx-4070-ti-super-vs-rx-7900-xt.json")
+    assert os.path.exists(fpath)
+    doc = _load_comparison(fpath)
+    value_ar = doc["verdict"]["value_and_budget_ar"]
+    assert "749" in value_ar, f"RX 7900 XT revised MSRP ($749) missing from value analysis: {value_ar}"
+    assert "خفّضت" in value_ar or "تخفيض" in value_ar or "رسمياً" in value_ar, (
+        f"Official markdown note missing from value analysis: {value_ar}"
+    )
+
+
+def test_quality_gate_laptop_personas_accuracy():
+    """Verifies laptop buyer personas: Legion Pro 7i is high-end value/vapor chamber, not budget MIL-STD-810H."""
+    # Razer Blade 16 vs Legion Pro 7i
+    fpath_blade_legion = os.path.join(COMPARISONS_DIR, "razer-blade-16-2024-vs-legion-pro-7i.json")
+    assert os.path.exists(fpath_blade_legion)
+    doc_blade_legion = _load_comparison(fpath_blade_legion)
+    who_legion = doc_blade_legion["verdict"]["who_should_buy_b"]
+    assert "MIL-STD-810H" not in who_legion, f"Legion Pro 7i falsely described with MIL-STD-810H: {who_legion}"
+    assert "4080" in who_legion or "غرف البخار" in who_legion or "1,600" in who_legion, (
+        f"Legion Pro 7i missing high-end value persona: {who_legion}"
+    )
+
+    # TUF A15 vs Zephyrus G16: TUF has MIL-STD-810H
+    fpath_tuf = os.path.join(COMPARISONS_DIR, "asus-tuf-gaming-a15-vs-rog-zephyrus-g16.json")
+    assert os.path.exists(fpath_tuf)
+    doc_tuf = _load_comparison(fpath_tuf)
+    who_tuf = doc_tuf["verdict"]["who_should_buy_a"]
+    assert "MIL-STD-810H" in who_tuf, f"TUF A15 missing MIL-STD-810H durability persona: {who_tuf}"

@@ -438,24 +438,28 @@ D:\tech_comparisons\
   - Added halo GPU scaling in `fps_calculator.py` (`1.16x` multiplier for cards with >= 15000 CUDA cores / AD102 / 450W), giving RTX 4090 a >= 6% benchmark index lead and >= 20% average FPS lead over RX 7900 XTX.
   - Added `revised_msrp_usd: 749.0` to `rx-7900-xt` in `seed_specs.json` and integrated dynamic official retail revision notes into `_build_value_budget_gpu`.
 - **Contextual Rule Engine Refactoring (`spec_engine.py`, `ai_editorial.py`):**
-  - *Power Claims Sanitization:* Strictly barred describing power consumption as "منضبط" or "فقط" for GPUs with TDP >= 260W or CPUs with TDP >= 150W. Added high power consumption, 850W+ PSU, and 12VHPWR cable bend precautions to RTX 4090 cons. Prevented CPUs consuming more power than rivals (e.g. i5-14600K 181W vs Ryzen 5 7600X 105W) from receiving energy efficiency pros while simultaneously listing high power cons.
+  - *Power Claims Sanitization:* Strictly barred describing power consumption as "منضبط" or "فقط" for GPUs with TDP >= 260W or CPUs with TDP >= 150W. Added high power consumption, 850W+ PSU, and 12VHPWR cable bend precautions to RTX 4090 cons. Prevented CPUs consuming more power than rivals (e.g. i5-14600K 181W vs Ryzen 5 7600X 105W) from receiving energy efficiency pros while simultaneously listing high power cons. Fixed adversarial CPU power clause edge case when both CPUs have high TDP (>= 150W).
   - *VRAM 4K Gating:* Restricted dedicated 4K gaming praise in VRAM pros strictly to GPUs with `benchmark_index >= 75.0`.
-  - *CPU Architectural Nuances:* Restricted L3 cache praise as "ضخمة" strictly to processors with >= 64MB cache (X3D). Added core count deficit cons for CPUs with >= 30% fewer cores (e.g. Ryzen 5 7600X 6-cores vs i5-14600K 14-cores). Differentiated `who_should_buy` between AMD (AM5 lifecycle, sub-150W efficiency) and Intel (multicore productivity, DDR4/DDR5 flexibility).
-  - *Laptop Contextual Rules:* Handled equal laptop TDP (175W vs 175W in Blade 16 vs Legion Pro 7i) as mutually providing maximum 175W TGP for sustainable clocks. Decoupled benchmark advantage from weight in pros. Guaranteed no laptop praises and criticizes battery life simultaneously. Differentiated buyer personas by price, performance, and mobility (TUF A15 budget value/durability, Blade 16 halo RTX 4090/Mini-LED, Legion Pro 7i RTX 4080 sustained performance/vapor chamber).
+  - *CPU Architectural Nuances:* Restricted L3 cache praise as "ضخمة" strictly to processors with >= 64MB cache (X3D). Added core count deficit cons for CPUs with >= 30% fewer cores (e.g. Ryzen 5 7600X 6-cores vs i5-14600K 14-cores). Differentiated `who_should_buy` between AMD (AM5 lifecycle, sub-150W efficiency) and Intel (multicore productivity, DDR4/DDR5 flexibility), including intra-brand differentiation.
+  - *GPU Narrative Grounding:* Grounded GPU raster analysis in empirical FPS benchmarks (`fps_matrix`) on 1440p/4K titles, completely eliminating false raster parity claims between RTX 4090 and RX 7900 XTX.
+  - *Price Revision Propagation:* Appended official revised retail price notes (e.g. RX 7900 XT at $749) across all value analysis branches including performance ties (`perf_pct < 3.0%`).
+  - *Laptop Contextual Rules:* Handled equal laptop TDP (175W vs 175W in Blade 16 vs Legion Pro 7i) as mutually providing maximum 175W TGP for sustainable clocks. Decoupled benchmark advantage from weight in pros, and prevented heavy laptops (>= 2.4 kg) from praising weight in pros while criticizing it in cons. Restructured buyer personas so Flagship Halo (Razer Blade 16 with RTX 4090 / Mini-LED) and High-End Value (Legion Pro 7i with RTX 4080 / vapor chamber saving $1,600) are never misclassified as budget MIL-STD-810H machines.
+- **macOS Emulation Disclosure (`GamingFpsWidget.astro` & `fps_calculator.py`):**
+  - Added visual translation layer disclaimer banner and individual `محاكاة Metal/GPTK` badges on benchmark cards when comparing macOS systems against native Windows gaming hardware.
 - **Automated Quality Gate Test Suite (`core/tests/test_quality_gate.py`):**
   - Built comprehensive self-auditing test suite asserting all 7 quality rules across all 15 JSON documents in `web/src/data/comparisons/*.json`:
     1. Score range check: all scores strictly between 0 and 100.
     2. Buyer recommendation differentiation: SequenceMatcher similarity <= 0.75 across all comparisons.
-    3. Coherence check: zero contradictory pros/cons on any device.
-    4. Realistic power claims: no high-TDP hardware praised with "منضبط" or "فقط".
+    3. Coherence check: zero contradictory pros/cons on any device (battery, energy efficiency, weight).
+    4. Realistic power claims: no high-TDP hardware praised with "منضبط" or "فقط" across all editorial texts.
     5. VRAM 4K claims: no sub-75 index GPUs claim 4K gaming in pros.
-    6. Platform realism: macOS never beats Windows RTX gaming laptops in gaming FPS.
-    7. Equal TDP spec diff neutrality: no biased "السحب الأعلى مقابل السحب المنضبط" phrasing.
-  - Added zero-Amazon compliance and high-end GPU calibration assertions.
+    6. Platform realism: macOS never beats Windows RTX gaming laptops in gaming FPS, and all benchmarks carry translation disclaimers.
+    7. Equal TDP spec diff neutrality: no biased "السحب الأعلى مقابل السحب المنضبط" phrasing, asserting neutral equality phrasing.
+  - Added zero-Amazon compliance, high-end GPU calibration (RTX 4090 >= 6% index lead, >= 20% FPS lead, zero raster parity), RX 7900 XT revised MSRP ($749) mention, and laptop buyer persona accuracy assertions.
 - **Verification:**
-  - Full test suite expanded to 89 tests (`core/tests/`): 100% pass rate in 1.44s.
+  - Full test suite expanded to 91 tests (`core/tests/`): 100% pass rate in 2.47s.
   - Re-seeded SQLite database with updated specs and regenerated all 15 comparison JSON collections.
-  - Astro SSG build (`npm run build`): 19 static HTML routes generated in 6.33s with 0 errors.
+  - Astro SSG build (`npm run build`): 19 static HTML routes generated in 7.09s with 0 errors.
 
 ---
 

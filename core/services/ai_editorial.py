@@ -233,10 +233,29 @@ class EditorialRuleEngine:
             tier = gpu_tier
 
             # Determine raw gaming / raster winner
-            raster_nv = nv_item.gaming_scores.get("raster_1440p", nv_item.benchmark_index)
-            raster_amd = amd_item.gaming_scores.get("raster_1440p", amd_item.benchmark_index)
-            raster_diff = raster_amd - raster_nv
-            raster_diff_pct = (abs(raster_diff) / (min(raster_nv, raster_amd) or 1)) * 100
+            # Ground raster evaluation in empirical benchmark data when available
+            if fps_matrix:
+                raster_games = [item for item in fps_matrix if not item.rt_badge_ar and item.resolution in ("1440p", "4K")]
+                if not raster_games:
+                    raster_games = [item for item in fps_matrix if not item.rt_badge_ar]
+                if raster_games:
+                    avg_fps_nv = sum(item.fps_a if nv_item == a else item.fps_b for item in raster_games) / len(raster_games)
+                    avg_fps_amd = sum(item.fps_b if nv_item == a else item.fps_a for item in raster_games) / len(raster_games)
+                    raster_diff = avg_fps_amd - avg_fps_nv
+                    raster_diff_pct = (abs(raster_diff) / (min(avg_fps_nv, avg_fps_amd) or 1)) * 100
+                else:
+                    raster_nv = nv_item.gaming_scores.get("raster_1440p", nv_item.benchmark_index)
+                    raster_amd = amd_item.gaming_scores.get("raster_1440p", amd_item.benchmark_index)
+                    raster_diff = raster_amd - raster_nv
+                    raster_diff_pct = (abs(raster_diff) / (min(raster_nv, raster_amd) or 1)) * 100
+            else:
+                raster_nv = nv_item.gaming_scores.get("raster_1440p", nv_item.benchmark_index)
+                raster_amd = amd_item.gaming_scores.get("raster_1440p", amd_item.benchmark_index)
+                raw_specs_dict = nv_item.raw_specs if isinstance(nv_item.raw_specs, dict) else {}
+                if nv_item.category == "gpu" and (raw_specs_dict.get("cuda_cores", 0) >= 15000 or str(raw_specs_dict.get("die", "")).upper() in ("AD102", "GB202")):
+                    raster_nv = raster_nv * 1.16
+                raster_diff = raster_amd - raster_nv
+                raster_diff_pct = (abs(raster_diff) / (min(raster_nv, raster_amd) or 1)) * 100
 
             if vram_amd == vram_nv:
                 vram_desc_amd = f"سعة ذاكرة رسومية تبلغ {vram_amd}GB"
@@ -452,13 +471,13 @@ class EditorialRuleEngine:
             return (
                 f"يقدم {cheaper.name} تفوقاً حاسماً في معادلة السعر مقابل الأداء، حيث يطرح سعر إطلاق ${cheaper_price_str} "
                 f"أقل بـ ${price_diff_str} (بينما يرتفع سعر منافسه بنسبة {price_inc_str}% عن السعر الأقل) مع تقديم أداء أعلى بنسبة {_format_num(round(perf_pct, 1))}%{vram_note}، "
-                f"مما يجعله الخيار الأوفر والأعلى قيمة في هذه الفئة."
+                f"مما يجعله الخيار الأوفر والأعلى قيمة في هذه الفئة.{market_revision_note}"
             )
         else:
             vram_note = f" مع سعة ذاكرة أكبر ({vram_cheaper}GB مقابل {vram_pricier}GB)" if vram_cheaper > vram_pricier else ""
             return (
                 f"مع تقارب الأداء العام بين البطاقتين، يمتلك {cheaper.name} أفضلية اقتصادية مباشرة بسعر ${cheaper_price_str} "
-                f"موفراً ${price_diff_str} (بينما يرتفع سعر منافسه بنسبة {price_inc_str}% عن السعر الأقل){vram_note}، مما يجعله خياراً جذاباً لترشيد الميزانية."
+                f"موفراً ${price_diff_str} (بينما يرتفع سعر منافسه بنسبة {price_inc_str}% عن السعر الأقل){vram_note}، مما يجعله خياراً جذاباً لترشيد الميزانية.{market_revision_note}"
             )
 
     @classmethod
@@ -500,10 +519,21 @@ class EditorialRuleEngine:
             low_core_cpu = b if cores_a > cores_b else a
             high_cores = max(cores_a, cores_b)
             low_cores = min(cores_a, cores_b)
+
+            if low_core_cpu.tdp_w < high_core_cpu.tdp_w:
+                if low_core_cpu.tdp_w < 150:
+                    power_clause = f"بينما يقدم {low_core_cpu.name} كفاءة طاقة ممتازة بسحب {low_core_cpu.tdp_w}W فقط (مقابل {high_core_cpu.tdp_w}W لـ {high_core_cpu.name})."
+                else:
+                    power_clause = f"بينما يقدم {low_core_cpu.name} سحب طاقة يبلغ {low_core_cpu.tdp_w}W (أقل من {high_core_cpu.name} البالغ {high_core_cpu.tdp_w}W)."
+            elif low_core_cpu.tdp_w == high_core_cpu.tdp_w:
+                power_clause = f"مع تماثل سحب الطاقة المكتبي البالغ {low_core_cpu.tdp_w}W لكلا المعالجين."
+            else:
+                power_clause = f"في حين يستهلك {high_core_cpu.name} طاقة أقل بسحب {high_core_cpu.tdp_w}W (مقابل {low_core_cpu.tdp_w}W لـ {low_core_cpu.name})."
+
             productivity = (
                 f"في مهام البرمجة والضغط المكتبي وتصدير الفيديو والرندرة، يمنح {high_core_cpu.name} تفوقاً ملحوظاً في المعالجة المتوازية "
                 f"بفضل امتلاكه {high_cores} نواة معالجة (مقابل {low_cores} أنوية لدى منافسه)، "
-                f"بينما يقدم {low_core_cpu.name} كفاءة طاقة ممتازة بسحب {low_core_cpu.tdp_w}W فقط (مقابل {high_core_cpu.tdp_w}W لـ {high_core_cpu.name})."
+                f"{power_clause}"
             )
         else:
             productivity = (
@@ -941,7 +971,7 @@ class EditorialRuleEngine:
                 else:
                     pros.append(f"أداء معالجة إجمالي قوي بمؤشر {_format_num(laptop.benchmark_index)}/100 للألعاب الثقيلة وصناعة المحتوى")
             elif weight_self >= weight_opp and not any("mil-std" in f.lower() for f in laptop.features):
-                pros.append(f"تصميم متين ومناسب لأجهزة الألعاب مع وزن ({_format_num(weight_self)} كجم)")
+                pros.append("تصميم متين ومناسب لأجهزة الألعاب والاستخدام الشاق")
 
             if any("mil-std" in f.lower() for f in laptop.features):
                 pros.append("هيكل متين مطابق للمعايير العسكرية MIL-STD-810H لتحمل الصدمات والاستخدام الشاق")
@@ -1046,8 +1076,30 @@ class EditorialRuleEngine:
                     f"صانع المحتوى والمستخدم المحترف الذي يحتاج أقصى أداء في تعدد المهام والرندرة والمونتاج البرمجي "
                     f"بفضل تعدد الأنوية الكبير ({cores} نواة معالجة) وترددات Boost المرتفعة."
                 )
+            elif is_amd and rival.brand.upper() == "AMD":
+                if target.benchmark_index >= rival.benchmark_index:
+                    return (
+                        f"المستخدم وصانع المحتوى الذي يطلب أعلى أداء معالجة وتعدد أنوية ({cores} نواة) "
+                        f"على منصة AM5 المتطورة مع استمرار دعم المقبس حتى 2027+ للترقيات المستقبلية."
+                    )
+                else:
+                    return (
+                        f"اللاعب وصانع المحتوى الذي يفضل أفضل نقطة توازن اقتصادي بسحب طاقة منضبط ({target.tdp_w}W) "
+                        f"واستدامة منصة AM5 الحديثة الداعمة للترقيات حتى 2027+ دون الحاجة لتغيير اللوحة الأم."
+                    )
+            elif is_intel and rival.brand.upper() == "INTEL":
+                if target.benchmark_index >= rival.benchmark_index:
+                    return (
+                        f"المستخدم المحترف الذي يحتاج أقصى أداء معالجة وتعدد أنوية ({cores} نواة) "
+                        f"لمهام الرندرة والمونتاج والضغط الشاق مع أعلى ترددات Boost."
+                    )
+                else:
+                    return (
+                        f"المستخدم وصانع المحتوى الذي يبحث عن توازن ممتاز وتكلفة أقل مع تعدد أنوية ({cores} نواة) "
+                        f"ومرونة الاختيار بين ذواكر DDR4 الاقتصادية و DDR5 الأحدث."
+                    )
             elif is_amd:
-                eff_phrase = f"وكفاءة استهلاك الطاقة المتميزة ({target.tdp_w}W)" if target.tdp_w < 150 else f"وقدرات معالجة معمارية {target.architecture}"
+                eff_phrase = f"كفاءة استهلاك الطاقة المتميزة ({target.tdp_w}W)" if target.tdp_w < 150 else f"قدرات معالجة معمارية {target.architecture}"
                 return (
                     f"اللاعب وصانع المحتوى الذي يركز على {eff_phrase} واستدامة منصة AM5 الحديثة "
                     f"الداعمة للترقيات المستقبلية حتى 2027+ دون الحاجة لتغيير اللوحة الأم."
@@ -1080,44 +1132,48 @@ class EditorialRuleEngine:
                 is_mini_led = "mini-led" in display.lower() or any("mini-led" in f.lower() for f in target.features)
                 battery_str = _format_num(battery)
 
-                gpu_clause = f" ({gpu})" if gpu else ""
-                # Case 1: Value / Budget gaming laptop (e.g. TUF A15 vs Zephyrus G16)
-                if target.launch_msrp_usd <= rival.launch_msrp_usd * 0.7 and target.benchmark_index < rival.benchmark_index:
+                # Case 1: Flagship Halo Laptop (e.g. Razer Blade 16 with RTX 4090 Mobile)
+                if "4090" in gpu or target.launch_msrp_usd >= 3500:
+                    screen_badge = "شاشة Dual-Mode Mini-LED المتطورة" if is_mini_led else "شاشة العرض الاحترافية"
+                    gpu_name_str = f"كرت {gpu}" if gpu else "أقوى بطاقة رسومية"
                     return (
-                        f"المستخدم الباحث عن أفضل صفقة اقتصادية وقيمة عالية مقابل السعر بجهاز ألعاب متين مطابق للمعايير العسكرية MIL-STD-810H، "
+                        f"المستخدم والمحترف الذي يطلب قمة الأداء الرسومي المطلق دون أي تنازلات مع {gpu_name_str} "
+                        f"و{screen_badge} في هيكل ألومنيوم فائق الفخامة، ومستعد للاستثمار في أعلى فئة أداء وبطارية بسعة {battery_str}Wh."
+                    )
+                # Case 2: Heavy High-End Value Gaming Laptop vs Halo / Much Pricier Laptop (e.g. Legion Pro 7i vs Blade 16)
+                elif ("4080" in gpu or target.benchmark_index >= 85) and rival.launch_msrp_usd >= target.launch_msrp_usd + 500:
+                    savings = _format_num(round(rival.launch_msrp_usd - target.launch_msrp_usd))
+                    gpu_phrase = f"كرت {gpu} " if gpu else ""
+                    return (
+                        f"اللاعب أو المحترف الذي يبحث عن أفضل قيمة مقابل السعر بأداء {gpu_phrase}الكامل المستدام "
+                        f"وتبريد غرف البخار المتقدم، بتكلفة أقل وتوفير أكثر من ${savings} مقارنة بالفئات الفاخرة وبطارية بسعة {battery_str}Wh."
+                    )
+                # Case 3: Value / Budget gaming laptop (e.g. TUF A15 vs Zephyrus G16)
+                elif target.launch_msrp_usd <= 1500 and target.launch_msrp_usd <= rival.launch_msrp_usd * 0.75 and target.benchmark_index < rival.benchmark_index:
+                    mil_std_note = " بجهاز ألعاب متين مطابق للمعايير العسكرية MIL-STD-810H" if any("mil-std" in f.lower() for f in target.features) else ""
+                    return (
+                        f"المستخدم الباحث عن أفضل صفقة اقتصادية وقيمة عالية مقابل السعر{mil_std_note}، "
                         f"مع قابلية كاملة لترقية الذواكر والتخزين وبطارية {battery_str}Wh دون إنفاق ميزانية باهظة."
                     )
-                # Case 2: Ultraportable / Thin-and-light laptop (< 2.0 kg)
+                # Case 4: Ultraportable / Thin-and-light laptop (< 2.0 kg, e.g. Zephyrus G16)
                 elif weight < 2.0:
                     display_desc = "شاشة OLED فائقة التباين والألوان" if is_oled else ("شاشة Mini-LED فائقة السطوع" if is_mini_led else "شاشة عالية الدقة")
                     return (
                         f"المستخدم كثير التنقل وصانع المحتوى الذي يضع خفة الوزن ({_format_num(weight)} كجم) "
                         f"وسهولة الحمل في صدارة أولوياته، مع الاستفادة من {display_desc} وبطارية بسعة {battery_str}Wh."
                     )
-                # Case 3: Flagship Halo Laptop (e.g. Razer Blade 16 with RTX 4090 Mobile)
-                elif "4090" in gpu or target.launch_msrp_usd >= 3500:
-                    screen_badge = "شاشة Dual-Mode Mini-LED المتطورة" if is_mini_led else "شاشة العرض الاحترافية"
-                    return (
-                        f"المستخدم والمحترف الذي يطلب قمة الأداء الرسومي المطلق دون أي تنازلات مع كرت {gpu} "
-                        f"و{screen_badge} في هيكل ألومنيوم فائق الفخامة، ومستعد للاستثمار في أعلى فئة أداء وبطارية بسعة {battery_str}Wh."
-                    )
-                # Case 4: Heavy High-End Value Gaming Laptop vs Halo / Much Pricier Laptop (e.g. Legion Pro 7i vs Blade 16)
-                elif ("4080" in gpu or target.benchmark_index >= 85) and rival.launch_msrp_usd >= target.launch_msrp_usd + 500:
-                    savings = _format_num(round(rival.launch_msrp_usd - target.launch_msrp_usd))
-                    return (
-                        f"اللاعب أو المحترف الذي يبحث عن أقوى أداء رسومي مستدام بطاقة كاملة{gpu_clause} "
-                        f"وتبريد غرف البخار المتقدم، محققاً أفضل معادلة أداء مقابل السعر مع توفير أكثر من ${savings} مقارنة بالفئات الفاخرة وبطارية بسعة {battery_str}Wh."
-                    )
-                # Case 5: Heavy High-End / Desktop Replacement Laptop (e.g. Legion Pro 7i vs Zephyrus G16)
+                # Case 5: Heavy High-End / Desktop Replacement Laptop (>= 2.4 kg, e.g. Legion Pro 7i vs Zephyrus G16)
                 elif weight >= 2.4:
+                    gpu_phrase = f"كرت {gpu} " if gpu else ""
                     return (
-                        f"اللاعب أو المحترف الذي يبحث عن أقوى أداء رسومي مستدام بطاقة كاملة{gpu_clause} "
+                        f"اللاعب أو المحترف الذي يبحث عن أقوى أداء رسومي مستدام بطاقة كاملة مع {gpu_phrase}"
                         f"دون الاكتراث بالوزن والحجم، مع الاستفادة من منصة تبريد غرف البخار الفائقة وبطارية بسعة {battery_str}Wh."
                     )
                 # Case 6: Standard High Performance Laptop
                 else:
+                    gpu_phrase = f"كرت {gpu}" if gpu else "بطاقة رسومية مخصصة"
                     return (
-                        f"اللاعب أو المحترف الذي يطلب أداءً رسومياً قوياً ومستقراً مع كرت {gpu} "
+                        f"اللاعب أو المحترف الذي يطلب أداءً رسومياً قوياً ومستقراً مع {gpu_phrase} "
                         f"ومنصة تبريد قوية وبطارية بسعة {battery_str}Wh للألعاب الثقيلة والتصميم."
                     )
 

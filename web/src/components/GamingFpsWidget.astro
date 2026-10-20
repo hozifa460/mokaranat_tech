@@ -77,6 +77,11 @@ const isMacComparison = (
                       {bench.rt_badge_ar || (bench.game_title === 'Cyberpunk 2077' ? '⚡ تتبع الأشعة مفعّل (RT ON)' : '💡 إضاءة Lumen العتادية')}
                     </span>
                   )}
+                  {(bench.platform_note_ar || isMacComparison) && (
+                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-50 dark:bg-purple-950/70 text-purple-700 dark:text-purple-300 border border-purple-200/60 dark:border-purple-800/60">
+                      محاكاة Metal/GPTK
+                    </span>
+                  )}
                 </div>
                 <span class="text-xs text-slate-500 font-medium">
                   {bench.game_title} • إعدادات {bench.preset}
