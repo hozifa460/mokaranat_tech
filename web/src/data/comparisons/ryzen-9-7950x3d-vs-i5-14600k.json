@@ -1,0 +1,357 @@
+{
+  "slug": "ryzen-9-7950x3d-vs-i5-14600k",
+  "category": "cpu",
+  "title_ar": "مقارنة AMD Ryzen 9 7950X3D ضد Intel Core i5-14600K | المواصفات والأداء والأسعار",
+  "meta_title_ar": "AMD Ryzen 9 7950X3D ضد Intel Core i5-14600K: أيهما يستحق الشراء؟ | مقارنات تك",
+  "meta_description_ar": "مقارنة شاملة وتفصيلية بين AMD Ryzen 9 7950X3D و Intel Core i5-14600K. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+  "item_a": {
+    "id": "ryzen-9-7950x3d",
+    "slug": "ryzen-9-7950x3d",
+    "name": "AMD Ryzen 9 7950X3D",
+    "category": "cpu",
+    "brand": "AMD",
+    "release_year": 2023,
+    "launch_msrp_usd": 699.0,
+    "architecture": "Zen 4 (3D V-Cache)",
+    "process_node_nm": 5.0,
+    "tdp_w": 120,
+    "raw_specs": {
+      "total_cores": 16,
+      "threads": 32,
+      "base_clock_ghz": 4.2,
+      "boost_clock_ghz": 5.7,
+      "l3_cache_mb": 128,
+      "socket": "AM5 (Lifecycle through 2027+)",
+      "memory_support": "DDR5-5200"
+    },
+    "benchmark_index": 98.0,
+    "gaming_scores": {
+      "gaming_overall": 98.0
+    },
+    "ray_tracing_score": null,
+    "efficiency_score": 95.0,
+    "features": [
+      "128MB 3D V-Cache",
+      "16 Cores / 32 Threads",
+      "AM5 Platform Lifecycle through 2027+",
+      "120W TDP Efficiency"
+    ],
+    "pcie_interface": null
+  },
+  "item_b": {
+    "id": "i5-14600k",
+    "slug": "i5-14600k",
+    "name": "Intel Core i5-14600K",
+    "category": "cpu",
+    "brand": "Intel",
+    "release_year": 2023,
+    "launch_msrp_usd": 319.0,
+    "architecture": "Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin)",
+    "process_node_nm": 7.0,
+    "tdp_w": 181,
+    "raw_specs": {
+      "total_cores": 14,
+      "p_cores": 6,
+      "e_cores": 8,
+      "threads": 20,
+      "base_clock_ghz": 3.5,
+      "boost_clock_ghz": 5.3,
+      "l3_cache_mb": 24,
+      "socket": "LGA 1700 (End of Life)",
+      "process_node": "Intel 7 (10nm Enhanced SuperFin)",
+      "memory_support": "DDR5-5600 / DDR4-3200"
+    },
+    "benchmark_index": 82.0,
+    "gaming_scores": {
+      "gaming_overall": 86.0
+    },
+    "ray_tracing_score": null,
+    "efficiency_score": 80.0,
+    "features": [
+      "14 Cores / 20 Threads",
+      "Intel UHD Graphics 770",
+      "PCIe 5.0 Support",
+      "DDR5/DDR4 Dual Memory Support"
+    ],
+    "pcie_interface": null
+  },
+  "spec_differences": [
+    {
+      "key": "benchmark_index",
+      "label_ar": "مؤشر الأداء العام (Benchmark Index)",
+      "value_a": 98.0,
+      "value_b": 82.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 19.5,
+      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 19.5%"
+    },
+    {
+      "key": "launch_msrp_usd",
+      "label_ar": "سعر الإطلاق الرسمي",
+      "value_a": 699.0,
+      "value_b": 319.0,
+      "unit": "$",
+      "winner": "b",
+      "diff_percentage": 54.4,
+      "advantage_summary_ar": "أوفر بالسعر بنسبة 54.4%"
+    },
+    {
+      "key": "tdp_w",
+      "label_ar": "استهلاك الطاقة المكتبي (TDP)",
+      "value_a": 120,
+      "value_b": 181,
+      "unit": "W",
+      "winner": "a",
+      "diff_percentage": 33.7,
+      "advantage_summary_ar": "استهلاك طاقة أقل وتوليد حراري أهدأ بفارق 33.7%"
+    },
+    {
+      "key": "process_node_nm",
+      "label_ar": "دقة التصنيع (Process Node)",
+      "value_a": 5.0,
+      "value_b": 7.0,
+      "unit": "nm",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقياس تقني استرشادي: تعتمد إنتل معيار Intel 7 (10nm Enhanced SuperFin) بكثافة ترانزستورات مكافئة لـ 7nm، وتختلف بنيوياً عن معيار TSMC 5nm في معالجات AMD"
+    },
+    {
+      "key": "efficiency_score",
+      "label_ar": "معيار الكفاءة مقابل الواط",
+      "value_a": 95.0,
+      "value_b": 80.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 18.8,
+      "advantage_summary_ar": "أداء أعلى لكل واط مستهلك"
+    },
+    {
+      "key": "total_cores",
+      "label_ar": "إجمالي الأنوية (Cores)",
+      "value_a": 16.0,
+      "value_b": 14.0,
+      "unit": "أنوية",
+      "winner": "a",
+      "diff_percentage": 14.3,
+      "advantage_summary_ar": "عدد أنوية أكبر لتعدد المهام والرندرة البرمجية الثقيلة"
+    },
+    {
+      "key": "threads",
+      "label_ar": "المسارات المعالجة (Threads)",
+      "value_a": 32.0,
+      "value_b": 20.0,
+      "unit": "مسار",
+      "winner": "a",
+      "diff_percentage": 60.0,
+      "advantage_summary_ar": "توازي معالجة أسرع للبرمجيات الثقيلة"
+    },
+    {
+      "key": "l3_cache_mb",
+      "label_ar": "الذاكرة المخبئية المستوى الثالث (L3 Cache)",
+      "value_a": 128.0,
+      "value_b": 24.0,
+      "unit": "MB",
+      "winner": "a",
+      "diff_percentage": 433.3,
+      "advantage_summary_ar": "ذاكرة كاش أضخم لتقليل زمن التأخير وتسريع معدل الإطارات بالألعاب"
+    },
+    {
+      "key": "boost_clock_ghz",
+      "label_ar": "تردد التعزيز الأقصى (Boost Clock)",
+      "value_a": 5.7,
+      "value_b": 5.3,
+      "unit": "GHz",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقياس استرشادي: تختلف كفاءة التردد وتعليمات الدورة (IPC) باختلاف معمارية المعالج، ولا يقاس الأداء بالتردد الخام وحده"
+    }
+  ],
+  "performance_score_a": 98.0,
+  "performance_score_b": 82.0,
+  "fps_benchmarks": [],
+  "verdict": {
+    "overall_winner": "a",
+    "winner_name": "AMD Ryzen 9 7950X3D",
+    "score_a": 98.0,
+    "score_b": 82.0,
+    "quick_verdict_ar": "يتفوق AMD Ryzen 9 7950X3D في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 19.5% مقارنة بـ Intel Core i5-14600K. هذا التفوق يستند إلى معمارية Zen 4 (3D V-Cache) وتوزيع الموارد الحسابية المتطور وكفاءة معالجة المهام، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "gaming_analysis_ar": "في تجارب الألعاب، يوفر AMD Ryzen 9 7950X3D (16 أنوية، 128MB كاش) سرعات إطارات مرتفعة للغاية مع أدنى زمن استجابة (1% low FPS) بفضل تقنية 3D V-Cache، في المقابل ينافس Intel Core i5-14600K (14 أنوية) بقوة في الألعاب متعددة المسارات واستقرار معدل التحديث.",
+    "productivity_analysis_ar": "في مهام البرمجة والضغط المكتبي وتصدير الفيديو والرندرة، يمنح AMD Ryzen 9 7950X3D تفوقاً ملحوظاً في المعالجة المتوازية بفضل امتلاكه 16 نواة معالجة (مقابل 14 أنوية لدى منافسه)، في حين يستهلك AMD Ryzen 9 7950X3D طاقة أقل بسحب 120W (مقابل 181W لـ Intel Core i5-14600K).",
+    "value_and_budget_ar": "يطرح Intel Core i5-14600K تكلفة شراء أولية أقل بسعر $319 مقارنة بـ $699 (توفير $380، بينما يرتفع سعر منافسه بنسبة 119.1% عن السعر الأقل)، في حين يوفر AMD Ryzen 9 7950X3D أداءً إضافياً بنسبة 19.5% يبرر الاستثمار لمن تتطلب أعمالهم أقصى إنتاجية وسرعة معالجة.",
+    "pros_a": [
+      "معمارية Zen 4 (3D V-Cache) المتقدمة بدقة تصنيع 5nm",
+      "كفاءة طاقة ممتازة (120W TDP) ومؤشر أداء لكل واط يبلغ 95/100",
+      "ذاكرة كاش ضخمة بتقنية 3D V-Cache (128MB L3) ترفع استقرار الإطارات الدنيا وتمنع التقطيع في الألعاب",
+      "استثمار مستدام وطويل الأجل لمنصة المقبس AMD AM5 مع استمرار الدعم المؤكد حتى عام 2027+، مما يتيح ترقيات مستقبلية دون الحاجة لتغيير اللوحة الأم"
+    ],
+    "cons_a": [
+      "سعر إطلاق رسمي أعلى ($699)",
+      "يتطلب منصة لوحة أم حديثة وذواكر متوافقة للاستفادة الكاملة من إمكانياته"
+    ],
+    "pros_b": [
+      "معمارية Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin)",
+      "مؤشر أداء متزن يبلغ (82/100) مع سحب طاقة 181W",
+      "ترددات تشغيل واستجابة سريعة في معالجة المهام اليومية والألعاب",
+      "دعم واسع لمنظومة الذواكر DDR5 و DDR4 مما يمنح مرونة عالية في اختيار اللوحات الأم والميزانية"
+    ],
+    "cons_b": [
+      "استهلاك طاقة أعلى ملحوظ (181W مقابل 120W في AMD Ryzen 9 7950X3D) يتطلب مشتت تبريد احترافي قوي",
+      "انتهاء العمر الافتراضي لمنصة المقبس Intel LGA 1700 (منصة منتهية الصلاحية Dead-end socket بلا أي مسار ترقية مستقبلي لأجيال معالجات أحدث دون تغيير اللوحة الأم بالكامل)"
+    ],
+    "who_should_buy_a": "اللاعب التنافسي الذي يضع أداء الألعاب وزمن الإطارات السلس في المقام الأول بفضل ذاكرة 3D V-Cache الكبيرة (128MB)، مع كفاءة استهلاك طاقة ممتازة (120W).",
+    "who_should_buy_b": "المستخدم وصانع المحتوى الذي يفضل تعدد الأنوية (14 نواة) للإنتاجية وتعدد المهام وتصدير الفيديو مع مرونة الاختيار بين ذواكر DDR4 الاقتصادية و DDR5 الأحدث."
+  },
+  "affiliate_links_a": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء AMD Ryzen 9 7950X3D من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=AMD+Ryzen+9+7950X3D",
+      "affiliate_url": "https://www.noon.com/search?q=AMD+Ryzen+9+7950X3D&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء AMD Ryzen 9 7950X3D من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=AMD+Ryzen+9+7950X3D",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=AMD+Ryzen+9+7950X3D&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء AMD Ryzen 9 7950X3D من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Ryzen+9+7950X3D",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Ryzen+9+7950X3D&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء AMD Ryzen 9 7950X3D من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=AMD+Ryzen+9+7950X3D",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=AMD+Ryzen+9+7950X3D&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "affiliate_links_b": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء Intel Core i5-14600K من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=Intel+Core+i5-14600K",
+      "affiliate_url": "https://www.noon.com/search?q=Intel+Core+i5-14600K&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء Intel Core i5-14600K من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=Intel+Core+i5-14600K",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=Intel+Core+i5-14600K&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء Intel Core i5-14600K من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=Intel+Core+i5-14600K",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=Intel+Core+i5-14600K&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء Intel Core i5-14600K من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=Intel+Core+i5-14600K",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=Intel+Core+i5-14600K&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "schema_json_ld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/ryzen-9-7950x3d-vs-i5-14600k#productA",
+        "name": "AMD Ryzen 9 7950X3D",
+        "category": "CPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "AMD"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "699",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/ryzen-9-7950x3d-vs-i5-14600k#productB",
+        "name": "Intel Core i5-14600K",
+        "category": "CPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "Intel"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "319",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://tech-comparisons.pages.dev/compare/ryzen-9-7950x3d-vs-i5-14600k#review",
+        "url": "https://tech-comparisons.pages.dev/compare/ryzen-9-7950x3d-vs-i5-14600k",
+        "name": "مقارنة AMD Ryzen 9 7950X3D ضد Intel Core i5-14600K | المواصفات والأداء والأسعار",
+        "description": "مقارنة شاملة وتفصيلية بين AMD Ryzen 9 7950X3D و Intel Core i5-14600K. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+        "datePublished": "2026-10-20T18:43:34.127373+00:00",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "فريق تحرير مقارنات تك",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "itemReviewed": {
+          "@type": "Product",
+          "name": "AMD Ryzen 9 7950X3D vs Intel Core i5-14600K"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 4.9,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "reviewBody": "يتفوق AMD Ryzen 9 7950X3D في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 19.5% مقارنة بـ Intel Core i5-14600K. هذا التفوق يستند إلى معمارية Zen 4 (3D V-Cache) وتوزيع الموارد الحسابية المتطور وكفاءة معالجة المهام، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+      }
+    ]
+  },
+  "created_at": "2026-10-20T18:43:34.127373+00:00"
+}

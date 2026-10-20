@@ -1,0 +1,361 @@
+{
+  "slug": "i7-14700k-vs-i5-14600k",
+  "category": "cpu",
+  "title_ar": "مقارنة Intel Core i7-14700K ضد Intel Core i5-14600K | المواصفات والأداء والأسعار",
+  "meta_title_ar": "Intel Core i7-14700K ضد Intel Core i5-14600K: أيهما يستحق الشراء؟ | مقارنات تك",
+  "meta_description_ar": "مقارنة شاملة وتفصيلية بين Intel Core i7-14700K و Intel Core i5-14600K. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+  "item_a": {
+    "id": "i7-14700k",
+    "slug": "i7-14700k",
+    "name": "Intel Core i7-14700K",
+    "category": "cpu",
+    "brand": "Intel",
+    "release_year": 2023,
+    "launch_msrp_usd": 409.0,
+    "architecture": "Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin)",
+    "process_node_nm": 7.0,
+    "tdp_w": 253,
+    "raw_specs": {
+      "total_cores": 20,
+      "p_cores": 8,
+      "e_cores": 12,
+      "threads": 28,
+      "base_clock_ghz": 3.4,
+      "boost_clock_ghz": 5.6,
+      "l3_cache_mb": 33,
+      "socket": "LGA 1700 (End of Life)",
+      "process_node": "Intel 7 (10nm Enhanced SuperFin)",
+      "memory_support": "DDR5-5600 / DDR4-3200"
+    },
+    "benchmark_index": 92.5,
+    "gaming_scores": {
+      "gaming_overall": 92.0
+    },
+    "ray_tracing_score": null,
+    "efficiency_score": 68.0,
+    "features": [
+      "20 Cores / 28 Threads",
+      "Intel QuickSync Video",
+      "PCIe 5.0 Support",
+      "Intel 7 (10nm Enhanced SuperFin)"
+    ],
+    "pcie_interface": null
+  },
+  "item_b": {
+    "id": "i5-14600k",
+    "slug": "i5-14600k",
+    "name": "Intel Core i5-14600K",
+    "category": "cpu",
+    "brand": "Intel",
+    "release_year": 2023,
+    "launch_msrp_usd": 319.0,
+    "architecture": "Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin)",
+    "process_node_nm": 7.0,
+    "tdp_w": 181,
+    "raw_specs": {
+      "total_cores": 14,
+      "p_cores": 6,
+      "e_cores": 8,
+      "threads": 20,
+      "base_clock_ghz": 3.5,
+      "boost_clock_ghz": 5.3,
+      "l3_cache_mb": 24,
+      "socket": "LGA 1700 (End of Life)",
+      "process_node": "Intel 7 (10nm Enhanced SuperFin)",
+      "memory_support": "DDR5-5600 / DDR4-3200"
+    },
+    "benchmark_index": 82.0,
+    "gaming_scores": {
+      "gaming_overall": 86.0
+    },
+    "ray_tracing_score": null,
+    "efficiency_score": 80.0,
+    "features": [
+      "14 Cores / 20 Threads",
+      "Intel UHD Graphics 770",
+      "PCIe 5.0 Support",
+      "DDR5/DDR4 Dual Memory Support"
+    ],
+    "pcie_interface": null
+  },
+  "spec_differences": [
+    {
+      "key": "benchmark_index",
+      "label_ar": "مؤشر الأداء العام (Benchmark Index)",
+      "value_a": 92.5,
+      "value_b": 82.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 12.8,
+      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 12.8%"
+    },
+    {
+      "key": "launch_msrp_usd",
+      "label_ar": "سعر الإطلاق الرسمي",
+      "value_a": 409.0,
+      "value_b": 319.0,
+      "unit": "$",
+      "winner": "b",
+      "diff_percentage": 22.0,
+      "advantage_summary_ar": "أوفر بالسعر بنسبة 22%"
+    },
+    {
+      "key": "tdp_w",
+      "label_ar": "استهلاك الطاقة المكتبي (TDP)",
+      "value_a": 253,
+      "value_b": 181,
+      "unit": "W",
+      "winner": "b",
+      "diff_percentage": 28.5,
+      "advantage_summary_ar": "استهلاك طاقة أقل وتوليد حراري أهدأ بفارق 28.5%"
+    },
+    {
+      "key": "process_node_nm",
+      "label_ar": "دقة التصنيع (Process Node)",
+      "value_a": 7.0,
+      "value_b": 7.0,
+      "unit": "nm",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "دقة تصنيع متطابقة عتادياً"
+    },
+    {
+      "key": "efficiency_score",
+      "label_ar": "معيار الكفاءة مقابل الواط",
+      "value_a": 68.0,
+      "value_b": 80.0,
+      "unit": "/ 100",
+      "winner": "b",
+      "diff_percentage": 17.6,
+      "advantage_summary_ar": "أداء أعلى لكل واط مستهلك"
+    },
+    {
+      "key": "total_cores",
+      "label_ar": "إجمالي الأنوية (Cores)",
+      "value_a": 20.0,
+      "value_b": 14.0,
+      "unit": "أنوية",
+      "winner": "a",
+      "diff_percentage": 42.9,
+      "advantage_summary_ar": "عدد أنوية أكبر لتعدد المهام والرندرة البرمجية الثقيلة"
+    },
+    {
+      "key": "threads",
+      "label_ar": "المسارات المعالجة (Threads)",
+      "value_a": 28.0,
+      "value_b": 20.0,
+      "unit": "مسار",
+      "winner": "a",
+      "diff_percentage": 40.0,
+      "advantage_summary_ar": "توازي معالجة أسرع للبرمجيات الثقيلة"
+    },
+    {
+      "key": "l3_cache_mb",
+      "label_ar": "الذاكرة المخبئية المستوى الثالث (L3 Cache)",
+      "value_a": 33.0,
+      "value_b": 24.0,
+      "unit": "MB",
+      "winner": "a",
+      "diff_percentage": 37.5,
+      "advantage_summary_ar": "ذاكرة كاش أضخم لتقليل زمن التأخير وتسريع معدل الإطارات بالألعاب"
+    },
+    {
+      "key": "boost_clock_ghz",
+      "label_ar": "تردد التعزيز الأقصى (Boost Clock)",
+      "value_a": 5.6,
+      "value_b": 5.3,
+      "unit": "GHz",
+      "winner": "a",
+      "diff_percentage": 5.7,
+      "advantage_summary_ar": "تردد أعلى لسرعة تنفيذ التعليمات الفردية بفارق 5.7%"
+    }
+  ],
+  "performance_score_a": 92.5,
+  "performance_score_b": 82.0,
+  "fps_benchmarks": [],
+  "verdict": {
+    "overall_winner": "a",
+    "winner_name": "Intel Core i7-14700K",
+    "score_a": 92.5,
+    "score_b": 82.0,
+    "quick_verdict_ar": "يتفوق Intel Core i7-14700K في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 12.8% مقارنة بـ Intel Core i5-14600K. هذا التفوق يستند إلى معمارية Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin) وتوزيع الموارد الحسابية المتطور وكفاءة معالجة المهام، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "gaming_analysis_ar": "في تجارب الألعاب، يقدم كل من Intel Core i7-14700K (20 أنوية) و Intel Core i5-14600K (14 أنوية) معدلات إطارات ممتازة، مع أسبقية طفيفة لـ Intel Core i7-14700K في استقرار 1% low FPS بفضل معمارية Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin) وكفاءة معالجة الخيوط الحسابية.",
+    "productivity_analysis_ar": "في مهام البرمجة والضغط المكتبي وتصدير الفيديو والرندرة، يمنح Intel Core i7-14700K تفوقاً ملحوظاً في المعالجة المتوازية بفضل امتلاكه 20 نواة معالجة (مقابل 14 أنوية لدى منافسه)، بينما يقدم Intel Core i5-14600K سحب طاقة يبلغ 181W (أقل من Intel Core i7-14700K البالغ 253W).",
+    "value_and_budget_ar": "يطرح Intel Core i5-14600K تكلفة شراء أولية أقل بسعر $319 مقارنة بـ $409 (توفير $90، بينما يرتفع سعر منافسه بنسبة 28.2% عن السعر الأقل)، في حين يوفر Intel Core i7-14700K أداءً إضافياً بنسبة 12.8% يبرر الاستثمار لمن تتطلب أعمالهم أقصى إنتاجية وسرعة معالجة.",
+    "pros_a": [
+      "معمارية Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin)",
+      "مؤشر أداء إجمالي (92.5/100) متفوق في مهام الرندرة والتصدير وتعدد المهام",
+      "ذاكرة كاش سريعة (33MB L3) تمنح استقراراً إضافياً في أزمنة الإطارات للألعاب",
+      "دعم واسع لمنظومة الذواكر DDR5 و DDR4 مما يمنح مرونة عالية في اختيار اللوحات الأم والميزانية"
+    ],
+    "cons_a": [
+      "سعر إطلاق رسمي أعلى ($409)",
+      "استهلاك طاقة يصل إلى 253W عند كسر السرعة والضغط الكامل، وانبعاث حراري يتطلب تبريداً مائياً متقدماً",
+      "انتهاء العمر الافتراضي لمنصة المقبس Intel LGA 1700 (منصة منتهية الصلاحية Dead-end socket بلا أي مسار ترقية مستقبلي لأجيال معالجات أحدث دون تغيير اللوحة الأم بالكامل)"
+    ],
+    "pros_b": [
+      "معمارية Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin)",
+      "مؤشر أداء متزن يبلغ (82/100) مع سحب طاقة 181W",
+      "ترددات تشغيل واستجابة سريعة في معالجة المهام اليومية والألعاب",
+      "دعم واسع لمنظومة الذواكر DDR5 و DDR4 مما يمنح مرونة عالية في اختيار اللوحات الأم والميزانية"
+    ],
+    "cons_b": [
+      "عدد نوى أقل (14 مقابل 20 في Intel Core i7-14700K) مما يحد من الأداء في الرندرة والمعالجة المتوازية متعددة المسارات",
+      "انتهاء العمر الافتراضي لمنصة المقبس Intel LGA 1700 (منصة منتهية الصلاحية Dead-end socket بلا أي مسار ترقية مستقبلي لأجيال معالجات أحدث دون تغيير اللوحة الأم بالكامل)"
+    ],
+    "who_should_buy_a": "المستخدم المحترف الذي يحتاج أقصى أداء معالجة وتعدد أنوية (20 نواة) لمهام الرندرة والمونتاج والضغط الشاق مع أعلى ترددات Boost.",
+    "who_should_buy_b": "المستخدم وصانع المحتوى الذي يبحث عن توازن ممتاز وتكلفة أقل مع تعدد أنوية (14 نواة) ومرونة الاختيار بين ذواكر DDR4 الاقتصادية و DDR5 الأحدث بتوفير سعري ملحوظ."
+  },
+  "affiliate_links_a": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء Intel Core i7-14700K من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=Intel+Core+i7-14700K",
+      "affiliate_url": "https://www.noon.com/search?q=Intel+Core+i7-14700K&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء Intel Core i7-14700K من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=Intel+Core+i7-14700K",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=Intel+Core+i7-14700K&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء Intel Core i7-14700K من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=Intel+Core+i7-14700K",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=Intel+Core+i7-14700K&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء Intel Core i7-14700K من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=Intel+Core+i7-14700K",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=Intel+Core+i7-14700K&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "affiliate_links_b": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء Intel Core i5-14600K من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=Intel+Core+i5-14600K",
+      "affiliate_url": "https://www.noon.com/search?q=Intel+Core+i5-14600K&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء Intel Core i5-14600K من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=Intel+Core+i5-14600K",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=Intel+Core+i5-14600K&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء Intel Core i5-14600K من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=Intel+Core+i5-14600K",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=Intel+Core+i5-14600K&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء Intel Core i5-14600K من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=Intel+Core+i5-14600K",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=Intel+Core+i5-14600K&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "schema_json_ld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/i7-14700k-vs-i5-14600k#productA",
+        "name": "Intel Core i7-14700K",
+        "category": "CPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "Intel"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "409",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/i7-14700k-vs-i5-14600k#productB",
+        "name": "Intel Core i5-14600K",
+        "category": "CPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "Intel"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "319",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://tech-comparisons.pages.dev/compare/i7-14700k-vs-i5-14600k#review",
+        "url": "https://tech-comparisons.pages.dev/compare/i7-14700k-vs-i5-14600k",
+        "name": "مقارنة Intel Core i7-14700K ضد Intel Core i5-14600K | المواصفات والأداء والأسعار",
+        "description": "مقارنة شاملة وتفصيلية بين Intel Core i7-14700K و Intel Core i5-14600K. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+        "datePublished": "2026-10-20T18:43:34.955485+00:00",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "فريق تحرير مقارنات تك",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "itemReviewed": {
+          "@type": "Product",
+          "name": "Intel Core i7-14700K vs Intel Core i5-14600K"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 4.6,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "reviewBody": "يتفوق Intel Core i7-14700K في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 12.8% مقارنة بـ Intel Core i5-14600K. هذا التفوق يستند إلى معمارية Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin) وتوزيع الموارد الحسابية المتطور وكفاءة معالجة المهام، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+      }
+    ]
+  },
+  "created_at": "2026-10-20T18:43:34.955485+00:00"
+}

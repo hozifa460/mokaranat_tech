@@ -461,6 +461,36 @@ D:\tech_comparisons\
   - Re-seeded SQLite database with updated specs and regenerated all 15 comparison JSON collections.
   - Astro SSG build (`npm run build`): 19 static HTML routes generated in 7.09s with 0 errors.
 
+### Phase 20: Interactive Hardware Comparison Selector & Full All-Pairs Matrix Generation (2026-10-20)
+- **Interactive Comparison Builder (`web/src/components/ComparisonBuilder.astro`):**
+  - Designed and implemented a responsive, RTL Arabic interactive selector component with Cairo/Tajawal typography.
+  - Features category tabs (🎮 كروت الشاشة | ⚙️ المعالجات | 💻 اللابتوبات), dynamic brand quick-filter pills (NVIDIA, AMD, Intel, ASUS, Lenovo, Razer, Apple), dual hardware dropdowns with `<optgroup>` organization, and an interactive swap (⇄) button.
+  - Implemented client-side bidirectional slug resolution: seamlessly resolves `${idA}:${idB}` or `${idB}:${idA}` and redirects the user directly to `/compare/{matched_slug}`.
+  - Embedded natively into the portal homepage (`pages/index.astro`), category hubs (`pages/category/[category].astro`), and dynamic comparison pages (`pages/compare/[slug].astro`).
+- **Full Category Matrix Generation (`scripts/generate_comparisons.py`):**
+  - Expanded comparison pipeline from 15 curated matchups to the complete all-pairs matrix across all hardware categories:
+    - 55 GPU comparisons (11 unique graphics cards).
+    - 15 CPU comparisons (6 unique processors).
+    - 10 Laptop comparisons (5 unique gaming and creator laptops).
+    - Total: 80 programmatic comparisons covering 100% of within-category hardware permutations.
+  - Preserved the exact slugs and ordering of the original 15 high-intent matchups at the head of the manifest, ensuring zero broken external links or dead routes.
+  - Updated `ComparisonExporter` to include `item_a_id`, `item_b_id`, `item_a_brand`, and `item_b_brand` in `comparisons_index.json`.
+- **Quality Gate Hardening & Contextual Edge Cases (`spec_engine.py`, `ai_editorial.py`):**
+  - *Equal Desktop/CPU TDP Differential Phrasing:* Updated `_compare_numeric` in `spec_engine.py` for identical TDP values (`val_a == val_b`), outputting neutral equality phrasing (`سحب طاقة متماثل تماماً (XW) لكلا المعالجين/البطاقتين`) satisfying Quality Gate Rule 7 across all CPU matchups (e.g. Ryzen 9 7950X3D vs Ryzen 7 7800X3D at 120W, i9-14900K vs i7-14700K at 253W).
+  - *Intra-Brand CPU Persona Differentiation:* Refactored `_build_who_should_buy` in `ai_editorial.py`:
+    - Differentiated dual-CCD flagship workstation/streaming X3D (Ryzen 9 7950X3D: 16 cores, 32 threads, 128MB cache) from pure single-CCD gaming X3D (Ryzen 7 7800X3D: 8 cores, zero scheduling overhead, 96MB cache).
+    - Prioritized intra-brand Intel evaluation before generic core count thresholds, cleanly separating flagship peak clock compute (i9-14900K: 24 cores, 6.0 GHz TVB) from value-oriented productivity (i7-14700K: 20 cores, DDR4/DDR5 flexibility).
+    - Reduced buyer persona similarity from 0.99 to <= 0.40, fully satisfying Quality Gate Rule 2 across all 80 pairs.
+- **Homepage UX & Performance Optimization (`web/src/pages/index.astro`):**
+  - Displayed the top 15 high-intent comparisons initially to prevent DOM bloat and preserve sub-second Core Web Vitals.
+  - Added an instant client-side search engine querying all 80 comparisons dynamically as the user types.
+  - Added an on-demand "استعراض جميع المقارنات (80)" toggle button allowing users to expand or collapse the full comparison catalog.
+- **Verification:**
+  - 100% pass rate on full test suite: 91/91 tests passed in 1.62s (`core/tests/`).
+  - Strict Quality Gate (`test_quality_gate.py`): 12/12 audits passed with 0 failures across all 80 exported comparison JSON files.
+  - Astro SSG Build (`npm run build`): 84 static HTML routes compiled with 0 errors in 11.08s.
+  - Strict ZERO Amazon compliance verified across all 80 JSON datasets.
+
 ---
 
 ## 5. Rules for Future AI Agents & Maintainers

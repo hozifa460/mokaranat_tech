@@ -8,6 +8,7 @@ import EditorialVerdict from '../../components/EditorialVerdict.astro';
 import AffiliateWidget from '../../components/AffiliateWidget.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import InternalLinksGrid from '../../components/InternalLinksGrid.astro';
+import ComparisonBuilder from '../../components/ComparisonBuilder.astro';
 
 export async function getStaticPaths() {
   const comparisonModules = import.meta.glob('../../data/comparisons/*.json', { eager: true });
@@ -92,6 +93,16 @@ const { comparison, allComparisons } = Astro.props;
 
     <!-- Bottom Ad Placement -->
     <AdSlot slotId="ad-bottom-related" format="horizontal" />
+
+    <!-- Interactive Custom Comparison Selector -->
+    <div class="my-10">
+      <ComparisonBuilder
+        initialCategory={comparison.category}
+        initialItemA={comparison.item_a.id}
+        title="قارن هذه القطعة مع أي بديل آخر ⚡"
+        subtitle={`اختر قطعة بديلة لمقارنتها مباشرة مع ${comparison.item_a.name} أو استكشف أي زوج آخر.`}
+      />
+    </div>
 
     <!-- Interlinking Related Comparisons Grid -->
     <InternalLinksGrid

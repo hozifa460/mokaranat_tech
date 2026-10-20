@@ -1,0 +1,589 @@
+{
+  "slug": "rtx-4070-ti-super-vs-rx-7700-xt",
+  "category": "gpu",
+  "title_ar": "مقارنة NVIDIA GeForce RTX 4070 Ti Super ضد AMD Radeon RX 7700 XT | المواصفات والأداء والأسعار",
+  "meta_title_ar": "NVIDIA GeForce RTX 4070 Ti Super ضد AMD Radeon RX 7700 XT: أيهما يستحق الشراء؟ | مقارنات تك",
+  "meta_description_ar": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4070 Ti Super و AMD Radeon RX 7700 XT. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+  "item_a": {
+    "id": "rtx-4070-ti-super",
+    "slug": "rtx-4070-ti-super",
+    "name": "NVIDIA GeForce RTX 4070 Ti Super",
+    "category": "gpu",
+    "brand": "NVIDIA",
+    "release_year": 2024,
+    "launch_msrp_usd": 799.0,
+    "architecture": "Ada Lovelace",
+    "process_node_nm": 4.0,
+    "tdp_w": 285,
+    "raw_specs": {
+      "die": "AD103",
+      "cuda_cores": 8448,
+      "base_clock_mhz": 2340,
+      "boost_clock_mhz": 2610,
+      "vram_gb": 16,
+      "memory_type": "GDDR6X",
+      "bus_width_bit": 256,
+      "bandwidth_gbps": 672.0,
+      "pcie_interface": "PCIe 4.0 x16",
+      "pcie_lanes": 16,
+      "nvenc_encoders": 2
+    },
+    "benchmark_index": 88.0,
+    "gaming_scores": {
+      "raster_1080p": 91.0,
+      "raster_1440p": 89.0,
+      "raster_4k": 81.0
+    },
+    "ray_tracing_score": 90.0,
+    "efficiency_score": 88.0,
+    "features": [
+      "DLSS 3.5 Frame Generation",
+      "Dual NVENC (AV1)",
+      "16GB GDDR6X",
+      "256-bit Memory Bus"
+    ],
+    "pcie_interface": "PCIe 4.0 x16"
+  },
+  "item_b": {
+    "id": "rx-7700-xt",
+    "slug": "rx-7700-xt",
+    "name": "AMD Radeon RX 7700 XT",
+    "category": "gpu",
+    "brand": "AMD",
+    "release_year": 2023,
+    "launch_msrp_usd": 449.0,
+    "architecture": "RDNA 3",
+    "process_node_nm": 5.0,
+    "tdp_w": 245,
+    "raw_specs": {
+      "stream_processors": 3456,
+      "base_clock_mhz": 1700,
+      "boost_clock_mhz": 2544,
+      "vram_gb": 12,
+      "memory_type": "GDDR6",
+      "bus_width_bit": 192,
+      "bandwidth_gbps": 432.0,
+      "pcie_interface": "PCIe 4.0 x16",
+      "pcie_lanes": 16,
+      "revised_msrp_usd": 419.0
+    },
+    "benchmark_index": 74.0,
+    "gaming_scores": {
+      "raster_1080p": 82.0,
+      "raster_1440p": 74.0,
+      "raster_4k": 55.0
+    },
+    "ray_tracing_score": 60.0,
+    "efficiency_score": 76.0,
+    "features": [
+      "12GB VRAM",
+      "FSR 3.1",
+      "DisplayPort 2.1"
+    ],
+    "pcie_interface": "PCIe 4.0 x16"
+  },
+  "spec_differences": [
+    {
+      "key": "benchmark_index",
+      "label_ar": "مؤشر الأداء العام (Benchmark Index)",
+      "value_a": 88.0,
+      "value_b": 74.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 18.9,
+      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 18.9%"
+    },
+    {
+      "key": "launch_msrp_usd",
+      "label_ar": "سعر الإطلاق الرسمي",
+      "value_a": 799.0,
+      "value_b": 449.0,
+      "unit": "$",
+      "winner": "b",
+      "diff_percentage": 43.8,
+      "advantage_summary_ar": "أوفر بالسعر بنسبة 43.8%"
+    },
+    {
+      "key": "tdp_w",
+      "label_ar": "استهلاك الطاقة المكتبي (TDP)",
+      "value_a": 285,
+      "value_b": 245,
+      "unit": "W",
+      "winner": "b",
+      "diff_percentage": 14.0,
+      "advantage_summary_ar": "استهلاك طاقة أقل وتوليد حراري أهدأ بفارق 14%"
+    },
+    {
+      "key": "process_node_nm",
+      "label_ar": "دقة التصنيع (Process Node)",
+      "value_a": 4.0,
+      "value_b": 5.0,
+      "unit": "nm",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقياس تقني استرشادي: تختلف هندسة دقة التصنيع وكثافة الترانزستورات والتصميم (رقاقة أحادية Monolithic مقابل رقاقات Chiplets) بين المعماريات المختلفة"
+    },
+    {
+      "key": "ray_tracing_score",
+      "label_ar": "كفاءة تتبع الأشعة (Ray Tracing)",
+      "value_a": 90.0,
+      "value_b": 60.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 50.0,
+      "advantage_summary_ar": "معالجة متقدمة لتقنيات الإضاءة الواقعية بفارق 50%"
+    },
+    {
+      "key": "efficiency_score",
+      "label_ar": "معيار الكفاءة مقابل الواط",
+      "value_a": 88.0,
+      "value_b": 76.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 15.8,
+      "advantage_summary_ar": "أداء أعلى لكل واط مستهلك"
+    },
+    {
+      "key": "vram_gb",
+      "label_ar": "سعة الذاكرة الرسومية (VRAM)",
+      "value_a": 16.0,
+      "value_b": 12.0,
+      "unit": "GB",
+      "winner": "a",
+      "diff_percentage": 33.3,
+      "advantage_summary_ar": "سعة VRAM أكبر تمنح أريحية فائقة في ألعاب 1440p و 4K وتطبيقات التصميم"
+    },
+    {
+      "key": "bus_width_bit",
+      "label_ar": "عرض ناقل الذاكرة (Memory Bus)",
+      "value_a": 256.0,
+      "value_b": 192.0,
+      "unit": "bit",
+      "winner": "a",
+      "diff_percentage": 33.3,
+      "advantage_summary_ar": "عرض نطاق أوسع لنقل البيانات الرسومية بسلاسة"
+    },
+    {
+      "key": "boost_clock_mhz",
+      "label_ar": "تردد التعزيز (Boost Clock)",
+      "value_a": 2610.0,
+      "value_b": 2544.0,
+      "unit": "MHz",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقياس استرشادي: تختلف كفاءة التردد وتعليمات الدورة (IPC) باختلاف المعمارية، ولا يقاس الأداء بالتردد الخام وحده"
+    },
+    {
+      "key": "pcie_interface",
+      "label_ar": "واجهة التوصيل العتادية (PCIe Interface)",
+      "value_a": "PCIe 4.0 x16",
+      "value_b": "PCIe 4.0 x16",
+      "unit": "",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "واجهة توصيل متطابقة بكامل المسارات (16 مساراً)"
+    }
+  ],
+  "performance_score_a": 88.0,
+  "performance_score_b": 74.0,
+  "fps_benchmarks": [
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 138,
+      "fps_b": 94,
+      "diff_pct": 46.8,
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 92,
+      "fps_b": 59,
+      "diff_pct": 55.9,
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 49,
+      "fps_b": 26,
+      "diff_pct": 88.5,
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1080p",
+      "preset": "Cinematic High",
+      "fps_a": 97,
+      "fps_b": 67,
+      "diff_pct": 44.8,
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1440p",
+      "preset": "Cinematic High",
+      "fps_a": 60,
+      "fps_b": 39,
+      "diff_pct": 53.8,
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "4K",
+      "preset": "Cinematic High",
+      "fps_a": 30,
+      "fps_b": 16,
+      "diff_pct": 87.5,
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1080p",
+      "preset": "Competitive High",
+      "fps_a": 326,
+      "fps_b": 288,
+      "diff_pct": 13.2,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1440p",
+      "preset": "Competitive High",
+      "fps_a": 223,
+      "fps_b": 194,
+      "diff_pct": 14.9,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "4K",
+      "preset": "Competitive High",
+      "fps_a": 124,
+      "fps_b": 102,
+      "diff_pct": 21.6,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1080p",
+      "preset": "Ultra",
+      "fps_a": 138,
+      "fps_b": 121,
+      "diff_pct": 14.0,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1440p",
+      "preset": "Ultra",
+      "fps_a": 100,
+      "fps_b": 83,
+      "diff_pct": 20.5,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "4K",
+      "preset": "Ultra",
+      "fps_a": 58,
+      "fps_b": 40,
+      "diff_pct": 45.0,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1080p",
+      "preset": "Ultra / High",
+      "fps_a": 195,
+      "fps_b": 193,
+      "diff_pct": 1.0,
+      "winner": "tie",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1440p",
+      "preset": "Ultra / High",
+      "fps_a": 133,
+      "fps_b": 124,
+      "diff_pct": 7.3,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "4K",
+      "preset": "Ultra / High",
+      "fps_a": 72,
+      "fps_b": 54,
+      "diff_pct": 33.3,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 142,
+      "fps_b": 132,
+      "diff_pct": 7.6,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 101,
+      "fps_b": 89,
+      "diff_pct": 13.5,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 54,
+      "fps_b": 40,
+      "diff_pct": 35.0,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    }
+  ],
+  "verdict": {
+    "overall_winner": "a",
+    "winner_name": "NVIDIA GeForce RTX 4070 Ti Super",
+    "score_a": 88.0,
+    "score_b": 74.0,
+    "quick_verdict_ar": "يتفوق NVIDIA GeForce RTX 4070 Ti Super في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 18.9% مقارنة بـ AMD Radeon RX 7700 XT. هذا التفوق يستند إلى معمارية Ada Lovelace وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~27.7%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "gaming_analysis_ar": "في ساحة الألعاب، يقدم NVIDIA GeForce RTX 4070 Ti Super تفوقاً ملحوظاً في مجمل الأداء الرسومي مع تفوق كاسح في العناوين الثقيلة بتتبع الأشعة بمؤشر 90/100 ودعم كامل لتقنيات DLSS 3 لتوليد الإطارات (Frame Generation) و DLSS 3.5 لإعادة بناء الأشعة (Ray Reconstruction)، بينما ينافس AMD Radeon RX 7700 XT بقوة رسومية خام متميزة و سعة ذاكرة متوازنة تبلغ 12GB (مقابل 16GB لدى منافسه) تمنح أريحية فائقة واستقراراً ممتازاً في ألعاب 1440p وقوام Ultra مع قدرة جيدة على تشغيل ألعاب 4K مع دعم تقنية FSR 3.1 وتوليد الإطارات المفتوح عبر المنصات.",
+    "productivity_analysis_ar": "على صعيد الإنتاجية والرندرة وصناعة المحتوى، يحسم NVIDIA GeForce RTX 4070 Ti Super المنافسة بفضل تفوق منظومة CUDA و OptiX لتسريع محركات التصميم (مثل Blender و Premiere) وتطبيقات الذكاء الاصطناعي مع مشفر NVENC المزدوج (Dual NVENC) فائق السرعة من الجيل الثامن مع دعم تسريع وتشفير عتادي لـ AV1؛ ومع أن كلا المعماريتين تدعمان التشفير وفك التشفير العتادي لترميز AV1 الحديث (مشفر NVENC الجيل الثامن في Ada Lovelace مقابل محرك VCN 4.0 في RDNA 3) وسعة ذاكرة متوازنة تبلغ 12GB لـ AMD Radeon RX 7700 XT، إلا أن أفضلية بيئة العمل البرمجية واستقرار التعريفات في تطبيقات الإنتاج تظل محسومة لصالح NVIDIA بفضل الدعم الواسع في برمجيات التصميم.",
+    "value_and_budget_ar": "عند دراسة معادلة القيمة مقابل السعر، يطرح AMD Radeon RX 7700 XT تكلفة شراء أقل بسعر $449 (توفير $350، بينما يرتفع سعر منافسه بنسبة 78% عن السعر الأقل)، في حين يقدم NVIDIA GeForce RTX 4070 Ti Super زيادة في الإطارات بمتوسط ~27.7% وسعة 16GB، مما يجعل AMD Radeon RX 7700 XT الخيار الأفضل لقيمة كل دولار، بينما يستهدف NVIDIA GeForce RTX 4070 Ti Super من يطلب أداءً أعلى واستثماراً أكثر استدامة للمستقبل. تجدر الإشارة إلى أن AMD قامت لاحقاً بتعديل السعر الرسمي للبطاقة نزولاً إلى ما بين $419 و $399 في العديد من المتاجر، مما يقلص أو يلغي الفارق السعري الفعلي في السوق لصالح RX 7700 XT.",
+    "pros_a": [
+      "تفوق في تتبع الأشعة بمؤشر 90/100 ودعم كامل لتقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة)",
+      "هيمنة بيئة العمل وصناعة المحتوى بفضل تسريع مكتبات CUDA و OptiX ومشفر NVENC المزدوج لتسريع البث المباشر وتصدير الفيديو",
+      "كفاءة طاقة معمارية متقدمة بمؤشر 88/100 باستطاعة (285W)"
+    ],
+    "cons_a": [
+      "سعر إطلاق رسمي أعلى ($799) مقارنة بـ AMD Radeon RX 7700 XT ($449)",
+      "استهلاك طاقة يبلغ 285 واط يتطلب مزود طاقة وتبريداً جيداً داخل الصندوق"
+    ],
+    "pros_b": [
+      "سعة ذاكرة رسومية متوازنة (12GB VRAM) بناقل 192 بت تمنح أريحية ممتازة للألعاب بدقة 1440p وتفادي اختناق الذاكرة مع القوام المرتفع",
+      "أداء رسومي خام (Rasterization) ممتاز ومؤشر عام تنافسي يبلغ 74/100",
+      "دعم تقنيات FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ العرض الحديثة DisplayPort 2.1"
+    ],
+    "cons_b": [
+      "أداء أقل في تتبع الأشعة (Ray Tracing) مقارنة بنواة RT Cores لدى NVIDIA (مؤشر 60/100)",
+      "افتقار لدعم بيئة تسريع CUDA المعتمدة صناعياً في برامج التصميم والذكاء الاصطناعي"
+    ],
+    "who_should_buy_a": "اللاعب أو صانع المحتوى الذي يضع أولوية لبيئة عمل CUDA وتسريع الرندرة وتطبيقات الذكاء الاصطناعي، ويرغب في أحدث تقنيات تتبع الأشعة مع تقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) لبطاقات GeForce RTX، إلى جانب كفاءة طاقة معمارية متقدمة باستطاعة 285W.",
+    "who_should_buy_b": "اللاعب الذي يركز على أعلى أداء رسومي خام (Raw Raster FPS) مقابل السعر، مع الاستفادة من سعة ذاكرة رحبة تبلغ 12GB بناقل 192 بت لتفادي اختناق القوام، وتفضيل التقنيات المفتوحة مثل FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ DisplayPort 2.1 الحديثة."
+  },
+  "affiliate_links_a": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء NVIDIA GeForce RTX 4070 Ti Super من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=NVIDIA+GeForce+RTX+4070+Ti+Super",
+      "affiliate_url": "https://www.noon.com/search?q=NVIDIA+GeForce+RTX+4070+Ti+Super&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء NVIDIA GeForce RTX 4070 Ti Super من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=NVIDIA+GeForce+RTX+4070+Ti+Super",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=NVIDIA+GeForce+RTX+4070+Ti+Super&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء NVIDIA GeForce RTX 4070 Ti Super من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=NVIDIA+GeForce+RTX+4070+Ti+Super",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=NVIDIA+GeForce+RTX+4070+Ti+Super&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء NVIDIA GeForce RTX 4070 Ti Super من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=NVIDIA+GeForce+RTX+4070+Ti+Super",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=NVIDIA+GeForce+RTX+4070+Ti+Super&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "affiliate_links_b": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء AMD Radeon RX 7700 XT من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=AMD+Radeon+RX+7700+XT",
+      "affiliate_url": "https://www.noon.com/search?q=AMD+Radeon+RX+7700+XT&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء AMD Radeon RX 7700 XT من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=AMD+Radeon+RX+7700+XT",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=AMD+Radeon+RX+7700+XT&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء AMD Radeon RX 7700 XT من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Radeon+RX+7700+XT",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Radeon+RX+7700+XT&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء AMD Radeon RX 7700 XT من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=AMD+Radeon+RX+7700+XT",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=AMD+Radeon+RX+7700+XT&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "schema_json_ld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4070-ti-super-vs-rx-7700-xt#productA",
+        "name": "NVIDIA GeForce RTX 4070 Ti Super",
+        "category": "GPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "NVIDIA"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "799",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4070-ti-super-vs-rx-7700-xt#productB",
+        "name": "AMD Radeon RX 7700 XT",
+        "category": "GPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "AMD"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "449",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4070-ti-super-vs-rx-7700-xt#review",
+        "url": "https://tech-comparisons.pages.dev/compare/rtx-4070-ti-super-vs-rx-7700-xt",
+        "name": "مقارنة NVIDIA GeForce RTX 4070 Ti Super ضد AMD Radeon RX 7700 XT | المواصفات والأداء والأسعار",
+        "description": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4070 Ti Super و AMD Radeon RX 7700 XT. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+        "datePublished": "2026-10-20T18:43:27.095318+00:00",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "فريق تحرير مقارنات تك",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "itemReviewed": {
+          "@type": "Product",
+          "name": "NVIDIA GeForce RTX 4070 Ti Super vs AMD Radeon RX 7700 XT"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 4.4,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "reviewBody": "يتفوق NVIDIA GeForce RTX 4070 Ti Super في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 18.9% مقارنة بـ AMD Radeon RX 7700 XT. هذا التفوق يستند إلى معمارية Ada Lovelace وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~27.7%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+      }
+    ]
+  },
+  "created_at": "2026-10-20T18:43:27.095318+00:00"
+}

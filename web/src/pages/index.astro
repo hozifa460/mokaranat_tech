@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AdSlot from '../components/AdSlot.astro';
+import ComparisonBuilder from '../components/ComparisonBuilder.astro';
 
 const comparisonModules = import.meta.glob('../data/comparisons/*.json', { eager: true });
 const allComparisons = Object.values(comparisonModules).map((mod: any) => mod.default || mod);
@@ -32,7 +33,7 @@ const formatVal = (v: any) => {
   schema={websiteSchema}
 >
   <!-- Hero Section -->
-  <section class="relative pt-12 pb-20 overflow-hidden bg-gradient-to-b from-blue-50/70 via-white to-slate-50 dark:from-slate-900/60 dark:via-slate-950 dark:to-slate-950 border-b border-slate-200 dark:border-slate-800">
+  <section class="relative pt-12 pb-16 overflow-hidden bg-gradient-to-b from-blue-50/70 via-white to-slate-50 dark:from-slate-900/60 dark:via-slate-950 dark:to-slate-950 border-b border-slate-200 dark:border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 text-xs font-bold mb-6">
@@ -44,16 +45,24 @@ const formatVal = (v: any) => {
         اختر عتادك القادم <span class="bg-gradient-to-l from-blue-600 to-indigo-600 bg-clip-text text-transparent">بدقة الأرقام</span> وليس مجرد تخمين
       </h1>
 
-      <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+      <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-8 leading-relaxed">
         مقارنات هندسية محايدة لكروت الشاشة والمعالجات والحواسيب المحمولة، مع معدل الإطارات في أحدث الألعاب وأسعار الشراء المباشرة.
       </p>
+
+      <!-- Interactive Comparison Builder Component -->
+      <div class="max-w-4xl mx-auto mb-10 text-right">
+        <ComparisonBuilder
+          title="أداة بناء المقارنة التفاعلية ⚡"
+          subtitle="اختر الفئة والقطعتين المراد مقارنتهما، وانتقل فوراً لمقارنة الأرقام الحقيقية والمواصفات الكاملة."
+        />
+      </div>
 
       <!-- Search / Filter Box -->
       <div class="max-w-xl mx-auto relative mb-12">
         <input
           type="text"
           id="search-input"
-          placeholder="ابحث عن مقارنة... مثلاً RTX 4070 أو Ryzen 7 أو RX 7800"
+          placeholder="ابحث في جميع المقارنات الـ 80... مثلاً RTX 4090 أو Ryzen 7 أو Blade 16"
           class="w-full py-4 pr-12 pl-4 rounded-2xl border-2 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 shadow-lg text-sm transition-colors"
         />
         <span class="absolute right-4 top-1/2 -translate-y-1/2 text-xl text-slate-400">
@@ -69,7 +78,7 @@ const formatVal = (v: any) => {
             🎮
           </div>
           <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">كروت الشاشة (GPUs)</h3>
-          <p class="text-xs text-slate-500 dark:text-slate-400">مقارنات بطاقات RTX و Radeon ومعدل إطارات الألعاب.</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400">55 مقارنة لبطاقات RTX و Radeon ومعدل إطارات الألعاب.</p>
         </a>
 
         <a href="/category/cpu" class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 dark:hover:border-blue-500 transition-all hover:shadow-lg group">
@@ -77,7 +86,7 @@ const formatVal = (v: any) => {
             ⚙️
           </div>
           <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">المعالجات (CPUs)</h3>
-          <p class="text-xs text-slate-500 dark:text-slate-400">مقارنات معالجات Intel و AMD وسرعات الرندرة وتعدد الأنوية.</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400">15 مقارنة لمعالجات Intel و AMD وسرعات الرندرة وتعدد الأنوية.</p>
         </a>
 
         <a href="/category/laptop" class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 dark:hover:border-blue-500 transition-all hover:shadow-lg group">
@@ -85,7 +94,7 @@ const formatVal = (v: any) => {
             💻
           </div>
           <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">الحواسيب المحمولة</h3>
-          <p class="text-xs text-slate-500 dark:text-slate-400">مقارنات لابتوبات القيمنق والمونتاج، الشاشات والبطاريات.</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400">10 مقارنات للابتوبات القيمنق والمونتاج، الشاشات والبطاريات.</p>
         </a>
 
       </div>
@@ -103,10 +112,10 @@ const formatVal = (v: any) => {
     <div class="flex items-center justify-between mb-8">
       <div>
         <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
-          أحدث وأقوى المقارنات المعتمدة
+          أبرز المقارنات الشائعة والمطلوبة
         </h2>
         <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
-          قائمة المقارنات الأكثر طلباً في السوق التقني الحالي.
+          قائمة المقارنات الأكثر طلباً وبحثاً، مع إمكانية البحث الفوري في كامل قاعدة البيانات (80 مقارنة).
         </p>
       </div>
       <span class="text-xs font-bold px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400">
@@ -115,9 +124,9 @@ const formatVal = (v: any) => {
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="comparisons-list">
-      {allComparisons.map((comp: any) => (
+      {allComparisons.map((comp: any, index: number) => (
         <article
-          class="comp-item bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all flex flex-col justify-between group"
+          class={`comp-item bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all flex flex-col justify-between group ${index >= 15 ? 'extra-card hidden' : ''}`}
           data-title={comp.title_ar.toLowerCase()}
           data-a={comp.item_a.name.toLowerCase()}
           data-b={comp.item_b.name.toLowerCase()}
@@ -170,26 +179,75 @@ const formatVal = (v: any) => {
         </article>
       ))}
     </div>
+
+    <!-- Toggle Show More Button -->
+    {allComparisons.length > 15 && (
+      <div class="mt-10 text-center" id="show-more-container">
+        <button
+          id="toggle-all-comps"
+          type="button"
+          class="px-6 py-3.5 rounded-2xl bg-white dark:bg-slate-900 hover:bg-blue-50 dark:hover:bg-blue-950/50 text-slate-800 dark:text-slate-200 hover:text-blue-600 font-bold text-sm border-2 border-slate-200 dark:border-slate-800 hover:border-blue-500 transition-all inline-flex items-center gap-2 shadow-sm"
+        >
+          <span>استعراض جميع المقارنات ({allComparisons.length})</span>
+          <span class="toggle-icon">▼</span>
+        </button>
+      </div>
+    )}
   </section>
 
   <!-- Client-side filter script -->
   <script is:inline>
     const searchInput = document.getElementById('search-input');
     const compCards = document.querySelectorAll('.comp-item');
+    const showMoreContainer = document.getElementById('show-more-container');
+    const toggleBtn = document.getElementById('toggle-all-comps');
+    let isExpanded = false;
 
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase().trim();
-        compCards.forEach(card => {
-          const title = card.getAttribute('data-title') || '';
-          const nameA = card.getAttribute('data-a') || '';
-          const nameB = card.getAttribute('data-b') || '';
-          if (title.includes(query) || nameA.includes(query) || nameB.includes(query)) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
+        if (query.length > 0) {
+          if (showMoreContainer) showMoreContainer.style.display = 'none';
+          compCards.forEach(card => {
+            const title = card.getAttribute('data-title') || '';
+            const nameA = card.getAttribute('data-a') || '';
+            const nameB = card.getAttribute('data-b') || '';
+            if (title.includes(query) || nameA.includes(query) || nameB.includes(query)) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        } else {
+          if (showMoreContainer) showMoreContainer.style.display = 'block';
+          compCards.forEach((card, idx) => {
+            if (idx < 15 || isExpanded) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        }
+      });
+    }
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        isExpanded = !isExpanded;
+        const extraCards = document.querySelectorAll('.extra-card');
+        extraCards.forEach(card => {
+          card.style.display = isExpanded ? 'flex' : 'none';
         });
+        const textSpan = toggleBtn.querySelector('span:first-child');
+        const iconSpan = toggleBtn.querySelector('.toggle-icon');
+        if (textSpan) {
+          textSpan.textContent = isExpanded
+            ? 'إخفاء المقارنات الإضافية'
+            : `استعراض جميع المقارنات (${compCards.length})`;
+        }
+        if (iconSpan) {
+          iconSpan.textContent = isExpanded ? '▲' : '▼';
+        }
       });
     }
   </script>

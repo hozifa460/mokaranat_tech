@@ -1,0 +1,594 @@
+{
+  "slug": "rtx-4090-vs-rx-7900-xt",
+  "category": "gpu",
+  "title_ar": "مقارنة NVIDIA GeForce RTX 4090 ضد AMD Radeon RX 7900 XT | المواصفات والأداء والأسعار",
+  "meta_title_ar": "NVIDIA GeForce RTX 4090 ضد AMD Radeon RX 7900 XT: أيهما يستحق الشراء؟ | مقارنات تك",
+  "meta_description_ar": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4090 و AMD Radeon RX 7900 XT. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+  "item_a": {
+    "id": "rtx-4090",
+    "slug": "rtx-4090",
+    "name": "NVIDIA GeForce RTX 4090",
+    "category": "gpu",
+    "brand": "NVIDIA",
+    "release_year": 2022,
+    "launch_msrp_usd": 1599.0,
+    "architecture": "Ada Lovelace",
+    "process_node_nm": 4.0,
+    "tdp_w": 450,
+    "raw_specs": {
+      "die": "AD102",
+      "cuda_cores": 16384,
+      "base_clock_mhz": 2235,
+      "boost_clock_mhz": 2520,
+      "vram_gb": 24,
+      "memory_type": "GDDR6X",
+      "bus_width_bit": 384,
+      "bandwidth_gbps": 1008.0,
+      "pcie_interface": "PCIe 4.0 x16",
+      "pcie_lanes": 16,
+      "nvenc_encoders": 2
+    },
+    "benchmark_index": 98.0,
+    "gaming_scores": {
+      "raster_1080p": 98.0,
+      "raster_1440p": 98.0,
+      "raster_4k": 98.0
+    },
+    "ray_tracing_score": 98.0,
+    "efficiency_score": 82.0,
+    "features": [
+      "DLSS 3.5 Frame Generation & Ray Reconstruction",
+      "Dual NVENC (AV1)",
+      "3rd Gen RT Cores",
+      "4th Gen Tensor Cores",
+      "24GB GDDR6X"
+    ],
+    "pcie_interface": "PCIe 4.0 x16"
+  },
+  "item_b": {
+    "id": "rx-7900-xt",
+    "slug": "rx-7900-xt",
+    "name": "AMD Radeon RX 7900 XT",
+    "category": "gpu",
+    "brand": "AMD",
+    "release_year": 2022,
+    "launch_msrp_usd": 899.0,
+    "architecture": "RDNA 3",
+    "process_node_nm": 5.0,
+    "tdp_w": 315,
+    "raw_specs": {
+      "die": "Navi 31",
+      "stream_processors": 5376,
+      "base_clock_mhz": 1500,
+      "boost_clock_mhz": 2400,
+      "vram_gb": 20,
+      "memory_type": "GDDR6",
+      "bus_width_bit": 320,
+      "bandwidth_gbps": 800.0,
+      "pcie_interface": "PCIe 4.0 x16",
+      "pcie_lanes": 16,
+      "displayport": "DisplayPort 2.1",
+      "revised_msrp_usd": 749.0
+    },
+    "benchmark_index": 89.0,
+    "gaming_scores": {
+      "raster_1080p": 93.0,
+      "raster_1440p": 92.0,
+      "raster_4k": 84.0
+    },
+    "ray_tracing_score": 70.0,
+    "efficiency_score": 77.0,
+    "features": [
+      "FSR 3.1",
+      "20GB GDDR6 VRAM",
+      "320-bit Memory Bus",
+      "DisplayPort 2.1"
+    ],
+    "pcie_interface": "PCIe 4.0 x16"
+  },
+  "spec_differences": [
+    {
+      "key": "benchmark_index",
+      "label_ar": "مؤشر الأداء العام (Benchmark Index)",
+      "value_a": 98.0,
+      "value_b": 89.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 10.1,
+      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 10.1%"
+    },
+    {
+      "key": "launch_msrp_usd",
+      "label_ar": "سعر الإطلاق الرسمي",
+      "value_a": 1599.0,
+      "value_b": 899.0,
+      "unit": "$",
+      "winner": "b",
+      "diff_percentage": 43.8,
+      "advantage_summary_ar": "أوفر بالسعر بنسبة 43.8%"
+    },
+    {
+      "key": "tdp_w",
+      "label_ar": "استهلاك الطاقة المكتبي (TDP)",
+      "value_a": 450,
+      "value_b": 315,
+      "unit": "W",
+      "winner": "b",
+      "diff_percentage": 30.0,
+      "advantage_summary_ar": "استهلاك طاقة أقل وتوليد حراري أهدأ بفارق 30%"
+    },
+    {
+      "key": "process_node_nm",
+      "label_ar": "دقة التصنيع (Process Node)",
+      "value_a": 4.0,
+      "value_b": 5.0,
+      "unit": "nm",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقياس تقني استرشادي: تختلف هندسة دقة التصنيع وكثافة الترانزستورات والتصميم (رقاقة أحادية Monolithic مقابل رقاقات Chiplets) بين المعماريات المختلفة"
+    },
+    {
+      "key": "ray_tracing_score",
+      "label_ar": "كفاءة تتبع الأشعة (Ray Tracing)",
+      "value_a": 98.0,
+      "value_b": 70.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 40.0,
+      "advantage_summary_ar": "معالجة متقدمة لتقنيات الإضاءة الواقعية بفارق 40%"
+    },
+    {
+      "key": "efficiency_score",
+      "label_ar": "معيار الكفاءة مقابل الواط",
+      "value_a": 82.0,
+      "value_b": 77.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 6.5,
+      "advantage_summary_ar": "أداء أعلى لكل واط مستهلك"
+    },
+    {
+      "key": "vram_gb",
+      "label_ar": "سعة الذاكرة الرسومية (VRAM)",
+      "value_a": 24.0,
+      "value_b": 20.0,
+      "unit": "GB",
+      "winner": "a",
+      "diff_percentage": 20.0,
+      "advantage_summary_ar": "سعة VRAM أكبر تمنح أماناً فائقاً في الألعاب بدقة 4K وعمليات الرندرة الضخمة"
+    },
+    {
+      "key": "bus_width_bit",
+      "label_ar": "عرض ناقل الذاكرة (Memory Bus)",
+      "value_a": 384.0,
+      "value_b": 320.0,
+      "unit": "bit",
+      "winner": "a",
+      "diff_percentage": 20.0,
+      "advantage_summary_ar": "عرض نطاق أوسع لنقل البيانات الرسومية بسلاسة"
+    },
+    {
+      "key": "boost_clock_mhz",
+      "label_ar": "تردد التعزيز (Boost Clock)",
+      "value_a": 2520.0,
+      "value_b": 2400.0,
+      "unit": "MHz",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقياس استرشادي: تختلف كفاءة التردد وتعليمات الدورة (IPC) باختلاف المعمارية، ولا يقاس الأداء بالتردد الخام وحده"
+    },
+    {
+      "key": "pcie_interface",
+      "label_ar": "واجهة التوصيل العتادية (PCIe Interface)",
+      "value_a": "PCIe 4.0 x16",
+      "value_b": "PCIe 4.0 x16",
+      "unit": "",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "واجهة توصيل متطابقة بكامل المسارات (16 مساراً)"
+    }
+  ],
+  "performance_score_a": 98.0,
+  "performance_score_b": 89.0,
+  "fps_benchmarks": [
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 202,
+      "fps_b": 118,
+      "diff_pct": 71.2,
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 141,
+      "fps_b": 80,
+      "diff_pct": 76.2,
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 85,
+      "fps_b": 41,
+      "diff_pct": 107.3,
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1080p",
+      "preset": "Cinematic High",
+      "fps_a": 142,
+      "fps_b": 84,
+      "diff_pct": 69.0,
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1440p",
+      "preset": "Cinematic High",
+      "fps_a": 92,
+      "fps_b": 53,
+      "diff_pct": 73.6,
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "4K",
+      "preset": "Cinematic High",
+      "fps_a": 52,
+      "fps_b": 26,
+      "diff_pct": 100.0,
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1080p",
+      "preset": "Competitive High",
+      "fps_a": 387,
+      "fps_b": 314,
+      "diff_pct": 23.2,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1440p",
+      "preset": "Competitive High",
+      "fps_a": 271,
+      "fps_b": 217,
+      "diff_pct": 24.9,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "4K",
+      "preset": "Competitive High",
+      "fps_a": 157,
+      "fps_b": 118,
+      "diff_pct": 33.1,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1080p",
+      "preset": "Ultra",
+      "fps_a": 198,
+      "fps_b": 148,
+      "diff_pct": 33.8,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1440p",
+      "preset": "Ultra",
+      "fps_a": 150,
+      "fps_b": 110,
+      "diff_pct": 36.4,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "4K",
+      "preset": "Ultra",
+      "fps_a": 98,
+      "fps_b": 62,
+      "diff_pct": 58.1,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1080p",
+      "preset": "Ultra / High",
+      "fps_a": 276,
+      "fps_b": 239,
+      "diff_pct": 15.5,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1440p",
+      "preset": "Ultra / High",
+      "fps_a": 197,
+      "fps_b": 166,
+      "diff_pct": 18.7,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "4K",
+      "preset": "Ultra / High",
+      "fps_a": 118,
+      "fps_b": 85,
+      "diff_pct": 38.8,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 203,
+      "fps_b": 162,
+      "diff_pct": 25.3,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 152,
+      "fps_b": 118,
+      "diff_pct": 28.8,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 91,
+      "fps_b": 61,
+      "diff_pct": 49.2,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    }
+  ],
+  "verdict": {
+    "overall_winner": "a",
+    "winner_name": "NVIDIA GeForce RTX 4090",
+    "score_a": 98.0,
+    "score_b": 89.0,
+    "quick_verdict_ar": "يتفوق NVIDIA GeForce RTX 4090 في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 10.1% مقارنة بـ AMD Radeon RX 7900 XT. هذا التفوق يستند إلى معمارية Ada Lovelace وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~43.1%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "gaming_analysis_ar": "في ساحة الألعاب، يقدم NVIDIA GeForce RTX 4090 تفوقاً ملحوظاً في مجمل الأداء الرسومي مع تفوق كاسح في العناوين الثقيلة بتتبع الأشعة بمؤشر 98/100 ودعم كامل لتقنيات DLSS 3 لتوليد الإطارات (Frame Generation) و DLSS 3.5 لإعادة بناء الأشعة (Ray Reconstruction)، بينما ينافس AMD Radeon RX 7900 XT بقوة رسومية خام متميزة و سعة ذاكرة وافرة تبلغ 20GB (مقابل 24GB لدى منافسه) تمنح أماناً فائقاً واستقراراً في الألعاب بدقة 4K وقوام Ultra بدون اختناق الذاكرة مع دعم تقنية FSR 3.1 وتوليد الإطارات المفتوح عبر المنصات.",
+    "productivity_analysis_ar": "على صعيد الإنتاجية والرندرة وصناعة المحتوى، يحسم NVIDIA GeForce RTX 4090 المنافسة بفضل تفوق منظومة CUDA و OptiX لتسريع محركات التصميم (مثل Blender و Premiere) وتطبيقات الذكاء الاصطناعي مع مشفر NVENC المزدوج (Dual NVENC) فائق السرعة من الجيل الثامن مع دعم تسريع وتشفير عتادي لـ AV1؛ ومع أن كلا المعماريتين تدعمان التشفير وفك التشفير العتادي لترميز AV1 الحديث (مشفر NVENC الجيل الثامن في Ada Lovelace مقابل محرك VCN 4.0 في RDNA 3) وسعة ذاكرة وافرة تبلغ 20GB لـ AMD Radeon RX 7900 XT، إلا أن أفضلية بيئة العمل البرمجية واستقرار التعريفات في تطبيقات الإنتاج تظل محسومة لصالح NVIDIA بفضل الدعم الواسع في برمجيات التصميم.",
+    "value_and_budget_ar": "عند دراسة معادلة القيمة مقابل السعر، يطرح AMD Radeon RX 7900 XT تكلفة شراء أقل بسعر $899 (توفير $700، بينما يرتفع سعر منافسه بنسبة 77.9% عن السعر الأقل)، في حين يقدم NVIDIA GeForce RTX 4090 زيادة في الإطارات بمتوسط ~43.1% وسعة 24GB، مما يجعل AMD Radeon RX 7900 XT الخيار الأفضل لقيمة كل دولار، بينما يستهدف NVIDIA GeForce RTX 4090 من يطلب أداءً أعلى واستثماراً أكثر استدامة للمستقبل. تجدر الإشارة إلى أن AMD قامت لاحقاً بتعديل السعر الرسمي لبطاقة AMD Radeon RX 7900 XT نزولاً من $899 إلى $749 رسمياً لدى كبرى المتاجر، مما يعزز جاذبيتها التنافسية ومعادلة القيمة مقابل السعر بشكل ملحوظ.",
+    "pros_a": [
+      "تفوق في تتبع الأشعة بمؤشر 98/100 ودعم كامل لتقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة)",
+      "هيمنة بيئة العمل وصناعة المحتوى بفضل تسريع مكتبات CUDA و OptiX ومشفر NVENC المزدوج لتسريع البث المباشر وتصدير الفيديو",
+      "كفاءة معمارية استثنائية تقدم أقصى أداء معالجة رسومية في العالم مقابل سحب الطاقة (450W)"
+    ],
+    "cons_a": [
+      "سعر إطلاق رسمي أعلى ($1599) مقارنة بـ AMD Radeon RX 7900 XT ($899)",
+      "استهلاك طاقة مرتفع للغاية (450W TDP) يتطلب مزود طاقة 850W+ وكابل توصيل 16-pin 12VHPWR مخصص مع تدفق هواء ممتاز داخل الصندوق"
+    ],
+    "pros_b": [
+      "سعة ذاكرة رسومية وافرة (20GB VRAM) بناقل 320 بت تمنح أريحية ممتازة للألعاب بدقة 1440p و 4K وتمنع اختناق الذاكرة مع القوام المرتفع",
+      "أداء رسومي خام (Rasterization) ممتاز ومؤشر عام تنافسي يبلغ 89/100",
+      "دعم تقنيات FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ العرض الحديثة DisplayPort 2.1"
+    ],
+    "cons_b": [
+      "أداء أقل في تتبع الأشعة (Ray Tracing) مقارنة بنواة RT Cores لدى NVIDIA (مؤشر 70/100)",
+      "افتقار لدعم بيئة تسريع CUDA المعتمدة صناعياً في برامج التصميم والذكاء الاصطناعي",
+      "استهلاك طاقة يصل إلى 315 واط يتطلب مزود طاقة وتبريداً قوياً داخل الصندوق"
+    ],
+    "who_should_buy_a": "اللاعب أو صانع المحتوى الذي يضع أولوية لبيئة عمل CUDA وتسريع الرندرة وتطبيقات الذكاء الاصطناعي، ويرغب في أحدث تقنيات تتبع الأشعة مع تقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) لبطاقات GeForce RTX، إلى جانب كفاءة معمارية استثنائية تقدم أعلى أداء حوسبي ورسومي في العالم مقابل سحب الطاقة (450W).",
+    "who_should_buy_b": "اللاعب الذي يركز على أعلى أداء رسومي خام (Raw Raster FPS) مقابل السعر، مع الاستفادة من سعة ذاكرة رحبة تبلغ 20GB بناقل 320 بت لتفادي اختناق القوام، وتفضيل التقنيات المفتوحة مثل FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ DisplayPort 2.1 الحديثة."
+  },
+  "affiliate_links_a": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء NVIDIA GeForce RTX 4090 من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=NVIDIA+GeForce+RTX+4090",
+      "affiliate_url": "https://www.noon.com/search?q=NVIDIA+GeForce+RTX+4090&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء NVIDIA GeForce RTX 4090 من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=NVIDIA+GeForce+RTX+4090",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=NVIDIA+GeForce+RTX+4090&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء NVIDIA GeForce RTX 4090 من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=NVIDIA+GeForce+RTX+4090",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=NVIDIA+GeForce+RTX+4090&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء NVIDIA GeForce RTX 4090 من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=NVIDIA+GeForce+RTX+4090",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=NVIDIA+GeForce+RTX+4090&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "affiliate_links_b": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء AMD Radeon RX 7900 XT من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=AMD+Radeon+RX+7900+XT",
+      "affiliate_url": "https://www.noon.com/search?q=AMD+Radeon+RX+7900+XT&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء AMD Radeon RX 7900 XT من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=AMD+Radeon+RX+7900+XT",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=AMD+Radeon+RX+7900+XT&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء AMD Radeon RX 7900 XT من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Radeon+RX+7900+XT",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Radeon+RX+7900+XT&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء AMD Radeon RX 7900 XT من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=AMD+Radeon+RX+7900+XT",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=AMD+Radeon+RX+7900+XT&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "schema_json_ld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4090-vs-rx-7900-xt#productA",
+        "name": "NVIDIA GeForce RTX 4090",
+        "category": "GPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "NVIDIA"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "1599",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4090-vs-rx-7900-xt#productB",
+        "name": "AMD Radeon RX 7900 XT",
+        "category": "GPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "AMD"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "899",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4090-vs-rx-7900-xt#review",
+        "url": "https://tech-comparisons.pages.dev/compare/rtx-4090-vs-rx-7900-xt",
+        "name": "مقارنة NVIDIA GeForce RTX 4090 ضد AMD Radeon RX 7900 XT | المواصفات والأداء والأسعار",
+        "description": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4090 و AMD Radeon RX 7900 XT. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+        "datePublished": "2026-10-20T18:43:20.301388+00:00",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "فريق تحرير مقارنات تك",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "itemReviewed": {
+          "@type": "Product",
+          "name": "NVIDIA GeForce RTX 4090 vs AMD Radeon RX 7900 XT"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 4.9,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "reviewBody": "يتفوق NVIDIA GeForce RTX 4090 في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 10.1% مقارنة بـ AMD Radeon RX 7900 XT. هذا التفوق يستند إلى معمارية Ada Lovelace وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~43.1%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+      }
+    ]
+  },
+  "created_at": "2026-10-20T18:43:20.301388+00:00"
+}

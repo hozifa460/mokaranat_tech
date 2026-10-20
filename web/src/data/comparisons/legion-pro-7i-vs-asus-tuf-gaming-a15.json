@@ -1,0 +1,586 @@
+{
+  "slug": "legion-pro-7i-vs-asus-tuf-gaming-a15",
+  "category": "laptop",
+  "title_ar": "مقارنة Lenovo Legion Pro 7i (Gen 9) ضد ASUS TUF Gaming A15 (2024) | المواصفات والأداء والأسعار",
+  "meta_title_ar": "Lenovo Legion Pro 7i (Gen 9) ضد ASUS TUF Gaming A15 (2024): أيهما يستحق الشراء؟ | مقارنات تك",
+  "meta_description_ar": "مقارنة شاملة وتفصيلية بين Lenovo Legion Pro 7i (Gen 9) و ASUS TUF Gaming A15 (2024). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+  "item_a": {
+    "id": "legion-pro-7i",
+    "slug": "legion-pro-7i",
+    "name": "Lenovo Legion Pro 7i (Gen 9)",
+    "category": "laptop",
+    "brand": "Lenovo",
+    "release_year": 2024,
+    "launch_msrp_usd": 2199.0,
+    "architecture": "Intel 14th Gen + RTX 4080",
+    "process_node_nm": 4.0,
+    "tdp_w": 175,
+    "raw_specs": {
+      "display": "16-inch IPS 2.5K 240Hz 500nits Anti-Glare",
+      "weight_kg": 2.6,
+      "battery_wh": 99.9,
+      "cpu": "Intel Core i9-14900HX",
+      "gpu": "RTX 4080 Mobile 12GB (175W)",
+      "ram_gb": 32,
+      "storage_tb": 1
+    },
+    "benchmark_index": 86.0,
+    "gaming_scores": {
+      "raster_1080p": 90.0,
+      "raster_1440p": 88.0,
+      "raster_4k": 68.0
+    },
+    "ray_tracing_score": 84.0,
+    "efficiency_score": 72.0,
+    "features": [
+      "Full 175W TGP GPU",
+      "Coldfront 5.0 Vapor Chamber",
+      "500 nits High-Brightness IPS",
+      "TrueStrike Keyboard"
+    ],
+    "pcie_interface": null
+  },
+  "item_b": {
+    "id": "asus-tuf-gaming-a15",
+    "slug": "asus-tuf-gaming-a15",
+    "name": "ASUS TUF Gaming A15 (2024)",
+    "category": "laptop",
+    "brand": "ASUS",
+    "release_year": 2024,
+    "launch_msrp_usd": 1099.0,
+    "architecture": "AMD Zen 3+ + RTX 4060 Mobile",
+    "process_node_nm": 4.0,
+    "tdp_w": 140,
+    "raw_specs": {
+      "display": "15.6-inch FHD 144Hz IPS (100% sRGB)",
+      "weight_kg": 2.2,
+      "battery_wh": 90.0,
+      "cpu": "AMD Ryzen 7 7735HS",
+      "gpu": "NVIDIA GeForce RTX 4060 Mobile 8GB (140W)",
+      "ram_gb": 16,
+      "storage_tb": 1
+    },
+    "benchmark_index": 68.0,
+    "gaming_scores": {
+      "raster_1080p": 74.0,
+      "raster_1440p": 58.0,
+      "raster_4k": 36.0
+    },
+    "ray_tracing_score": 55.0,
+    "efficiency_score": 84.0,
+    "features": [
+      "Ryzen 7 + RTX 4060 140W TGP",
+      "90Wh Large Battery",
+      "MIL-STD-810H Military Standard",
+      "144Hz 100% sRGB Display"
+    ],
+    "pcie_interface": null
+  },
+  "spec_differences": [
+    {
+      "key": "benchmark_index",
+      "label_ar": "مؤشر الأداء العام (Benchmark Index)",
+      "value_a": 86.0,
+      "value_b": 68.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 26.5,
+      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 26.5%"
+    },
+    {
+      "key": "launch_msrp_usd",
+      "label_ar": "سعر الإطلاق الرسمي",
+      "value_a": 2199.0,
+      "value_b": 1099.0,
+      "unit": "$",
+      "winner": "b",
+      "diff_percentage": 50.0,
+      "advantage_summary_ar": "أوفر بالسعر بنسبة 50%"
+    },
+    {
+      "key": "tdp_w",
+      "label_ar": "أقصى استهلاك رسومي متاح (GPU TGP / Thermal Budget)",
+      "value_a": 175,
+      "value_b": 140,
+      "unit": "W",
+      "winner": "tie",
+      "diff_percentage": 20.0,
+      "advantage_summary_ar": "مقياس هندسي: يمنح السحب الأعلى (175W) أداء رسومياً مستداماً وترددات بطاقة أعلى، بينما يتيح السحب المنضبط (140W) هيكلاً فائق النحافة وحرارة أقل"
+    },
+    {
+      "key": "process_node_nm",
+      "label_ar": "دقة التصنيع (Process Node)",
+      "value_a": 4.0,
+      "value_b": 4.0,
+      "unit": "nm",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "دقة تصنيع متطابقة عتادياً"
+    },
+    {
+      "key": "ray_tracing_score",
+      "label_ar": "كفاءة تتبع الأشعة (Ray Tracing)",
+      "value_a": 84.0,
+      "value_b": 55.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 52.7,
+      "advantage_summary_ar": "معالجة متقدمة لتقنيات الإضاءة الواقعية بفارق 52.7%"
+    },
+    {
+      "key": "efficiency_score",
+      "label_ar": "معيار الكفاءة مقابل الواط",
+      "value_a": 72.0,
+      "value_b": 84.0,
+      "unit": "/ 100",
+      "winner": "b",
+      "diff_percentage": 16.7,
+      "advantage_summary_ar": "أداء أعلى لكل واط مستهلك"
+    },
+    {
+      "key": "weight_kg",
+      "label_ar": "وزن الجهاز المحمول",
+      "value_a": 2.6,
+      "value_b": 2.2,
+      "unit": "kg",
+      "winner": "b",
+      "diff_percentage": 15.4,
+      "advantage_summary_ar": "أخف وزناً وسهولة أعلى في التنقل اليومي"
+    },
+    {
+      "key": "battery_wh",
+      "label_ar": "سعة البطارية (Watt-hours)",
+      "value_a": 99.9,
+      "value_b": 90.0,
+      "unit": "Wh",
+      "winner": "a",
+      "diff_percentage": 11.0,
+      "advantage_summary_ar": "سعة بطارية أكبر للعمل لفترات أطول خارج المقبس"
+    },
+    {
+      "key": "display",
+      "label_ar": "تقنية ومواصفات الشاشة",
+      "value_a": "16-inch IPS 2.5K 240Hz 500nits Anti-Glare",
+      "value_b": "15.6-inch FHD 144Hz IPS (100% sRGB)",
+      "unit": "",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقارنة شاشات: تقنيات عرض متقدمة بمعدلات تحديث سريعة ملائمة للألعاب التنافسية وصناعة المحتوى"
+    },
+    {
+      "key": "ram_gb",
+      "label_ar": "سعة الذاكرة العشوائية (RAM)",
+      "value_a": 32.0,
+      "value_b": 16.0,
+      "unit": "GB",
+      "winner": "a",
+      "diff_percentage": 100.0,
+      "advantage_summary_ar": "سعة ذاكرة عشوائية أكبر لتشغيل ألعاب العصر وتعدد المهام الثقيلة"
+    }
+  ],
+  "performance_score_a": 86.0,
+  "performance_score_b": 68.0,
+  "fps_benchmarks": [
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 133,
+      "fps_b": 98,
+      "diff_pct": 35.7,
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 89,
+      "fps_b": 53,
+      "diff_pct": 67.9,
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 41,
+      "fps_b": 20,
+      "diff_pct": 105.0,
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1080p",
+      "preset": "Cinematic High",
+      "fps_a": 93,
+      "fps_b": 69,
+      "diff_pct": 34.8,
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1440p",
+      "preset": "Cinematic High",
+      "fps_a": 58,
+      "fps_b": 35,
+      "diff_pct": 65.7,
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "4K",
+      "preset": "Cinematic High",
+      "fps_a": 25,
+      "fps_b": 15,
+      "diff_pct": 66.7,
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1080p",
+      "preset": "Competitive High",
+      "fps_a": 322,
+      "fps_b": 294,
+      "diff_pct": 9.5,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1440p",
+      "preset": "Competitive High",
+      "fps_a": 221,
+      "fps_b": 189,
+      "diff_pct": 16.9,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "4K",
+      "preset": "Competitive High",
+      "fps_a": 116,
+      "fps_b": 96,
+      "diff_pct": 20.8,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1080p",
+      "preset": "Ultra",
+      "fps_a": 135,
+      "fps_b": 107,
+      "diff_pct": 26.2,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1440p",
+      "preset": "Ultra",
+      "fps_a": 98,
+      "fps_b": 64,
+      "diff_pct": 53.1,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "4K",
+      "preset": "Ultra",
+      "fps_a": 49,
+      "fps_b": 26,
+      "diff_pct": 88.5,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1080p",
+      "preset": "Ultra / High",
+      "fps_a": 191,
+      "fps_b": 154,
+      "diff_pct": 24.0,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1440p",
+      "preset": "Ultra / High",
+      "fps_a": 131,
+      "fps_b": 87,
+      "diff_pct": 50.6,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "4K",
+      "preset": "Ultra / High",
+      "fps_a": 61,
+      "fps_b": 34,
+      "diff_pct": 79.4,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 138,
+      "fps_b": 110,
+      "diff_pct": 25.5,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 99,
+      "fps_b": 65,
+      "diff_pct": 52.3,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 45,
+      "fps_b": 24,
+      "diff_pct": 87.5,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    }
+  ],
+  "verdict": {
+    "overall_winner": "a",
+    "winner_name": "Lenovo Legion Pro 7i (Gen 9)",
+    "score_a": 86.0,
+    "score_b": 68.0,
+    "quick_verdict_ar": "يتفوق Lenovo Legion Pro 7i (Gen 9) في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 26.5% مقارنة بـ ASUS TUF Gaming A15 (2024). هذا التفوق يستند إلى معمارية Intel 14th Gen + RTX 4080 وتوازن العتاد المعماري ومنصة التشغيل المحمولة وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~51.1%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "gaming_analysis_ar": "في فئة الحواسيب المحمولة، يوفر كلا الجهازين توازناً متقدماً بين الأداء المحمول والحرارة المحكومة، مع أفضلية في ثبات الترددات والأداء الرسومي لصالح Lenovo Legion Pro 7i (Gen 9) (بمؤشر 86/100) تحت الأحمال المطولة مقارنة بـ ASUS TUF Gaming A15 (2024) (68/100).",
+    "productivity_analysis_ar": "تعتبر سعة البطارية وإدارة الطاقة والوزن هي العوامل الفاصلة في الإنتاجية اليومية للمصممين والمبرمجين؛ حيث يقدم كلا الجهازين هيكلاً متيناً مخصصاً للأداء العالي مع أفضلية طفيفة في الوزن لصالح ASUS TUF Gaming A15 (2024) (2.2 كجم مقابل 2.6 كجم).",
+    "value_and_budget_ar": "يطرح ASUS TUF Gaming A15 (2024) تكلفة شراء أولية أقل بسعر $1099 مقارنة بـ $2199 (توفير $1100، بينما يرتفع سعر منافسه بنسبة 100.1% عن السعر الأقل)، في حين يوفر Lenovo Legion Pro 7i (Gen 9) أداءً إضافياً بنسبة 26.5% يبرر الاستثمار لمن تتطلب أعمالهم أعلى مواصفات للتنقل واللعب.",
+    "pros_a": [
+      "شاشة IPS فائقة السطوع (500 nits لثبات الإضاءة والوضوح التام في الغرف المضيئة دون أي مخاطر لتطبيع الشاشة OLED Burn-in)",
+      "أداء معالجة إجمالي قوي بمؤشر 86/100 للألعاب الثقيلة وصناعة المحتوى",
+      "بطارية بسعة ضخمة (99.9 واط/ساعة) للاستخدام المطول خارج المنزل"
+    ],
+    "cons_a": [
+      "سعر إطلاق رسمي أعلى ($2199)",
+      "وزن الجهاز (2.6 كجم) ثقيل مع شاحن ضخم مقارنة بالمنافس (2.2 كجم) مما يحد من سهولة التنقل اليومي ويجعله بديلاً مكتبياً",
+      "خيارات ترقية العتاد الداخلي محدودة بطبيعة الأجهزة المحمولة",
+      "يتطلب وضعية تهوية جيدة على سطح مستوٍ لتفادي خنق تدفق الهواء السفلي"
+    ],
+    "pros_b": [
+      "شاشة IPS سريعة الاستجابة (15.6-inch FHD 144Hz IPS (100% sRGB)) بدون أي مخاطر لتطبيع الشاشة (Burn-in)",
+      "وزن أخف نسبياً (2.2 كجم) مقارنة بالمنافس (2.6 كجم)",
+      "هيكل متين مطابق للمعايير العسكرية MIL-STD-810H لتحمل الصدمات والاستخدام الشاق"
+    ],
+    "cons_b": [
+      "سعة بطارية أقل (90Wh مقابل 99.9Wh لدى Lenovo Legion Pro 7i (Gen 9))",
+      "خيارات ترقية العتاد الداخلي محدودة بطبيعة الأجهزة المحمولة",
+      "يتطلب وضعية تهوية جيدة على سطح مستوٍ لتفادي خنق تدفق الهواء السفلي"
+    ],
+    "who_should_buy_a": "اللاعب أو المحترف الذي يبحث عن أقوى أداء رسومي مستدام بطاقة كاملة مع كرت RTX 4080 Mobile 12GB (175W) دون الاكتراث بالوزن والحجم، مع الاستفادة من منصة تبريد غرف البخار الفائقة وبطارية بسعة 99.9Wh.",
+    "who_should_buy_b": "المستخدم الباحث عن أفضل صفقة اقتصادية وقيمة عالية مقابل السعر بجهاز ألعاب متين مطابق للمعايير العسكرية MIL-STD-810H، مع قابلية كاملة لترقية الذواكر والتخزين وبطارية 90Wh دون إنفاق ميزانية باهظة."
+  },
+  "affiliate_links_a": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء Lenovo Legion Pro 7i (Gen 9) من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=Lenovo+Legion+Pro+7i+%28Gen+9%29",
+      "affiliate_url": "https://www.noon.com/search?q=Lenovo+Legion+Pro+7i+%28Gen+9%29&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء Lenovo Legion Pro 7i (Gen 9) من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=Lenovo+Legion+Pro+7i+%28Gen+9%29",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=Lenovo+Legion+Pro+7i+%28Gen+9%29&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء Lenovo Legion Pro 7i (Gen 9) من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=Lenovo+Legion+Pro+7i+%28Gen+9%29",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=Lenovo+Legion+Pro+7i+%28Gen+9%29&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء Lenovo Legion Pro 7i (Gen 9) من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=Lenovo+Legion+Pro+7i+%28Gen+9%29",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=Lenovo+Legion+Pro+7i+%28Gen+9%29&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "affiliate_links_b": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء ASUS TUF Gaming A15 (2024) من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=ASUS+TUF+Gaming+A15+%282024%29",
+      "affiliate_url": "https://www.noon.com/search?q=ASUS+TUF+Gaming+A15+%282024%29&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء ASUS TUF Gaming A15 (2024) من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=ASUS+TUF+Gaming+A15+%282024%29",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=ASUS+TUF+Gaming+A15+%282024%29&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء ASUS TUF Gaming A15 (2024) من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=ASUS+TUF+Gaming+A15+%282024%29",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=ASUS+TUF+Gaming+A15+%282024%29&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء ASUS TUF Gaming A15 (2024) من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=ASUS+TUF+Gaming+A15+%282024%29",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=ASUS+TUF+Gaming+A15+%282024%29&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "schema_json_ld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/legion-pro-7i-vs-asus-tuf-gaming-a15#productA",
+        "name": "Lenovo Legion Pro 7i (Gen 9)",
+        "category": "LAPTOP",
+        "brand": {
+          "@type": "Brand",
+          "name": "Lenovo"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "2199",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/legion-pro-7i-vs-asus-tuf-gaming-a15#productB",
+        "name": "ASUS TUF Gaming A15 (2024)",
+        "category": "LAPTOP",
+        "brand": {
+          "@type": "Brand",
+          "name": "ASUS"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "1099",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://tech-comparisons.pages.dev/compare/legion-pro-7i-vs-asus-tuf-gaming-a15#review",
+        "url": "https://tech-comparisons.pages.dev/compare/legion-pro-7i-vs-asus-tuf-gaming-a15",
+        "name": "مقارنة Lenovo Legion Pro 7i (Gen 9) ضد ASUS TUF Gaming A15 (2024) | المواصفات والأداء والأسعار",
+        "description": "مقارنة شاملة وتفصيلية بين Lenovo Legion Pro 7i (Gen 9) و ASUS TUF Gaming A15 (2024). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+        "datePublished": "2026-10-20T18:43:36.382030+00:00",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "فريق تحرير مقارنات تك",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "itemReviewed": {
+          "@type": "Product",
+          "name": "Lenovo Legion Pro 7i (Gen 9) vs ASUS TUF Gaming A15 (2024)"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 4.3,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "reviewBody": "يتفوق Lenovo Legion Pro 7i (Gen 9) في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 26.5% مقارنة بـ ASUS TUF Gaming A15 (2024). هذا التفوق يستند إلى معمارية Intel 14th Gen + RTX 4080 وتوازن العتاد المعماري ومنصة التشغيل المحمولة وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~51.1%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+      }
+    ]
+  },
+  "created_at": "2026-10-20T18:43:36.382030+00:00"
+}

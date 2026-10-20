@@ -1066,16 +1066,37 @@ class EditorialRuleEngine:
             is_amd = target.brand.upper() == "AMD"
             is_intel = target.brand.upper() == "INTEL"
 
-            if is_x3d:
+            rival_cores = rival.raw_specs.get("total_cores", 8)
+            rival_l3 = rival.raw_specs.get("l3_cache_mb", 32)
+            rival_is_x3d = "x3d" in rival.name.lower() or rival_l3 >= 64
+
+            if is_x3d and rival_is_x3d:
+                if target.benchmark_index >= rival.benchmark_index:
+                    return (
+                        f"المستخدم المحترف وصانع المحتوى الذي يجمع بين بث الألعاب والرندرة الثقيلة بفضل {cores} نواة معالجة، "
+                        f"مع الاستفادة من ذاكرة 3D V-Cache الضخمة ({_format_num(l3)}MB) لأداء ألعاب فائق دون تقديم أي تنازلات في الإنتاجية."
+                    )
+                else:
+                    return (
+                        f"اللاعب النقي والتنافسي الذي يركز كلياً على أقصى أداء ممكن في الألعاب بفضل معمارية الشريحة الواحدة (Single CCD) "
+                        f"الخالية من تعقيدات الجدولة، محققاً أفضل كفاءة طاقة وقيمة اقتصادية بذاكرة 3D V-Cache ({_format_num(l3)}MB)."
+                    )
+            elif is_x3d:
                 return (
                     f"اللاعب التنافسي الذي يضع أداء الألعاب وزمن الإطارات السلس في المقام الأول بفضل ذاكرة "
                     f"3D V-Cache الكبيرة ({_format_num(l3)}MB)، مع كفاءة استهلاك طاقة ممتازة ({target.tdp_w}W)."
                 )
-            elif cores >= 16:
-                return (
-                    f"صانع المحتوى والمستخدم المحترف الذي يحتاج أقصى أداء في تعدد المهام والرندرة والمونتاج البرمجي "
-                    f"بفضل تعدد الأنوية الكبير ({cores} نواة معالجة) وترددات Boost المرتفعة."
-                )
+            elif is_intel and rival.brand.upper() == "INTEL":
+                if target.benchmark_index >= rival.benchmark_index:
+                    return (
+                        f"المستخدم المحترف الذي يحتاج أقصى أداء معالجة وتعدد أنوية ({cores} نواة) "
+                        f"لمهام الرندرة والمونتاج والضغط الشاق مع أعلى ترددات Boost."
+                    )
+                else:
+                    return (
+                        f"المستخدم وصانع المحتوى الذي يبحث عن توازن ممتاز وتكلفة أقل مع تعدد أنوية ({cores} نواة) "
+                        f"ومرونة الاختيار بين ذواكر DDR4 الاقتصادية و DDR5 الأحدث بتوفير سعري ملحوظ."
+                    )
             elif is_amd and rival.brand.upper() == "AMD":
                 if target.benchmark_index >= rival.benchmark_index:
                     return (
@@ -1087,17 +1108,11 @@ class EditorialRuleEngine:
                         f"اللاعب وصانع المحتوى الذي يفضل أفضل نقطة توازن اقتصادي بسحب طاقة منضبط ({target.tdp_w}W) "
                         f"واستدامة منصة AM5 الحديثة الداعمة للترقيات حتى 2027+ دون الحاجة لتغيير اللوحة الأم."
                     )
-            elif is_intel and rival.brand.upper() == "INTEL":
-                if target.benchmark_index >= rival.benchmark_index:
-                    return (
-                        f"المستخدم المحترف الذي يحتاج أقصى أداء معالجة وتعدد أنوية ({cores} نواة) "
-                        f"لمهام الرندرة والمونتاج والضغط الشاق مع أعلى ترددات Boost."
-                    )
-                else:
-                    return (
-                        f"المستخدم وصانع المحتوى الذي يبحث عن توازن ممتاز وتكلفة أقل مع تعدد أنوية ({cores} نواة) "
-                        f"ومرونة الاختيار بين ذواكر DDR4 الاقتصادية و DDR5 الأحدث."
-                    )
+            elif cores >= 16:
+                return (
+                    f"صانع المحتوى والمستخدم المحترف الذي يحتاج أقصى أداء في تعدد المهام والرندرة والمونتاج البرمجي "
+                    f"بفضل تعدد الأنوية الكبير ({cores} نواة معالجة) وترددات Boost المرتفعة."
+                )
             elif is_amd:
                 eff_phrase = f"كفاءة استهلاك الطاقة المتميزة ({target.tdp_w}W)" if target.tdp_w < 150 else f"قدرات معالجة معمارية {target.architecture}"
                 return (

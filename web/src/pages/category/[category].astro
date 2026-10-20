@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import AdSlot from '../../components/AdSlot.astro';
+import ComparisonBuilder from '../../components/ComparisonBuilder.astro';
 
 export async function getStaticPaths() {
   const comparisonModules = import.meta.glob('../../data/comparisons/*.json', { eager: true });
@@ -76,6 +77,15 @@ const formatVal = (v: any) => {
 
     <!-- Ad Slot -->
     <AdSlot slotId={`ad-cat-${category}`} format="horizontal" />
+
+    <!-- Interactive Comparison Builder Pre-selected to Category -->
+    <div class="my-10">
+      <ComparisonBuilder
+        initialCategory={category}
+        title={`أداة مقارنة ${currentInfo.title}`}
+        subtitle={`اختر أي قطعتين من فئة ${currentInfo.title} لمشاهدة الفوارق الرقمية ومعدلات الإطارات فوراً.`}
+      />
+    </div>
 
     <!-- Comparisons Grid -->
     {items.length > 0 ? (

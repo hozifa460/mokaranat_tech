@@ -43,14 +43,41 @@ DEFAULT_MATCHUPS: List[Tuple[str, str]] = [
 ]
 
 
+def get_all_matchups(repo: HardwareRepository) -> List[Tuple[str, str]]:
+    """Builds the complete all-pairs comparison matrix across all categories,
+    preserving the original 15 high-intent matchups at the beginning of the list.
+    """
+    import itertools
+
+    all_matchups: List[Tuple[str, str]] = list(DEFAULT_MATCHUPS)
+    seen_pairs = {tuple(sorted([a, b])) for a, b in DEFAULT_MATCHUPS}
+
+    categories = ["gpu", "cpu", "laptop"]
+    all_hardware = repo.list_all_hardware()
+
+    for cat in categories:
+        cat_items = [h for h in all_hardware if h.category == cat]
+        cat_items.sort(key=lambda x: x.benchmark_index, reverse=True)
+        for spec_a, spec_b in itertools.combinations(cat_items, 2):
+            pair_key = tuple(sorted([spec_a.id, spec_b.id]))
+            if pair_key not in seen_pairs:
+                all_matchups.append((spec_a.id, spec_b.id))
+                seen_pairs.add(pair_key)
+
+    return all_matchups
+
+
 def generate_all_comparisons():
-    print("[*] Starting Comparison Pipeline...")
+    print("[*] Starting Full Matrix Comparison Pipeline...")
     repo = HardwareRepository()
     exporter = ComparisonExporter()
 
+    matchups = get_all_matchups(repo)
+    print(f"[*] Prepared {len(matchups)} pairwise matchups across all categories.")
+
     generated_docs: List[ComparisonDocument] = []
 
-    for id_a, id_b in DEFAULT_MATCHUPS:
+    for idx, (id_a, id_b) in enumerate(matchups, start=1):
         spec_a = repo.get_hardware_by_id(id_a)
         spec_b = repo.get_hardware_by_id(id_b)
 
@@ -58,7 +85,7 @@ def generate_all_comparisons():
             print(f"[!] Warning: One of the items ({id_a}, {id_b}) was not found in SQLite. Skipping.")
             continue
 
-        print(f" -> Generating comparison: {spec_a.name} VS {spec_b.name}")
+        print(f" [{idx}/{len(matchups)}] Generating: {spec_a.name} VS {spec_b.name}")
         doc = exporter.build_comparison(spec_a, spec_b)
 
         # 1. Save to SQLite cache
@@ -66,7 +93,6 @@ def generate_all_comparisons():
 
         # 2. Export to Astro data directory
         json_file = exporter.export_to_astro(doc)
-        print(f"    [OK] Exported JSON: {json_file.name}")
 
         generated_docs.append(doc)
 

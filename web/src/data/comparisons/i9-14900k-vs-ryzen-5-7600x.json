@@ -1,0 +1,358 @@
+{
+  "slug": "i9-14900k-vs-ryzen-5-7600x",
+  "category": "cpu",
+  "title_ar": "مقارنة Intel Core i9-14900K ضد AMD Ryzen 5 7600X | المواصفات والأداء والأسعار",
+  "meta_title_ar": "Intel Core i9-14900K ضد AMD Ryzen 5 7600X: أيهما يستحق الشراء؟ | مقارنات تك",
+  "meta_description_ar": "مقارنة شاملة وتفصيلية بين Intel Core i9-14900K و AMD Ryzen 5 7600X. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+  "item_a": {
+    "id": "i9-14900k",
+    "slug": "i9-14900k",
+    "name": "Intel Core i9-14900K",
+    "category": "cpu",
+    "brand": "Intel",
+    "release_year": 2023,
+    "launch_msrp_usd": 589.0,
+    "architecture": "Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin)",
+    "process_node_nm": 7.0,
+    "tdp_w": 253,
+    "raw_specs": {
+      "total_cores": 24,
+      "p_cores": 8,
+      "e_cores": 16,
+      "threads": 32,
+      "base_clock_ghz": 3.2,
+      "boost_clock_ghz": 6.0,
+      "l3_cache_mb": 36,
+      "socket": "LGA 1700 (End of Life)",
+      "process_node": "Intel 7 (10nm Enhanced SuperFin)",
+      "memory_support": "DDR5-5600 / DDR4-3200"
+    },
+    "benchmark_index": 97.0,
+    "gaming_scores": {
+      "gaming_overall": 95.0
+    },
+    "ray_tracing_score": null,
+    "efficiency_score": 70.0,
+    "features": [
+      "Intel Thermal Velocity Boost 6.0GHz",
+      "24 Cores / 32 Threads",
+      "PCIe 5.0 Support",
+      "Integrated UHD 770"
+    ],
+    "pcie_interface": null
+  },
+  "item_b": {
+    "id": "ryzen-5-7600x",
+    "slug": "ryzen-5-7600x",
+    "name": "AMD Ryzen 5 7600X",
+    "category": "cpu",
+    "brand": "AMD",
+    "release_year": 2022,
+    "launch_msrp_usd": 299.0,
+    "architecture": "Zen 4",
+    "process_node_nm": 5.0,
+    "tdp_w": 105,
+    "raw_specs": {
+      "total_cores": 6,
+      "threads": 12,
+      "base_clock_ghz": 4.7,
+      "boost_clock_ghz": 5.3,
+      "l3_cache_mb": 32,
+      "socket": "AM5 (Lifecycle through 2027+)",
+      "memory_support": "DDR5-5200"
+    },
+    "benchmark_index": 78.0,
+    "gaming_scores": {
+      "gaming_overall": 85.0
+    },
+    "ray_tracing_score": null,
+    "efficiency_score": 89.0,
+    "features": [
+      "Zen 4 Architecture",
+      "AM5 Platform Lifecycle through 2027+",
+      "PCIe 5.0 Ready",
+      "High Single-Core Frequency"
+    ],
+    "pcie_interface": null
+  },
+  "spec_differences": [
+    {
+      "key": "benchmark_index",
+      "label_ar": "مؤشر الأداء العام (Benchmark Index)",
+      "value_a": 97.0,
+      "value_b": 78.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 24.4,
+      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 24.4%"
+    },
+    {
+      "key": "launch_msrp_usd",
+      "label_ar": "سعر الإطلاق الرسمي",
+      "value_a": 589.0,
+      "value_b": 299.0,
+      "unit": "$",
+      "winner": "b",
+      "diff_percentage": 49.2,
+      "advantage_summary_ar": "أوفر بالسعر بنسبة 49.2%"
+    },
+    {
+      "key": "tdp_w",
+      "label_ar": "استهلاك الطاقة المكتبي (TDP)",
+      "value_a": 253,
+      "value_b": 105,
+      "unit": "W",
+      "winner": "b",
+      "diff_percentage": 58.5,
+      "advantage_summary_ar": "استهلاك طاقة أقل وتوليد حراري أهدأ بفارق 58.5%"
+    },
+    {
+      "key": "process_node_nm",
+      "label_ar": "دقة التصنيع (Process Node)",
+      "value_a": 7.0,
+      "value_b": 5.0,
+      "unit": "nm",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقياس تقني استرشادي: تعتمد إنتل معيار Intel 7 (10nm Enhanced SuperFin) بكثافة ترانزستورات مكافئة لـ 7nm، وتختلف بنيوياً عن معيار TSMC 5nm في معالجات AMD"
+    },
+    {
+      "key": "efficiency_score",
+      "label_ar": "معيار الكفاءة مقابل الواط",
+      "value_a": 70.0,
+      "value_b": 89.0,
+      "unit": "/ 100",
+      "winner": "b",
+      "diff_percentage": 27.1,
+      "advantage_summary_ar": "أداء أعلى لكل واط مستهلك"
+    },
+    {
+      "key": "total_cores",
+      "label_ar": "إجمالي الأنوية (Cores)",
+      "value_a": 24.0,
+      "value_b": 6.0,
+      "unit": "أنوية",
+      "winner": "a",
+      "diff_percentage": 300.0,
+      "advantage_summary_ar": "عدد أنوية أكبر لتعدد المهام والرندرة البرمجية الثقيلة"
+    },
+    {
+      "key": "threads",
+      "label_ar": "المسارات المعالجة (Threads)",
+      "value_a": 32.0,
+      "value_b": 12.0,
+      "unit": "مسار",
+      "winner": "a",
+      "diff_percentage": 166.7,
+      "advantage_summary_ar": "توازي معالجة أسرع للبرمجيات الثقيلة"
+    },
+    {
+      "key": "l3_cache_mb",
+      "label_ar": "الذاكرة المخبئية المستوى الثالث (L3 Cache)",
+      "value_a": 36.0,
+      "value_b": 32.0,
+      "unit": "MB",
+      "winner": "a",
+      "diff_percentage": 12.5,
+      "advantage_summary_ar": "ذاكرة كاش أضخم لتقليل زمن التأخير وتسريع معدل الإطارات بالألعاب"
+    },
+    {
+      "key": "boost_clock_ghz",
+      "label_ar": "تردد التعزيز الأقصى (Boost Clock)",
+      "value_a": 6.0,
+      "value_b": 5.3,
+      "unit": "GHz",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقياس استرشادي: تختلف كفاءة التردد وتعليمات الدورة (IPC) باختلاف معمارية المعالج، ولا يقاس الأداء بالتردد الخام وحده"
+    }
+  ],
+  "performance_score_a": 97.0,
+  "performance_score_b": 78.0,
+  "fps_benchmarks": [],
+  "verdict": {
+    "overall_winner": "a",
+    "winner_name": "Intel Core i9-14900K",
+    "score_a": 97.0,
+    "score_b": 78.0,
+    "quick_verdict_ar": "يتفوق Intel Core i9-14900K في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 24.4% مقارنة بـ AMD Ryzen 5 7600X. هذا التفوق يستند إلى معمارية Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin) وتوزيع الموارد الحسابية المتطور وكفاءة معالجة المهام، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "gaming_analysis_ar": "في تجارب الألعاب، يقدم كل من Intel Core i9-14900K (24 أنوية) و AMD Ryzen 5 7600X (6 أنوية) معدلات إطارات ممتازة، مع أسبقية طفيفة لـ Intel Core i9-14900K في استقرار 1% low FPS بفضل معمارية Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin) وكفاءة معالجة الخيوط الحسابية.",
+    "productivity_analysis_ar": "في مهام البرمجة والضغط المكتبي وتصدير الفيديو والرندرة، يمنح Intel Core i9-14900K تفوقاً ملحوظاً في المعالجة المتوازية بفضل امتلاكه 24 نواة معالجة (مقابل 6 أنوية لدى منافسه)، بينما يقدم AMD Ryzen 5 7600X كفاءة طاقة ممتازة بسحب 105W فقط (مقابل 253W لـ Intel Core i9-14900K).",
+    "value_and_budget_ar": "يطرح AMD Ryzen 5 7600X تكلفة شراء أولية أقل بسعر $299 مقارنة بـ $589 (توفير $290، بينما يرتفع سعر منافسه بنسبة 97% عن السعر الأقل)، في حين يوفر Intel Core i9-14900K أداءً إضافياً بنسبة 24.4% يبرر الاستثمار لمن تتطلب أعمالهم أقصى إنتاجية وسرعة معالجة.",
+    "pros_a": [
+      "معمارية Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin)",
+      "مؤشر أداء إجمالي (97/100) متفوق في مهام الرندرة والتصدير وتعدد المهام",
+      "ذاكرة كاش سريعة (36MB L3) تمنح استقراراً إضافياً في أزمنة الإطارات للألعاب",
+      "دعم واسع لمنظومة الذواكر DDR5 و DDR4 مما يمنح مرونة عالية في اختيار اللوحات الأم والميزانية"
+    ],
+    "cons_a": [
+      "سعر إطلاق رسمي أعلى ($589)",
+      "استهلاك طاقة يصل إلى 253W عند كسر السرعة والضغط الكامل، وانبعاث حراري يتطلب تبريداً مائياً متقدماً",
+      "انتهاء العمر الافتراضي لمنصة المقبس Intel LGA 1700 (منصة منتهية الصلاحية Dead-end socket بلا أي مسار ترقية مستقبلي لأجيال معالجات أحدث دون تغيير اللوحة الأم بالكامل)"
+    ],
+    "pros_b": [
+      "معمارية Zen 4 المتقدمة بدقة تصنيع 5nm",
+      "كفاءة طاقة ممتازة (105W TDP) ومؤشر أداء لكل واط يبلغ 89/100",
+      "ترددات تشغيل واستجابة سريعة في معالجة المهام اليومية والألعاب",
+      "استثمار مستدام وطويل الأجل لمنصة المقبس AMD AM5 مع استمرار الدعم المؤكد حتى عام 2027+، مما يتيح ترقيات مستقبلية دون الحاجة لتغيير اللوحة الأم"
+    ],
+    "cons_b": [
+      "عدد نوى أقل (6 مقابل 24 في Intel Core i9-14900K) مما يحد من الأداء في الرندرة والمعالجة المتوازية متعددة المسارات",
+      "يتطلب منصة لوحة أم حديثة وذواكر متوافقة للاستفادة الكاملة من إمكانياته"
+    ],
+    "who_should_buy_a": "صانع المحتوى والمستخدم المحترف الذي يحتاج أقصى أداء في تعدد المهام والرندرة والمونتاج البرمجي بفضل تعدد الأنوية الكبير (24 نواة معالجة) وترددات Boost المرتفعة.",
+    "who_should_buy_b": "اللاعب وصانع المحتوى الذي يركز على كفاءة استهلاك الطاقة المتميزة (105W) واستدامة منصة AM5 الحديثة الداعمة للترقيات المستقبلية حتى 2027+ دون الحاجة لتغيير اللوحة الأم."
+  },
+  "affiliate_links_a": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء Intel Core i9-14900K من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=Intel+Core+i9-14900K",
+      "affiliate_url": "https://www.noon.com/search?q=Intel+Core+i9-14900K&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء Intel Core i9-14900K من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=Intel+Core+i9-14900K",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=Intel+Core+i9-14900K&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء Intel Core i9-14900K من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=Intel+Core+i9-14900K",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=Intel+Core+i9-14900K&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء Intel Core i9-14900K من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=Intel+Core+i9-14900K",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=Intel+Core+i9-14900K&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "affiliate_links_b": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء AMD Ryzen 5 7600X من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=AMD+Ryzen+5+7600X",
+      "affiliate_url": "https://www.noon.com/search?q=AMD+Ryzen+5+7600X&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء AMD Ryzen 5 7600X من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=AMD+Ryzen+5+7600X",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=AMD+Ryzen+5+7600X&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء AMD Ryzen 5 7600X من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Ryzen+5+7600X",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Ryzen+5+7600X&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء AMD Ryzen 5 7600X من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=AMD+Ryzen+5+7600X",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=AMD+Ryzen+5+7600X&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "schema_json_ld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/i9-14900k-vs-ryzen-5-7600x#productA",
+        "name": "Intel Core i9-14900K",
+        "category": "CPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "Intel"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "589",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/i9-14900k-vs-ryzen-5-7600x#productB",
+        "name": "AMD Ryzen 5 7600X",
+        "category": "CPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "AMD"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "299",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://tech-comparisons.pages.dev/compare/i9-14900k-vs-ryzen-5-7600x#review",
+        "url": "https://tech-comparisons.pages.dev/compare/i9-14900k-vs-ryzen-5-7600x",
+        "name": "مقارنة Intel Core i9-14900K ضد AMD Ryzen 5 7600X | المواصفات والأداء والأسعار",
+        "description": "مقارنة شاملة وتفصيلية بين Intel Core i9-14900K و AMD Ryzen 5 7600X. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+        "datePublished": "2026-10-20T18:43:34.834128+00:00",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "فريق تحرير مقارنات تك",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "itemReviewed": {
+          "@type": "Product",
+          "name": "Intel Core i9-14900K vs AMD Ryzen 5 7600X"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 4.8,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "reviewBody": "يتفوق Intel Core i9-14900K في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 24.4% مقارنة بـ AMD Ryzen 5 7600X. هذا التفوق يستند إلى معمارية Raptor Lake Refresh (Intel 7 / 10nm Enhanced SuperFin) وتوزيع الموارد الحسابية المتطور وكفاءة معالجة المهام، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+      }
+    ]
+  },
+  "created_at": "2026-10-20T18:43:34.834128+00:00"
+}

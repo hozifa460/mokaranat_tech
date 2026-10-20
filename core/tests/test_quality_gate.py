@@ -38,7 +38,7 @@ def _load_comparison(path: str) -> Dict[str, Any]:
 def test_quality_gate_files_exist():
     """Rule 0: Verifies all expected comparison files are present and valid JSON."""
     files = _get_comparison_files()
-    assert len(files) == 15
+    assert len(files) == 80, f"Expected exactly 80 comparison JSON files, found: {len(files)}"
     for fpath in files:
         data = _load_comparison(fpath)
         assert "slug" in data

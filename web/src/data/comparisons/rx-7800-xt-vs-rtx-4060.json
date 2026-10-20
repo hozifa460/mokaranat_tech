@@ -1,0 +1,590 @@
+{
+  "slug": "rx-7800-xt-vs-rtx-4060",
+  "category": "gpu",
+  "title_ar": "مقارنة AMD Radeon RX 7800 XT ضد NVIDIA GeForce RTX 4060 (8GB) | المواصفات والأداء والأسعار",
+  "meta_title_ar": "AMD Radeon RX 7800 XT ضد NVIDIA GeForce RTX 4060 (8GB): أيهما يستحق الشراء؟ | مقارنات تك",
+  "meta_description_ar": "مقارنة شاملة وتفصيلية بين AMD Radeon RX 7800 XT و NVIDIA GeForce RTX 4060 (8GB). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+  "item_a": {
+    "id": "rx-7800-xt",
+    "slug": "rx-7800-xt",
+    "name": "AMD Radeon RX 7800 XT",
+    "category": "gpu",
+    "brand": "AMD",
+    "release_year": 2023,
+    "launch_msrp_usd": 499.0,
+    "architecture": "RDNA 3",
+    "process_node_nm": 5.0,
+    "tdp_w": 263,
+    "raw_specs": {
+      "stream_processors": 3840,
+      "base_clock_mhz": 1295,
+      "boost_clock_mhz": 2430,
+      "vram_gb": 16,
+      "memory_type": "GDDR6",
+      "bus_width_bit": 256,
+      "bandwidth_gbps": 624.0,
+      "pcie_interface": "PCIe 4.0 x16",
+      "pcie_lanes": 16
+    },
+    "benchmark_index": 81.0,
+    "gaming_scores": {
+      "raster_1080p": 87.0,
+      "raster_1440p": 83.5,
+      "raster_4k": 71.0
+    },
+    "ray_tracing_score": 67.0,
+    "efficiency_score": 78.0,
+    "features": [
+      "FSR 3.1",
+      "HYPR-RX",
+      "AV1 Hardware Decode/Encode",
+      "DisplayPort 2.1"
+    ],
+    "pcie_interface": "PCIe 4.0 x16"
+  },
+  "item_b": {
+    "id": "rtx-4060",
+    "slug": "rtx-4060",
+    "name": "NVIDIA GeForce RTX 4060 (8GB)",
+    "category": "gpu",
+    "brand": "NVIDIA",
+    "release_year": 2023,
+    "launch_msrp_usd": 299.0,
+    "architecture": "Ada Lovelace",
+    "process_node_nm": 4.0,
+    "tdp_w": 115,
+    "raw_specs": {
+      "die": "AD107",
+      "cuda_cores": 3072,
+      "base_clock_mhz": 1830,
+      "boost_clock_mhz": 2460,
+      "vram_gb": 8,
+      "memory_type": "GDDR6",
+      "bus_width_bit": 128,
+      "bandwidth_gbps": 272.0,
+      "pcie_interface": "PCIe 4.0 x8",
+      "pcie_lanes": 8,
+      "nvenc_encoders": 1
+    },
+    "benchmark_index": 58.0,
+    "gaming_scores": {
+      "raster_1080p": 68.0,
+      "raster_1440p": 52.0,
+      "raster_4k": 32.0
+    },
+    "ray_tracing_score": 50.0,
+    "efficiency_score": 94.0,
+    "features": [
+      "DLSS 3 Frame Generation",
+      "Single NVENC (AV1)",
+      "Ultra-Low 115W TDP",
+      "PCIe 4.0 x8"
+    ],
+    "pcie_interface": "PCIe 4.0 x8"
+  },
+  "spec_differences": [
+    {
+      "key": "benchmark_index",
+      "label_ar": "مؤشر الأداء العام (Benchmark Index)",
+      "value_a": 81.0,
+      "value_b": 58.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 39.7,
+      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 39.7%"
+    },
+    {
+      "key": "launch_msrp_usd",
+      "label_ar": "سعر الإطلاق الرسمي",
+      "value_a": 499.0,
+      "value_b": 299.0,
+      "unit": "$",
+      "winner": "b",
+      "diff_percentage": 40.1,
+      "advantage_summary_ar": "أوفر بالسعر بنسبة 40.1%"
+    },
+    {
+      "key": "tdp_w",
+      "label_ar": "استهلاك الطاقة المكتبي (TDP)",
+      "value_a": 263,
+      "value_b": 115,
+      "unit": "W",
+      "winner": "b",
+      "diff_percentage": 56.3,
+      "advantage_summary_ar": "استهلاك طاقة أقل وتوليد حراري أهدأ بفارق 56.3%"
+    },
+    {
+      "key": "process_node_nm",
+      "label_ar": "دقة التصنيع (Process Node)",
+      "value_a": 5.0,
+      "value_b": 4.0,
+      "unit": "nm",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقياس تقني استرشادي: تختلف هندسة دقة التصنيع وكثافة الترانزستورات والتصميم (رقاقة أحادية Monolithic مقابل رقاقات Chiplets) بين المعماريات المختلفة"
+    },
+    {
+      "key": "ray_tracing_score",
+      "label_ar": "كفاءة تتبع الأشعة (Ray Tracing)",
+      "value_a": 67.0,
+      "value_b": 50.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 34.0,
+      "advantage_summary_ar": "معالجة متقدمة لتقنيات الإضاءة الواقعية بفارق 34%"
+    },
+    {
+      "key": "efficiency_score",
+      "label_ar": "معيار الكفاءة مقابل الواط",
+      "value_a": 78.0,
+      "value_b": 94.0,
+      "unit": "/ 100",
+      "winner": "b",
+      "diff_percentage": 20.5,
+      "advantage_summary_ar": "أداء أعلى لكل واط مستهلك"
+    },
+    {
+      "key": "vram_gb",
+      "label_ar": "سعة الذاكرة الرسومية (VRAM)",
+      "value_a": 16.0,
+      "value_b": 8.0,
+      "unit": "GB",
+      "winner": "a",
+      "diff_percentage": 100.0,
+      "advantage_summary_ar": "سعة VRAM أكبر تمنح أريحية فائقة في ألعاب 1440p و 4K وتطبيقات التصميم"
+    },
+    {
+      "key": "bus_width_bit",
+      "label_ar": "عرض ناقل الذاكرة (Memory Bus)",
+      "value_a": 256.0,
+      "value_b": 128.0,
+      "unit": "bit",
+      "winner": "a",
+      "diff_percentage": 100.0,
+      "advantage_summary_ar": "عرض نطاق أوسع لنقل البيانات الرسومية بسلاسة"
+    },
+    {
+      "key": "boost_clock_mhz",
+      "label_ar": "تردد التعزيز (Boost Clock)",
+      "value_a": 2430.0,
+      "value_b": 2460.0,
+      "unit": "MHz",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقياس استرشادي: تختلف كفاءة التردد وتعليمات الدورة (IPC) باختلاف المعمارية، ولا يقاس الأداء بالتردد الخام وحده"
+    },
+    {
+      "key": "pcie_interface",
+      "label_ar": "واجهة التوصيل العتادية (PCIe Interface)",
+      "value_a": "PCIe 4.0 x16",
+      "value_b": "PCIe 4.0 x8",
+      "unit": "",
+      "winner": "a",
+      "diff_percentage": 100.0,
+      "advantage_summary_ar": "واجهة كاملة بـ 16 مساراً تمنع اختناق نقل البيانات وتذبذب الإطارات عند امتلاء الذاكرة"
+    }
+  ],
+  "performance_score_a": 81.0,
+  "performance_score_b": 58.0,
+  "fps_benchmarks": [
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 102,
+      "fps_b": 89,
+      "diff_pct": 14.6,
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 68,
+      "fps_b": 47,
+      "diff_pct": 44.7,
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 35,
+      "fps_b": 18,
+      "diff_pct": 94.4,
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1080p",
+      "preset": "Cinematic High",
+      "fps_a": 72,
+      "fps_b": 62,
+      "diff_pct": 16.1,
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1440p",
+      "preset": "Cinematic High",
+      "fps_a": 45,
+      "fps_b": 31,
+      "diff_pct": 45.2,
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "4K",
+      "preset": "Cinematic High",
+      "fps_a": 22,
+      "fps_b": 15,
+      "diff_pct": 46.7,
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1080p",
+      "preset": "Competitive High",
+      "fps_a": 296,
+      "fps_b": 285,
+      "diff_pct": 3.9,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1440p",
+      "preset": "Competitive High",
+      "fps_a": 203,
+      "fps_b": 183,
+      "diff_pct": 10.9,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "4K",
+      "preset": "Competitive High",
+      "fps_a": 111,
+      "fps_b": 94,
+      "diff_pct": 18.1,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1080p",
+      "preset": "Ultra",
+      "fps_a": 129,
+      "fps_b": 99,
+      "diff_pct": 30.3,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1440p",
+      "preset": "Ultra",
+      "fps_a": 94,
+      "fps_b": 57,
+      "diff_pct": 64.9,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "4K",
+      "preset": "Ultra",
+      "fps_a": 52,
+      "fps_b": 23,
+      "diff_pct": 126.1,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1080p",
+      "preset": "Ultra / High",
+      "fps_a": 207,
+      "fps_b": 142,
+      "diff_pct": 45.8,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1440p",
+      "preset": "Ultra / High",
+      "fps_a": 141,
+      "fps_b": 79,
+      "diff_pct": 78.5,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "4K",
+      "preset": "Ultra / High",
+      "fps_a": 71,
+      "fps_b": 30,
+      "diff_pct": 136.7,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 141,
+      "fps_b": 101,
+      "diff_pct": 39.6,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 101,
+      "fps_b": 58,
+      "diff_pct": 74.1,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 51,
+      "fps_b": 21,
+      "diff_pct": 142.9,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    }
+  ],
+  "verdict": {
+    "overall_winner": "a",
+    "winner_name": "AMD Radeon RX 7800 XT",
+    "score_a": 81.0,
+    "score_b": 58.0,
+    "quick_verdict_ar": "يتفوق AMD Radeon RX 7800 XT في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 39.7% مقارنة بـ NVIDIA GeForce RTX 4060 (8GB). هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~53.1%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "gaming_analysis_ar": "في ساحة الألعاب، يحسم AMD Radeon RX 7800 XT الصدارة في الأداء الرسومي الخام (Raw Rasterization) ومعدلات الإطارات في العناوين التقليدية على دقة 1440p، مدعوماً بـ سعة ذاكرة وافرة تبلغ 16GB (مقابل 8GB لدى منافسه) تمنح أريحية فائقة واستقراراً ممتازاً في ألعاب 1440p وقوام Ultra مع قدرة جيدة على تشغيل ألعاب 4K مع دعم تقنية FSR 3.1 مفتوحة المصدر بما فيها توليد الإطارات (Frame Generation) عبر مختلف المنصات. في المقابل، يحتفظ NVIDIA GeForce RTX 4060 (8GB) بتفوقه النوعي في العناوين الثقيلة بتتبع الأشعة بمؤشر 50/100 (مقابل 67/100 لـ AMD Radeon RX 7800 XT)، مع الاستفادة من تقنيات NVIDIA: DLSS 3 لتوليد الإطارات (Frame Generation) و DLSS 3.5 لإعادة بناء الأشعة (Ray Reconstruction) لتعويض الفارق في الألعاب الداعمة، علماً بأن تقنية DLSS تظل حصرية لبيئة NVIDIA بينما توفر AMD تقنية FSR 3.1 كمعيار مفتوح يعمل عبر مختلف البطاقات.",
+    "productivity_analysis_ar": "على صعيد الإنتاجية والرندرة وصناعة المحتوى، يحسم NVIDIA GeForce RTX 4060 (8GB) المنافسة بفضل تفوق منظومة CUDA و OptiX لتسريع محركات التصميم (مثل Blender و Premiere) وتطبيقات الذكاء الاصطناعي مع مشفر NVENC فائق السرعة من الجيل الثامن مع دعم تسريع وتشفير عتادي لـ AV1؛ ومع أن كلا المعماريتين تدعمان التشفير وفك التشفير العتادي لترميز AV1 الحديث (مشفر NVENC الجيل الثامن في Ada Lovelace مقابل محرك VCN 4.0 في RDNA 3) وسعة ذاكرة وافرة تبلغ 16GB لـ AMD Radeon RX 7800 XT، إلا أن أفضلية بيئة العمل البرمجية واستقرار التعريفات في تطبيقات الإنتاج تظل محسومة لصالح NVIDIA بفضل الدعم الواسع في برمجيات التصميم.",
+    "value_and_budget_ar": "عند دراسة معادلة القيمة مقابل السعر، يطرح NVIDIA GeForce RTX 4060 (8GB) تكلفة شراء أقل بسعر $299 (توفير $200، بينما يرتفع سعر منافسه بنسبة 66.9% عن السعر الأقل)، في حين يقدم AMD Radeon RX 7800 XT زيادة في الإطارات بمتوسط ~53.1% وسعة 16GB، مما يجعل NVIDIA GeForce RTX 4060 (8GB) الخيار الأفضل لقيمة كل دولار، بينما يستهدف AMD Radeon RX 7800 XT من يطلب أداءً أعلى واستثماراً أكثر استدامة للمستقبل.",
+    "pros_a": [
+      "سعة ذاكرة رسومية وافرة (16GB VRAM) بناقل 256 بت تمنح أريحية ممتازة للألعاب بدقة 1440p و 4K وتمنع اختناق الذاكرة مع القوام المرتفع",
+      "أداء رسومي خام (Rasterization) ممتاز ومؤشر عام تنافسي يبلغ 81/100",
+      "دعم تقنيات FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ العرض الحديثة DisplayPort 2.1"
+    ],
+    "cons_a": [
+      "أداء أقل في تتبع الأشعة (Ray Tracing) مقارنة بنواة RT Cores لدى NVIDIA (مؤشر 67/100)",
+      "افتقار لدعم بيئة تسريع CUDA المعتمدة صناعياً في برامج التصميم والذكاء الاصطناعي",
+      "استهلاك طاقة يبلغ 263 واط يتطلب مزود طاقة وتبريداً مناسباً داخل الصندوق"
+    ],
+    "pros_b": [
+      "تفوق في تتبع الأشعة بمؤشر 50/100 ودعم كامل لتقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة)",
+      "هيمنة بيئة العمل وصناعة المحتوى بفضل تسريع مكتبات CUDA و OptiX ومشفر NVENC من الجيل الثامن مع دعم تسريع وتشفير عتادي لـ AV1",
+      "كفاءة طاقة ممتازة بمؤشر 94/100 وسحب طاقة منضبط (115W)"
+    ],
+    "cons_b": [
+      "واجهة اتصال عتادية تقتصر على 8 مسارات فقط (PCIe 4.0 x8)، مما يسبب عنق زجاجة وتذبذباً في أزمنة الإطارات (Stutter) على اللوحات الأم القديمة الداعمة لمنفذ PCIe 3.0 عند امتلاء الذاكرة",
+      "سعة ذاكرة رسومية (8GB) أقل مقارنة بـ AMD (16GB) مما قد يحد من مرونة ألعاب 1440p و 4K فائقة القوام مستقبلاً"
+    ],
+    "who_should_buy_a": "اللاعب الذي يركز على أعلى أداء رسومي خام (Raw Raster FPS) مقابل السعر، مع الاستفادة من سعة ذاكرة رحبة تبلغ 16GB بناقل 256 بت لتفادي اختناق القوام، وتفضيل التقنيات المفتوحة مثل FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ DisplayPort 2.1 الحديثة.",
+    "who_should_buy_b": "اللاعب أو صانع المحتوى الذي يضع أولوية لبيئة عمل CUDA وتسريع الرندرة وتطبيقات الذكاء الاصطناعي، ويرغب في أحدث تقنيات تتبع الأشعة مع تقنيات DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) لبطاقات GeForce RTX، إلى جانب كفاءة استهلاك طاقة عالية بسحب 115W فقط."
+  },
+  "affiliate_links_a": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء AMD Radeon RX 7800 XT من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=AMD+Radeon+RX+7800+XT",
+      "affiliate_url": "https://www.noon.com/search?q=AMD+Radeon+RX+7800+XT&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء AMD Radeon RX 7800 XT من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=AMD+Radeon+RX+7800+XT",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=AMD+Radeon+RX+7800+XT&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء AMD Radeon RX 7800 XT من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Radeon+RX+7800+XT",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Radeon+RX+7800+XT&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء AMD Radeon RX 7800 XT من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=AMD+Radeon+RX+7800+XT",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=AMD+Radeon+RX+7800+XT&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "affiliate_links_b": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء NVIDIA GeForce RTX 4060 (8GB) من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=NVIDIA+GeForce+RTX+4060+%288GB%29",
+      "affiliate_url": "https://www.noon.com/search?q=NVIDIA+GeForce+RTX+4060+%288GB%29&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء NVIDIA GeForce RTX 4060 (8GB) من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=NVIDIA+GeForce+RTX+4060+%288GB%29",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=NVIDIA+GeForce+RTX+4060+%288GB%29&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء NVIDIA GeForce RTX 4060 (8GB) من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=NVIDIA+GeForce+RTX+4060+%288GB%29",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=NVIDIA+GeForce+RTX+4060+%288GB%29&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء NVIDIA GeForce RTX 4060 (8GB) من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=NVIDIA+GeForce+RTX+4060+%288GB%29",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=NVIDIA+GeForce+RTX+4060+%288GB%29&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "schema_json_ld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/rx-7800-xt-vs-rtx-4060#productA",
+        "name": "AMD Radeon RX 7800 XT",
+        "category": "GPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "AMD"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "499",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/rx-7800-xt-vs-rtx-4060#productB",
+        "name": "NVIDIA GeForce RTX 4060 (8GB)",
+        "category": "GPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "NVIDIA"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "299",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://tech-comparisons.pages.dev/compare/rx-7800-xt-vs-rtx-4060#review",
+        "url": "https://tech-comparisons.pages.dev/compare/rx-7800-xt-vs-rtx-4060",
+        "name": "مقارنة AMD Radeon RX 7800 XT ضد NVIDIA GeForce RTX 4060 (8GB) | المواصفات والأداء والأسعار",
+        "description": "مقارنة شاملة وتفصيلية بين AMD Radeon RX 7800 XT و NVIDIA GeForce RTX 4060 (8GB). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+        "datePublished": "2026-10-20T18:43:32.868319+00:00",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "فريق تحرير مقارنات تك",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "itemReviewed": {
+          "@type": "Product",
+          "name": "AMD Radeon RX 7800 XT vs NVIDIA GeForce RTX 4060 (8GB)"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 4.0,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "reviewBody": "يتفوق AMD Radeon RX 7800 XT في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 39.7% مقارنة بـ NVIDIA GeForce RTX 4060 (8GB). هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~53.1%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+      }
+    ]
+  },
+  "created_at": "2026-10-20T18:43:32.868319+00:00"
+}

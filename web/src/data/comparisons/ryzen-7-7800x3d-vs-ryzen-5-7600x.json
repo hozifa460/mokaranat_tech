@@ -1,0 +1,353 @@
+{
+  "slug": "ryzen-7-7800x3d-vs-ryzen-5-7600x",
+  "category": "cpu",
+  "title_ar": "مقارنة AMD Ryzen 7 7800X3D ضد AMD Ryzen 5 7600X | المواصفات والأداء والأسعار",
+  "meta_title_ar": "AMD Ryzen 7 7800X3D ضد AMD Ryzen 5 7600X: أيهما يستحق الشراء؟ | مقارنات تك",
+  "meta_description_ar": "مقارنة شاملة وتفصيلية بين AMD Ryzen 7 7800X3D و AMD Ryzen 5 7600X. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+  "item_a": {
+    "id": "ryzen-7-7800x3d",
+    "slug": "ryzen-7-7800x3d",
+    "name": "AMD Ryzen 7 7800X3D",
+    "category": "cpu",
+    "brand": "AMD",
+    "release_year": 2023,
+    "launch_msrp_usd": 449.0,
+    "architecture": "Zen 4 (3D V-Cache)",
+    "process_node_nm": 5.0,
+    "tdp_w": 120,
+    "raw_specs": {
+      "total_cores": 8,
+      "threads": 16,
+      "base_clock_ghz": 4.2,
+      "boost_clock_ghz": 5.0,
+      "l3_cache_mb": 96,
+      "socket": "AM5",
+      "memory_support": "DDR5-5200"
+    },
+    "benchmark_index": 91.0,
+    "gaming_scores": {
+      "gaming_overall": 98.0
+    },
+    "ray_tracing_score": null,
+    "efficiency_score": 96.0,
+    "features": [
+      "96MB 3D V-Cache",
+      "Best Gaming Power Efficiency",
+      "AM5 Platform Lifecycle through 2027+"
+    ],
+    "pcie_interface": null
+  },
+  "item_b": {
+    "id": "ryzen-5-7600x",
+    "slug": "ryzen-5-7600x",
+    "name": "AMD Ryzen 5 7600X",
+    "category": "cpu",
+    "brand": "AMD",
+    "release_year": 2022,
+    "launch_msrp_usd": 299.0,
+    "architecture": "Zen 4",
+    "process_node_nm": 5.0,
+    "tdp_w": 105,
+    "raw_specs": {
+      "total_cores": 6,
+      "threads": 12,
+      "base_clock_ghz": 4.7,
+      "boost_clock_ghz": 5.3,
+      "l3_cache_mb": 32,
+      "socket": "AM5 (Lifecycle through 2027+)",
+      "memory_support": "DDR5-5200"
+    },
+    "benchmark_index": 78.0,
+    "gaming_scores": {
+      "gaming_overall": 85.0
+    },
+    "ray_tracing_score": null,
+    "efficiency_score": 89.0,
+    "features": [
+      "Zen 4 Architecture",
+      "AM5 Platform Lifecycle through 2027+",
+      "PCIe 5.0 Ready",
+      "High Single-Core Frequency"
+    ],
+    "pcie_interface": null
+  },
+  "spec_differences": [
+    {
+      "key": "benchmark_index",
+      "label_ar": "مؤشر الأداء العام (Benchmark Index)",
+      "value_a": 91.0,
+      "value_b": 78.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 16.7,
+      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 16.7%"
+    },
+    {
+      "key": "launch_msrp_usd",
+      "label_ar": "سعر الإطلاق الرسمي",
+      "value_a": 449.0,
+      "value_b": 299.0,
+      "unit": "$",
+      "winner": "b",
+      "diff_percentage": 33.4,
+      "advantage_summary_ar": "أوفر بالسعر بنسبة 33.4%"
+    },
+    {
+      "key": "tdp_w",
+      "label_ar": "استهلاك الطاقة المكتبي (TDP)",
+      "value_a": 120,
+      "value_b": 105,
+      "unit": "W",
+      "winner": "b",
+      "diff_percentage": 12.5,
+      "advantage_summary_ar": "استهلاك طاقة أقل وتوليد حراري أهدأ بفارق 12.5%"
+    },
+    {
+      "key": "process_node_nm",
+      "label_ar": "دقة التصنيع (Process Node)",
+      "value_a": 5.0,
+      "value_b": 5.0,
+      "unit": "nm",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "دقة تصنيع متطابقة عتادياً"
+    },
+    {
+      "key": "efficiency_score",
+      "label_ar": "معيار الكفاءة مقابل الواط",
+      "value_a": 96.0,
+      "value_b": 89.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 7.9,
+      "advantage_summary_ar": "أداء أعلى لكل واط مستهلك"
+    },
+    {
+      "key": "total_cores",
+      "label_ar": "إجمالي الأنوية (Cores)",
+      "value_a": 8.0,
+      "value_b": 6.0,
+      "unit": "أنوية",
+      "winner": "a",
+      "diff_percentage": 33.3,
+      "advantage_summary_ar": "عدد أنوية أكبر لتعدد المهام والرندرة البرمجية الثقيلة"
+    },
+    {
+      "key": "threads",
+      "label_ar": "المسارات المعالجة (Threads)",
+      "value_a": 16.0,
+      "value_b": 12.0,
+      "unit": "مسار",
+      "winner": "a",
+      "diff_percentage": 33.3,
+      "advantage_summary_ar": "توازي معالجة أسرع للبرمجيات الثقيلة"
+    },
+    {
+      "key": "l3_cache_mb",
+      "label_ar": "الذاكرة المخبئية المستوى الثالث (L3 Cache)",
+      "value_a": 96.0,
+      "value_b": 32.0,
+      "unit": "MB",
+      "winner": "a",
+      "diff_percentage": 200.0,
+      "advantage_summary_ar": "ذاكرة كاش أضخم لتقليل زمن التأخير وتسريع معدل الإطارات بالألعاب"
+    },
+    {
+      "key": "boost_clock_ghz",
+      "label_ar": "تردد التعزيز الأقصى (Boost Clock)",
+      "value_a": 5.0,
+      "value_b": 5.3,
+      "unit": "GHz",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقياس استرشادي: تختلف كفاءة التردد وتعليمات الدورة (IPC) باختلاف معمارية المعالج، ولا يقاس الأداء بالتردد الخام وحده"
+    }
+  ],
+  "performance_score_a": 91.0,
+  "performance_score_b": 78.0,
+  "fps_benchmarks": [],
+  "verdict": {
+    "overall_winner": "a",
+    "winner_name": "AMD Ryzen 7 7800X3D",
+    "score_a": 91.0,
+    "score_b": 78.0,
+    "quick_verdict_ar": "يتفوق AMD Ryzen 7 7800X3D في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 16.7% مقارنة بـ AMD Ryzen 5 7600X. هذا التفوق يستند إلى معمارية Zen 4 (3D V-Cache) وتوزيع الموارد الحسابية المتطور وكفاءة معالجة المهام، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "gaming_analysis_ar": "في تجارب الألعاب، يوفر AMD Ryzen 7 7800X3D (8 أنوية، 96MB كاش) سرعات إطارات مرتفعة للغاية مع أدنى زمن استجابة (1% low FPS) بفضل تقنية 3D V-Cache، في المقابل ينافس AMD Ryzen 5 7600X (6 أنوية) بقوة في الألعاب متعددة المسارات واستقرار معدل التحديث.",
+    "productivity_analysis_ar": "في مهام البرمجة والضغط المكتبي وتصدير الفيديو والرندرة، يمنح AMD Ryzen 7 7800X3D تفوقاً ملحوظاً في المعالجة المتوازية بفضل امتلاكه 8 نواة معالجة (مقابل 6 أنوية لدى منافسه)، بينما يقدم AMD Ryzen 5 7600X كفاءة طاقة ممتازة بسحب 105W فقط (مقابل 120W لـ AMD Ryzen 7 7800X3D).",
+    "value_and_budget_ar": "يطرح AMD Ryzen 5 7600X تكلفة شراء أولية أقل بسعر $299 مقارنة بـ $449 (توفير $150، بينما يرتفع سعر منافسه بنسبة 50.2% عن السعر الأقل)، في حين يوفر AMD Ryzen 7 7800X3D أداءً إضافياً بنسبة 16.7% يبرر الاستثمار لمن تتطلب أعمالهم أقصى إنتاجية وسرعة معالجة.",
+    "pros_a": [
+      "معمارية Zen 4 (3D V-Cache) المتقدمة بدقة تصنيع 5nm",
+      "مؤشر أداء إجمالي (91/100) متفوق في مهام الرندرة والتصدير وتعدد المهام",
+      "ذاكرة كاش ضخمة بتقنية 3D V-Cache (96MB L3) ترفع استقرار الإطارات الدنيا وتمنع التقطيع في الألعاب",
+      "استثمار مستدام وطويل الأجل لمنصة المقبس AMD AM5 مع استمرار الدعم المؤكد حتى عام 2027+، مما يتيح ترقيات مستقبلية دون الحاجة لتغيير اللوحة الأم"
+    ],
+    "cons_a": [
+      "سعر إطلاق رسمي أعلى ($449)",
+      "يتطلب منصة لوحة أم حديثة وذواكر متوافقة للاستفادة الكاملة من إمكانياته"
+    ],
+    "pros_b": [
+      "معمارية Zen 4 المتقدمة بدقة تصنيع 5nm",
+      "كفاءة طاقة ممتازة (105W TDP) ومؤشر أداء لكل واط يبلغ 89/100",
+      "ترددات تشغيل واستجابة سريعة في معالجة المهام اليومية والألعاب",
+      "استثمار مستدام وطويل الأجل لمنصة المقبس AMD AM5 مع استمرار الدعم المؤكد حتى عام 2027+، مما يتيح ترقيات مستقبلية دون الحاجة لتغيير اللوحة الأم"
+    ],
+    "cons_b": [
+      "يتطلب مشتت تبريد احترافي (مائي أو هوائي قوي) للوصول لأعلى تردد",
+      "يتطلب منصة لوحة أم حديثة وذواكر متوافقة للاستفادة الكاملة من إمكانياته"
+    ],
+    "who_should_buy_a": "اللاعب التنافسي الذي يضع أداء الألعاب وزمن الإطارات السلس في المقام الأول بفضل ذاكرة 3D V-Cache الكبيرة (96MB)، مع كفاءة استهلاك طاقة ممتازة (120W).",
+    "who_should_buy_b": "اللاعب وصانع المحتوى الذي يفضل أفضل نقطة توازن اقتصادي بسحب طاقة منضبط (105W) واستدامة منصة AM5 الحديثة الداعمة للترقيات حتى 2027+ دون الحاجة لتغيير اللوحة الأم."
+  },
+  "affiliate_links_a": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء AMD Ryzen 7 7800X3D من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=AMD+Ryzen+7+7800X3D",
+      "affiliate_url": "https://www.noon.com/search?q=AMD+Ryzen+7+7800X3D&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء AMD Ryzen 7 7800X3D من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=AMD+Ryzen+7+7800X3D",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=AMD+Ryzen+7+7800X3D&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء AMD Ryzen 7 7800X3D من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Ryzen+7+7800X3D",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Ryzen+7+7800X3D&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء AMD Ryzen 7 7800X3D من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=AMD+Ryzen+7+7800X3D",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=AMD+Ryzen+7+7800X3D&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "affiliate_links_b": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء AMD Ryzen 5 7600X من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=AMD+Ryzen+5+7600X",
+      "affiliate_url": "https://www.noon.com/search?q=AMD+Ryzen+5+7600X&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء AMD Ryzen 5 7600X من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=AMD+Ryzen+5+7600X",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=AMD+Ryzen+5+7600X&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء AMD Ryzen 5 7600X من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Ryzen+5+7600X",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Ryzen+5+7600X&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء AMD Ryzen 5 7600X من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=AMD+Ryzen+5+7600X",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=AMD+Ryzen+5+7600X&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "schema_json_ld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/ryzen-7-7800x3d-vs-ryzen-5-7600x#productA",
+        "name": "AMD Ryzen 7 7800X3D",
+        "category": "CPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "AMD"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "449",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/ryzen-7-7800x3d-vs-ryzen-5-7600x#productB",
+        "name": "AMD Ryzen 5 7600X",
+        "category": "CPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "AMD"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "299",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://tech-comparisons.pages.dev/compare/ryzen-7-7800x3d-vs-ryzen-5-7600x#review",
+        "url": "https://tech-comparisons.pages.dev/compare/ryzen-7-7800x3d-vs-ryzen-5-7600x",
+        "name": "مقارنة AMD Ryzen 7 7800X3D ضد AMD Ryzen 5 7600X | المواصفات والأداء والأسعار",
+        "description": "مقارنة شاملة وتفصيلية بين AMD Ryzen 7 7800X3D و AMD Ryzen 5 7600X. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+        "datePublished": "2026-10-20T18:43:35.376199+00:00",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "فريق تحرير مقارنات تك",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "itemReviewed": {
+          "@type": "Product",
+          "name": "AMD Ryzen 7 7800X3D vs AMD Ryzen 5 7600X"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 4.5,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "reviewBody": "يتفوق AMD Ryzen 7 7800X3D في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 16.7% مقارنة بـ AMD Ryzen 5 7600X. هذا التفوق يستند إلى معمارية Zen 4 (3D V-Cache) وتوزيع الموارد الحسابية المتطور وكفاءة معالجة المهام، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+      }
+    ]
+  },
+  "created_at": "2026-10-20T18:43:35.376199+00:00"
+}

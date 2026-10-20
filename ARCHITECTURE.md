@@ -61,12 +61,13 @@
 │          ┌───────────────────────────────┼──────────────────────────────┐              │
 │          ▼                               ▼                              ▼              │
 │    pages/index.astro           pages/category/[category]       pages/compare/[slug]    │
-│  - Live Search Filter         - Category Listings (GPU/CPU)   - ComparisonHero         │
-│  - Category Quick Cards       - Winner Micro Badges           - PerformanceBars        │
-│  - Featured Matchups Grid     - Score Comparisons             - SpecsTable (Winner tag)│
-│                                                               - GamingFpsWidget (Tabs) │
+│  - ComparisonBuilder          - ComparisonBuilder (Category)  - ComparisonHero         │
+│  - Live Search Filter         - Category Listings (GPU/CPU)   - PerformanceBars        │
+│  - Category Quick Cards       - Winner Micro Badges           - SpecsTable (Winner tag)│
+│  - Featured Matchups Grid     - Score Comparisons             - GamingFpsWidget (Tabs) │
 │                                                               - EditorialVerdict (AI)  │
 │                                                               - AffiliateWidget        │
+│                                                               - ComparisonBuilder      │
 │                                                               - AdSlot (AdSense)       │
 │                                                               - InternalLinksGrid      │
 └────────────────────────────────────────────────────────────────────────────────────────┘
@@ -248,13 +249,13 @@ BaseLayout.astro
 3. Run `scripts/run_pipeline.bat` (or run `seed_database.py` and `generate_comparisons.py`).
 4. Rebuild Astro via `npm run build`.
 
-### Adding a New Comparison Matchup:
-1. Open `scripts/generate_comparisons.py`.
-2. Add the tuple to `DEFAULT_MATCHUPS`:
-   `("rtx-5080", "rtx-4080-super"),`
-3. Run the generator script:
-   `D:\tech_comparisons\.venv\Scripts\python.exe scripts/generate_comparisons.py`
-4. Astro will automatically detect the new JSON file and build a static SSG page for it on next build.
+### Full Category Matrix & Automatic Pairwise Generation (Phase 20):
+1. In `scripts/generate_comparisons.py`, the system builds the complete all-pairs matrix within each category:
+   - All unique combinations: N*(N-1)/2 per category (55 GPUs + 15 CPUs + 10 Laptops = 80 total comparisons).
+   - Preserves the 15 original high-intent matchups at the head of the manifest.
+2. The interactive selector component (`ComparisonBuilder.astro`):
+   - Maps bidirectional combinations: `${idA}:${idB}` and `${idB}:${idA}` to the resolved comparison slug.
+   - Dynamically loads categories and brand filters without full page reloads.
 
 ### Running Automated Tests:
 ```powershell

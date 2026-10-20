@@ -1,0 +1,585 @@
+{
+  "slug": "rx-7800-xt-vs-rx-7700-xt",
+  "category": "gpu",
+  "title_ar": "مقارنة AMD Radeon RX 7800 XT ضد AMD Radeon RX 7700 XT | المواصفات والأداء والأسعار",
+  "meta_title_ar": "AMD Radeon RX 7800 XT ضد AMD Radeon RX 7700 XT: أيهما يستحق الشراء؟ | مقارنات تك",
+  "meta_description_ar": "مقارنة شاملة وتفصيلية بين AMD Radeon RX 7800 XT و AMD Radeon RX 7700 XT. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+  "item_a": {
+    "id": "rx-7800-xt",
+    "slug": "rx-7800-xt",
+    "name": "AMD Radeon RX 7800 XT",
+    "category": "gpu",
+    "brand": "AMD",
+    "release_year": 2023,
+    "launch_msrp_usd": 499.0,
+    "architecture": "RDNA 3",
+    "process_node_nm": 5.0,
+    "tdp_w": 263,
+    "raw_specs": {
+      "stream_processors": 3840,
+      "base_clock_mhz": 1295,
+      "boost_clock_mhz": 2430,
+      "vram_gb": 16,
+      "memory_type": "GDDR6",
+      "bus_width_bit": 256,
+      "bandwidth_gbps": 624.0,
+      "pcie_interface": "PCIe 4.0 x16",
+      "pcie_lanes": 16
+    },
+    "benchmark_index": 81.0,
+    "gaming_scores": {
+      "raster_1080p": 87.0,
+      "raster_1440p": 83.5,
+      "raster_4k": 71.0
+    },
+    "ray_tracing_score": 67.0,
+    "efficiency_score": 78.0,
+    "features": [
+      "FSR 3.1",
+      "HYPR-RX",
+      "AV1 Hardware Decode/Encode",
+      "DisplayPort 2.1"
+    ],
+    "pcie_interface": "PCIe 4.0 x16"
+  },
+  "item_b": {
+    "id": "rx-7700-xt",
+    "slug": "rx-7700-xt",
+    "name": "AMD Radeon RX 7700 XT",
+    "category": "gpu",
+    "brand": "AMD",
+    "release_year": 2023,
+    "launch_msrp_usd": 449.0,
+    "architecture": "RDNA 3",
+    "process_node_nm": 5.0,
+    "tdp_w": 245,
+    "raw_specs": {
+      "stream_processors": 3456,
+      "base_clock_mhz": 1700,
+      "boost_clock_mhz": 2544,
+      "vram_gb": 12,
+      "memory_type": "GDDR6",
+      "bus_width_bit": 192,
+      "bandwidth_gbps": 432.0,
+      "pcie_interface": "PCIe 4.0 x16",
+      "pcie_lanes": 16,
+      "revised_msrp_usd": 419.0
+    },
+    "benchmark_index": 74.0,
+    "gaming_scores": {
+      "raster_1080p": 82.0,
+      "raster_1440p": 74.0,
+      "raster_4k": 55.0
+    },
+    "ray_tracing_score": 60.0,
+    "efficiency_score": 76.0,
+    "features": [
+      "12GB VRAM",
+      "FSR 3.1",
+      "DisplayPort 2.1"
+    ],
+    "pcie_interface": "PCIe 4.0 x16"
+  },
+  "spec_differences": [
+    {
+      "key": "benchmark_index",
+      "label_ar": "مؤشر الأداء العام (Benchmark Index)",
+      "value_a": 81.0,
+      "value_b": 74.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 9.5,
+      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 9.5%"
+    },
+    {
+      "key": "launch_msrp_usd",
+      "label_ar": "سعر الإطلاق الرسمي",
+      "value_a": 499.0,
+      "value_b": 449.0,
+      "unit": "$",
+      "winner": "b",
+      "diff_percentage": 10.0,
+      "advantage_summary_ar": "أوفر بالسعر بنسبة 10%"
+    },
+    {
+      "key": "tdp_w",
+      "label_ar": "استهلاك الطاقة المكتبي (TDP)",
+      "value_a": 263,
+      "value_b": 245,
+      "unit": "W",
+      "winner": "b",
+      "diff_percentage": 6.8,
+      "advantage_summary_ar": "استهلاك طاقة أقل وتوليد حراري أهدأ بفارق 6.8%"
+    },
+    {
+      "key": "process_node_nm",
+      "label_ar": "دقة التصنيع (Process Node)",
+      "value_a": 5.0,
+      "value_b": 5.0,
+      "unit": "nm",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "دقة تصنيع متطابقة عتادياً"
+    },
+    {
+      "key": "ray_tracing_score",
+      "label_ar": "كفاءة تتبع الأشعة (Ray Tracing)",
+      "value_a": 67.0,
+      "value_b": 60.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 11.7,
+      "advantage_summary_ar": "معالجة متقدمة لتقنيات الإضاءة الواقعية بفارق 11.7%"
+    },
+    {
+      "key": "efficiency_score",
+      "label_ar": "معيار الكفاءة مقابل الواط",
+      "value_a": 78.0,
+      "value_b": 76.0,
+      "unit": "/ 100",
+      "winner": "tie",
+      "diff_percentage": 2.6,
+      "advantage_summary_ar": "تعادل / تقارب في الأداء (فارق هامشي أقل من 3%)"
+    },
+    {
+      "key": "vram_gb",
+      "label_ar": "سعة الذاكرة الرسومية (VRAM)",
+      "value_a": 16.0,
+      "value_b": 12.0,
+      "unit": "GB",
+      "winner": "a",
+      "diff_percentage": 33.3,
+      "advantage_summary_ar": "سعة VRAM أكبر تمنح أريحية فائقة في ألعاب 1440p و 4K وتطبيقات التصميم"
+    },
+    {
+      "key": "bus_width_bit",
+      "label_ar": "عرض ناقل الذاكرة (Memory Bus)",
+      "value_a": 256.0,
+      "value_b": 192.0,
+      "unit": "bit",
+      "winner": "a",
+      "diff_percentage": 33.3,
+      "advantage_summary_ar": "عرض نطاق أوسع لنقل البيانات الرسومية بسلاسة"
+    },
+    {
+      "key": "boost_clock_mhz",
+      "label_ar": "تردد التعزيز (Boost Clock)",
+      "value_a": 2430.0,
+      "value_b": 2544.0,
+      "unit": "MHz",
+      "winner": "b",
+      "diff_percentage": 4.7,
+      "advantage_summary_ar": "تردد أعلى لسرعة معالجة الرسوميات الإطارية"
+    },
+    {
+      "key": "pcie_interface",
+      "label_ar": "واجهة التوصيل العتادية (PCIe Interface)",
+      "value_a": "PCIe 4.0 x16",
+      "value_b": "PCIe 4.0 x16",
+      "unit": "",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "واجهة توصيل متطابقة بكامل المسارات (16 مساراً)"
+    }
+  ],
+  "performance_score_a": 81.0,
+  "performance_score_b": 74.0,
+  "fps_benchmarks": [
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 102,
+      "fps_b": 94,
+      "diff_pct": 8.5,
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 68,
+      "fps_b": 59,
+      "diff_pct": 15.3,
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 35,
+      "fps_b": 26,
+      "diff_pct": 34.6,
+      "winner": "a",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1080p",
+      "preset": "Cinematic High",
+      "fps_a": 72,
+      "fps_b": 67,
+      "diff_pct": 7.5,
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1440p",
+      "preset": "Cinematic High",
+      "fps_a": 45,
+      "fps_b": 39,
+      "diff_pct": 15.4,
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "4K",
+      "preset": "Cinematic High",
+      "fps_a": 22,
+      "fps_b": 16,
+      "diff_pct": 37.5,
+      "winner": "a",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1080p",
+      "preset": "Competitive High",
+      "fps_a": 296,
+      "fps_b": 288,
+      "diff_pct": 2.8,
+      "winner": "tie",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1440p",
+      "preset": "Competitive High",
+      "fps_a": 203,
+      "fps_b": 194,
+      "diff_pct": 4.6,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "4K",
+      "preset": "Competitive High",
+      "fps_a": 111,
+      "fps_b": 102,
+      "diff_pct": 8.8,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1080p",
+      "preset": "Ultra",
+      "fps_a": 129,
+      "fps_b": 121,
+      "diff_pct": 6.6,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1440p",
+      "preset": "Ultra",
+      "fps_a": 94,
+      "fps_b": 83,
+      "diff_pct": 13.3,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "4K",
+      "preset": "Ultra",
+      "fps_a": 52,
+      "fps_b": 40,
+      "diff_pct": 30.0,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1080p",
+      "preset": "Ultra / High",
+      "fps_a": 207,
+      "fps_b": 193,
+      "diff_pct": 7.3,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1440p",
+      "preset": "Ultra / High",
+      "fps_a": 141,
+      "fps_b": 124,
+      "diff_pct": 13.7,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "4K",
+      "preset": "Ultra / High",
+      "fps_a": 71,
+      "fps_b": 54,
+      "diff_pct": 31.5,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 141,
+      "fps_b": 132,
+      "diff_pct": 6.8,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 101,
+      "fps_b": 89,
+      "diff_pct": 13.5,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 51,
+      "fps_b": 40,
+      "diff_pct": 27.5,
+      "winner": "a",
+      "rt_badge_ar": null,
+      "platform_note_ar": null
+    }
+  ],
+  "verdict": {
+    "overall_winner": "a",
+    "winner_name": "AMD Radeon RX 7800 XT",
+    "score_a": 81.0,
+    "score_b": 74.0,
+    "quick_verdict_ar": "يتفوق AMD Radeon RX 7800 XT في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 9.5% مقارنة بـ AMD Radeon RX 7700 XT. هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~12.6%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "gaming_analysis_ar": "في ساحة الألعاب، يتميز كرت AMD Radeon RX 7800 XT بقوة معالجة خام فائقة وسعة ذاكرة وافرة تبلغ 16GB VRAM، في حين يقدم AMD Radeon RX 7700 XT بسعة 12GB توازناً ممتازاً على دقة 1440p، مع دعم كامل لكلا البطاقتين لتقنيات FSR 3.1 ومنافذ DisplayPort 2.1 الحديثة.",
+    "productivity_analysis_ar": "على صعيد الإنتاجية والرندرة، تمنح سعة الذاكرة الكبيرة (16GB لـ AMD Radeon RX 7800 XT) ميزة في معالجة المشاهد ثلاثية الأبعاد والمشاريع الضخمة، بينما يستهلك AMD Radeon RX 7700 XT طاقة أقل (245W مقابل 263W) مما يسهل تبريده في مختلف بيئات العمل.",
+    "value_and_budget_ar": "عند دراسة معادلة القيمة مقابل السعر، يقدم AMD Radeon RX 7700 XT تكلفة شراء أولية أقل بسعر $449 (توفير $50 لصالح الميزانيات المحدودة مع سحب طاقة منخفض يبلغ 245W). في المقابل، يطرح AMD Radeon RX 7800 XT سعراً أعلى بنسبة 11.1% عن السعر الأقل ($499)، ومع تفوقه في معدل الإطارات بدقة 1440p بمتوسط ~12.6% وسعة ذاكرة أكبر (16GB مقابل 12GB) وناقل أعرض، فإن تكلفة الإطار الواحد (القيمة مقابل السعر) تصبح متطابقة عملياً بين البطاقتين (تعادل في القيمة الصافية). وبذلك لا يوجد فوز مطلق؛ حيث يمثل AMD Radeon RX 7800 XT استثماراً أكثر استدامة وتوازناً لتفادي اختناق القوام بدقة 1440p و 4K على المدى المتوسط، بينما يبقى AMD Radeon RX 7700 XT ملائماً لمن تحكمهم ميزانية شراء صارمة وأولوية ترشيد الطاقة. تجدر الإشارة إلى أن AMD قامت لاحقاً بتعديل السعر الرسمي للبطاقة نزولاً إلى ما بين $419 و $399 في العديد من المتاجر، مما يقلص أو يلغي الفارق السعري الفعلي في السوق لصالح RX 7700 XT.",
+    "pros_a": [
+      "سعة ذاكرة رسومية وافرة (16GB VRAM) بناقل 256 بت تمنح أريحية ممتازة للألعاب بدقة 1440p و 4K وتمنع اختناق الذاكرة مع القوام المرتفع",
+      "أداء رسومي خام (Rasterization) ممتاز ومؤشر عام تنافسي يبلغ 81/100",
+      "دعم تقنيات FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ العرض الحديثة DisplayPort 2.1"
+    ],
+    "cons_a": [
+      "استهلاك طاقة يبلغ 263 واط يتطلب مزود طاقة وتبريداً مناسباً داخل الصندوق"
+    ],
+    "pros_b": [
+      "سعة ذاكرة رسومية متوازنة (12GB VRAM) بناقل 192 بت تمنح أريحية ممتازة للألعاب بدقة 1440p وتفادي اختناق الذاكرة مع القوام المرتفع",
+      "أداء رسومي خام (Rasterization) ممتاز ومؤشر عام تنافسي يبلغ 74/100",
+      "دعم تقنيات FSR 3.1 مع توليد الإطارات (Frame Generation) مفتوح المصدر ومنافذ العرض الحديثة DisplayPort 2.1"
+    ],
+    "cons_b": [
+      "أداء رسومي إجمالي أقل مقارنة بالفئة الأعلى (81/100)"
+    ],
+    "who_should_buy_a": "اللاعب الذي يستهدف أقصى أداء رسومي على دقة 1440p مع سعة ذاكرة وافرة تبلغ 16GB للمشاريع والألعاب الضخمة.",
+    "who_should_buy_b": "اللاعب الذي يركز على أفضل قيمة شرائية لتشغيل ألعاب دقة 1440p بسلاسة تامة واستهلاك طاقة منضبط (245W)."
+  },
+  "affiliate_links_a": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء AMD Radeon RX 7800 XT من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=AMD+Radeon+RX+7800+XT",
+      "affiliate_url": "https://www.noon.com/search?q=AMD+Radeon+RX+7800+XT&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء AMD Radeon RX 7800 XT من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=AMD+Radeon+RX+7800+XT",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=AMD+Radeon+RX+7800+XT&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء AMD Radeon RX 7800 XT من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Radeon+RX+7800+XT",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Radeon+RX+7800+XT&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء AMD Radeon RX 7800 XT من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=AMD+Radeon+RX+7800+XT",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=AMD+Radeon+RX+7800+XT&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "affiliate_links_b": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء AMD Radeon RX 7700 XT من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=AMD+Radeon+RX+7700+XT",
+      "affiliate_url": "https://www.noon.com/search?q=AMD+Radeon+RX+7700+XT&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء AMD Radeon RX 7700 XT من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=AMD+Radeon+RX+7700+XT",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=AMD+Radeon+RX+7700+XT&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء AMD Radeon RX 7700 XT من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Radeon+RX+7700+XT",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Radeon+RX+7700+XT&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء AMD Radeon RX 7700 XT من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=AMD+Radeon+RX+7700+XT",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=AMD+Radeon+RX+7700+XT&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "schema_json_ld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/rx-7800-xt-vs-rx-7700-xt#productA",
+        "name": "AMD Radeon RX 7800 XT",
+        "category": "GPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "AMD"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "499",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/rx-7800-xt-vs-rx-7700-xt#productB",
+        "name": "AMD Radeon RX 7700 XT",
+        "category": "GPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "AMD"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "449",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://tech-comparisons.pages.dev/compare/rx-7800-xt-vs-rx-7700-xt#review",
+        "url": "https://tech-comparisons.pages.dev/compare/rx-7800-xt-vs-rx-7700-xt",
+        "name": "مقارنة AMD Radeon RX 7800 XT ضد AMD Radeon RX 7700 XT | المواصفات والأداء والأسعار",
+        "description": "مقارنة شاملة وتفصيلية بين AMD Radeon RX 7800 XT و AMD Radeon RX 7700 XT. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+        "datePublished": "2026-10-20T18:43:32.566454+00:00",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "فريق تحرير مقارنات تك",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "itemReviewed": {
+          "@type": "Product",
+          "name": "AMD Radeon RX 7800 XT vs AMD Radeon RX 7700 XT"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 4.0,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "reviewBody": "يتفوق AMD Radeon RX 7800 XT في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 9.5% مقارنة بـ AMD Radeon RX 7700 XT. هذا التفوق يستند إلى معمارية RDNA 3 وقدرات المعالجة الرسومية الأعلى وتفوق في متوسط معدل الإطارات بالألعاب بنسبة ~12.6%، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+      }
+    ]
+  },
+  "created_at": "2026-10-20T18:43:32.566454+00:00"
+}

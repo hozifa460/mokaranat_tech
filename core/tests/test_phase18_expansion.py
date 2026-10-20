@@ -174,7 +174,7 @@ def test_zero_amazon_rule_across_all_exported_comparisons():
     assert comp_dir.exists(), "Comparisons export directory does not exist"
 
     json_files = list(comp_dir.glob("*.json"))
-    assert len(json_files) == 15, f"Expected 15 exported comparison JSON files, found {len(json_files)}"
+    assert len(json_files) == 80, f"Expected 80 exported comparison JSON files, found {len(json_files)}"
 
     forbidden = ["amazon", "amzn.to", "أمازون"]
 
@@ -187,12 +187,12 @@ def test_zero_amazon_rule_across_all_exported_comparisons():
 
 
 def test_comparisons_manifest_count():
-    """Verify comparisons_index.json contains exactly 15 valid comparison items."""
+    """Verify comparisons_index.json contains exactly 80 valid comparison items including the 15 original matchups."""
     manifest_path = PROJECT_ROOT / "web" / "src" / "data" / "comparisons_index.json"
     with open(manifest_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    assert len(data) == 15, f"Expected 15 items in comparisons_index.json, found {len(data)}"
+    assert len(data) == 80, f"Expected 80 items in comparisons_index.json, found {len(data)}"
     slugs = {item["slug"] for item in data}
 
     expected_slugs = {
@@ -213,7 +213,7 @@ def test_comparisons_manifest_count():
         "asus-tuf-gaming-a15-vs-rog-zephyrus-g16"
     }
 
-    assert slugs == expected_slugs, f"Manifest slugs mismatch: {slugs.symmetric_difference(expected_slugs)}"
+    assert expected_slugs.issubset(slugs), f"Manifest missing original slugs: {expected_slugs - slugs}"
 
 
 def test_apple_vs_win_value_budget_symmetry_when_windows_is_pricier():

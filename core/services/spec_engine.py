@@ -177,7 +177,12 @@ class SpecEngine:
         summary_pattern: str
     ) -> SpecDiffItem:
         if val_a == val_b:
-            summary = "السعر متطابق" if key == "launch_msrp_usd" else "متطابق في هذه القيمة"
+            if key == "launch_msrp_usd":
+                summary = "السعر متطابق"
+            elif key == "tdp_w":
+                summary = f"سحب طاقة متماثل تماماً ({_format_num(val_a)}W) لكلا المعالجين/البطاقتين"
+            else:
+                summary = "متطابق في هذه القيمة"
             return SpecDiffItem(
                 key=key,
                 label_ar=label_ar,

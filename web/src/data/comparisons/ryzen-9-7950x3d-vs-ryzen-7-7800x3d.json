@@ -1,0 +1,353 @@
+{
+  "slug": "ryzen-9-7950x3d-vs-ryzen-7-7800x3d",
+  "category": "cpu",
+  "title_ar": "مقارنة AMD Ryzen 9 7950X3D ضد AMD Ryzen 7 7800X3D | المواصفات والأداء والأسعار",
+  "meta_title_ar": "AMD Ryzen 9 7950X3D ضد AMD Ryzen 7 7800X3D: أيهما يستحق الشراء؟ | مقارنات تك",
+  "meta_description_ar": "مقارنة شاملة وتفصيلية بين AMD Ryzen 9 7950X3D و AMD Ryzen 7 7800X3D. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+  "item_a": {
+    "id": "ryzen-9-7950x3d",
+    "slug": "ryzen-9-7950x3d",
+    "name": "AMD Ryzen 9 7950X3D",
+    "category": "cpu",
+    "brand": "AMD",
+    "release_year": 2023,
+    "launch_msrp_usd": 699.0,
+    "architecture": "Zen 4 (3D V-Cache)",
+    "process_node_nm": 5.0,
+    "tdp_w": 120,
+    "raw_specs": {
+      "total_cores": 16,
+      "threads": 32,
+      "base_clock_ghz": 4.2,
+      "boost_clock_ghz": 5.7,
+      "l3_cache_mb": 128,
+      "socket": "AM5 (Lifecycle through 2027+)",
+      "memory_support": "DDR5-5200"
+    },
+    "benchmark_index": 98.0,
+    "gaming_scores": {
+      "gaming_overall": 98.0
+    },
+    "ray_tracing_score": null,
+    "efficiency_score": 95.0,
+    "features": [
+      "128MB 3D V-Cache",
+      "16 Cores / 32 Threads",
+      "AM5 Platform Lifecycle through 2027+",
+      "120W TDP Efficiency"
+    ],
+    "pcie_interface": null
+  },
+  "item_b": {
+    "id": "ryzen-7-7800x3d",
+    "slug": "ryzen-7-7800x3d",
+    "name": "AMD Ryzen 7 7800X3D",
+    "category": "cpu",
+    "brand": "AMD",
+    "release_year": 2023,
+    "launch_msrp_usd": 449.0,
+    "architecture": "Zen 4 (3D V-Cache)",
+    "process_node_nm": 5.0,
+    "tdp_w": 120,
+    "raw_specs": {
+      "total_cores": 8,
+      "threads": 16,
+      "base_clock_ghz": 4.2,
+      "boost_clock_ghz": 5.0,
+      "l3_cache_mb": 96,
+      "socket": "AM5",
+      "memory_support": "DDR5-5200"
+    },
+    "benchmark_index": 91.0,
+    "gaming_scores": {
+      "gaming_overall": 98.0
+    },
+    "ray_tracing_score": null,
+    "efficiency_score": 96.0,
+    "features": [
+      "96MB 3D V-Cache",
+      "Best Gaming Power Efficiency",
+      "AM5 Platform Lifecycle through 2027+"
+    ],
+    "pcie_interface": null
+  },
+  "spec_differences": [
+    {
+      "key": "benchmark_index",
+      "label_ar": "مؤشر الأداء العام (Benchmark Index)",
+      "value_a": 98.0,
+      "value_b": 91.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 7.7,
+      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 7.7%"
+    },
+    {
+      "key": "launch_msrp_usd",
+      "label_ar": "سعر الإطلاق الرسمي",
+      "value_a": 699.0,
+      "value_b": 449.0,
+      "unit": "$",
+      "winner": "b",
+      "diff_percentage": 35.8,
+      "advantage_summary_ar": "أوفر بالسعر بنسبة 35.8%"
+    },
+    {
+      "key": "tdp_w",
+      "label_ar": "استهلاك الطاقة المكتبي (TDP)",
+      "value_a": 120,
+      "value_b": 120,
+      "unit": "W",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "سحب طاقة متماثل تماماً (120W) لكلا المعالجين/البطاقتين"
+    },
+    {
+      "key": "process_node_nm",
+      "label_ar": "دقة التصنيع (Process Node)",
+      "value_a": 5.0,
+      "value_b": 5.0,
+      "unit": "nm",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "دقة تصنيع متطابقة عتادياً"
+    },
+    {
+      "key": "efficiency_score",
+      "label_ar": "معيار الكفاءة مقابل الواط",
+      "value_a": 95.0,
+      "value_b": 96.0,
+      "unit": "/ 100",
+      "winner": "tie",
+      "diff_percentage": 1.1,
+      "advantage_summary_ar": "تعادل / تقارب في الأداء (فارق هامشي أقل من 3%)"
+    },
+    {
+      "key": "total_cores",
+      "label_ar": "إجمالي الأنوية (Cores)",
+      "value_a": 16.0,
+      "value_b": 8.0,
+      "unit": "أنوية",
+      "winner": "a",
+      "diff_percentage": 100.0,
+      "advantage_summary_ar": "عدد أنوية أكبر لتعدد المهام والرندرة البرمجية الثقيلة"
+    },
+    {
+      "key": "threads",
+      "label_ar": "المسارات المعالجة (Threads)",
+      "value_a": 32.0,
+      "value_b": 16.0,
+      "unit": "مسار",
+      "winner": "a",
+      "diff_percentage": 100.0,
+      "advantage_summary_ar": "توازي معالجة أسرع للبرمجيات الثقيلة"
+    },
+    {
+      "key": "l3_cache_mb",
+      "label_ar": "الذاكرة المخبئية المستوى الثالث (L3 Cache)",
+      "value_a": 128.0,
+      "value_b": 96.0,
+      "unit": "MB",
+      "winner": "a",
+      "diff_percentage": 33.3,
+      "advantage_summary_ar": "ذاكرة كاش أضخم لتقليل زمن التأخير وتسريع معدل الإطارات بالألعاب"
+    },
+    {
+      "key": "boost_clock_ghz",
+      "label_ar": "تردد التعزيز الأقصى (Boost Clock)",
+      "value_a": 5.7,
+      "value_b": 5.0,
+      "unit": "GHz",
+      "winner": "a",
+      "diff_percentage": 14.0,
+      "advantage_summary_ar": "تردد أعلى لسرعة تنفيذ التعليمات الفردية بفارق 14%"
+    }
+  ],
+  "performance_score_a": 98.0,
+  "performance_score_b": 91.0,
+  "fps_benchmarks": [],
+  "verdict": {
+    "overall_winner": "a",
+    "winner_name": "AMD Ryzen 9 7950X3D",
+    "score_a": 98.0,
+    "score_b": 91.0,
+    "quick_verdict_ar": "يتفوق AMD Ryzen 9 7950X3D في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 7.7% مقارنة بـ AMD Ryzen 7 7800X3D. هذا التفوق يستند إلى معمارية Zen 4 (3D V-Cache) وتوزيع الموارد الحسابية المتطور وكفاءة معالجة المهام، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "gaming_analysis_ar": "في تجارب الألعاب، يقدم كل من AMD Ryzen 9 7950X3D (16 أنوية) و AMD Ryzen 7 7800X3D (8 أنوية) معدلات إطارات ممتازة، مع أسبقية طفيفة لـ AMD Ryzen 9 7950X3D في استقرار 1% low FPS بفضل معمارية Zen 4 (3D V-Cache) وكفاءة معالجة الخيوط الحسابية.",
+    "productivity_analysis_ar": "في مهام البرمجة والضغط المكتبي وتصدير الفيديو والرندرة، يمنح AMD Ryzen 9 7950X3D تفوقاً ملحوظاً في المعالجة المتوازية بفضل امتلاكه 16 نواة معالجة (مقابل 8 أنوية لدى منافسه)، مع تماثل سحب الطاقة المكتبي البالغ 120W لكلا المعالجين.",
+    "value_and_budget_ar": "يطرح AMD Ryzen 7 7800X3D تكلفة شراء أولية أقل بسعر $449 مقارنة بـ $699 (توفير $250، بينما يرتفع سعر منافسه بنسبة 55.7% عن السعر الأقل)، في حين يوفر AMD Ryzen 9 7950X3D أداءً إضافياً بنسبة 7.7% يبرر الاستثمار لمن تتطلب أعمالهم أقصى إنتاجية وسرعة معالجة.",
+    "pros_a": [
+      "معمارية Zen 4 (3D V-Cache) المتقدمة بدقة تصنيع 5nm",
+      "كفاءة طاقة ممتازة (120W TDP) ومؤشر أداء لكل واط يبلغ 95/100",
+      "ذاكرة كاش ضخمة بتقنية 3D V-Cache (128MB L3) ترفع استقرار الإطارات الدنيا وتمنع التقطيع في الألعاب",
+      "استثمار مستدام وطويل الأجل لمنصة المقبس AMD AM5 مع استمرار الدعم المؤكد حتى عام 2027+، مما يتيح ترقيات مستقبلية دون الحاجة لتغيير اللوحة الأم"
+    ],
+    "cons_a": [
+      "سعر إطلاق رسمي أعلى ($699)",
+      "يتطلب منصة لوحة أم حديثة وذواكر متوافقة للاستفادة الكاملة من إمكانياته"
+    ],
+    "pros_b": [
+      "معمارية Zen 4 (3D V-Cache) المتقدمة بدقة تصنيع 5nm",
+      "كفاءة طاقة ممتازة (120W TDP) ومؤشر أداء لكل واط يبلغ 96/100",
+      "ذاكرة كاش ضخمة بتقنية 3D V-Cache (96MB L3) ترفع استقرار الإطارات الدنيا وتمنع التقطيع في الألعاب",
+      "استثمار مستدام وطويل الأجل لمنصة المقبس AMD AM5 مع استمرار الدعم المؤكد حتى عام 2027+، مما يتيح ترقيات مستقبلية دون الحاجة لتغيير اللوحة الأم"
+    ],
+    "cons_b": [
+      "عدد نوى أقل (8 مقابل 16 في AMD Ryzen 9 7950X3D) مما يحد من الأداء في الرندرة والمعالجة المتوازية متعددة المسارات",
+      "يتطلب منصة لوحة أم حديثة وذواكر متوافقة للاستفادة الكاملة من إمكانياته"
+    ],
+    "who_should_buy_a": "المستخدم المحترف وصانع المحتوى الذي يجمع بين بث الألعاب والرندرة الثقيلة بفضل 16 نواة معالجة، مع الاستفادة من ذاكرة 3D V-Cache الضخمة (128MB) لأداء ألعاب فائق دون تقديم أي تنازلات في الإنتاجية.",
+    "who_should_buy_b": "اللاعب النقي والتنافسي الذي يركز كلياً على أقصى أداء ممكن في الألعاب بفضل معمارية الشريحة الواحدة (Single CCD) الخالية من تعقيدات الجدولة، محققاً أفضل كفاءة طاقة وقيمة اقتصادية بذاكرة 3D V-Cache (96MB)."
+  },
+  "affiliate_links_a": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء AMD Ryzen 9 7950X3D من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=AMD+Ryzen+9+7950X3D",
+      "affiliate_url": "https://www.noon.com/search?q=AMD+Ryzen+9+7950X3D&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء AMD Ryzen 9 7950X3D من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=AMD+Ryzen+9+7950X3D",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=AMD+Ryzen+9+7950X3D&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء AMD Ryzen 9 7950X3D من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Ryzen+9+7950X3D",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Ryzen+9+7950X3D&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء AMD Ryzen 9 7950X3D من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=AMD+Ryzen+9+7950X3D",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=AMD+Ryzen+9+7950X3D&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "affiliate_links_b": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء AMD Ryzen 7 7800X3D من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=AMD+Ryzen+7+7800X3D",
+      "affiliate_url": "https://www.noon.com/search?q=AMD+Ryzen+7+7800X3D&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء AMD Ryzen 7 7800X3D من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=AMD+Ryzen+7+7800X3D",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=AMD+Ryzen+7+7800X3D&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء AMD Ryzen 7 7800X3D من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Ryzen+7+7800X3D",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=AMD+Ryzen+7+7800X3D&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء AMD Ryzen 7 7800X3D من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=AMD+Ryzen+7+7800X3D",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=AMD+Ryzen+7+7800X3D&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "schema_json_ld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/ryzen-9-7950x3d-vs-ryzen-7-7800x3d#productA",
+        "name": "AMD Ryzen 9 7950X3D",
+        "category": "CPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "AMD"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "699",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/ryzen-9-7950x3d-vs-ryzen-7-7800x3d#productB",
+        "name": "AMD Ryzen 7 7800X3D",
+        "category": "CPU",
+        "brand": {
+          "@type": "Brand",
+          "name": "AMD"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "449",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://tech-comparisons.pages.dev/compare/ryzen-9-7950x3d-vs-ryzen-7-7800x3d#review",
+        "url": "https://tech-comparisons.pages.dev/compare/ryzen-9-7950x3d-vs-ryzen-7-7800x3d",
+        "name": "مقارنة AMD Ryzen 9 7950X3D ضد AMD Ryzen 7 7800X3D | المواصفات والأداء والأسعار",
+        "description": "مقارنة شاملة وتفصيلية بين AMD Ryzen 9 7950X3D و AMD Ryzen 7 7800X3D. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+        "datePublished": "2026-10-20T18:43:33.919850+00:00",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "فريق تحرير مقارنات تك",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "itemReviewed": {
+          "@type": "Product",
+          "name": "AMD Ryzen 9 7950X3D vs AMD Ryzen 7 7800X3D"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 4.9,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "reviewBody": "يتفوق AMD Ryzen 9 7950X3D في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 7.7% مقارنة بـ AMD Ryzen 7 7800X3D. هذا التفوق يستند إلى معمارية Zen 4 (3D V-Cache) وتوزيع الموارد الحسابية المتطور وكفاءة معالجة المهام، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+      }
+    ]
+  },
+  "created_at": "2026-10-20T18:43:33.919850+00:00"
+}

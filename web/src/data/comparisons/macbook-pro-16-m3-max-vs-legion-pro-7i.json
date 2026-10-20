@@ -1,0 +1,590 @@
+{
+  "slug": "macbook-pro-16-m3-max-vs-legion-pro-7i",
+  "category": "laptop",
+  "title_ar": "مقارنة Apple MacBook Pro 16 (M3 Max) ضد Lenovo Legion Pro 7i (Gen 9) | المواصفات والأداء والأسعار",
+  "meta_title_ar": "Apple MacBook Pro 16 (M3 Max) ضد Lenovo Legion Pro 7i (Gen 9): أيهما يستحق الشراء؟ | مقارنات تك",
+  "meta_description_ar": "مقارنة شاملة وتفصيلية بين Apple MacBook Pro 16 (M3 Max) و Lenovo Legion Pro 7i (Gen 9). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+  "item_a": {
+    "id": "macbook-pro-16-m3-max",
+    "slug": "macbook-pro-16-m3-max",
+    "name": "Apple MacBook Pro 16 (M3 Max)",
+    "category": "laptop",
+    "brand": "Apple",
+    "release_year": 2023,
+    "launch_msrp_usd": 3499.0,
+    "architecture": "Apple Silicon (M3 Max)",
+    "process_node_nm": 3.0,
+    "tdp_w": 100,
+    "raw_specs": {
+      "display": "16.2-inch Liquid Retina XDR Mini-LED (1600 nits peak, 120Hz ProMotion)",
+      "weight_kg": 2.16,
+      "battery_wh": 100.0,
+      "cpu": "Apple M3 Max (16-core CPU [12P + 4E])",
+      "gpu": "Apple M3 Max 40-core GPU",
+      "ram_gb": 48,
+      "unified_memory_bandwidth_gbps": 300,
+      "storage_tb": 1,
+      "os": "macOS"
+    },
+    "benchmark_index": 92.0,
+    "gaming_scores": {
+      "raster_1080p": 55.0,
+      "raster_1440p": 46.0,
+      "raster_4k": 30.0
+    },
+    "ray_tracing_score": 45.0,
+    "efficiency_score": 98.0,
+    "features": [
+      "Apple M3 Max 3nm Silicon",
+      "Liquid Retina XDR Mini-LED",
+      "48GB Unified Memory (300 GB/s)",
+      "Extraordinary Battery Efficiency (22h)"
+    ],
+    "pcie_interface": null
+  },
+  "item_b": {
+    "id": "legion-pro-7i",
+    "slug": "legion-pro-7i",
+    "name": "Lenovo Legion Pro 7i (Gen 9)",
+    "category": "laptop",
+    "brand": "Lenovo",
+    "release_year": 2024,
+    "launch_msrp_usd": 2199.0,
+    "architecture": "Intel 14th Gen + RTX 4080",
+    "process_node_nm": 4.0,
+    "tdp_w": 175,
+    "raw_specs": {
+      "display": "16-inch IPS 2.5K 240Hz 500nits Anti-Glare",
+      "weight_kg": 2.6,
+      "battery_wh": 99.9,
+      "cpu": "Intel Core i9-14900HX",
+      "gpu": "RTX 4080 Mobile 12GB (175W)",
+      "ram_gb": 32,
+      "storage_tb": 1
+    },
+    "benchmark_index": 86.0,
+    "gaming_scores": {
+      "raster_1080p": 90.0,
+      "raster_1440p": 88.0,
+      "raster_4k": 68.0
+    },
+    "ray_tracing_score": 84.0,
+    "efficiency_score": 72.0,
+    "features": [
+      "Full 175W TGP GPU",
+      "Coldfront 5.0 Vapor Chamber",
+      "500 nits High-Brightness IPS",
+      "TrueStrike Keyboard"
+    ],
+    "pcie_interface": null
+  },
+  "spec_differences": [
+    {
+      "key": "benchmark_index",
+      "label_ar": "مؤشر الأداء العام (Benchmark Index)",
+      "value_a": 92.0,
+      "value_b": 86.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 7.0,
+      "advantage_summary_ar": "تفوق في الأداء الكلي بنسبة 7%"
+    },
+    {
+      "key": "launch_msrp_usd",
+      "label_ar": "سعر الإطلاق الرسمي",
+      "value_a": 3499.0,
+      "value_b": 2199.0,
+      "unit": "$",
+      "winner": "b",
+      "diff_percentage": 37.2,
+      "advantage_summary_ar": "أوفر بالسعر بنسبة 37.2%"
+    },
+    {
+      "key": "tdp_w",
+      "label_ar": "أقصى استهلاك رسومي متاح (GPU TGP / Thermal Budget)",
+      "value_a": 100,
+      "value_b": 175,
+      "unit": "W",
+      "winner": "tie",
+      "diff_percentage": 42.9,
+      "advantage_summary_ar": "مقياس هندسي: يمنح السحب الأعلى (175W) أداء رسومياً مستداماً وترددات بطاقة أعلى، بينما يتيح السحب المنضبط (100W) هيكلاً فائق النحافة وحرارة أقل"
+    },
+    {
+      "key": "process_node_nm",
+      "label_ar": "دقة التصنيع (Process Node)",
+      "value_a": 3.0,
+      "value_b": 4.0,
+      "unit": "nm",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقياس تقني استرشادي: تختلف هندسة دقة التصنيع وكثافة الترانزستورات والتصميم (رقاقة أحادية Monolithic مقابل رقاقات Chiplets) بين المعماريات المختلفة"
+    },
+    {
+      "key": "ray_tracing_score",
+      "label_ar": "كفاءة تتبع الأشعة (Ray Tracing)",
+      "value_a": 45.0,
+      "value_b": 84.0,
+      "unit": "/ 100",
+      "winner": "b",
+      "diff_percentage": 86.7,
+      "advantage_summary_ar": "معالجة متقدمة لتقنيات الإضاءة الواقعية بفارق 86.7%"
+    },
+    {
+      "key": "efficiency_score",
+      "label_ar": "معيار الكفاءة مقابل الواط",
+      "value_a": 98.0,
+      "value_b": 72.0,
+      "unit": "/ 100",
+      "winner": "a",
+      "diff_percentage": 36.1,
+      "advantage_summary_ar": "أداء أعلى لكل واط مستهلك"
+    },
+    {
+      "key": "weight_kg",
+      "label_ar": "وزن الجهاز المحمول",
+      "value_a": 2.16,
+      "value_b": 2.6,
+      "unit": "kg",
+      "winner": "a",
+      "diff_percentage": 16.9,
+      "advantage_summary_ar": "أخف وزناً وسهولة أعلى في التنقل اليومي"
+    },
+    {
+      "key": "battery_wh",
+      "label_ar": "سعة البطارية (Watt-hours)",
+      "value_a": 100.0,
+      "value_b": 99.9,
+      "unit": "Wh",
+      "winner": "tie",
+      "diff_percentage": 0.1,
+      "advantage_summary_ar": "تعادل / تقارب في الأداء (فارق هامشي أقل من 3%)"
+    },
+    {
+      "key": "display",
+      "label_ar": "تقنية ومواصفات الشاشة",
+      "value_a": "16.2-inch Liquid Retina XDR Mini-LED (1600 nits peak, 120Hz ProMotion)",
+      "value_b": "16-inch IPS 2.5K 240Hz 500nits Anti-Glare",
+      "unit": "",
+      "winner": "tie",
+      "diff_percentage": 0.0,
+      "advantage_summary_ar": "مقارنة شاشات: شاشة Mini-LED متقدمة بسطوع سينمائي (1000-1600 nits) ومناطق تعتيم محلي لتباين HDR وسواد عميق مقارنة بشاشات IPS التقليدية"
+    },
+    {
+      "key": "ram_gb",
+      "label_ar": "سعة الذاكرة العشوائية (RAM)",
+      "value_a": 48.0,
+      "value_b": 32.0,
+      "unit": "GB",
+      "winner": "a",
+      "diff_percentage": 50.0,
+      "advantage_summary_ar": "سعة ذاكرة أكبر مدعومة بذاكرة موحدة (Unified Memory) فائقة السرعة (300GB/s) تمنح معمارية Apple Silicon سرعة تشارك بيانات فورية"
+    }
+  ],
+  "performance_score_a": 92.0,
+  "performance_score_b": 86.0,
+  "fps_benchmarks": [
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 65,
+      "fps_b": 133,
+      "diff_pct": 104.6,
+      "winner": "b",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 38,
+      "fps_b": 89,
+      "diff_pct": 134.2,
+      "winner": "b",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Cyberpunk 2077",
+      "game_title_ar": "سايبربانك 2077",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 15,
+      "fps_b": 41,
+      "diff_pct": 173.3,
+      "winner": "b",
+      "rt_badge_ar": "⚡ تتبع الأشعة مفعّل (RT ON)",
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1080p",
+      "preset": "Cinematic High",
+      "fps_a": 45,
+      "fps_b": 93,
+      "diff_pct": 106.7,
+      "winner": "b",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "1440p",
+      "preset": "Cinematic High",
+      "fps_a": 25,
+      "fps_b": 58,
+      "diff_pct": 132.0,
+      "winner": "b",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Black Myth: Wukong",
+      "game_title_ar": "بلاك ميث: ووكونغ",
+      "resolution": "4K",
+      "preset": "Cinematic High",
+      "fps_a": 15,
+      "fps_b": 25,
+      "diff_pct": 66.7,
+      "winner": "b",
+      "rt_badge_ar": "💡 إضاءة Lumen العتادية",
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1080p",
+      "preset": "Competitive High",
+      "fps_a": 255,
+      "fps_b": 322,
+      "diff_pct": 26.3,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "1440p",
+      "preset": "Competitive High",
+      "fps_a": 170,
+      "fps_b": 221,
+      "diff_pct": 30.0,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Counter-Strike 2",
+      "game_title_ar": "كاونتر سترايك 2",
+      "resolution": "4K",
+      "preset": "Competitive High",
+      "fps_a": 89,
+      "fps_b": 116,
+      "diff_pct": 30.3,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1080p",
+      "preset": "Ultra",
+      "fps_a": 80,
+      "fps_b": 135,
+      "diff_pct": 68.8,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "1440p",
+      "preset": "Ultra",
+      "fps_a": 51,
+      "fps_b": 98,
+      "diff_pct": 92.2,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Red Dead Redemption 2",
+      "game_title_ar": "ريد ديد ريدمبشن 2",
+      "resolution": "4K",
+      "preset": "Ultra",
+      "fps_a": 22,
+      "fps_b": 49,
+      "diff_pct": 122.7,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1080p",
+      "preset": "Ultra / High",
+      "fps_a": 116,
+      "fps_b": 191,
+      "diff_pct": 64.7,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "1440p",
+      "preset": "Ultra / High",
+      "fps_a": 69,
+      "fps_b": 131,
+      "diff_pct": 89.9,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Call of Duty: Warzone",
+      "game_title_ar": "كول أوف ديوتي: وورزون",
+      "resolution": "4K",
+      "preset": "Ultra / High",
+      "fps_a": 27,
+      "fps_b": 61,
+      "diff_pct": 125.9,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1080p",
+      "preset": "Ultra High",
+      "fps_a": 84,
+      "fps_b": 138,
+      "diff_pct": 64.3,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "1440p",
+      "preset": "Ultra High",
+      "fps_a": 52,
+      "fps_b": 99,
+      "diff_pct": 90.4,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    },
+    {
+      "game_title": "Assassin's Creed Mirage",
+      "game_title_ar": "أساسنز كريد ميراج",
+      "resolution": "4K",
+      "preset": "Ultra High",
+      "fps_a": 20,
+      "fps_b": 45,
+      "diff_pct": 125.0,
+      "winner": "b",
+      "rt_badge_ar": null,
+      "platform_note_ar": "أرقام الألعاب على macOS تقديرية عبر طبقة المحاكاة/Metal (Game Porting Toolkit) وليست دعماً أصلياً لـ DirectX 12 أو ألعاب Anti-Cheat مثل CS2 و Warzone."
+    }
+  ],
+  "verdict": {
+    "overall_winner": "a",
+    "winner_name": "Apple MacBook Pro 16 (M3 Max)",
+    "score_a": 92.0,
+    "score_b": 86.0,
+    "quick_verdict_ar": "يتفوق Apple MacBook Pro 16 (M3 Max) في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 7% مقارنة بـ Lenovo Legion Pro 7i (Gen 9). هذا التفوق يستند إلى معمارية Apple Silicon (M3 Max) وتوازن العتاد المعماري ومنصة التشغيل المحمولة وتفوقاً كاسحاً في كفاءة المعالجة والإنتاجية وصناعة المحتوى المحمولة، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة.",
+    "gaming_analysis_ar": "في ساحة الألعاب، يحسم Lenovo Legion Pro 7i (Gen 9) الصدارة بشكل قاطع بفضل بيئة نظام Windows الأصلية ومكتبة ألعاب DirectX 12 الشاملة، مدعوماً بكرت الشاشة المخصص (RTX 4080 Mobile 12GB (175W)) ودعم كامل لتقنيات NVIDIA DLSS 3 لتوليد الإطارات (Frame Generation) والتوافق التام مع برمجيات مكافحة الغش (Anti-cheat) التنافسية؛ في حين يعتمد Apple MacBook Pro 16 (M3 Max) على مكتبة Metal ونظام macOS، حيث تقتصر تجربة الألعاب على العناوين الأصلية المحدودة أو استخدام طبقات الترجمة (Game Porting Toolkit) التي تعاني من تفاوت في التوافق والأداء وتفتقر لتقنيات DLSS.",
+    "productivity_analysis_ar": "على صعيد الإنتاجية والرندرة وصناعة المحتوى، يقدم Apple MacBook Pro 16 (M3 Max) تفوقاً استثنائياً في كفاءة الطاقة واستمرارية العمل بفضل شريحة Apple Silicon (معمارية 3nm) وذاكرة موحدة فائقة السرعة (Unified Memory) بسعة 48GB وسرعة نقل 300GB/s، مع الحفاظ على 100% من كامل طاقته الحسابية حتى عند العمل على البطارية مع عمر بطارية قياسي يصل إلى 22 ساعة ومحركات تسريع عتادية لـ ProRes و AV1؛ بينما يقدم Lenovo Legion Pro 7i (Gen 9) قوة حوسبة رسومية فائقة في بيئات Windows وبرمجيات التصميم المعتمدة على تسريع CUDA، إلا أنه يشهد تراجعاً حاداً في أداء المعالجة الرسومية عند فصل الشاحن والاعتماد على البطارية مع عمر بطارية أقصر بكثير.",
+    "value_and_budget_ar": "من منظور القيمة مقابل السعر، يطرح Lenovo Legion Pro 7i (Gen 9) معادلة اقتصادية متفوقة لهواة الألعاب بسعر $2199 (توفير $1300، بينما يرتفع سعر منافسه بنسبة 59.1% عن السعر الأقل) مع قابلية ترقية الذواكر والتخزين مستقبلاً ودعم مكتبة الألعاب الشاملة؛ في المقابل، يمثل Apple MacBook Pro 16 (M3 Max) استثماراً احترافياً موجهاً لبيئات الإنتاج وصناع المحتوى بسعر $3499 حيث يبرر فارق السعر عبر جودة الشاشة الاستثنائية وكفاءة العمل الكامل على البطارية دون شاحن.",
+    "pros_a": [
+      "شاشة Liquid Retina XDR بتقنية Mini-LED (سطوع 1600 nits ذروة، تباين 1,000,000:1، ودقة ألوان استثنائية لصناع المحتوى)",
+      "شريحة Apple Silicon (M3 Max) بمعمارية 3nm وكفاءة طاقة خارقة تمنح أداءً متطابقاً 100% سواء كان الجهاز موصولاً بالشاحن أو يعمل على البطارية",
+      "ذاكرة موحدة فائقة السرعة Unified Memory بسعة 48GB وسرعة نقل 300GB/s مشتركة بين المعالج وكرت الشاشة",
+      "عمر بطارية أسطوري يصل إلى 22 ساعة مع محركات تشفير وتسريع عتادية لـ ProRes و AV1"
+    ],
+    "cons_a": [
+      "نظام تشغيل macOS يفتقر لدعم مكتبات DirectX 12 ومكتبة ألعاب Windows الضخمة، حيث تعتمد الألعاب على طبقات المحاكاة (Game Porting Toolkit)",
+      "ذواكر عشوائية وتخزين ملحومان بالكامل على اللوحة الأم (لا توجد أي إمكانية لترقية RAM أو SSD بعد الشراء)",
+      "سعر إطلاق رسمي مرتفع ($3499) يستهدف فئة المحترفين وصناع المحتوى بشكل خاص",
+      "تظهر هالات ضوئية طفيفة (Blooming) حول العناصر البيضاء الساطعة على الخلفيات الداكنة مقارنة بشاشات OLED"
+    ],
+    "pros_b": [
+      "شاشة IPS فائقة السطوع (500 nits لثبات الإضاءة والوضوح التام في الغرف المضيئة دون أي مخاطر لتطبيع الشاشة OLED Burn-in)",
+      "بيئة ألعاب Windows 11 أصلية مع دعم كامل لمكتبات DirectX 12 ومكتبة ألعاب PC الشاملة وأنظمة الحماية من الغش (Anti-cheat)",
+      "معالجة رسومية مخصصة مع دعم كامل لتقنيات NVIDIA DLSS 3 وتوليد الإطارات (Frame Generation) وتتبع الأشعة العتادي",
+      "قابلية ترقية العتاد الداخلي وسهولة استبدال أو زيادة سعة الذواكر وتخزين M.2 NVMe SSD مستقبلاً"
+    ],
+    "cons_b": [
+      "تراجع ملحوظ في الأداء الرسومي عند العمل على البطارية مع عمر بطارية أقصر بكثير مقارنة بمعالجات Apple Silicon",
+      "انبعاثات حرارية وصوت مراوح مرتفع عند الضغط القصوى مقارنة بهدوء وكفاءة معالجات ARM",
+      "وزن الجهاز (2.6 كجم) والشاحن أكبر مقارنة بـ Apple MacBook Pro 16 (M3 Max)"
+    ],
+    "who_should_buy_a": "صانع المحتوى والمحترف (مونتير، ملحن، مهندس برمجيات) في بيئة macOS الذي يحتاج أقصى قوة معالجة ورندرة متنقلة مع 48GB ذاكرة موحدة وعمر بطارية خارق يتيح العمل يوماً كاملاً دون شاحن وبأداء غير مخنوق.",
+    "who_should_buy_b": "اللاعب التنافسي أو المهندس والمصمم الذي يحتاج بيئة Windows أصلية لتشغيل مكتبة ألعاب PC بأعلى إطارات وتقنيات DLSS 3، أو البرمجيات الهندسية المعتمدة على Windows مع حرية ترقية الذاكرة والتخزين مستقبلاً."
+  },
+  "affiliate_links_a": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء Apple MacBook Pro 16 (M3 Max) من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=Apple+MacBook+Pro+16+%28M3+Max%29",
+      "affiliate_url": "https://www.noon.com/search?q=Apple+MacBook+Pro+16+%28M3+Max%29&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء Apple MacBook Pro 16 (M3 Max) من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=Apple+MacBook+Pro+16+%28M3+Max%29",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=Apple+MacBook+Pro+16+%28M3+Max%29&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء Apple MacBook Pro 16 (M3 Max) من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=Apple+MacBook+Pro+16+%28M3+Max%29",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=Apple+MacBook+Pro+16+%28M3+Max%29&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء Apple MacBook Pro 16 (M3 Max) من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=Apple+MacBook+Pro+16+%28M3+Max%29",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=Apple+MacBook+Pro+16+%28M3+Max%29&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "affiliate_links_b": [
+    {
+      "store_key": "noon",
+      "store_name_ar": "نون",
+      "store_name_en": "Noon",
+      "product_title": "شراء Lenovo Legion Pro 7i (Gen 9) من متجر نون",
+      "direct_url": "https://www.noon.com/search?q=Lenovo+Legion+Pro+7i+%28Gen+9%29",
+      "affiliate_url": "https://www.noon.com/search?q=Lenovo+Legion+Pro+7i+%28Gen+9%29&affiliate_id=TECHCOMP_NOON_AR",
+      "badge_color": "#FEE600",
+      "text_color": "#1F2937"
+    },
+    {
+      "store_key": "newegg",
+      "store_name_ar": "نيو إيج",
+      "store_name_en": "Newegg",
+      "product_title": "شراء Lenovo Legion Pro 7i (Gen 9) من متجر نيو إيج",
+      "direct_url": "https://www.newegg.com/p/pl?d=Lenovo+Legion+Pro+7i+%28Gen+9%29",
+      "affiliate_url": "https://www.newegg.com/p/pl?d=Lenovo+Legion+Pro+7i+%28Gen+9%29&cm_mmc=aff-techcomp_ar",
+      "badge_color": "#F37021",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "aliexpress",
+      "store_name_ar": "علي إكسبريس",
+      "store_name_en": "AliExpress",
+      "product_title": "شراء Lenovo Legion Pro 7i (Gen 9) من متجر علي إكسبريس",
+      "direct_url": "https://www.aliexpress.com/wholesale?SearchText=Lenovo+Legion+Pro+7i+%28Gen+9%29",
+      "affiliate_url": "https://www.aliexpress.com/wholesale?SearchText=Lenovo+Legion+Pro+7i+%28Gen+9%29&aff_fcid=TECHCOMP_ALI_AR",
+      "badge_color": "#FF4747",
+      "text_color": "#FFFFFF"
+    },
+    {
+      "store_key": "jumia",
+      "store_name_ar": "جوميا",
+      "store_name_en": "Jumia",
+      "product_title": "شراء Lenovo Legion Pro 7i (Gen 9) من متجر جوميا",
+      "direct_url": "https://www.jumia.com/catalog/?q=Lenovo+Legion+Pro+7i+%28Gen+9%29",
+      "affiliate_url": "https://www.jumia.com/catalog/?q=Lenovo+Legion+Pro+7i+%28Gen+9%29&tag=techcomparisons-jumia",
+      "badge_color": "#F68B1E",
+      "text_color": "#FFFFFF"
+    }
+  ],
+  "schema_json_ld": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/macbook-pro-16-m3-max-vs-legion-pro-7i#productA",
+        "name": "Apple MacBook Pro 16 (M3 Max)",
+        "category": "LAPTOP",
+        "brand": {
+          "@type": "Brand",
+          "name": "Apple"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "3499",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://tech-comparisons.pages.dev/compare/macbook-pro-16-m3-max-vs-legion-pro-7i#productB",
+        "name": "Lenovo Legion Pro 7i (Gen 9)",
+        "category": "LAPTOP",
+        "brand": {
+          "@type": "Brand",
+          "name": "Lenovo"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "2199",
+          "offerCount": "4"
+        }
+      },
+      {
+        "@type": "Review",
+        "@id": "https://tech-comparisons.pages.dev/compare/macbook-pro-16-m3-max-vs-legion-pro-7i#review",
+        "url": "https://tech-comparisons.pages.dev/compare/macbook-pro-16-m3-max-vs-legion-pro-7i",
+        "name": "مقارنة Apple MacBook Pro 16 (M3 Max) ضد Lenovo Legion Pro 7i (Gen 9) | المواصفات والأداء والأسعار",
+        "description": "مقارنة شاملة وتفصيلية بين Apple MacBook Pro 16 (M3 Max) و Lenovo Legion Pro 7i (Gen 9). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
+        "datePublished": "2026-10-20T18:43:36.085510+00:00",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "فريق تحرير مقارنات تك",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
+          "url": "https://tech-comparisons.pages.dev"
+        },
+        "itemReviewed": {
+          "@type": "Product",
+          "name": "Apple MacBook Pro 16 (M3 Max) vs Lenovo Legion Pro 7i (Gen 9)"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 4.6,
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "reviewBody": "يتفوق Apple MacBook Pro 16 (M3 Max) في مجمل المقارنة المعمارية وتحليلات الأداء المتوقعة محققاً أسبقية بمؤشر الأداء بنسبة 7% مقارنة بـ Lenovo Legion Pro 7i (Gen 9). هذا التفوق يستند إلى معمارية Apple Silicon (M3 Max) وتوازن العتاد المعماري ومنصة التشغيل المحمولة وتفوقاً كاسحاً في كفاءة المعالجة والإنتاجية وصناعة المحتوى المحمولة، مما يمنحه الأفضلية للمستخدمين الباحثين عن أعلى أداء في هذه الفئة."
+      }
+    ]
+  },
+  "created_at": "2026-10-20T18:43:36.085510+00:00"
+}
