@@ -545,7 +545,8 @@ D:\tech_comparisons\
 - **Navigation & Footer Integration (`web/src/components/Footer.astro`):**
   - Updated Footer with a dedicated "عن المنصة والسياسات" column linking to `/about`, `/privacy`, `/terms`, and `/contact`.
   - Added an inline statutory navigation bar in the footer bottom bar alongside copyright notices.
-- **Quality Gate & Verification:**
+- **Google Search Console Verification Tag:** Embedded `<meta name="google-site-verification" content="d77hr0Og-lx7relfSHa8I-HscQDxtHKxwSheylmH01Y" />` into `BaseLayout.astro` `<head>` for instant live ownership verification across all 88 pages.
+  - **Quality Gate & Verification:**
   - Added dedicated Phase 21/22 test suite (`core/tests/test_phase21_production_readiness.py`) testing statutory pages existence, zero Amazon compliance, sitemap configuration, robots.txt validity, OpenGraph tags, og-image assets, clickable mailto contacts, noscript fallback, canonical consistency, and sitemap route coverage.
   - Full automated test suite expanded to 118 tests (`core/tests/`): 100% pass rate in under 2 seconds.
   - Astro SSG static build: 88 pages compiled in under 7 seconds with 0 errors.
