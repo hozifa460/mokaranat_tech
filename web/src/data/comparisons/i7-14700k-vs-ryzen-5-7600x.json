@@ -292,7 +292,7 @@
     "@graph": [
       {
         "@type": "Product",
-        "@id": "https://tech-comparisons.pages.dev/compare/i7-14700k-vs-ryzen-5-7600x#productA",
+        "@id": "https://mokaranat-tech.pages.dev/compare/i7-14700k-vs-ryzen-5-7600x#productA",
         "name": "Intel Core i7-14700K",
         "category": "CPU",
         "brand": {
@@ -308,7 +308,7 @@
       },
       {
         "@type": "Product",
-        "@id": "https://tech-comparisons.pages.dev/compare/i7-14700k-vs-ryzen-5-7600x#productB",
+        "@id": "https://mokaranat-tech.pages.dev/compare/i7-14700k-vs-ryzen-5-7600x#productB",
         "name": "AMD Ryzen 5 7600X",
         "category": "CPU",
         "brand": {
@@ -324,21 +324,21 @@
       },
       {
         "@type": "Review",
-        "@id": "https://tech-comparisons.pages.dev/compare/i7-14700k-vs-ryzen-5-7600x#review",
-        "url": "https://tech-comparisons.pages.dev/compare/i7-14700k-vs-ryzen-5-7600x",
+        "@id": "https://mokaranat-tech.pages.dev/compare/i7-14700k-vs-ryzen-5-7600x#review",
+        "url": "https://mokaranat-tech.pages.dev/compare/i7-14700k-vs-ryzen-5-7600x",
         "name": "مقارنة Intel Core i7-14700K ضد AMD Ryzen 5 7600X | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين Intel Core i7-14700K و AMD Ryzen 5 7600X. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-20T20:05:53.850165+00:00",
+        "datePublished": "2026-10-20T20:33:45.348931+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
           "name": "فريق تحرير مقارنات تك",
-          "url": "https://tech-comparisons.pages.dev"
+          "url": "https://mokaranat-tech.pages.dev"
         },
         "publisher": {
           "@type": "Organization",
           "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
-          "url": "https://tech-comparisons.pages.dev"
+          "url": "https://mokaranat-tech.pages.dev"
         },
         "itemReviewed": {
           "@type": "Product",
@@ -354,5 +354,5 @@
       }
     ]
   },
-  "created_at": "2026-10-20T20:05:53.850165+00:00"
+  "created_at": "2026-10-20T20:33:45.348931+00:00"
 }

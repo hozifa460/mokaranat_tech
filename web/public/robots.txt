@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tech-comparisons.pages.dev/sitemap.xml
+Sitemap: https://mokaranat-tech.pages.dev/sitemap-index.xml

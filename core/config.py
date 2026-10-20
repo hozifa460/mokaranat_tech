@@ -68,7 +68,7 @@ AFFILIATE_STORES: Dict[str, Dict[str, Any]] = {
 # SEO & Meta Defaults
 SITE_META = {
     "site_name_ar": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
-    "site_url": "https://tech-comparisons.pages.dev",
+    "site_url": "https://mokaranat-tech.pages.dev",
     "default_author": "فريق تحرير مقارنات تك",
     "locale": "ar_SA",
     "currency_default": "USD"

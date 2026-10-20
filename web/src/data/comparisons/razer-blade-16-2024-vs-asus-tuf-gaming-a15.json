@@ -521,7 +521,7 @@
     "@graph": [
       {
         "@type": "Product",
-        "@id": "https://tech-comparisons.pages.dev/compare/razer-blade-16-2024-vs-asus-tuf-gaming-a15#productA",
+        "@id": "https://mokaranat-tech.pages.dev/compare/razer-blade-16-2024-vs-asus-tuf-gaming-a15#productA",
         "name": "Razer Blade 16 (2024)",
         "category": "LAPTOP",
         "brand": {
@@ -537,7 +537,7 @@
       },
       {
         "@type": "Product",
-        "@id": "https://tech-comparisons.pages.dev/compare/razer-blade-16-2024-vs-asus-tuf-gaming-a15#productB",
+        "@id": "https://mokaranat-tech.pages.dev/compare/razer-blade-16-2024-vs-asus-tuf-gaming-a15#productB",
         "name": "ASUS TUF Gaming A15 (2024)",
         "category": "LAPTOP",
         "brand": {
@@ -553,21 +553,21 @@
       },
       {
         "@type": "Review",
-        "@id": "https://tech-comparisons.pages.dev/compare/razer-blade-16-2024-vs-asus-tuf-gaming-a15#review",
-        "url": "https://tech-comparisons.pages.dev/compare/razer-blade-16-2024-vs-asus-tuf-gaming-a15",
+        "@id": "https://mokaranat-tech.pages.dev/compare/razer-blade-16-2024-vs-asus-tuf-gaming-a15#review",
+        "url": "https://mokaranat-tech.pages.dev/compare/razer-blade-16-2024-vs-asus-tuf-gaming-a15",
         "name": "مقارنة Razer Blade 16 (2024) ضد ASUS TUF Gaming A15 (2024) | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين Razer Blade 16 (2024) و ASUS TUF Gaming A15 (2024). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-20T20:05:54.610609+00:00",
+        "datePublished": "2026-10-20T20:33:46.434991+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
           "name": "فريق تحرير مقارنات تك",
-          "url": "https://tech-comparisons.pages.dev"
+          "url": "https://mokaranat-tech.pages.dev"
         },
         "publisher": {
           "@type": "Organization",
           "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
-          "url": "https://tech-comparisons.pages.dev"
+          "url": "https://mokaranat-tech.pages.dev"
         },
         "itemReviewed": {
           "@type": "Product",
@@ -583,5 +583,5 @@
       }
     ]
   },
-  "created_at": "2026-10-20T20:05:54.610609+00:00"
+  "created_at": "2026-10-20T20:33:46.434991+00:00"
 }

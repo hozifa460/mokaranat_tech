@@ -1,0 +1,208 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "من نحن والمنهجية التحريرية | مقارنات تك",
+  "url": "https://mokaranat-tech.pages.dev/about",
+  "description": "تعرف على منصة مقارنات تك والمنهجية التحريرية الهندسية الصارمة، محرك الحساب الحتمي، ومصادر بيانات العتاد المعتمدة لتحقيق أعلى معايير الدقة والحيادية.",
+  "inLanguage": "ar"
+};
+---
+
+<BaseLayout
+  title="من نحن والمنهجية التحريرية | مقارنات تك"
+  description="تعرف على رؤية مقارنات تك والمنهجية الهندسية الصارمة: محرك المقارنات الحسابي الحتمي، مصادر البيانات المعتمدة (TechPowerUp, Intel ARK, AMD, Jarrod's Tech)، والحيادية التحريرية التامة."
+  canonicalUrl="https://mokaranat-tech.pages.dev/about"
+  schema={aboutSchema}
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Breadcrumbs -->
+    <nav aria-label="مسار التنقل" class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-8">
+      <a href="/" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">الرئيسية</a>
+      <span>/</span>
+      <span class="text-slate-800 dark:text-slate-200 font-medium">من نحن والمنهجية</span>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="mb-12 border-b border-slate-200 dark:border-slate-800 pb-8">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 text-xs font-bold mb-4">
+        <span>📐</span>
+        <span>المعايير الهندسية والحيادية التحريرية (E-E-A-T)</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight mb-4">
+        من نحن والمنهجية الهندسية الصارمة
+      </h1>
+      <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-3xl">
+        تأسست منصة <strong>مقارنات تك</strong> لسد الفجوة الكبيرة في المحتوى التقني العربي، عبر الانتقال من المقالات الإنشائية والتسويقية السطحية إلى <strong>التحليل المعماري الحسابي الدقيق</strong> المبني على الأرقام، القوانين الفيزيائية للسيليكون، والفحوصات المعملية الموثقة.
+      </p>
+      <div class="mt-4 flex flex-wrap items-center gap-4 text-xs text-slate-500 dark:text-slate-400">
+        <span>🎯 الهدف: تمكين المستهلك العربي من اتخاذ قرارات شراء مدروسة</span>
+        <span>•</span>
+        <span>حيادية تحريرية 100% دون رعاية تجارية</span>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <article class="prose prose-slate dark:prose-invert max-w-none space-y-10 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
+      
+      <!-- 1. رسالتنا ورؤيتنا -->
+      <section class="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+          <span class="text-blue-600 dark:text-blue-400">⚡</span>
+          <span>رؤيتنا: الأرقام الصادقة قبل الانطباعات التسويقية</span>
+        </h2>
+        <p class="mb-3">
+          في عالم تتسابق فيه الشركات المصنعة لترويج أرقام أداء منتقاة بعناية (Cherry-picked benchmarks) ومصطلحات تسويقية براقة، تأتي منصة <strong>مقارنات تك</strong> لتكون المرجع العربي الأول الموثوق للمستخدمين، اللاعبين، وصناع المحتوى والمهندسين في العالم العربي.
+        </p>
+        <p>
+          نحن نؤمن بأن كل دولار ينفقه المستخدم في تجميع حاسوبه أو شراء حاسوبه المحمول يجب أن يقابله أداء ملموس واستقرار طويل الأمد. لذلك، بنينا نظاماً برمجياً متكاملاً يحلل العتاد بموضوعية مطلقة ويفصل بين قدرات الرندر النقي، تتبع الأشعة العتادي، تقنيات رفع الدقة، وعنق الزجاجة الفيزيائي.
+        </p>
+      </section>
+
+      <!-- 2. محرك الحساب الحتمي 100% Deterministic Engine -->
+      <section class="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+          <span class="text-blue-600 dark:text-blue-400">🧠</span>
+          <span>محرك المقارنات الحسابي الحتمي (Deterministic Calculation Engine)</span>
+        </h2>
+        <p class="mb-4">
+          خلافاً للمنصات التي تعتمد على نماذج لغوية عامة قد تهلوس بالأرقام أو تعطي أحكاماً متناقضة، تعمل منصتنا بواسطة <strong>محرك برمجي حتمي مكتوب بلغة بايثون ومعمارية نظيفة (Clean Architecture)</strong> يتبع قواعد صارمة:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700">
+            <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-sm">قاعدة هامش الخطأ الإحصائي (3.0% Rule):</h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              لا نمنح ألقاب فوز وهمية أو تضخم كؤوس لفوارق ضئيلة. أي فارق في الأداء يقل عن 3.0% يُصنف حتمياً كـ <strong>تعادل متقارب في الأداء (Tie)</strong> لضمان النزاهة العلمية.
+            </p>
+          </div>
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700">
+            <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-sm">فصل المعماريات واختلاف الترددات:</h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              لا نقارن الترددات الخام (MHz) أو دقة التصنيع (nm) مباشرة بين معماريتين مختلفتين (مثل Zen 4 ضد Raptor Lake أو Ada Lovelace ضد RDNA 3)، بل نأخذ في الاعتبار فوارق تعليمات كل دورة (IPC) وكثافة الترانزستور.
+            </p>
+          </div>
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700">
+            <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-sm">معادلة القيمة والتكلفة لكل إطار:</h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              يوازن المحرك بين فارق السعر وفارق الإطارات الحقيقي. إذا كان تفوق كرت ما في الإطارات (+12.6%) متطابقاً مع زيادة سعره (+12.5%)، يُعلن المحرك تعادلاً في القيمة الصافية دون انحياز للقطعة الأغلى.
+            </p>
+          </div>
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700">
+            <h3 class="font-bold text-slate-900 dark:text-white mb-2 text-sm">كشف قيود التوصيل وعنق الزجاجة:</h3>
+            <p class="text-slate-600 dark:text-slate-400">
+              يكشف المحرك تلقائياً البطاقات التي تقتصر على 8 مسارات (PCIe 4.0 x8) ويحذر المشتري بوضوح من احتمال حدوث تذبذب في الإطارات (Stutter) على اللوحات القديمة الداعمة لمنفذ PCIe 3.0 عند امتلاء الذاكرة.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. مصادر البيانات المعتمدة -->
+      <section class="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+          <span class="text-blue-600 dark:text-blue-400">📚</span>
+          <span>مصادر بيانات العتاد المعتمدة والموثوقة</span>
+        </h2>
+        <p class="mb-4">
+          تُستمد كافة المواصفات والقياسات الأساسية في قاعدة بياناتنا من أرفع المصادر الهندسية المعترف بها دولياً:
+        </p>
+        <div class="space-y-3 mr-2">
+          <div class="flex items-start gap-3 p-3.5 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700">
+            <span class="text-xl">🗄️</span>
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-sm">قاعدة بيانات TechPowerUp GPU Database:</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
+                المرجع العالمي الأكثر موثوقية لمواصفات رقاقات السيليكون، عدد أنوية CUDA، معالجات التظليل Stream Processors، واجهة التوصيل PCIe Lanes، سرعات وسعات الذاكرة، ومعدلات استهلاك الطاقة الأساسية.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-3.5 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700">
+            <span class="text-xl">🏢</span>
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-sm">بوابة المواصفات الرسمية Intel ARK:</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
+                المصدر المباشر لمواصفات معالجات Intel Core، تقسيم أنوية الأداء الهجينة (P-Cores) وأنوية الكفاءة (E-Cores)، استهلاك الطاقة الأقصى (MTP)، ترددات Thermal Velocity Boost، ودعم المقابس.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-3.5 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700">
+            <span class="text-xl">🔴</span>
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-sm">المواصفات التقنية الرسمية لشركة AMD:</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
+                التوثيق الهندسي لمعالجات AMD Ryzen ومعمارية كروت Radeon RDNA، تفاصيل ذاكرة التخزين المؤقت المكدسة ثلاثية الأبعاد (3D V-Cache)، ومسارات دعم منصة AM5 الممتدة حتى 2027+.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-3.5 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700">
+            <span class="text-xl">🔬</span>
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-sm">مختبرات المراجعات المستقلة (Jarrod's Tech & Hardware Labs):</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
+                الفحوصات المعملية الواقعية للحواسيب المحمولة المخصصة للألعاب وصناع المحتوى: قياسات استهلاك طاقة الكرت الفعلي (TGP)، كفاءة منظومة التبريد وغرف البخار، قياسات سطوع وألوان الشاشات، واختبارات تفريغ البطارية الحقيقية.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. الحيادية التحريرية والاستقلالية المالية -->
+      <section class="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+          <span class="text-blue-600 dark:text-blue-400">⚖️</span>
+          <span>الحيادية التحريرية والاستقلالية التامة (Editorial Independence)</span>
+        </h2>
+        <p class="mb-3">
+          تلتزم منصة <strong>مقارنات تك</strong> بسياسة تحريرية مستقلة وصارمة:
+        </p>
+        <ul class="list-disc list-inside space-y-2 mr-2 text-slate-600 dark:text-slate-400">
+          <li><strong>لا نرتبط بأي رعاية تجارية:</strong> لا نتلقى أي تمويل أو رعاية تسويقية من أي شركة مصنعة للسيليكون (سواء NVIDIA أو AMD أو Intel أو Apple)، وجميع نتائج الفحص والمعادلات تطبق على جميع الشركات بنفس المعايير المتكافئة.</li>
+          <li><strong>فصل الإعلانات عن التقييم:</strong> ظهور الإعلانات (عبر شبكة Google AdSense) أو روابط المتاجر المعتمدة لا يؤثر مطلقاً، وبأي نسبة كانت، على درجة الأداء المحسوبة، الفائز الممنوح، أو إيجابيات وسلبيات أي قطعة.</li>
+          <li><strong>شفافية روابط الإحالة:</strong> نوفر روابط لمتاجر رسمية ومعتمدة (نون، نيو إيج، علي إكسبريس، جوميا) لتمكين الزائر من استكشاف الخيارات السعرية المتاحة، مع إفصاح صريح بأننا قد نحصل على عمولة تسويقية دون أي تكلفة إضافية على الزائر.</li>
+        </ul>
+      </section>
+
+      <!-- 5. معايير الجودة الصارمة وفريق العمل -->
+      <section class="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+          <span class="text-blue-600 dark:text-blue-400">🛡️</span>
+          <span>بوابة الجودة الذاتية الصارمة (Self-Auditing Quality Gate)</span>
+        </h2>
+        <p class="mb-3">
+          لضمان عدم تسرب أي بيانات متناقضة أو ادعاءات مضللة، تخضع كافة صفحات المنصة لاختبارات تحقق آلية ومستمرة تشمل:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 my-3 text-xs">
+          <div class="bg-slate-50 dark:bg-slate-800/80 p-3 rounded-xl border border-slate-200 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-1">دقة مسميات التقنيات:</strong>
+            فصل دقيق بين DLSS 3 (توليد الإطارات) و DLSS 3.5 (إعادة بناء الأشعة) والاعتراف بـ FSR 3.1 مفتوح المصدر.
+          </div>
+          <div class="bg-slate-50 dark:bg-slate-800/80 p-3 rounded-xl border border-slate-200 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-1">واقعية قيود الطاقة:</strong>
+            منع وصف أي معالج أو كرت ذو سحب طاقة مرتفع بأنه "منضبط" وتنبيه المستخدم لمتطلبات مزود الطاقة.
+          </div>
+          <div class="bg-slate-50 dark:bg-slate-800/80 p-3 rounded-xl border border-slate-200 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-1">منع التناقضات التحريرية:</strong>
+            فحص آلي يضمن عدم مدح وزن لابتوب ثقيل (أكثر من 2.4 كجم) في الإيجابيات وانتقاده في السلبيات.
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="bg-gradient-to-br from-emerald-50/70 to-blue-50/50 dark:from-slate-900 dark:to-emerald-950/40 rounded-2xl p-6 sm:p-8 border border-emerald-200/80 dark:border-emerald-900/40 text-center">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2">هل لديك ملاحظة تقنية أو ترغب في التواصل معنا؟</h2>
+        <p class="text-sm text-slate-600 dark:text-slate-300 max-w-xl mx-auto mb-6">
+          نرحب دائماً باقتراحات المهندسين، المطورين، وعشاق الهاردوير لتطوير محركنا البرمجي وإضافة المزيد من قطع العتاد.
+        </p>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm transition-colors shadow-sm"
+        >
+          <span>📬</span>
+          <span>تواصل مع فريق التحرير التقني</span>
+        </a>
+      </section>
+
+    </article>
+  </div>
+</BaseLayout>

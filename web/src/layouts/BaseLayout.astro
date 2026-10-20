@@ -10,15 +10,26 @@ interface Props {
   canonicalUrl?: string;
   schema?: Record<string, any>;
   ogType?: string;
+  ogImage?: string;
 }
 
 const {
   title,
   description,
-  canonicalUrl = Astro.url.href,
+  canonicalUrl,
   schema,
-  ogType = 'website'
+  ogType = 'website',
+  ogImage = '/og-image.png'
 } = Astro.props;
+
+const siteUrl = 'https://mokaranat-tech.pages.dev';
+const pageUrl = canonicalUrl
+  ? (canonicalUrl.startsWith('http') ? canonicalUrl : new URL(canonicalUrl, siteUrl).href)
+  : (Astro.site ? new URL(Astro.url.pathname, Astro.site).href : new URL(Astro.url.pathname, siteUrl).href);
+
+const socialImage = ogImage.startsWith('http')
+  ? ogImage
+  : (Astro.site ? new URL(ogImage, Astro.site).href : new URL(ogImage, siteUrl).href);
 ---
 
 <!doctype html>
@@ -28,23 +39,31 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonicalUrl} />
+    <link rel="canonical" href={pageUrl} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:url" content={pageUrl} />
     <meta property="og:locale" content="ar_SA" />
     <meta property="og:site_name" content="مقارنات تك" />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:url" content={pageUrl} />
+    <meta name="twitter:image" content={socialImage} />
+    <meta name="twitter:image:alt" content={title} />
 
-    <!-- Favicon -->
+    <!-- Favicon & Sitemap -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- Inline script to avoid Dark Mode flash (FOUC) -->
     <script is:inline>

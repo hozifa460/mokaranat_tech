@@ -524,7 +524,7 @@
     "@graph": [
       {
         "@type": "Product",
-        "@id": "https://tech-comparisons.pages.dev/compare/razer-blade-16-2024-vs-macbook-pro-16-m3-max#productA",
+        "@id": "https://mokaranat-tech.pages.dev/compare/razer-blade-16-2024-vs-macbook-pro-16-m3-max#productA",
         "name": "Razer Blade 16 (2024)",
         "category": "LAPTOP",
         "brand": {
@@ -540,7 +540,7 @@
       },
       {
         "@type": "Product",
-        "@id": "https://tech-comparisons.pages.dev/compare/razer-blade-16-2024-vs-macbook-pro-16-m3-max#productB",
+        "@id": "https://mokaranat-tech.pages.dev/compare/razer-blade-16-2024-vs-macbook-pro-16-m3-max#productB",
         "name": "Apple MacBook Pro 16 (M3 Max)",
         "category": "LAPTOP",
         "brand": {
@@ -556,21 +556,21 @@
       },
       {
         "@type": "Review",
-        "@id": "https://tech-comparisons.pages.dev/compare/razer-blade-16-2024-vs-macbook-pro-16-m3-max#review",
-        "url": "https://tech-comparisons.pages.dev/compare/razer-blade-16-2024-vs-macbook-pro-16-m3-max",
+        "@id": "https://mokaranat-tech.pages.dev/compare/razer-blade-16-2024-vs-macbook-pro-16-m3-max#review",
+        "url": "https://mokaranat-tech.pages.dev/compare/razer-blade-16-2024-vs-macbook-pro-16-m3-max",
         "name": "مقارنة Razer Blade 16 (2024) ضد Apple MacBook Pro 16 (M3 Max) | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين Razer Blade 16 (2024) و Apple MacBook Pro 16 (M3 Max). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-20T20:05:54.282226+00:00",
+        "datePublished": "2026-10-20T20:33:45.929036+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
           "name": "فريق تحرير مقارنات تك",
-          "url": "https://tech-comparisons.pages.dev"
+          "url": "https://mokaranat-tech.pages.dev"
         },
         "publisher": {
           "@type": "Organization",
           "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
-          "url": "https://tech-comparisons.pages.dev"
+          "url": "https://mokaranat-tech.pages.dev"
         },
         "itemReviewed": {
           "@type": "Product",
@@ -586,5 +586,5 @@
       }
     ]
   },
-  "created_at": "2026-10-20T20:05:54.282226+00:00"
+  "created_at": "2026-10-20T20:33:45.929036+00:00"
 }

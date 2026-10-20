@@ -70,6 +70,13 @@
 │                                                               - ComparisonBuilder      │
 │                                                               - AdSlot (AdSense)       │
 │                                                               - InternalLinksGrid      │
+│                                                                                        │
+│          ┌──────────────────────────────────────────────────────────────┐              │
+│          ▼                                                              ▼              │
+│    pages/about.astro & pages/contact.astro         pages/privacy.astro & pages/terms.astro │
+│  - E-E-A-T Editorial Methodology                  - Google AdSense & GDPR Privacy Policy│
+│  - Data Sources (TechPowerUp, Intel ARK, AMD)     - Benchmark & Advice Disclaimers      │
+│  - Direct Inquiries & Data Corrections Form       - Approved Stores (Noon, Newegg, Ali) │
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -216,12 +223,23 @@ BaseLayout.astro
       - **High-End GPU Scaling Calibration:** Added halo scaling in `fps_calculator.py` for >= 15000 CUDA cores / AD102 GPUs (RTX 4090) giving >= 6% index lead and >= 20% average FPS lead over RX 7900 XTX. Preserved statistical tie (< 3% index delta) between RTX 4080 Super and RX 7900 XTX. Added official revised retail price support (`revised_msrp_usd`) for RX 7900 XT ($749) propagating across all value branches. Grounded raster narrative in empirical FPS benchmarks (`fps_matrix`) to eliminate false raster parity claims between RTX 4090 and RX 7900 XTX.
       - **Contextual Rule Engine Refactoring:** Sanitized power descriptions (never describe >= 260W GPU or >= 150W CPU as "منضبط" or "فقط" in any editorial context). Added 450W / 12VHPWR con for RTX 4090. Barred 4K gaming praise in VRAM pros for GPUs with index < 75.0. Added CPU core deficit cons for >= 30% fewer cores (7600X vs 14600K). Handled equal laptop TDP diffs as mutually providing full 175W TGP. Prevented battery or weight pros and cons from coexisting on the same laptop. Differentiated buyer personas by price, mobility, and performance tier (Halo RTX 4090, High-End Value RTX 4080 saving $1,600, Budget/TUF MIL-STD-810H, Thin-and-Light OLED, and Desktop Replacement).
       - **Self-Auditing Quality Gate (`core/tests/test_quality_gate.py`):** Implemented automated audit tests asserting 7 core quality rules across all 15 comparison JSON files: score bounding in [0, 100], buyer persona differentiation (SequenceMatcher <= 0.75), coherence of pros/cons (battery, power, weight), realistic power claims, 4K VRAM gating, macOS platform gaming realism, equal TDP neutrality, revised MSRP presence, and buyer persona accuracy (91 total pytest tests passing 100%).
-    - **Phase 21: Contextual Editorial Hardening, Resolution Grounding & Smart Interlinking:**
-      - **NVIDIA vs NVIDIA & Cross-Brand Ray Tracing Neutrality:** Strictly requires `card.ray_tracing_score > opp.ray_tracing_score` to claim RT superiority in pros or gaming narrative; falls back to neutral capability framing when `<= opp.ray_tracing_score`. Automatically appends an objective con if `card.benchmark_index < opp.benchmark_index - 3.0`. Guards AMD RT deficit con so AMD cards are never falsely penalized against weaker/equal NVIDIA RT opponents.
-      - **Empirical GPU Target Resolution Grounding:** Enforces target resolutions based strictly on `benchmark_index` and VRAM via `_get_gpu_target_resolution()`. Sub-65 index GPUs are strictly bound to 1080p and never claim smooth 1440p or 4K Ultra gaming across narratives, VRAM pros, SpecEngine summaries, or buyer personas. In cross-brand matchups, `res_context_amd` is grounded directly in AMD's benchmark index rather than the opponent's tier.
-      - **Dual-X3D Single-CCD vs Dual-CCD Architectural Analysis:** Implemented dedicated `is_a_x3d and is_b_x3d` branch in `_build_cpu_narrative` contrasting single-CCD 1% low FPS frame pacing (Ryzen 7 7800X3D) with zero cross-CCD latency against dual-CCD multitasking/streaming (Ryzen 9 7950X3D).
-      - **Smart Related Matchup Discovery (`InternalLinksGrid.astro` & `pages/compare/[slug].astro`):** Passes `item_a_id` and `item_b_id` from comparison documents to `InternalLinksGrid.astro`, prioritizing comparisons sharing either hardware component first in the 6-slot related comparisons grid.
-      - **Hardened Quality Gate Suite (`test_quality_gate.py`, `test_spec_engine.py`, `test_affiliate_and_editorial.py`):** Comprehensive automated audit tests asserting cross-brand RT neutrality, sub-65 resolution gating, and dual-X3D architecture across all 80 generated JSON documents, bringing the total suite to 102 tests passing 100%.
+    - **Phase 22: Production Launch & Search Engine Readiness (Google AdSense, E-E-A-T, Sitemap & OpenGraph SEO):**
+      - **Statutory Pages for AdSense & E-E-A-T (`web/src/pages/`):**
+        - `privacy.astro`: Full privacy policy meeting Google AdSense, GDPR, and cookie guidelines (DoubleClick DART, opt-out via AboutAds/YourOnlineChoices, log files, zero Amazon mentions, approved partners: Noon, Newegg, AliExpress, Jumia).
+        - `terms.astro`: Comprehensive terms of service covering copyright, benchmark usage disclaimers (estimated FPS on standardized testbenches), and technical advice limitations.
+        - `about.astro`: High E-E-A-T methodology page explaining the 100% deterministic calculation engine, hardware data sources (TechPowerUp, Intel ARK, AMD, Jarrod's Tech), and editorial independence.
+        - `contact.astro`: Direct contact channels for corrections (`editorial@mokaranat-tech.com`), inquiries (`contact@mokaranat-tech.com`), and advertising (`ads@mokaranat-tech.com`) with an interactive form.
+      - **SEO & Social Sharing Infrastructure (`web/`):**
+        - Configured `@astrojs/sitemap` in `web/astro.config.mjs` with site URL `https://mokaranat-tech.pages.dev`, automatically building `sitemap-index.xml` and `sitemap-0.xml`.
+        - Created `web/public/robots.txt` allowing all legitimate crawlers and pointing directly to `sitemap-index.xml`.
+        - Created high-res 1200x630 social preview assets (`web/public/og-image.svg` and `web/public/og-image.png`).
+        - Enhanced `web/src/layouts/BaseLayout.astro` with complete OpenGraph (`og:image`, `og:image:width`, `og:image:height`, `og:url`, `og:site_name`) and Twitter Card (`twitter:card`, `twitter:image`, `twitter:url`) tags.
+      - **Navigation & Footer Integration (`web/src/components/Footer.astro`):**
+        - Integrated prominent statutory navigation links in both the 4-column footer grid and the bottom copyright bar.
+      - **Quality Gate & Full Verification:**
+        - Total static build expanded to 88 pages with 0 errors.
+        - Automated test suite expanded to 112 tests (`core/tests/test_phase21_production_readiness.py`) passing 100%.
+        - Verified 0 Amazon links or mentions across all 88 pages and metadata.
 
 ---
 

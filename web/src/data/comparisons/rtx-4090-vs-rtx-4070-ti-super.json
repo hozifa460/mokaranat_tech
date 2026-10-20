@@ -527,7 +527,7 @@
     "@graph": [
       {
         "@type": "Product",
-        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4090-vs-rtx-4070-ti-super#productA",
+        "@id": "https://mokaranat-tech.pages.dev/compare/rtx-4090-vs-rtx-4070-ti-super#productA",
         "name": "NVIDIA GeForce RTX 4090",
         "category": "GPU",
         "brand": {
@@ -543,7 +543,7 @@
       },
       {
         "@type": "Product",
-        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4090-vs-rtx-4070-ti-super#productB",
+        "@id": "https://mokaranat-tech.pages.dev/compare/rtx-4090-vs-rtx-4070-ti-super#productB",
         "name": "NVIDIA GeForce RTX 4070 Ti Super",
         "category": "GPU",
         "brand": {
@@ -559,21 +559,21 @@
       },
       {
         "@type": "Review",
-        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4090-vs-rtx-4070-ti-super#review",
-        "url": "https://tech-comparisons.pages.dev/compare/rtx-4090-vs-rtx-4070-ti-super",
+        "@id": "https://mokaranat-tech.pages.dev/compare/rtx-4090-vs-rtx-4070-ti-super#review",
+        "url": "https://mokaranat-tech.pages.dev/compare/rtx-4090-vs-rtx-4070-ti-super",
         "name": "مقارنة NVIDIA GeForce RTX 4090 ضد NVIDIA GeForce RTX 4070 Ti Super | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4090 و NVIDIA GeForce RTX 4070 Ti Super. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-20T20:05:38.468214+00:00",
+        "datePublished": "2026-10-20T20:33:28.280531+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
           "name": "فريق تحرير مقارنات تك",
-          "url": "https://tech-comparisons.pages.dev"
+          "url": "https://mokaranat-tech.pages.dev"
         },
         "publisher": {
           "@type": "Organization",
           "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
-          "url": "https://tech-comparisons.pages.dev"
+          "url": "https://mokaranat-tech.pages.dev"
         },
         "itemReviewed": {
           "@type": "Product",
@@ -589,5 +589,5 @@
       }
     ]
   },
-  "created_at": "2026-10-20T20:05:38.468214+00:00"
+  "created_at": "2026-10-20T20:33:28.280531+00:00"
 }

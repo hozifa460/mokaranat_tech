@@ -524,7 +524,7 @@
     "@graph": [
       {
         "@type": "Product",
-        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4070-ti-super-vs-rx-7800-xt#productA",
+        "@id": "https://mokaranat-tech.pages.dev/compare/rtx-4070-ti-super-vs-rx-7800-xt#productA",
         "name": "NVIDIA GeForce RTX 4070 Ti Super",
         "category": "GPU",
         "brand": {
@@ -540,7 +540,7 @@
       },
       {
         "@type": "Product",
-        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4070-ti-super-vs-rx-7800-xt#productB",
+        "@id": "https://mokaranat-tech.pages.dev/compare/rtx-4070-ti-super-vs-rx-7800-xt#productB",
         "name": "AMD Radeon RX 7800 XT",
         "category": "GPU",
         "brand": {
@@ -556,21 +556,21 @@
       },
       {
         "@type": "Review",
-        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4070-ti-super-vs-rx-7800-xt#review",
-        "url": "https://tech-comparisons.pages.dev/compare/rtx-4070-ti-super-vs-rx-7800-xt",
+        "@id": "https://mokaranat-tech.pages.dev/compare/rtx-4070-ti-super-vs-rx-7800-xt#review",
+        "url": "https://mokaranat-tech.pages.dev/compare/rtx-4070-ti-super-vs-rx-7800-xt",
         "name": "مقارنة NVIDIA GeForce RTX 4070 Ti Super ضد AMD Radeon RX 7800 XT | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4070 Ti Super و AMD Radeon RX 7800 XT. شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-20T20:05:46.649102+00:00",
+        "datePublished": "2026-10-20T20:33:35.640646+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
           "name": "فريق تحرير مقارنات تك",
-          "url": "https://tech-comparisons.pages.dev"
+          "url": "https://mokaranat-tech.pages.dev"
         },
         "publisher": {
           "@type": "Organization",
           "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
-          "url": "https://tech-comparisons.pages.dev"
+          "url": "https://mokaranat-tech.pages.dev"
         },
         "itemReviewed": {
           "@type": "Product",
@@ -586,5 +586,5 @@
       }
     ]
   },
-  "created_at": "2026-10-20T20:05:46.649102+00:00"
+  "created_at": "2026-10-20T20:33:35.640646+00:00"
 }

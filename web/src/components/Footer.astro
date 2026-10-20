@@ -3,10 +3,10 @@
 
 <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-20 pt-12 pb-8 text-sm text-slate-600 dark:text-slate-400">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
       
       <!-- Brand column -->
-      <div class="md:col-span-2">
+      <div>
         <div class="flex items-center gap-2 mb-3">
           <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold">
             ⚡
@@ -15,7 +15,7 @@
             مقارنات تك
           </span>
         </div>
-        <p class="text-sm leading-relaxed text-slate-500 dark:text-slate-400 max-w-md">
+        <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-400">
           منصة برمجية متقدمة تقدم مقارنات عتاد تقنية محايدة وعميقة باللغة العربية، مبنية على مقارنة معمارية وتحليلات الأداء المتوقعة لمساعدة اللاعبين وصناع المحتوى على اتخاذ قرارات شراء مدروسة بدقة.
         </p>
       </div>
@@ -23,10 +23,42 @@
       <!-- Quick Categories -->
       <div>
         <h3 class="font-bold text-slate-900 dark:text-white mb-3 text-base">الأقسام الرئيسية</h3>
-        <ul class="space-y-2">
-          <li><a href="/category/gpu" class="hover:text-blue-600 transition-colors">مقارنات كروت الشاشة</a></li>
-          <li><a href="/category/cpu" class="hover:text-blue-600 transition-colors">مقارنات المعالجات المركزية</a></li>
-          <li><a href="/category/laptop" class="hover:text-blue-600 transition-colors">مقارنات الحواسيب المحمولة</a></li>
+        <ul class="space-y-2 text-xs">
+          <li><a href="/category/gpu" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">🎮 مقارنات كروت الشاشة</a></li>
+          <li><a href="/category/cpu" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">⚙️ مقارنات المعالجات المركزية</a></li>
+          <li><a href="/category/laptop" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">💻 مقارنات الحواسيب المحمولة</a></li>
+          <li><a href="/" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">🔍 جميع المقارنات والبحث السريع</a></li>
+        </ul>
+      </div>
+
+      <!-- Statutory & Policy Links (AdSense & E-E-A-T Compliant) -->
+      <div>
+        <h3 class="font-bold text-slate-900 dark:text-white mb-3 text-base">عن المنصة والسياسات</h3>
+        <ul class="space-y-2 text-xs">
+          <li>
+            <a href="/about" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-1.5">
+              <span>📖</span>
+              <span>من نحن والمنهجية التحريرية</span>
+            </a>
+          </li>
+          <li>
+            <a href="/privacy" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-1.5">
+              <span>🔒</span>
+              <span>سياسة الخصوصية (Privacy Policy)</span>
+            </a>
+          </li>
+          <li>
+            <a href="/terms" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-1.5">
+              <span>📜</span>
+              <span>شروط الاستخدام وإخلاء المسؤولية</span>
+            </a>
+          </li>
+          <li>
+            <a href="/contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-1.5">
+              <span>📬</span>
+              <span>اتصل بنا وتصحيح البيانات</span>
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -40,10 +72,22 @@
 
     </div>
 
-    <!-- Bottom copyright -->
-    <div class="border-t border-slate-100 dark:border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
-      <p>© {new Date().getFullYear()} مقارنات تك - جميع الحقوق محفوظة.</p>
-      <p>صُممت المنصة وفق أعلى معايير الأداء والسرعة (100 Core Web Vitals) باستضافة Cloudflare Pages.</p>
+    <!-- Statutory Bar & Bottom copyright -->
+    <div class="border-t border-slate-100 dark:border-slate-800 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 dark:text-slate-400 gap-4">
+      <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-medium">
+        <a href="/about" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">من نحن والمنهجية</a>
+        <span class="text-slate-300 dark:text-slate-700">•</span>
+        <a href="/privacy" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">سياسة الخصوصية</a>
+        <span class="text-slate-300 dark:text-slate-700">•</span>
+        <a href="/terms" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">شروط الاستخدام</a>
+        <span class="text-slate-300 dark:text-slate-700">•</span>
+        <a href="/contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">اتصل بنا</a>
+      </div>
+      <div class="text-center md:text-left flex flex-col sm:flex-row items-center gap-2">
+        <p>© {new Date().getFullYear()} مقارنات تك - جميع الحقوق محفوظة.</p>
+        <span class="hidden sm:inline text-slate-300 dark:text-slate-700">•</span>
+        <p>استضافة سحابية فائقة السرعة عبر Cloudflare Pages.</p>
+      </div>
     </div>
   </div>
 </footer>

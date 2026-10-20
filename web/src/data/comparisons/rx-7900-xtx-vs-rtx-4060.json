@@ -524,7 +524,7 @@
     "@graph": [
       {
         "@type": "Product",
-        "@id": "https://tech-comparisons.pages.dev/compare/rx-7900-xtx-vs-rtx-4060#productA",
+        "@id": "https://mokaranat-tech.pages.dev/compare/rx-7900-xtx-vs-rtx-4060#productA",
         "name": "AMD Radeon RX 7900 XTX",
         "category": "GPU",
         "brand": {
@@ -540,7 +540,7 @@
       },
       {
         "@type": "Product",
-        "@id": "https://tech-comparisons.pages.dev/compare/rx-7900-xtx-vs-rtx-4060#productB",
+        "@id": "https://mokaranat-tech.pages.dev/compare/rx-7900-xtx-vs-rtx-4060#productB",
         "name": "NVIDIA GeForce RTX 4060 (8GB)",
         "category": "GPU",
         "brand": {
@@ -556,21 +556,21 @@
       },
       {
         "@type": "Review",
-        "@id": "https://tech-comparisons.pages.dev/compare/rx-7900-xtx-vs-rtx-4060#review",
-        "url": "https://tech-comparisons.pages.dev/compare/rx-7900-xtx-vs-rtx-4060",
+        "@id": "https://mokaranat-tech.pages.dev/compare/rx-7900-xtx-vs-rtx-4060#review",
+        "url": "https://mokaranat-tech.pages.dev/compare/rx-7900-xtx-vs-rtx-4060",
         "name": "مقارنة AMD Radeon RX 7900 XTX ضد NVIDIA GeForce RTX 4060 (8GB) | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين AMD Radeon RX 7900 XTX و NVIDIA GeForce RTX 4060 (8GB). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-20T20:05:40.476841+00:00",
+        "datePublished": "2026-10-20T20:33:30.723037+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
           "name": "فريق تحرير مقارنات تك",
-          "url": "https://tech-comparisons.pages.dev"
+          "url": "https://mokaranat-tech.pages.dev"
         },
         "publisher": {
           "@type": "Organization",
           "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
-          "url": "https://tech-comparisons.pages.dev"
+          "url": "https://mokaranat-tech.pages.dev"
         },
         "itemReviewed": {
           "@type": "Product",
@@ -586,5 +586,5 @@
       }
     ]
   },
-  "created_at": "2026-10-20T20:05:40.476841+00:00"
+  "created_at": "2026-10-20T20:33:30.723037+00:00"
 }

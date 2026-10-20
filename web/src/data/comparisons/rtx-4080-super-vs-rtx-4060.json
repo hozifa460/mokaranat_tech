@@ -525,7 +525,7 @@
     "@graph": [
       {
         "@type": "Product",
-        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4080-super-vs-rtx-4060#productA",
+        "@id": "https://mokaranat-tech.pages.dev/compare/rtx-4080-super-vs-rtx-4060#productA",
         "name": "NVIDIA GeForce RTX 4080 Super",
         "category": "GPU",
         "brand": {
@@ -541,7 +541,7 @@
       },
       {
         "@type": "Product",
-        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4080-super-vs-rtx-4060#productB",
+        "@id": "https://mokaranat-tech.pages.dev/compare/rtx-4080-super-vs-rtx-4060#productB",
         "name": "NVIDIA GeForce RTX 4060 (8GB)",
         "category": "GPU",
         "brand": {
@@ -557,21 +557,21 @@
       },
       {
         "@type": "Review",
-        "@id": "https://tech-comparisons.pages.dev/compare/rtx-4080-super-vs-rtx-4060#review",
-        "url": "https://tech-comparisons.pages.dev/compare/rtx-4080-super-vs-rtx-4060",
+        "@id": "https://mokaranat-tech.pages.dev/compare/rtx-4080-super-vs-rtx-4060#review",
+        "url": "https://mokaranat-tech.pages.dev/compare/rtx-4080-super-vs-rtx-4060",
         "name": "مقارنة NVIDIA GeForce RTX 4080 Super ضد NVIDIA GeForce RTX 4060 (8GB) | المواصفات والأداء والأسعار",
         "description": "مقارنة شاملة وتفصيلية بين NVIDIA GeForce RTX 4080 Super و NVIDIA GeForce RTX 4060 (8GB). شاهد الفروقات في المواصفات، مقارنة معمارية وتحليلات الأداء المتوقعة في الألعاب، كفاءة استهلاك الطاقة، وحكم الشراء النهائي مع أفضل الأسعار من نون، نيو إيج، وجوميا.",
-        "datePublished": "2026-10-20T20:05:41.551181+00:00",
+        "datePublished": "2026-10-20T20:33:32.003259+00:00",
         "inLanguage": "ar",
         "author": {
           "@type": "Organization",
           "name": "فريق تحرير مقارنات تك",
-          "url": "https://tech-comparisons.pages.dev"
+          "url": "https://mokaranat-tech.pages.dev"
         },
         "publisher": {
           "@type": "Organization",
           "name": "مقارنات تك | الدليل الأقوى لمقارنة العتاد والبطاقات الرسومية",
-          "url": "https://tech-comparisons.pages.dev"
+          "url": "https://mokaranat-tech.pages.dev"
         },
         "itemReviewed": {
           "@type": "Product",
@@ -587,5 +587,5 @@
       }
     ]
   },
-  "created_at": "2026-10-20T20:05:41.551181+00:00"
+  "created_at": "2026-10-20T20:33:32.003259+00:00"
 }
