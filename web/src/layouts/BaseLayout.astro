@@ -23,13 +23,22 @@ const {
 } = Astro.props;
 
 const siteUrl = 'https://mokaranat-tech.pages.dev';
-const pageUrl = canonicalUrl
+const rawCanonical = canonicalUrl
   ? (canonicalUrl.startsWith('http') ? canonicalUrl : new URL(canonicalUrl, siteUrl).href)
   : (Astro.site ? new URL(Astro.url.pathname, Astro.site).href : new URL(Astro.url.pathname, siteUrl).href);
 
-const socialImage = ogImage.startsWith('http')
+// Ensure trailing slash consistency with Astro directory format and sitemap
+const pageUrl = (rawCanonical.endsWith('/') || /\.[a-z0-9]+$/i.test(rawCanonical))
+  ? rawCanonical
+  : `${rawCanonical}/`;
+
+const imagePath = ogImage.startsWith('http')
   ? ogImage
-  : (Astro.site ? new URL(ogImage, Astro.site).href : new URL(ogImage, siteUrl).href);
+  : (ogImage.startsWith('/') ? ogImage : `/${ogImage}`);
+
+const socialImage = imagePath.startsWith('http')
+  ? imagePath
+  : (Astro.site ? new URL(imagePath, Astro.site).href : new URL(imagePath, siteUrl).href);
 ---
 
 <!doctype html>
@@ -49,6 +58,7 @@ const socialImage = ogImage.startsWith('http')
     <meta property="og:locale" content="ar_SA" />
     <meta property="og:site_name" content="مقارنات تك" />
     <meta property="og:image" content={socialImage} />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={title} />
@@ -63,7 +73,7 @@ const socialImage = ogImage.startsWith('http')
 
     <!-- Favicon & Sitemap -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
 
     <!-- Inline script to avoid Dark Mode flash (FOUC) -->
     <script is:inline>

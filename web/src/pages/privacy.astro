@@ -5,16 +5,21 @@ const privacySchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "سياسة الخصوصية | مقارنات تك",
-  "url": "https://mokaranat-tech.pages.dev/privacy",
+  "url": "https://mokaranat-tech.pages.dev/privacy/",
   "description": "سياسة الخصوصية الرسمية لمنصة مقارنات تك، توضح كيفية إدارة البيانات وملفات تعريف الارتباط وشبكات الإعلانات التابعة لجهة خارجية مثل Google AdSense وروابط الإحالة المعتمدة.",
-  "inLanguage": "ar"
+  "inLanguage": "ar",
+  "publisher": {
+    "@type": "Organization",
+    "name": "مقارنات تك",
+    "url": "https://mokaranat-tech.pages.dev/"
+  }
 };
 ---
 
 <BaseLayout
   title="سياسة الخصوصية | مقارنات تك"
   description="سياسة الخصوصية الرسمية لمنصة مقارنات تك، متوافقة مع إرشادات Google AdSense واللائحة العامة لحماية البيانات (GDPR) واستخدام ملفات تعريف الارتباط والشركاء المعتمدين."
-  canonicalUrl="https://mokaranat-tech.pages.dev/privacy"
+  canonicalUrl="https://mokaranat-tech.pages.dev/privacy/"
   schema={privacySchema}
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -187,7 +192,7 @@ const privacySchema = {
             <span>الانتقال إلى صفحة اتصل بنا</span>
           </a>
           <span class="text-xs text-slate-500 dark:text-slate-400">
-            أو عبر البريد الرسمي: privacy@mokaranat-tech.com
+            أو عبر البريد الرسمي: <a href="mailto:privacy@mokaranat-tech.com" class="text-blue-600 dark:text-blue-400 underline font-medium">privacy@mokaranat-tech.com</a>
           </span>
         </div>
       </section>

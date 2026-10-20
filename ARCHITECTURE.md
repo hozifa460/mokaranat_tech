@@ -225,20 +225,21 @@ BaseLayout.astro
       - **Self-Auditing Quality Gate (`core/tests/test_quality_gate.py`):** Implemented automated audit tests asserting 7 core quality rules across all 15 comparison JSON files: score bounding in [0, 100], buyer persona differentiation (SequenceMatcher <= 0.75), coherence of pros/cons (battery, power, weight), realistic power claims, 4K VRAM gating, macOS platform gaming realism, equal TDP neutrality, revised MSRP presence, and buyer persona accuracy (91 total pytest tests passing 100%).
     - **Phase 22: Production Launch & Search Engine Readiness (Google AdSense, E-E-A-T, Sitemap & OpenGraph SEO):**
       - **Statutory Pages for AdSense & E-E-A-T (`web/src/pages/`):**
-        - `privacy.astro`: Full privacy policy meeting Google AdSense, GDPR, and cookie guidelines (DoubleClick DART, opt-out via AboutAds/YourOnlineChoices, log files, zero Amazon mentions, approved partners: Noon, Newegg, AliExpress, Jumia).
-        - `terms.astro`: Comprehensive terms of service covering copyright, benchmark usage disclaimers (estimated FPS on standardized testbenches), and technical advice limitations.
+        - `privacy.astro`: Full privacy policy meeting Google AdSense, GDPR, and cookie guidelines (DoubleClick DART, opt-out via AboutAds/YourOnlineChoices, log files, zero Amazon mentions, approved partners: Noon, Newegg, AliExpress, Jumia). Includes active `mailto:privacy@mokaranat-tech.com` link.
+        - `terms.astro`: Comprehensive terms of service covering copyright, benchmark usage disclaimers (estimated FPS on standardized testbenches), and technical advice limitations. Includes active `mailto:legal@mokaranat-tech.com` link.
         - `about.astro`: High E-E-A-T methodology page explaining the 100% deterministic calculation engine, hardware data sources (TechPowerUp, Intel ARK, AMD, Jarrod's Tech), and editorial independence.
-        - `contact.astro`: Direct contact channels for corrections (`editorial@mokaranat-tech.com`), inquiries (`contact@mokaranat-tech.com`), and advertising (`ads@mokaranat-tech.com`) with an interactive form.
+        - `contact.astro`: Direct contact channels for corrections (`editorial@mokaranat-tech.com`), inquiries (`contact@mokaranat-tech.com`), and advertising (`ads@mokaranat-tech.com`) with clickable mailto links, native `mailto:` form action fallback, `<noscript>` guidance, and an interactive client form with direct mailto generation.
       - **SEO & Social Sharing Infrastructure (`web/`):**
         - Configured `@astrojs/sitemap` in `web/astro.config.mjs` with site URL `https://mokaranat-tech.pages.dev`, automatically building `sitemap-index.xml` and `sitemap-0.xml`.
         - Created `web/public/robots.txt` allowing all legitimate crawlers and pointing directly to `sitemap-index.xml`.
         - Created high-res 1200x630 social preview assets (`web/public/og-image.svg` and `web/public/og-image.png`).
-        - Enhanced `web/src/layouts/BaseLayout.astro` with complete OpenGraph (`og:image`, `og:image:width`, `og:image:height`, `og:url`, `og:site_name`) and Twitter Card (`twitter:card`, `twitter:image`, `twitter:url`) tags.
+        - Enhanced `web/src/layouts/BaseLayout.astro` with complete OpenGraph (`og:image`, `og:image:width`, `og:image:height`, `og:image:type`, `og:url`, `og:site_name`, `og:locale`), Twitter Card (`twitter:card`, `twitter:image`, `twitter:url`) tags, and trailing-slash canonical URL normalization matching Astro directory format.
+        - Reinforced Schema.org JSON-LD across statutory pages and homepage with `Organization` publisher entities (`mokaranat-tech.pages.dev/`).
       - **Navigation & Footer Integration (`web/src/components/Footer.astro`):**
         - Integrated prominent statutory navigation links in both the 4-column footer grid and the bottom copyright bar.
       - **Quality Gate & Full Verification:**
-        - Total static build expanded to 88 pages with 0 errors.
-        - Automated test suite expanded to 112 tests (`core/tests/test_phase21_production_readiness.py`) passing 100%.
+        - Total static build compiled into 88 static pages with 0 errors.
+        - Automated test suite expanded to 118 tests (`core/tests/test_phase21_production_readiness.py` with 16 dedicated tests) passing 100%.
         - Verified 0 Amazon links or mentions across all 88 pages and metadata.
 
 ---

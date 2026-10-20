@@ -156,3 +156,71 @@ def test_contact_page_channels_and_form():
     assert 'name="name"' in content
     assert 'name="email"' in content
     assert 'name="message"' in content
+
+
+def test_contact_email_links_are_clickable_mailto():
+    """Verify that all channel emails on contact.astro are clickable mailto: links."""
+    contact_path = PAGES_DIR / "contact.astro"
+    content = contact_path.read_text(encoding="utf-8")
+    assert 'href="mailto:editorial@mokaranat-tech.com"' in content
+    assert 'href="mailto:contact@mokaranat-tech.com"' in content
+    assert 'href="mailto:ads@mokaranat-tech.com"' in content
+
+
+def test_contact_form_noscript_and_action_fallback():
+    """Verify that contact.astro provides robust noscript fallback and mailto action."""
+    contact_path = PAGES_DIR / "contact.astro"
+    content = contact_path.read_text(encoding="utf-8")
+    assert '<noscript>' in content
+    assert 'action="mailto:contact@mokaranat-tech.com"' in content
+    assert 'method="POST"' in content
+    assert 'id="direct-mailto-link"' in content
+
+
+def test_privacy_and_terms_email_links_are_clickable():
+    """Verify that privacy.astro and terms.astro have clickable mailto links."""
+    privacy_path = PAGES_DIR / "privacy.astro"
+    terms_path = PAGES_DIR / "terms.astro"
+    assert 'href="mailto:privacy@mokaranat-tech.com"' in privacy_path.read_text(encoding="utf-8")
+    assert 'href="mailto:legal@mokaranat-tech.com"' in terms_path.read_text(encoding="utf-8")
+
+
+def test_publisher_organization_schema_on_statutory_pages():
+    """Verify that Schema.org on statutory pages includes Organization publisher entity."""
+    pages = ["about.astro", "privacy.astro", "terms.astro", "contact.astro", "index.astro"]
+    for page in pages:
+        content = (PAGES_DIR / page).read_text(encoding="utf-8")
+        assert '"@type": "Organization"' in content
+        assert '"name": "مقارنات تك"' in content
+        assert '"https://mokaranat-tech.pages.dev/"' in content
+
+
+def test_canonical_and_sitemap_trailing_slash_consistency():
+    """Verify that canonical tags match trailing slash format of Astro directory output."""
+    pages = ["about.astro", "privacy.astro", "terms.astro", "contact.astro"]
+    for page in pages:
+        content = (PAGES_DIR / page).read_text(encoding="utf-8")
+        stem = page.replace(".astro", "")
+        expected = f"https://mokaranat-tech.pages.dev/{stem}/"
+        assert f'canonicalUrl="{expected}"' in content
+        assert f'"url": "{expected}"' in content
+
+
+def test_sitemap_contains_all_statutory_and_category_pages():
+    """Verify that dist/sitemap-0.xml exists and contains all statutory and category routes."""
+    sitemap_path = WEB_DIR / "dist" / "sitemap-0.xml"
+    if not sitemap_path.exists():
+        pytest.skip("Run npm run build to generate dist/sitemap-0.xml first")
+    content = sitemap_path.read_text(encoding="utf-8")
+    expected_routes = [
+        "https://mokaranat-tech.pages.dev/",
+        "https://mokaranat-tech.pages.dev/about/",
+        "https://mokaranat-tech.pages.dev/privacy/",
+        "https://mokaranat-tech.pages.dev/terms/",
+        "https://mokaranat-tech.pages.dev/contact/",
+        "https://mokaranat-tech.pages.dev/category/gpu/",
+        "https://mokaranat-tech.pages.dev/category/cpu/",
+        "https://mokaranat-tech.pages.dev/category/laptop/",
+    ]
+    for route in expected_routes:
+        assert f"<loc>{route}</loc>" in content, f"Missing route {route} in sitemap-0.xml"

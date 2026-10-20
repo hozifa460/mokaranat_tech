@@ -5,16 +5,21 @@ const termsSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "شروط الاستخدام وإخلاء المسؤولية | مقارنات تك",
-  "url": "https://mokaranat-tech.pages.dev/terms",
+  "url": "https://mokaranat-tech.pages.dev/terms/",
   "description": "شروط وأحكام استخدام منصة مقارنات تك، متضمنة إخلاء المسؤولية عن نتائج الأداء المعيارية واختبارات الألعاب، حقوق الملكية الفكرية، وضوابط الروابط الخارجية.",
-  "inLanguage": "ar"
+  "inLanguage": "ar",
+  "publisher": {
+    "@type": "Organization",
+    "name": "مقارنات تك",
+    "url": "https://mokaranat-tech.pages.dev/"
+  }
 };
 ---
 
 <BaseLayout
   title="شروط الاستخدام وإخلاء المسؤولية | مقارنات تك"
   description="اتفاقية شروط الاستخدام الرسمية لمنصة مقارنات تك، تتضمن إخلاء المسؤولية الفنية عن مؤشرات الأداء ومعدلات الإطارات، حقوق الملكية، وتنظيم روابط المتاجر المعتمدة."
-  canonicalUrl="https://mokaranat-tech.pages.dev/terms"
+  canonicalUrl="https://mokaranat-tech.pages.dev/terms/"
   schema={termsSchema}
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -152,7 +157,7 @@ const termsSchema = {
             <span>نموذج التواصل والاستفسارات</span>
           </a>
           <span class="text-xs text-slate-500 dark:text-slate-400">
-            البريد القانوني: legal@mokaranat-tech.com
+            البريد القانوني: <a href="mailto:legal@mokaranat-tech.com" class="text-indigo-600 dark:text-indigo-400 underline font-medium">legal@mokaranat-tech.com</a>
           </span>
         </div>
       </section>

@@ -5,16 +5,21 @@ const contactSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   "name": "اتصل بنا | مقارنات تك",
-  "url": "https://mokaranat-tech.pages.dev/contact",
+  "url": "https://mokaranat-tech.pages.dev/contact/",
   "description": "تواصل مع فريق مقارنات تك للاستفسارات العامة، تصحيح مواصفات العتاد، الاقتراحات التقنية، والإعلان التجاري.",
-  "inLanguage": "ar"
+  "inLanguage": "ar",
+  "publisher": {
+    "@type": "Organization",
+    "name": "مقارنات تك",
+    "url": "https://mokaranat-tech.pages.dev/"
+  }
 };
 ---
 
 <BaseLayout
   title="اتصل بنا وتصحيح البيانات | مقارنات تك"
   description="تواصل مباشرة مع فريق تحرير ومهندسي منصة مقارنات تك: قنوات مخصصة لتصحيح مواصفات العتاد، الاستفسارات التقنية، ونموذج مراسلة مباشر مع التزام بالرد خلال 24-48 ساعة."
-  canonicalUrl="https://mokaranat-tech.pages.dev/contact"
+  canonicalUrl="https://mokaranat-tech.pages.dev/contact/"
   schema={contactSchema}
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -52,7 +57,7 @@ const contactSchema = {
           </p>
         </div>
         <div class="text-xs font-semibold text-blue-600 dark:text-blue-400 dir-ltr text-right">
-          editorial@mokaranat-tech.com
+          <a href="mailto:editorial@mokaranat-tech.com" class="hover:underline inline-block">editorial@mokaranat-tech.com</a>
         </div>
       </div>
 
@@ -68,7 +73,7 @@ const contactSchema = {
           </p>
         </div>
         <div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 dir-ltr text-right">
-          contact@mokaranat-tech.com
+          <a href="mailto:contact@mokaranat-tech.com" class="hover:underline inline-block">contact@mokaranat-tech.com</a>
         </div>
       </div>
 
@@ -84,7 +89,7 @@ const contactSchema = {
           </p>
         </div>
         <div class="text-xs font-semibold text-purple-600 dark:text-purple-400 dir-ltr text-right">
-          ads@mokaranat-tech.com
+          <a href="mailto:ads@mokaranat-tech.com" class="hover:underline inline-block">ads@mokaranat-tech.com</a>
         </div>
       </div>
     </div>
@@ -97,7 +102,14 @@ const contactSchema = {
           يرجى ملء النموذج أدناه بدقة، وسيقوم العضو المختص من فريق التحرير بمراجعة رسالتك والرد عليك في أقرب وقت.
         </p>
 
-        <form id="contact-form" class="space-y-5">
+        <noscript>
+          <div class="mb-6 p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200 text-xs leading-relaxed">
+            ⚠️ لتجربة أسرع بدون جافا سكريبت، يمكنك مراسلتنا مباشرة عبر النقر على بريد الفريق:
+            <a href="mailto:contact@mokaranat-tech.com" class="underline font-bold mr-1">contact@mokaranat-tech.com</a>
+          </div>
+        </noscript>
+
+        <form id="contact-form" action="mailto:contact@mokaranat-tech.com" method="POST" enctype="text/plain" class="space-y-5">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <!-- Name -->
             <div>
@@ -178,15 +190,22 @@ const contactSchema = {
         <!-- Success Notification Box -->
         <div
           id="form-success"
-          class="hidden mt-6 p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-200 text-xs"
+          class="hidden mt-6 p-5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-200 text-xs"
         >
-          <div class="flex items-center gap-2 font-bold mb-1">
+          <div class="flex items-center gap-2 font-bold mb-1.5 text-sm">
             <span>✅</span>
             <span>تم استلام رسالتك بنجاح!</span>
           </div>
-          <p class="text-slate-600 dark:text-slate-300">
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
             شكراً لتواصلك مع مقارنات تك. تم توجيه رسالتك للقسم المعني، وسيقوم أحد مهندسي الفريق بالرد على بريدك الإلكتروني خلال 24-48 ساعة.
           </p>
+          <div class="pt-3 border-t border-emerald-200/60 dark:border-emerald-800/60 flex items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400">
+            <span>💡</span>
+            <span>
+              ترغب في فتح تطبيق بريدك لإرسال تفاصيل إضافية؟ 
+              <a id="direct-mailto-link" href="mailto:contact@mokaranat-tech.com" class="text-emerald-700 dark:text-emerald-300 font-bold underline">اضغط هنا لفتح البريد مباشرة</a>
+            </span>
+          </div>
         </div>
       </div>
     </section>
@@ -215,12 +234,30 @@ const contactSchema = {
       submitBtn.disabled = true;
       submitBtn.innerText = 'جاري الإرسال...';
 
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const categorySelect = document.getElementById('category');
+      const messageInput = document.getElementById('message');
+
+      const nameVal = nameInput ? nameInput.value : '';
+      const emailVal = emailInput ? emailInput.value : '';
+      const categoryVal = categorySelect ? categorySelect.value : '';
+      const messageVal = messageInput ? messageInput.value : '';
+
+      // Prepare fallback direct mailto link
+      const directLink = document.getElementById('direct-mailto-link');
+      if (directLink) {
+        const subject = encodeURIComponent(`[مقارنات تك] استفسار: ${categoryVal}`);
+        const body = encodeURIComponent(`الاسم: ${nameVal}\nالبريد: ${emailVal}\n\nالرسالة:\n${messageVal}`);
+        directLink.href = `mailto:contact@mokaranat-tech.com?subject=${subject}&body=${body}`;
+      }
+
       // Simulate clean asynchronous submission
       setTimeout(() => {
         contactForm.reset();
         contactForm.classList.add('hidden');
         successBox.classList.remove('hidden');
-      }, 600);
+      }, 500);
     });
   }
 </script>
