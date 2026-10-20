@@ -10,10 +10,21 @@ import AdSlot from '../../components/AdSlot.astro';
 import InternalLinksGrid from '../../components/InternalLinksGrid.astro';
 import ComparisonBuilder from '../../components/ComparisonBuilder.astro';
 
+import comparisonsIndex from '../../data/comparisons_index.json';
+
 export async function getStaticPaths() {
   const comparisonModules = import.meta.glob('../../data/comparisons/*.json', { eager: true });
-  
-  const comparisons = Object.values(comparisonModules).map((mod: any) => mod.default || mod);
+  const comparisonsBySlug: Record<string, any> = {};
+  Object.values(comparisonModules).forEach((mod: any) => {
+    const comp = mod.default || mod;
+    if (comp && comp.slug) {
+      comparisonsBySlug[comp.slug] = comp;
+    }
+  });
+
+  const comparisons = comparisonsIndex
+    .map((item: any) => comparisonsBySlug[item.slug])
+    .filter(Boolean);
 
   return comparisons.map((comp: any) => ({
     params: { slug: comp.slug },

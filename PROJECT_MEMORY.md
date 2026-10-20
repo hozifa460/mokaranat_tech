@@ -464,8 +464,10 @@ D:\tech_comparisons\
 ### Phase 20: Interactive Hardware Comparison Selector & Full All-Pairs Matrix Generation (2026-10-20)
 - **Interactive Comparison Builder (`web/src/components/ComparisonBuilder.astro`):**
   - Designed and implemented a responsive, RTL Arabic interactive selector component with Cairo/Tajawal typography.
-  - Features category tabs (🎮 كروت الشاشة | ⚙️ المعالجات | 💻 اللابتوبات), dynamic brand quick-filter pills (NVIDIA, AMD, Intel, ASUS, Lenovo, Razer, Apple), dual hardware dropdowns with `<optgroup>` organization, and an interactive swap (⇄) button.
-  - Implemented client-side bidirectional slug resolution: seamlessly resolves `${idA}:${idB}` or `${idB}:${idA}` and redirects the user directly to `/compare/{matched_slug}`.
+  - Features category tabs (🎮 كروت الشاشة | ⚙️ المعالجات | 💻 اللابتوبات).
+  - *Independent Dual Quick-Search & Brand Filters:* Solved the critical UX defect where a single global brand filter wiped out the opposite side and prevented cross-brand comparisons (e.g. NVIDIA vs AMD). Each selector (Item 1 and Item 2) now features independent real-time search inputs (`quick-search-a`, `quick-search-b`) and independent brand filter pills (pre-rendered in SSR for initial categories), enabling frictionless cross-brand hardware pairing.
+  - *Symmetrical Mutual De-duplication & Clean Swap Logic:* Fixed swap button (`swapBtn`) defect where setting `selectA.value = valB` prior to `populateDropdowns` caused false `(مختارة بالفعل)` tagging on active selections. Implemented symmetrical `rebuildBoth(valB, valA)` and mutual option disabling across both selectors.
+  - *Bidirectional Slug Resolution:* Client-side router seamlessly resolves `${idA}:${idB}` or `${idB}:${idA}` and redirects the user directly to `/compare/{matched_slug}`.
   - Embedded natively into the portal homepage (`pages/index.astro`), category hubs (`pages/category/[category].astro`), and dynamic comparison pages (`pages/compare/[slug].astro`).
 - **Full Category Matrix Generation (`scripts/generate_comparisons.py`):**
   - Expanded comparison pipeline from 15 curated matchups to the complete all-pairs matrix across all hardware categories:
@@ -481,14 +483,15 @@ D:\tech_comparisons\
     - Differentiated dual-CCD flagship workstation/streaming X3D (Ryzen 9 7950X3D: 16 cores, 32 threads, 128MB cache) from pure single-CCD gaming X3D (Ryzen 7 7800X3D: 8 cores, zero scheduling overhead, 96MB cache).
     - Prioritized intra-brand Intel evaluation before generic core count thresholds, cleanly separating flagship peak clock compute (i9-14900K: 24 cores, 6.0 GHz TVB) from value-oriented productivity (i7-14700K: 20 cores, DDR4/DDR5 flexibility).
     - Reduced buyer persona similarity from 0.99 to <= 0.40, fully satisfying Quality Gate Rule 2 across all 80 pairs.
-- **Homepage UX & Performance Optimization (`web/src/pages/index.astro`):**
-  - Displayed the top 15 high-intent comparisons initially to prevent DOM bloat and preserve sub-second Core Web Vitals.
+- **Homepage & Category UX Optimization (`web/src/pages/index.astro`, `category/[category].astro`, `compare/[slug].astro`):**
+  - *Curated High-Intent Featured Comparisons Fix:* Resolved a critical bug where Vite's `import.meta.glob` alphabetical sorting caused the featured homepage comparisons to display 8 Laptops, 6 CPUs, and ZERO GPUs. By mapping `allComparisons` against `comparisons_index.json`, the top 15 featured slots prominently showcase the 15 curated flagship comparisons (8 GPUs, 3 CPUs, 4 Laptops).
   - Added an instant client-side search engine querying all 80 comparisons dynamically as the user types.
   - Added an on-demand "استعراض جميع المقارنات (80)" toggle button allowing users to expand or collapse the full comparison catalog.
-- **Verification:**
-  - 100% pass rate on full test suite: 91/91 tests passed in 1.62s (`core/tests/`).
+- **Verification & Test Suite Expansion:**
+  - Added dedicated Phase 20 test suite (`core/tests/test_phase20_matrix_and_builder.py`) validating matrix math (55/15/10=80), preservation of top 15 slugs in exact order, manifest metadata completeness, bidirectional slug resolution (160 permutations), and zero disk/manifest orphans.
+  - Full test suite expanded to 96 tests (`core/tests/`): 100% pass rate in 1.68s.
   - Strict Quality Gate (`test_quality_gate.py`): 12/12 audits passed with 0 failures across all 80 exported comparison JSON files.
-  - Astro SSG Build (`npm run build`): 84 static HTML routes compiled with 0 errors in 11.08s.
+  - Astro SSG Build (`npm run build`): 84 static HTML routes compiled with 0 errors in 4.33s.
   - Strict ZERO Amazon compliance verified across all 80 JSON datasets.
 
 ---

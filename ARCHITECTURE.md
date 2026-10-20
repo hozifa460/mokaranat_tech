@@ -249,13 +249,22 @@ BaseLayout.astro
 3. Run `scripts/run_pipeline.bat` (or run `seed_database.py` and `generate_comparisons.py`).
 4. Rebuild Astro via `npm run build`.
 
-### Full Category Matrix & Automatic Pairwise Generation (Phase 20):
-1. In `scripts/generate_comparisons.py`, the system builds the complete all-pairs matrix within each category:
-   - All unique combinations: N*(N-1)/2 per category (55 GPUs + 15 CPUs + 10 Laptops = 80 total comparisons).
-   - Preserves the 15 original high-intent matchups at the head of the manifest.
-2. The interactive selector component (`ComparisonBuilder.astro`):
-   - Maps bidirectional combinations: `${idA}:${idB}` and `${idB}:${idA}` to the resolved comparison slug.
-   - Dynamically loads categories and brand filters without full page reloads.
+### Full Category Matrix & Interactive Comparison Builder Architecture (Phase 20):
+1. **Full All-Pairs Matrix Generation (`scripts/generate_comparisons.py`):**
+   - Combinatorial pairwise generator: $N \times (N-1) / 2$ within each category:
+     - 55 GPU comparisons ($\binom{11}{2}$)
+     - 15 CPU comparisons ($\binom{6}{2}$)
+     - 10 Laptop comparisons ($\binom{5}{2}$)
+     - Total: 80 static comparison documents covering 100% of within-category hardware pairs.
+   - Preserves the exact slugs and order of the original 15 high-intent matchups at the head of `comparisons_index.json`.
+2. **Interactive Hardware Comparison Selector (`web/src/components/ComparisonBuilder.astro`):**
+   - Category tabs for instant switching between GPUs, CPUs, and Laptops.
+   - Dual selection cards with independent quick-search inputs (`quick-search-a`, `quick-search-b`) and independent brand filter pills (pre-rendered during SSR), enabling frictionless cross-brand comparisons (e.g. NVIDIA vs AMD).
+   - Symmetrical mutual de-duplication: item selected in Item 1 is disabled in Item 2 with `(مختارة بالفعل)` and vice-versa.
+   - Clean swap mechanism (`⇄`) that swaps selections symmetrically without option corruption or self-disabling.
+   - Client-side bidirectional router: hashes `${idA}:${idB}` and `${idB}:${idA}` to the matching static route `/compare/{matched_slug}`.
+3. **Curated High-Intent Featured Comparison Routing (`index.astro`, `category/[category].astro`, `compare/[slug].astro`):**
+   - Maps comparisons by `comparisons_index.json` manifest order rather than arbitrary filesystem alphabetical sorting, ensuring the top 15 featured slots prominently showcase the 15 curated flagship matchups (8 GPUs, 3 CPUs, 4 Laptops).
 
 ### Running Automated Tests:
 ```powershell
